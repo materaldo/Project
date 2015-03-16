@@ -1,0 +1,118 @@
+Jako opiekun chcę mieć możliwość dodania nowej grupy.
+Jako opiekun chcę wprowadzać dane mojej grupy.
+Jako opiekun chcę mieć wgląd w dane rekordów mojej grupy w celu kontrolowania bieżącego stanu.
+Jako opiekun chcę mieć możliwość edycji rekordów mojej grupy, w celu uaktualniania danych.
+Jako opiekun chcę mieć możliwość wysyłania wiadomości do wszystkich członków mojej grupy.
+Jako opiekun chcę mieć możliwość logowania celem potwierdzenia swojej osoby.
+Jako opiekun chcę mieć możliwość rejestracji, aby mieć dostęp do nowych funkcjonalności.
+Jako opiekun chcę mieć możliwość wysłania wiadomości do administratora.
+Jako opiekun chcę mieć możliwość wyszukania uczestnika na podstawie wprowadzonych danych.
+Jako uczestnik chcę mieć możliwość zarejestrowania się do serwisu.
+Jako uczestnik chcę mieć możliwość zalogowania do serwisu.
+Jako uczestnik chcę mieć możliwość sprawdzenia przydzielonego mi miejsca noclegu.
+Jako uczestnik chcę mieć możliwość odzyskania hasła.
+Jako administrator chcę wprowadzać nowe miejsca noclegowe celem aktualizacji bazy danych.
+Jako administrator chcę mieć wgląd w listę uczestników imprezy celem kontrolowania bieżącego stanu.
+Jako administrator chcę móc ręcznie zmieniać przydział noclegowy użytkowników, aby uwzględnić szczególne przypadki i żądania.
+Jako administrator chcę widzieć liczbę zajętych i wolnych miejsc w poszczególnych miejscach noclegowych, aby wiedzieć, czy potrzebne będą dodatkowe miejsca dla uczestników.
+Jako administrator chcę modyfikować istniejące miejsca noclegowe oraz ich atrybuty, celem wprowadzania zaistniałych zmian.
+Jako administrator chcę zbiorową wiadomość do wszystkich opiekunów zarejestrowanych w systemie.
+Jako administrator chcę przeszukiwać listę uczestników wydarzenia, aby łatwo znaleźć osobę, której przydział chcę zmodyfikować.
+Jako administrator chcę zatwierdzać nowych użytkowników systemu, aby zweryfikować zarejestrowanych użytkowników.
+
+ 
+Wyszukanie uzytkownika na podstawie wprowadzonych danych(opiekun)
+1. Opiekun wybiera opcję wyszukaj.
+2. System wyświetla odpowiedni formularz umożliwiający wyszukanie.
+3. Użytkownik wprowadza dane identyfikujące szukany obiekt i naciska przycisk "Szukaj".
+4. System wyświetla użytkownika/ użytkowników, którzy spełniają kryteria.
+
+3a. System wyświetla informacje o błędzie " Użytkownik nie należy do twojej grupy".
+4a. Użytkownik wybiera użytkownika z listy.
+
+Dodawanie grupy(opiekun)
+1. Użytkownik uruchamia opcję tworzenia nowej grupy.
+2. System wyświetla formularz tworzenia grupy.
+3. Użytkownik uzupełnia wymagane dane.
+4. System dodaje grupę do bazy danych.
+
+Zarządzanie uczestnikami(opiekun)
+1. Użytkownik uruchamia opcję edycji grupy.
+2. System przechodzi do wybranej grupy.
+3. Użytkownik dodaje dane nowego uczestnika.
+4. System zatwierdza operację.
+
+3a. Użytkownik dokonuje edycji użytkownika.
+4a. System zatwierdza zmianę.
+
+3b. Użytkownik usuwa uczestnika z grupy.
+4b. System zatwierdza zmianę.
+
+Rejestracja w systemie(opiekun)
+1. Niezalogowany użytkownik wybiera opcję rejestracji.
+2. System przechodzi do rejestracji.
+3. Niezalogowany użytkownik wypełnia wymagane dane.
+4. System wysyła na adres email podany przy rejestracji link potwierdzający rejestrację.
+
+Logowanie do systemu(opiekun)
+1. Niezalogowany użytkownik wpisuje dane do logowania.
+2. System stwierdza poprawność danych i loguje użytkownika do witryny.
+
+2a. System stwierdza niepoprawność danych. Powrót do 1.
+
+Dodawanie miejsc do bazy noclegowej (administrator)
+1. Użytkownik uruchamia łącze "baza noclegowa".
+2. System wyświetla aktualną bazę noclegową wraz z liczbami dostępnych miejsc.
+3. Użytkownik naciska przycisk "Dodaj nowe miejsce".
+4. System wyświetla formularz dodawania nowego miejsca.
+5. Użytkownik wprowadza następujące dane: adres, lokalizację?, status, miejsca ogółem i zatwierdza wprowadzanie.
+6. System tworzy nowy obiekt bazy danych ustawiając identyfikator na kolejną liczbę naturalną i miejsca zajęte na 0, oraz pozostałe dane wprowadzone przez użytkownika.
+
+Wyszukiwanie (administrator)
+1. Użytkownik wybiera opcję "wyszukaj".
+2. Użytkownik wybiera z listy rozwijalnej typ szukanego bytu.
+3. System wyświetla odpowiedni dla danego typu formularz umożliwiający wyszukanie żądanych danych.
+4. Użytkownik wprowadza dane identyfikujące szukany obiekt i naciska przycisk "Szukaj".
+	4a. Użytkownik naciska przycisk "wyświetl wszystkie".
+	4b. System wyświetla listę wszystkich obiektów danego typu.
+5. System wyświetla listę obiektów spełniających podane kryteria.
+	5a. System wyświetla komunikat "brak ... spełniających kryteria"
+6. Użytkownik wybiera żądany obiekt z listy.
+
+Ręczna zmiana przydziału miejsca noclegu (administrator)
+1. Użytkownik wyszukuje i wybiera żądanego uczestnika (-> scenariusz wyszukiwanie).
+2. System wyświetla dane szczegółowe wybranego uczestnika.
+3. Użytkownik wybiera opcję "edytuj przydział".
+4. Użytkownik wyszukuje i wybiera miejsce noclegowe (-> scenariusz wyszukiwanie, punkt 3).
+5. System wraca do strony danych uczestnikach i aktualizuje informację o miejscu noclegowym.
+6. Użytkownik naciska przycisk "zapisz zmiany".
+	6a. Użytkownik naciska przycisk "anuluj zmiany".
+	6b. System przywraca dane uczestnika do wcześniejszego stanu i nie wprowadza zmian do bazy danych.
+7. System aktualizuje informację o miejscu noclegowym uczestnika w bazie danych.
+
+Rejestracja do systemu(uczestnik)
+1.	Użytkownik został zgłoszony przez opiekuna i otrzymał dostęp do rejestracji na pocztę elektroniczną
+a.	Użytkownik nie dostał maila, zgłasza ten fakt do opiekuna grupy, a ten rozwiązuje problem poprzez kontakt z administratorem grupy
+2.	Użytkownik wchodzi na link podany w wiadomości, wpisuje własne hasło i rejestruje się do systemu.
+3.	Użytkownik zostaje automatycznie zalogowany do serwisu.
+
+Logowanie się do systemu(uczestnik)
+1.	Użytkownik wchodzi na stronę serwisu i wpisuje w odpowiednie pola adres e-mail oraz hasło
+a.	Hasło bądź adres e-mail jest niepoprawny, system odsyła użytkownika do ponownego zalogowania.
+2.	Hasło i adres e-mail są poprawne, użytkownik zostaje zalogowany do serwisu.
+
+Sprawdzenie miejsca zakwaterowania(uczestnik)
+	
+	Warunek wstępny: użytkownik musi być zalogowany do serwisu.
+
+1.	Użytkownik wybiera opcję sprawdzenia miejsca zakwaterowania z menu.
+2.	System wyświetla stronę hostelu/hotelu z informacjami  dla użytkownika.
+
+Odzyskanie hasła(uczestnik)
+1.	Użytkownik wybiera opcję odzyskania hasła
+2.	System wysyła zapytanie o adres e-mail, który został użyty podczas rejestracji
+3.	Użytkownik wpisuje adres e-mail i zatwierdza jego wprowadzenie
+a.	Adres nie istnieje w bazie danych, system prosi o ponowne wprowadzenie adresu
+4.	Na podany adres zostaje wysłana wiadomość z linkiem odsyłającym do zmiany hasła.
+5.	Użytkownik wpisuje nowe hasło i zatwierdza zmiany
+6.	Użytkownik zostaje automatycznie zalogowany do serwisu.
