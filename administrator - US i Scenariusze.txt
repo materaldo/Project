@@ -1,0 +1,39 @@
+Jako administrator chcê wprowadzaæ nowe miejsca noclegowe celem aktualizacji bazy danych.
+Jako administrator chcê mieæ wgl¹d w listê uczestników imprezy celem kontrolowania bie¿¹cego stanu.
+Jako administrator chcê móc rêcznie zmieniaæ przydzia³ noclegowy u¿ytkowników, aby uwzglêdniæ szczególne przypadki i ¿¹dania.
+Jako administrator chcê widzieæ liczbê zajêtych i wolnych miejsc w poszczególnych miejscach noclegowych, aby wiedzieæ, czy potrzebne bêd¹ dodatkowe miejsca dla uczestników.
+Jako administrator chcê modyfikowaæ istniej¹ce miejsca noclegowe oraz ich atrybuty, celem wprowadzania zaistnia³ych zmian.
+Jako administrator chcê zbiorow¹ wiadomoœæ do wszystkich opiekunów zarejestrowanych w systemie.
+Jako administrator chcê przeszukiwaæ listê uczestników wydarzenia, aby ³atwo znaleŸæ osobê, której przydzia³ chcê zmodyfikowaæ.
+Jako administrator chcê zatwierdzaæ nowych u¿ytkowników systemu, aby zweryfikowaæ zarejestrowanych u¿ytkowników.
+
+
+Dodawanie miejsc do bazy noclegowej (administrator)
+1. U¿ytkownik uruchamia ³¹cze "baza noclegowa".
+2. System wyœwietla aktualn¹ bazê noclegow¹ wraz z liczbami dostêpnych miejsc.
+3. U¿ytkownik naciska przycisk "Dodaj nowe miejsce".
+4. System wyœwietla formularz dodawania nowego miejsca.
+5. U¿ytkownik wprowadza nastêpuj¹ce dane: adres, lokalizacjê?, status, miejsca ogó³em i zatwierdza wprowadzanie.
+6. System tworzy nowy obiekt bazy danych ustawiaj¹c identyfikator na kolejn¹ liczbê naturaln¹ i miejsca zajête na 0, oraz pozosta³e dane wprowadzone przez u¿ytkownika.
+
+Wyszukiwanie (administrator)
+1. U¿ytkownik wybiera opcjê "wyszukaj".
+2. U¿ytkownik wybiera z listy rozwijalnej typ szukanego bytu.
+3. System wyœwietla odpowiedni dla danego typu formularz umo¿liwiaj¹cy wyszukanie ¿¹danych danych.
+4. U¿ytkownik wprowadza dane identyfikuj¹ce szukany obiekt i naciska przycisk "Szukaj".
+	4a. U¿ytkownik naciska przycisk "wyœwietl wszystkie".
+	4b. System wyœwietla listê wszystkich obiektów danego typu.
+5. System wyœwietla listê obiektów spe³niaj¹cych podane kryteria.
+	5a. System wyœwietla komunikat "brak ... spe³niaj¹cych kryteria"
+6. U¿ytkownik wybiera ¿¹dany obiekt z listy.
+
+Rêczna zmiana przydzia³u miejsca noclegu (administrator)
+1. U¿ytkownik wyszukuje i wybiera ¿¹danego uczestnika (-> scenariusz wyszukiwanie).
+2. System wyœwietla dane szczegó³owe wybranego uczestnika.
+3. U¿ytkownik wybiera opcjê "edytuj przydzia³".
+4. U¿ytkownik wyszukuje i wybiera miejsce noclegowe (-> scenariusz wyszukiwanie, punkt 3).
+5. System wraca do strony danych uczestnikach i aktualizuje informacjê o miejscu noclegowym.
+6. U¿ytkownik naciska przycisk "zapisz zmiany".
+	6a. U¿ytkownik naciska przycisk "anuluj zmiany".
+	6b. System przywraca dane uczestnika do wczeœniejszego stanu i nie wprowadza zmian do bazy danych.
+7. System aktualizuje informacjê o miejscu noclegowym uczestnika w bazie danych.
