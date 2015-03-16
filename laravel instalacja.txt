@@ -1,0 +1,52 @@
+pre: zainstaluj xamppa, composer (bedzie prosil o wybranie pliku php.exe z folderu xampp->php)
+1. rozpakuj laravel 4.2.1
+2. przenies do folderu do ktorego chcesz
+3. przejdz w cmd do sciezki tego folderu
+4. wpisz composer install
+5. windows->system32->drivers->etc
+6. otwieramy notatnik jako administrator
+7. otwieramy w nim plik hosts
+8. dopisujemy w tym pliku na dole 
+	127.0.0.x (x!={1,2})	nazwa
+	np. 
+	127.0.0.6	ztp.dev
+9. xampp->apache->conf->extra->trzecie od do³u (vhosts)
+10. wklejamy na dole tego pliku (przyk³adowo:)
+<VirtualHost 127.0.0.6>
+    DocumentRoot "C:\ZTP\Zadanie 0\public"
+    ServerName ztp.dev
+	<Directory "C:\ZTP\Zadanie 0\public">
+   ## Order allow,deny
+    ##Allow from all
+	Require all granted
+  </Directory>
+</VirtualHost>
+œcie¿ka mo¿e siê zmieniaæ w zaleznosci gdzie mamy folder public laravela
+11. do tej pory powinno ju¿ dzia³aæ w przegl¹darce http://ztp.dev
+------------------------------------------------
+12. wpisz w cmd: 
+	php artisan key:generate
+13. folder zadanie0/bootstrap -> plik start.php
+14. podmieniamy zmienn¹ environment:
+$env = $app->detectEnvironment(function(){
+	return 'local';
+});
+15. wchodzimy w phpMyAdmin (przez localhosta)
+16. tworzymy now¹ bazê danych np. ztp_zadanie0
+17. otwieramy folder app/config
+18. plik databse.php:
+	z 'mysql' zmieniamy username na 'root' i database na 'ztp_zadanie0'
+19. plik app.php:
+	'debug' na true	
+	'url' na 'http://ztp.dev'
+20. wchodzimy do folderu local -> plik databse.php:
+	z 'mysql' zmieniamy username na 'root' i database na 'ztp_zadanie0
+(to samo co wczeœniej w 18)
+21. wpisujemy w cmd:
+	php artisan migrate:install
+22. przyk³ad tworzenia bazy faktury:
+	w cmd:
+	php artisan migrate:make create_faktury_table
+23. tworzy migracje w zadanie0/app/database/migrations
+mo¿emy j¹ sobie otworzyæ i tam uzupe³niamy funkcje up i down
+24. edycja plików w controllers, models, views i routes
