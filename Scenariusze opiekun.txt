@@ -1,0 +1,55 @@
+Jako opiekun chcę mieć możliwość dodania nowej grupy.
+Jako opiekun chcę wprowadzać dane mojej grupy.
+Jako opiekun chcę mieć wgląd w dane rekordów mojej grupy w celu kontrolowania bieżącego stanu.
+Jako opiekun chcę mieć możliwość edycji rekordów mojej grupy, w celu uaktualniania danych.
+Jako opiekun chcę mieć możliwość wysyłania wiadomości do wszystkich członków mojej grupy.
+Jako opiekun chcę mieć możliwość logowania celem potwierdzenia swojej osoby.
+Jako opiekun chcę mieć możliwość rejestracji, aby mieć dostęp do nowych funkcjonalności.
+Jako opiekun chcę mieć możliwość wysłania wiadomości do administratora.
+Jako opiekun chcę mieć możliwość wyszukania uczestnika na podstawie wprowadzonych danych.
+ 
+Wyszukanie uzytkownika na podstawie wprowadzonych danych(opiekun)
+1. Opiekun wybiera opcję wyszukaj.
+2. System wyświetla odpowiedni formularz umożliwiający wyszukanie.
+3. Użytkownik wprowadza dane identyfikujące szukany obiekt i naciska przycisk "Szukaj".
+4. System wyświetla użytkownika/ użytkowników, którzy spełniają kryteria.
+
+3a. System wyświetla informacje o błędzie " Użytkownik nie należy do twojej grupy".
+4a. Użytkownik wybiera użytkownika z listy.
+
+Dodawanie grupy(opiekun)
+1. Użytkownik uruchamia opcję tworzenia nowej grupy.
+2. System wyświetla formularz tworzenia grupy.
+3. Użytkownik uzupełnia wymagane dane.
+4. System dodaje grupę do bazy danych.
+
+Zarządzanie uczestnikami(opiekun)
+1. Użytkownik uruchamia opcję edycji grupy.
+2. System przechodzi do wybranej grupy.
+3. Użytkownik dodaje dane nowego uczestnika.
+4. System zatwierdza operację.
+
+3a. Użytkownik dokonuje edycji użytkownika.
+4a. System zatwierdza zmianę.
+
+3b. Użytkownik usuwa uczestnika z grupy.
+4b. System zatwierdza zmianę.
+
+Rejestracja w systemie(opiekun)
+
+1. Niezalogowany użytkownik wybiera opcję rejestracji.
+2. System przechodzi do rejestracji.
+3. Niezalogowany użytkownik wypełnia wymagane dane.
+4. System wysyła na adres email podany przy rejestracji link potwierdzający rejestrację.
+
+Logowanie do systemu(opiekun)
+
+1. Niezalogowany użytkownik wpisuje dane do logowania.
+2. System stwierdza poprawność danych i loguje użytkownika do witryny.
+
+2a. System stwierdza niepoprawność danych. Powrót do 1.
+
+
+
+
+
