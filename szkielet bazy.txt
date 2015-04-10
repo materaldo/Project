@@ -1,13 +1,36 @@
 Schemat bazy danych:
 
+<<<<<<< HEAD
 OPIEKUNOWIE(id_op, login UNIQUE, haslo, imie NOT NULL, nazwisko NOT NULL, email UNIQUE NOT NULL, nr_kontaktowy NOT NULL, nr_zapasowy, #narodowosc not null, 
 #jezyk not null, nr_paszportu, nr_ubezpieczenia)
 GRUPY(id_grupa, #id_opiekun not null,....)
 GRUPY_NOCLEGOWE(id, #id_grupa, #id_noc)
 UCZESTNICY(id_uzyt, haslo, email NOT NULL UNIQUE, imie, nazwisko, dataurodzenia, #narodowosc, #jezyk, nr_dokumentu, nr_ubezpieczenia, #id_grupa)
+=======
+<<<<<<< HEAD
+OPIEKUNI(login UNIQUE, haslo, imie NOT NULL, nazwisko NOT NULL, email UNIQUE NOT NULL, nr_kontaktowy NOT NULL, nr_zapasowy, narodowosc, jezyk, nr_paszportu, nr_ubezpieczenia)
+
+GRUPY(id_grupa, #id_opiekun, #id_nocleg)
+
+UCZESTNICY(id_uzyt, haslo, imie, nazwisko, dataurodzenia, narodowosc, jezyk, nr_dokumentu, nr_ubezpieczenia, #id_grupa)
+
+NOCLEGI(id, adres, mapa, status, miejsca zajete, miejsca ogolem)
+
+ORGANIZATORZY(id, login, haslo, email)
+
+NARODOWSCI
+
+JEZYKI
+
+=======
+OPIEKUNOWIE(login UNIQUE, haslo, imie NOT NULL, nazwisko NOT NULL, email UNIQUE NOT NULL, nr_kontaktowy NOT NULL, nr_zapasowy, narodowosc, jezyk, nr_paszportu, nr_ubezpieczenia)
+GRUPY(id_grupa, #id_opiekun, #id_nocleg)
+UCZESTNICY(id_uzyt, haslo, email NOT NULL UNIQUE, imie, nazwisko, dataurodzenia, narodowosc, jezyk, nr_dokumentu, nr_ubezpieczenia, #id_grupa)
+>>>>>>> origin/master
 NARODOWOSCI(id, kraj)
 JEZYKI(id, język)
 MIEJSCA NOCLEGOWE(id_noc, ulica, numer_mieszkania, kod_pocztowy, miejscowość, telefon, mapa, miejsca zajete, miejsca ogolem)
 ORGANIZATORZY(id, login, haslo, email NOT NULL UNIQUE, telefon)
 
 //duzo tu brakuje
+>>>>>>> origin/master
