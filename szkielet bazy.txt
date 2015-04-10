@@ -1,6 +1,16 @@
 Schemat bazy danych:
-OPIEKUN(login UNIQUE, haslo, imie NOT NULL, nazwisko NOT NULL, email UNIQUE NOT NULL, nr_kontaktowy NOT NULL, nr_zapasowy, narodowosc, jezyk, nr_paszportu, nr_ubezpieczenia)
-GRUPA(id_grupa, #id_opiekun, #id_nocleg)
-UCZESTNIK(id_uzyt, haslo, imie, nazwisko, dataurodzenia, narodowosc, jezyk, nr_dokumentu, nr_ubezpieczenia, #id_grupa)
-MIEJSCE NOCLEGOWE(id, adres, mapa, status, miejsca zajete, miejsca ogolem)
-ADMINISTRATOR(id, login, haslo, email)
+
+OPIEKUNI(login UNIQUE, haslo, imie NOT NULL, nazwisko NOT NULL, email UNIQUE NOT NULL, nr_kontaktowy NOT NULL, nr_zapasowy, narodowosc, jezyk, nr_paszportu, nr_ubezpieczenia)
+
+GRUPY(id_grupa, #id_opiekun, #id_nocleg)
+
+UCZESTNICY(id_uzyt, haslo, imie, nazwisko, dataurodzenia, narodowosc, jezyk, nr_dokumentu, nr_ubezpieczenia, #id_grupa)
+
+NOCLEGI(id, adres, mapa, status, miejsca zajete, miejsca ogolem)
+
+ORGANIZATORZY(id, login, haslo, email)
+
+NARODOWSCI
+
+JEZYKI
+
