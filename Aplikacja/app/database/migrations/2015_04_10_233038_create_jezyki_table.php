@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUczestnicyTable extends Migration {
+class CreateJezykiTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,13 @@ class CreateUczestnicyTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('jezyki', function($table)
+		{
+			$table->increments('id_j');
+			//$table->primary('id_j');
+			$table->string('jezyk');
+			$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +28,7 @@ class CreateUczestnicyTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('jezyki');
 	}
 
 }

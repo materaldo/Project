@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOpiekunowieTable extends Migration {
+class CreateNarodowosciTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,11 @@ class CreateOpiekunowieTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('opiekunowie', function($table)
+		Schema::create('narodowosci', function($table)
 		{
-			//$table->increments('id');
-			$table->string('login');
-			$table->string('imie');
-			$table->string('nazwisko');
-			//$table->integer('rokZal');
+			$table->increments('id_n');
+			//$table->primary('id_n');
+			$table->string('kraj');
 			$table->timestamps();
 		});
 	}
@@ -30,7 +28,7 @@ class CreateOpiekunowieTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('opiekunowie');
+		Schema::drop('narodowosci');
 	}
 
 }
