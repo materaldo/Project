@@ -18,7 +18,7 @@
         <div id="logo">
             <div id="logo_text">
 
-                <h2>Simple. Contemporary. Website Template.</h2>
+         
             </div>
         </div>
         <nav>

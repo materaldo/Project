@@ -45,13 +45,9 @@ class HomeController extends BaseController {
 	{
 		return View::make('nocleg_dodaj');
 	}
-<<<<<<< HEAD
-	
+
 	public function getLogin()
 	{
 		return View::make('login');
 	}
-
-=======
->>>>>>> origin/master
 }
