@@ -29,13 +29,13 @@
 				<td>Liczba miejsc ogółem</td>
 			</tr>		
 			<tr>
-				<td><img src="images/hotel1.jpg" alt="hotel1"/></td>
+				<td><img src="{{asset('images/hotel1.jpg')}}" alt="hotel1"/></td>
 				<td>Hotel Miejski<br>ul. Zielona 30a, 50-335 Wrocław</td>
 				<td align="middle">43</td>
 				<td align="middle">200</td>
 			</tr>
 			<tr>
-				<td><img src="images/hotel2.jpg" alt="hotel2"/></td>
+				<td><img src="{{asset('images/hotel2.jpg')}}" alt="hotel2"/></td>
 				<td>Szkoła Podstawowa im. Kazimierza Wielkiego<br>ul. Akademicka 21, 50-342 Wrocław</td>
 				<td align="middle">12</td>
 				<td align="middle">60</td>

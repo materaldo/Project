@@ -20,6 +20,21 @@ class HomeController extends BaseController {
 		return View::make('index');
 	}
 	
+	public function getOrganizator()
+	{
+		return View::make('organizator');
+	}
+	
+	public function getOpiekun()
+	{
+		return View::make('opiekun');
+	}
+	
+	public function getUczestnik()
+	{
+		return View::make('uczestnik');
+	}
+	
 	public function getBaza()
 	{
 		return View::make('bazanoclegowa');

@@ -13,11 +13,7 @@
 </head>
 <body>
 
-<p>Zalogowany jako:<br>
-<a href = "http://zpi.dev/index.php/organizator">Organizator</a><br>
-<a href = "http://zpi.dev/index.php/opiekun">Opiekun</a><br>
-<a href = "http://zpi.dev/index.php/uczestnik">Uczestnik</a>
-</p>
+Witaj opiekunie!
 
 </body>
 </html>

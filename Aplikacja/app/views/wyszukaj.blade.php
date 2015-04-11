@@ -9,6 +9,7 @@
 	<title>Strona główna orgranizatora</title>
 	
 	{{HTML::style('css/style.css');}}
+	{{HTML::script('js/wyszukiwanie.js');}}
 </head>
 <body>
 
