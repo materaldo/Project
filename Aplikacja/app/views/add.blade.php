@@ -11,7 +11,7 @@
 	{{HTML::style('css/style.css');}}
 	</head>
 <body>              
-                <form method = "post" action = "bazanoclegowa.php">
+                <form method = "post" action = "http://zpi.dev/index.php/addplace">
                  
 								 
                 <h4><label>Nazwa:<br>

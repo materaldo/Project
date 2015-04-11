@@ -50,4 +50,15 @@ class HomeController extends BaseController {
 	{
 		return View::make('login');
 	}
+	
+	public function getAddplace()
+	{
+		$ulica = Input::get('nazwa');
+
+		$nocleg = new MiejsceNoclegowe();
+		$nocleg->ulica = $nazwa;
+		$nocleg->save();
+
+		return View::make('places');	
+	}
 }
