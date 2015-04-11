@@ -126,5 +126,6 @@
     </form>
 </table>
 <br><br>
+<a href = "http://zpi.dev/index.php/organizator">Powrót do strony głównej</a>
 </body>
 </html>
