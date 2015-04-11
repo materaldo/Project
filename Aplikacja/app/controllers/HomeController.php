@@ -36,8 +36,15 @@ class HomeController extends BaseController {
 	{
 		return View::make('informations');
 	}
+<<<<<<< HEAD
 	public function getContact()
 	{
 		return View::make('contact');
+=======
+	
+	public function getDodaj()
+	{
+		return View::make('nocleg_dodaj');
+>>>>>>> origin/master
 	}
 }

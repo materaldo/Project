@@ -41,8 +41,16 @@
 		</table>
 
 <p>Tutaj lista miejsc noclegowych pobrana z bazy danych</p>
+<<<<<<< HEAD:Aplikacja/app/views/places.blade.php
 <a class="clickMe" href="nowynocleg.php">Dodaj nowe miejsce</a>
 
 @stop
 
 
+=======
+<a class="clickMe" href="http://zpi.dev/index.php/dodaj">Dodaj nowe miejsce</a>
+<br><br>
+<a href="http://zpi.dev/index.php/organizator">Powrót do strony głównej</a>
+</body>
+</html>
+>>>>>>> origin/master:Aplikacja/app/views/bazanoclegowa.blade.php
