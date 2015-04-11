@@ -45,9 +45,9 @@ class HomeController extends BaseController {
 		return View::make('wyszukaj');
 	}
 	
-	public function showWelcome()
+	public function getDodaj()
 	{
-		return View::make('hello');
+		return View::make('nocleg_dodaj');
 	}
 
 }

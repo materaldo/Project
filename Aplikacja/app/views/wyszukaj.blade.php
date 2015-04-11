@@ -126,6 +126,5 @@
     </form>
 </table>
 <br><br>
-<a href="index.php">Powrót do strony głównej</a>
 </body>
 </html>
