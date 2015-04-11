@@ -15,7 +15,6 @@ class CreateMiejscanoclegoweTable extends Migration {
 		Schema::create('miejscanoclegowe', function($table)
 		{
 			$table->increments('id_noc');
-			//$table->primary('id_org');
 			$table->string('ulica');
 			$table->string('nr_mieszkania');
 			$table->string('kod_pocztowy');
@@ -25,7 +24,7 @@ class CreateMiejscanoclegoweTable extends Migration {
 			$table->integer('miejsca_wolne');
 			$table->integer('miejsca_ogolem');
 			$table->timestamps();
-		});
+		});		
 	}
 
 	/**

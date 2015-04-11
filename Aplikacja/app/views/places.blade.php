@@ -41,6 +41,11 @@
 		</table>
 
 <p>Tutaj lista miejsc noclegowych pobrana z bazy danych</p>
+<<<<<<< HEAD
 <a class="clickMe" href="http://zpi.dev/index.php/add">Dodaj nowe miejsce</a>
+=======
+
+<a class="clickMe" href="nowynocleg.php">Dodaj nowe miejsce</a>
+>>>>>>> origin/master
 
 @stop
