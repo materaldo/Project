@@ -7,7 +7,7 @@
             <h1>Zmiana Zakwaterowania</h1>
 			<p>Prszę wypałnić formularz dotyczący preferencji miejsca zakwaterownia. Pomoże nam on znaleźć odpowiedznie dla Ciebie miejsce.
             
-            <form name="FormularzZmiana" action="zamiana.html" method="post">
+            <form name="FormularzZmiana" action="zamiana.php" method="post">
 			
 			
              
@@ -33,6 +33,6 @@
                <input type="reset" value="Wyczyść">
               </p>
             </form>
-            <a href="index.html">Powrót</a>
+            <a href="index.php">Powrót</a>
 
     @stop

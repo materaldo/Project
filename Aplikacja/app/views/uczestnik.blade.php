@@ -14,6 +14,6 @@
 <p>50-201 Wrocław</p>
 <p>tel: 71 326 78 00</p>
 
-<a href="zamiana.html">Chcę zmienić zakawterowanie</a>
+<a href="zamiana.php">Chcę zmienić zakawterowanie</a>
 
 @stop
