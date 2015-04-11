@@ -15,6 +15,12 @@
 
 <div id="main">
     <header>
+        <div id="logo">
+            <div id="logo_text">
+
+         
+            </div>
+        </div>
         <nav>
             <div id="menu_container">
                 <ul class="sf-menu" id="nav">
