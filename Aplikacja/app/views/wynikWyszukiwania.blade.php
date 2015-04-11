@@ -7,6 +7,8 @@
 	<meta name="Keywords" content="" />
 	<link rel="Stylesheet" type="text/css" href="styles/style.css" />
 	<title>Strona główna orgranizatora</title>
+	
+	{{HTML::style('css/style.css');}}
 </head>
 <body>
 

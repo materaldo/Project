@@ -7,6 +7,8 @@
 	<link rel="Stylesheet" type="text/css" href="styles/style.css"/>
 	<script type="text/javascript" src="scripts/wyszukiwanie.js"></script>
 	<title>Strona główna orgranizatora</title>
+	
+	{{HTML::style('css/style.css');}}
 </head>
 <body>
 

@@ -7,9 +7,10 @@
 	<meta name="Keywords" content="" />
 	<link rel="Stylesheet" type="text/css" href="styles/style.css" />
 	<title>Strona główna orgranizatora</title>
-</head>
-<body>
 
+	{{HTML::style('css/style.css');}}
+	</head>
+<body>
 
 <h2>BAZA NOCLEGOWA</h2>
 <p>Dodawanie miejsc do bazy noclegowej (administrator)<br>

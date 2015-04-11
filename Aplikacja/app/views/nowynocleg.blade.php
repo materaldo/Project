@@ -7,7 +7,9 @@
 	<meta name="Keywords" content="" />
 	<link rel="Stylesheet" type="text/css" href="styles/style.css" />
 	<title>Strona główna orgranizatora</title>
-</head>
+
+	{{HTML::style('css/style.css');}}
+	</head>
 <body>              
                 <form method = "post" action = "bazanoclegowa.php">
                  
