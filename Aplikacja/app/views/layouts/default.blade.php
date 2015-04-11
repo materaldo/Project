@@ -15,12 +15,6 @@
 
 <div id="main">
     <header>
-        <div id="logo">
-            <div id="logo_text">
-
-                <h2>Simple. Contemporary. Website Template.</h2>
-            </div>
-        </div>
         <nav>
             <div id="menu_container">
                 <ul class="sf-menu" id="nav">
@@ -28,8 +22,8 @@
                     <li><a href="http://zpi.dev/index.php/about">O ŚDM</a></li>
                     <li><a href="http://zpi.dev/index.php/add">Zgłoś grupę</a></li>
                     <li><a href="http://zpi.dev/index.php/places">Nasze miejsca noclegowe</a></li>
-                    <li><a href="http://zpi.dev/index.php/informations">Informacje dla podróżnych</a></li>
                     <li><a href="http://zpi.dev/index.php/contact">Kontakt</a></li>
+                    <li><a href="http://zpi.dev/index.php/login">Zaloguj się</a></li>
                 </ul>
             </div>
         </nav>
@@ -74,7 +68,6 @@
                 <a href="examples.php">O ŚDM</a> |
                 <a href="contact.php">Zgłoś grupę</a> |
                 <a href="contact.php">Nasze miejsca noclegowe</a> |
-                <a href="contact.php">Informacje dla podróżnych</a> |
                 <a href="contact.php">Kontakt</a>
             </p>
 
