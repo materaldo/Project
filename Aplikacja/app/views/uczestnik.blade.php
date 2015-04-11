@@ -1,8 +1,7 @@
 ﻿@extends('layouts.default')
 
 @section('header')
-	<title>Światowe Dni Młodzieży - Wrocaław</title>
-	{{ HTML::style('css/style.css'); }}
+
 @stop
 	
 @section('content')
