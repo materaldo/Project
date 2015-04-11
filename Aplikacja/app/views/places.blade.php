@@ -1,16 +1,14 @@
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
-<head>
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+@extends('layouts.default')
+
+@section('header')
+
 	<meta name="Description" content="" />
 	<meta name="Keywords" content="" />
-	<link rel="Stylesheet" type="text/css" href="styles/style.css" />
-	<title>Strona główna orgranizatora</title>
 
-	{{HTML::style('css/style.css');}}
-	</head>
-<body>
+@stop
+
+@section('content')
 
 <h2>BAZA NOCLEGOWA</h2>
 <p>Dodawanie miejsc do bazy noclegowej (administrator)<br>
@@ -44,7 +42,7 @@
 
 <p>Tutaj lista miejsc noclegowych pobrana z bazy danych</p>
 <a class="clickMe" href="nowynocleg.php">Dodaj nowe miejsce</a>
-<br><br>
-<a href="index.php">Powrót do strony głównej</a>
-</body>
-</html>
+
+@stop
+
+

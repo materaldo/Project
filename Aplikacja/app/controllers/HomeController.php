@@ -20,34 +20,24 @@ class HomeController extends BaseController {
 		return View::make('index');
 	}
 	
-	public function getOrganizator()
+	public function getAbout()
 	{
-		return View::make('organizator');
+		return View::make('about');
 	}
-	
-	public function getOpiekun()
+	public function getAdd()
 	{
-		return View::make('opiekun');
+		return View::make('add');
 	}
-	
-	public function getUczestnik()
+	public function getPlaces()
 	{
-		return View::make('uczestnik');
+		return View::make('places');
 	}
-	
-	public function getBaza()
+	public function getInformations()
 	{
-		return View::make('bazanoclegowa');
+		return View::make('informations');
 	}
-
-	public function getSzukaj()
+	public function getContact()
 	{
-		return View::make('wyszukaj');
+		return View::make('contact');
 	}
-	
-	public function showWelcome()
-	{
-		return View::make('hello');
-	}
-
 }

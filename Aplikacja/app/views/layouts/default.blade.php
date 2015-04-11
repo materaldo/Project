@@ -22,12 +22,12 @@
         <nav>
             <div id="menu_container">
                 <ul class="sf-menu" id="nav">
-                    <li><a href="index.php">Aktalności</a></li>
-                    <li><a href="about.php">O ŚDM</a></li>
-                    <li><a href="add_group.php">Zgłoś grupę</a></li>
-                    <li><a href="places.php">Nasze miejsca noclegowe</a></li>
-                    <li><a href="informations.php">Informacje dla podróżnych</a></li>
-                    <li><a href="contact.php">Kontakt</a></li>
+                    <li><a href="http://zpi.dev/index.php/index">Aktalności</a></li>
+                    <li><a href="http://zpi.dev/index.php/about">O ŚDM</a></li>
+                    <li><a href="http://zpi.dev/index.php/add">Zgłoś grupę</a></li>
+                    <li><a href="http://zpi.dev/index.php/places">Nasze miejsca noclegowe</a></li>
+                    <li><a href="http://zpi.dev/index.php/informations">Informacje dla podróżnych</a></li>
+                    <li><a href="http://zpi.dev/index.php/contact">Kontakt</a></li>
                 </ul>
             </div>
         </nav>
