@@ -50,14 +50,29 @@ class HomeController extends BaseController {
 		return View::make('login');
 	}
 	
-	public function getAddplace()
+	public function getZatwierdz()
 	{
-		$ulica = Input::get('nazwa');
+		$nazwa = Input::get('nazwa');
 
+		//echo $nazwa;
 		$nocleg = new MiejsceNoclegowe();
-		$nocleg->ulica = $nazwa;
+		$nocleg->nazwa = $nazwa;
 		$nocleg->save();
 
 		return View::make('places');	
+	}
+	
+	public function getWyswietl()
+	{
+		$noclegi = MiejsceNoclegowe::all();
+		
+		echo "<table>";
+		foreach ($noclegi as $noc)
+		{
+			echo "<tr><td>" . $noc->nazwa . "</td><td>" . $noc->nazwa . "</td></tr>";
+
+			//echo "Nazwa:" . $noc->nazwa;// . "<br>Nazwa: " . $gr->nazwa . "<br><br>";
+		}	
+		echo "</table>"; 	
 	}
 }

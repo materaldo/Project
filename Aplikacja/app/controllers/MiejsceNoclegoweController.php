@@ -11,4 +11,15 @@ class NoclegController extends BaseController {
 	{
 		return View::make('nocleg_dodaj');
 	}
+	
+	public function getAddplace()
+	{
+		$nazwa = Input::get('nazwa');
+
+		$nocleg = new MiejsceNoclegowe();
+		$nocleg->nazwa = $nazwa;
+		$nocleg->save();
+
+		//return View::make('places');	
+	}
 }
