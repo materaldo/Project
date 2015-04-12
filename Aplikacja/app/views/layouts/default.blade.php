@@ -24,7 +24,7 @@
         <nav>
             <div id="menu_container">
                 <ul class="sf-menu" id="nav">
-                    <li><a href="http://zpi.dev/index.php/index">Aktalności</a></li>
+                    <li><a href="http://zpi.dev/index.php/index">Aktualności</a></li>
                     <li><a href="http://zpi.dev/index.php/about">O ŚDM</a></li>
                     <li><a href="http://zpi.dev/index.php/add">Zgłoś grupę</a></li>
                     <li><a href="http://zpi.dev/index.php/places">Nasze miejsca noclegowe</a></li>

@@ -53,10 +53,26 @@ class HomeController extends BaseController {
 	public function getZatwierdz()
 	{
 		$nazwa = Input::get('nazwa');
-
-		//echo $nazwa;
+		$ulica = Input::get('ulica');
+		$numer = Input::get('numer');
+		$miasto = Input::get('miasto');
+		$kod = Input::get('kod');
+		$telefon = Input::get('telefon');
+		$mapa = Input::get('mapa');
+		$miejsca = Input::get('miejsca');
+		$zdjecie = Input::get('zdjecie');
+		
 		$nocleg = new MiejsceNoclegowe();
 		$nocleg->nazwa = $nazwa;
+		$nocleg->ulica = $ulica;
+		$nocleg->nr_mieszkania = $numer;
+		$nocleg->miejscowosc = $miasto;
+		$nocleg->kod_pocztowy = $kod;
+		$nocleg->telefon = $telefon;
+		$nocleg->mapa = $mapa;
+		$nocleg->miejsca_ogolem = $miejsca;
+		$nocleg->image = $zdjecie;
+		
 		$nocleg->save();
 
 		return View::make('places');	
@@ -69,9 +85,7 @@ class HomeController extends BaseController {
 		echo "<table>";
 		foreach ($noclegi as $noc)
 		{
-			echo "<tr><td>" . $noc->nazwa . "</td><td>" . $noc->nazwa . "</td></tr>";
-
-			//echo "Nazwa:" . $noc->nazwa;// . "<br>Nazwa: " . $gr->nazwa . "<br><br>";
+			echo "<tr><td>" . $noc->zdjecie . "</td><td>" . $noc->nazwa . "<br>" . $noc->ulica . " " . $noc->numer . ", " . $noc->kod . " " . $noc->miasto;
 		}	
 		echo "</table>"; 	
 	}

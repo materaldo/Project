@@ -22,9 +22,20 @@
 	$noclegi = MiejsceNoclegowe::all();
 	
 	foreach ($noclegi as $noc)
-	{
-		echo "<tr><td>" . $noc->nazwa . "</td><td>" . $noc->ulica . "</td><td>". $noc->ulica . "</td><td>". $noc->ulica . "</td></tr>";
-	}	
+		{
+			echo "<tr>
+				<td>
+					<img src=\"" . $noc->zdjecie . "\" alt=\"" . $noc->nazwa ."\"/>
+				</td>
+				<td>" . 
+					$noc->nazwa . "<br>" . $noc->ulica . " " . $noc->nr_mieszkania . ", " . $noc->kod_pocztowy . " " . $noc->miejscowosc . 
+				"</td>
+				<td>" . 
+					$noc->miejsca_wolne . 
+				"</td>
+				<td>" . $noc->miejsca_ogolem . 
+			"</tr>";
+		}	
 ?>
 
 		
