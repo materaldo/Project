@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNarodowosciTable extends Migration {
+class CreateUzytkownicyTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,13 @@ class CreateNarodowosciTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('narodowosci', function($table)
+		Schema::create('uzytkownicy', function($table)
 		{
-			$table->increments('id_n');
-			//$table->primary('id_n');
-			$table->string('kraj');
+			$table->increments('id');
+			$table->string('login')->unique();
+			$table->string('haslo');
+			$table->integer('rola');
+			$table->string('email')->unique();
 			$table->timestamps();
 		});
 	}
@@ -28,7 +30,7 @@ class CreateNarodowosciTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('narodowosci');
+		Schema::drop('uzytkownicy');
 	}
 
 }

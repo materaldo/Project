@@ -14,11 +14,11 @@ class CreateGrupynoclegoweTable extends Migration {
 	{
 		Schema::create('grupynoclegowe', function($table)
 		{
-			$table->increments('id_gn');
+			$table->increments('id');
 			$table->integer('grupa_id')->unsigned();
-			$table->foreign('grupa_id')->references('id_gr')->on('grupy');
+			$table->foreign('grupa_id')->references('id')->on('grupy');
 			$table->integer('nocleg_id')->unsigned();
-			$table->foreign('nocleg_id')->references('id_noc')->on('miejscanoclegowe');
+			$table->foreign('nocleg_id')->references('id')->on('noclegi');
 		});
 	}
 
