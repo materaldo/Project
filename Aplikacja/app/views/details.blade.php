@@ -12,7 +12,7 @@
 
 <h2>BAZA NOCLEGOWA</h2>
 <a href="http://zpi.dev/index.php/edit/{{$idN}}">Edytuj</a>
-<a href="http://zpi.dev/index.php/delete/{{$idN}}" onclick="return confirm('?')">Usuń</a><br><br>
+<a href="http://zpi.dev/index.php/delete/{{$idN}}" onclick="return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')">Usuń</a><br><br>
 <?php
 
 	$noc = MiejsceNoclegowe::find($idN);
