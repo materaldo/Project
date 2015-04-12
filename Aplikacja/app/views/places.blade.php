@@ -27,7 +27,7 @@
 		{
 			echo "<tr>
 				<td>
-					<img src=\"" . $noc->image ."\" alt=\"" . $noc->nazwa ."\" height=\"150\" width=\"100\"/>
+					<a href=http://zpi.dev/index.php/details/" . $noc->id . "><img src=\"" . $noc->image ."\" alt=\"" . $noc->nazwa ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
 					$noc->nazwa . "<br>" . $noc->ulica . " " . $noc->nr_mieszkania . ", " . $noc->kod_pocztowy . " " . $noc->miejscowosc . 

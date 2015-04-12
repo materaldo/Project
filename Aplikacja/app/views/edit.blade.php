@@ -6,12 +6,33 @@
 
 	<meta name="Description" content="" />
 	<meta name="Keywords" content="" />
+	<?php
 	
+	$noc = MiejsceNoclegowe::find($idN);
+	
+		if (isset($idN)){
+			echo "
+	 <script type=\"text/javascript\">
+        function loadData() 
+		{
+			document.getElementById(\"nazwa\").value = \"" . $noc->nazwa . "\";
+			document.getElementById(\"ulica\").value = \"" . $noc->ulica . "\";
+			document.getElementById(\"numer\").value = \"" . $noc->nr_mieszkania . "\";
+			document.getElementById(\"kod\").value = \"" . $noc->kod_pocztowy . "\";
+			document.getElementById(\"miasto\").value = \"" . $noc->miejscowosc . "\";
+			document.getElementById(\"telefon\").value = \"" . $noc->telefon . "\";
+			document.getElementById(\"mapa\").value = \"" . $noc->mapa . "\";
+			document.getElementById(\"miejsca\").value = \"" . $noc->miejsca_ogolem . "\";
+			document.getElementById(\"zdjecie\").value = \"" . $noc->image . "\";
+        }
+        window.onload = loadData;
+        </script>";}
+	?>
 @stop
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/zatwierdz">			 
+<form action = "http://zpi.dev/index.php/zatwierdzedycje/{{$idN}}">			 
         <h4><label>Nazwa:<br>
             <input name = "nazwa" id = "nazwa" type = "text" size = "28"
                 maxlength = "255">
@@ -49,7 +70,7 @@
                 maxlength = "255">
         </label></h4>   
 	<p>		
-		<input type = "submit" id="submit" value = "Dodaj">
+		<input type = "submit" value = "Zatwierdź">
         <input type = "reset" value = "Wyczyść">
     </p>
 </form>

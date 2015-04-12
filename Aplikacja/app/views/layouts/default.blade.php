@@ -26,7 +26,7 @@
                 <ul class="sf-menu" id="nav">
                     <li><a href="http://zpi.dev/index.php/index">Aktualności</a></li>
                     <li><a href="http://zpi.dev/index.php/about">O ŚDM</a></li>
-                    <li><a href="http://zpi.dev/index.php/add">Zgłoś grupę</a></li>
+                    <li><a href="http://zpi.dev/index.php/addgroup">Zgłoś grupę</a></li>
                     <li><a href="http://zpi.dev/index.php/places">Nasze miejsca noclegowe</a></li>
                     <li><a href="http://zpi.dev/index.php/contact">Kontakt</a></li>
                     <li><a href="http://zpi.dev/index.php/login">Zaloguj się</a></li>
@@ -37,11 +37,8 @@
     <div id="site_content">
         <div id="sidebar_container">
             <div class="sidebar">
-                <h3>Latest News</h3>
-                <h4>New Website Launched</h4>
-                <h5>January 1st, 2013</h5>
-
-                <p>2013 sees the redesign of our website. <a href="#">Read more</a></p>
+				<h1>ŚDM Kraków 2016</h1>
+				<a href="http://www.krakow2016.com"><img src="http://www.krakow2016.com/common/images/logos/logo_pl.png"/></a>
             </div>
             <div class="sidebar">
                 <h3>Useful Links</h3>

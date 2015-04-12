@@ -78,6 +78,25 @@ class HomeController extends BaseController {
 		return View::make('places');	
 	}
 	
+	public function getZatwierdzedycje($id)
+	{
+		$nazwa = Input::get('nazwa');
+		$ulica = Input::get('ulica');
+		$numer = Input::get('numer');
+		$miasto = Input::get('miasto');
+		$kod = Input::get('kod');
+		$telefon = Input::get('telefon');
+		$mapa = Input::get('mapa');
+		$miejsca = Input::get('miejsca');
+		$zdjecie = Input::get('zdjecie');
+		
+		$nocleg = MiejsceNoclegowe::find($id);
+		
+		$nocleg->update(array('nazwa' => $nazwa));
+
+		return View::make('places');	
+	}
+	
 	public function getWyswietl()
 	{
 		$noclegi = MiejsceNoclegowe::all();
@@ -88,5 +107,30 @@ class HomeController extends BaseController {
 			echo "<tr><td>" . $noc->zdjecie . "</td><td>" . $noc->nazwa . "<br>" . $noc->ulica . " " . $noc->numer . ", " . $noc->kod . " " . $noc->miasto;
 		}	
 		echo "</table>"; 	
+	}
+	
+	public function getAddgroup()
+	{
+		echo "TODO";
+	}
+	
+	public function getDetails($id)
+	{
+		return View::make('details')->with('idN', $id);
+	}
+	
+	public function getEdit($id)
+	{
+		return View::make('edit')->with('idN', $id);
+	}
+	
+	public function getDelete($id)
+	{
+		if($id>0)
+		{
+			$nocleg = MiejsceNoclegowe::find($id);
+			$nocleg->delete();
+		}
+		return View::make('places');
 	}
 }
