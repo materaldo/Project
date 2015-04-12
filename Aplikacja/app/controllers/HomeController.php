@@ -90,10 +90,6 @@ class HomeController extends BaseController {
 		$miejsca = Input::get('miejsca');
 		$zdjecie = Input::get('zdjecie');
 		
-		//$nocleg = MiejsceNoclegowe::find($id);
-		
-		//$nocleg->update(array('nazwa' => $nazwa));
-
 		MiejsceNoclegowe::where('id', $id)->update(array(
 			'nazwa'=>$nazwa,
 			'ulica'=>$ulica,
@@ -144,5 +140,15 @@ class HomeController extends BaseController {
 			$nocleg->delete();
 		}
 		return View::make('places');
+	}
+	
+	public function getSearch()
+	{
+		return View::make('search');
+	}
+	
+	public function getResults()
+	{
+		return View::make('search_results');
 	}
 }

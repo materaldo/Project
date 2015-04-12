@@ -1,6 +1,7 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
-<head>
-	
+@extends('layouts.default')
+
+@section('header')
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="Description" content=""/>
 	<meta name="Keywords" content=""/>
@@ -10,9 +11,11 @@
 	
 	{{HTML::style('css/style.css');}}
 	{{HTML::script('js/wyszukiwanie.js');}}
-</head>
-<body>
 
+@stop
+
+@section('content')
+       
 <h2>WYSZUKIWANIE</h2>
 		<p>Wybierz czego szukasz: </p>
 				<select id="wyborSzukanych" onchange="wyswietlFormularz()">
@@ -24,7 +27,7 @@
 				</select>
 			
 <table id="szukajUczestnik">
-    <form action = "wynikWyszukiwania.php">
+    <form action = "http://zpi.dev/index.php/results">
 		<tr>
 			<td>						 
                 <h4><label>Imię:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
@@ -50,7 +53,7 @@
     </form>
 </table>
 <table id="szukajOpiekun">
-    <form method = "post" action = "wynikWyszukiwania.php">
+    <form action = "http://zpi.dev/index.php/results">
 		<tr>
 			<td>						 
                 <h4><label>Imię:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
@@ -76,7 +79,7 @@
     </form>
 </table>
 <table id="szukajGrupa">
-    <form method = "post" action = "wynikWyszukiwania.html">
+    <form action = "http://zpi.dev/index.php/results">
 		<tr>
 			<td>						 
                 <h4><label>Nazwa:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
@@ -103,7 +106,7 @@
 </table>
 
 <table id="szukajNocleg">
-    <form method = "post" action = "wynikWyszukiwania.php">
+    <form action = "http://zpi.dev/index.php/results">
 		<tr>
 			<td>						 
                 <h4><label>Nazwa:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
@@ -126,6 +129,5 @@
     </form>
 </table>
 <br><br>
-<a href = "http://zpi.dev/index.php/organizator">Powrót do strony głównej</a>
-</body>
-</html>
+
+@stop

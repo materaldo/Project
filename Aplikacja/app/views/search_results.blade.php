@@ -1,7 +1,7 @@
+@extends('layouts.default')
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
-<head>
-	
+@section('header')
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="Description" content="" />
 	<meta name="Keywords" content="" />
@@ -9,9 +9,10 @@
 	<title>Strona główna orgranizatora</title>
 	
 	{{HTML::style('css/style.css');}}
-</head>
-<body>
 
+@stop
+
+@section('content')
 
 <h2>WYNIKI WYSZUKIWANIA</h2>
 
@@ -34,5 +35,5 @@
 		</table>
 	<br>
 <a href="index.php">Powrót do strony głównej</a>
-</body>
-</html>
+
+@stop
