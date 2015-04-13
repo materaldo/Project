@@ -18,7 +18,7 @@ class NoclegController extends BaseController {
 	{
 		return View::make('nocleg_dodaj');
 	}
-	public function getZatwierdz()
+	public function getConfirm()
 	{
 		$nazwa = Input::get('nazwa');
 		$ulica = Input::get('ulica');
@@ -30,24 +30,24 @@ class NoclegController extends BaseController {
 		$miejsca = Input::get('miejsca');
 		$zdjecie = Input::get('zdjecie');
 		
-		$nocleg = new Nocleg();
-		$nocleg->nazwa = $nazwa;
-		$nocleg->ulica = $ulica;
-		$nocleg->nr_budynku = $numer;
-		$nocleg->miejscowosc = $miasto;
-		$nocleg->kod_pocztowy = $kod;
-		$nocleg->telefon = $telefon;
-		$nocleg->mapa = $mapa;
-		$nocleg->miejsca_wolne = $miejsca;
-		$nocleg->miejsca_ogolem = $miejsca;
-		$nocleg->zdjecie = $zdjecie;
+		$acc = new Accommodation();
+		$acc->name = $nazwa;
+		$acc->street = $ulica;
+		$acc->building = $numer;
+		$acc->city = $miasto;
+		$acc->post_code = $kod;
+		$acc->phone_number = $telefon;
+		$acc->map = $mapa;
+		$acc->free_places = $miejsca;
+		$acc->all_places = $miejsca;
+		$acc->image = $zdjecie;
 		
-		$nocleg->save();
+		$acc->save();
 
 		return View::make('places');	
 	}
 	
-	public function getZatwierdzedycje($id)
+	public function getConfirmedit($id)
 	{
 		$nazwa = Input::get('nazwa');
 		$ulica = Input::get('ulica');
@@ -59,27 +59,27 @@ class NoclegController extends BaseController {
 		$miejsca = Input::get('miejsca');
 		$zdjecie = Input::get('zdjecie');
 		
-		Nocleg::where('id', $id)->update(array(
-			'nazwa'=>$nazwa,
-			'ulica'=>$ulica,
-			'nr_budynku'=>$numer,
-			'miejscowosc'=>$miasto,
-			'kod_pocztowy'=>$kod,
-			'telefon'=>$telefon,
-			'mapa'=>$mapa,
-			'miejsca_ogolem'=>$miejsca,
-			'zdjecie'=>$zdjecie
+		Accommodation::where('id', $id)->update(array(
+			'name'=>$nazwa,
+			'street'=>$ulica,
+			'building'=>$numer,
+			'city'=>$miasto,
+			'post_code'=>$kod,
+			'phone_number'=>$telefon,
+			'map'=>$mapa,
+			'all_places'=>$miejsca,
+			'image'=>$zdjecie
 			));
 		
 		return View::make('places');	
 	}
 	
-	public function getWyswietl()
+	public function getDisplay()
 	{
-		$noclegi = Nocleg::all();
+		$accommod = Accommodations::all();
 		
 		echo "<table>";
-		foreach ($noclegi as $noc)
+		foreach ($accommod as $noc)
 		{
 			echo "<tr><td>" . $noc->zdjecie . "</td><td>" . $noc->nazwa . "<br>" . $noc->ulica . " " . $noc->numer . ", " . $noc->kod . " " . $noc->miasto;
 		}	
@@ -105,8 +105,8 @@ class NoclegController extends BaseController {
 	{
 		if($id>0)
 		{
-			$nocleg = Nocleg::find($id);
-			$nocleg->delete();
+			$acc = Accommodation::find($id);
+			$acc->delete();
 		}
 		return View::make('places');
 	}

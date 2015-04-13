@@ -11,7 +11,7 @@
 @section('content')
 
 <h2>BAZA NOCLEGOWA</h2>
-<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Dodaj nowe miejsce</a>
+<a class="clickMe" href="http://zpi.dev/index.php/accommod/add">Dodaj nowe miejsce</a>
 
 	<table id="baza">	
 		<tr>
@@ -21,21 +21,21 @@
 			<td>Liczba miejsc ogółem</td>
 		</tr>	
 <?php
-	$noclegi = Nocleg::all();
+	$accommod = Accommodation::all();
 	
-	foreach ($noclegi as $noc)
+	foreach ($accommod as $acc)
 		{
 			echo "<tr>
 				<td>
-					<a href=http://zpi.dev/index.php/nocleg/details/" . $noc->id . "><img src=\"" . $noc->zdjecie ."\" alt=\"" . $noc->nazwa ."\" height=\"150\" width=\"100\"/></a>
+					<a href=http://zpi.dev/index.php/accommod/details/" . $acc->id . "><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
-					$noc->nazwa . "<br>" . $noc->ulica . " " . $noc->nr_budynku . ", " . $noc->kod_pocztowy . " " . $noc->miejscowosc . 
+					$acc->name . "<br>" . $acc->street . " " . $acc->building . ", " . $acc->post_code . " " . $acc->city . 
 				"</td>
 				<td align=\"middle\">" . 
-					$noc->miejsca_wolne . 
+					$acc->free_places . 
 				"</td>
-				<td align=\"middle\">" . $noc->miejsca_ogolem . 
+				<td align=\"middle\">" . $acc->all_places . 
 			"</tr>";
 		}	
 ?>
