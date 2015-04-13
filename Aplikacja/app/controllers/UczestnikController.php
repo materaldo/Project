@@ -1,6 +1,6 @@
 <?php
 
-class NoclegController extends BaseController {
+class UczestnikController extends BaseController {
 
 	public function getIndex()
 	{
