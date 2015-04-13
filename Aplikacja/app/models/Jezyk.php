@@ -7,5 +7,5 @@ class Jezyk extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'jezyki';
+	protected $table = 'languages';
 }

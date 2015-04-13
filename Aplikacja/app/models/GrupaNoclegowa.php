@@ -7,5 +7,5 @@ class GrupaNoclegowa extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'grupynoclegowe';
+	protected $table = 'groups_accommodations';
 }
