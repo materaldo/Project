@@ -16,7 +16,7 @@ class NoclegController extends BaseController {
 	{
 		$nazwa = Input::get('nazwa');
 
-		$nocleg = new MiejsceNoclegowe();
+		$nocleg = new Nocleg();
 		$nocleg->nazwa = $nazwa;
 		$nocleg->save();
 

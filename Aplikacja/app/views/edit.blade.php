@@ -8,7 +8,7 @@
 	<meta name="Keywords" content="" />
 	<?php
 	
-	$noc = MiejsceNoclegowe::find($idN);
+	$noc = Nocleg::find($idN);
 	
 		if (isset($idN)){
 			echo "
@@ -17,13 +17,13 @@
 		{
 			document.getElementById(\"nazwa\").value = \"" . $noc->nazwa . "\";
 			document.getElementById(\"ulica\").value = \"" . $noc->ulica . "\";
-			document.getElementById(\"numer\").value = \"" . $noc->nr_mieszkania . "\";
+			document.getElementById(\"numer\").value = \"" . $noc->nr_budynku . "\";
 			document.getElementById(\"kod\").value = \"" . $noc->kod_pocztowy . "\";
 			document.getElementById(\"miasto\").value = \"" . $noc->miejscowosc . "\";
 			document.getElementById(\"telefon\").value = \"" . $noc->telefon . "\";
 			document.getElementById(\"mapa\").value = \"" . $noc->mapa . "\";
 			document.getElementById(\"miejsca\").value = \"" . $noc->miejsca_ogolem . "\";
-			document.getElementById(\"zdjecie\").value = \"" . $noc->image . "\";
+			document.getElementById(\"zdjecie\").value = \"" . $noc->zdjecie . "\";
         }
         window.onload = loadData;
         </script>";}

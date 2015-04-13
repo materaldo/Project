@@ -62,16 +62,16 @@ class HomeController extends BaseController {
 		$miejsca = Input::get('miejsca');
 		$zdjecie = Input::get('zdjecie');
 		
-		$nocleg = new MiejsceNoclegowe();
+		$nocleg = new Nocleg();
 		$nocleg->nazwa = $nazwa;
 		$nocleg->ulica = $ulica;
-		$nocleg->nr_mieszkania = $numer;
+		$nocleg->nr_budynku = $numer;
 		$nocleg->miejscowosc = $miasto;
 		$nocleg->kod_pocztowy = $kod;
 		$nocleg->telefon = $telefon;
 		$nocleg->mapa = $mapa;
 		$nocleg->miejsca_ogolem = $miejsca;
-		$nocleg->image = $zdjecie;
+		$nocleg->zdjecie = $zdjecie;
 		
 		$nocleg->save();
 
@@ -90,16 +90,16 @@ class HomeController extends BaseController {
 		$miejsca = Input::get('miejsca');
 		$zdjecie = Input::get('zdjecie');
 		
-		MiejsceNoclegowe::where('id', $id)->update(array(
+		Nocleg::where('id', $id)->update(array(
 			'nazwa'=>$nazwa,
 			'ulica'=>$ulica,
-			'nr_mieszkania'=>$numer,
+			'nr_budynku'=>$numer,
 			'miejscowosc'=>$miasto,
 			'kod_pocztowy'=>$kod,
 			'telefon'=>$telefon,
 			'mapa'=>$mapa,
 			'miejsca_ogolem'=>$miejsca,
-			'image'=>$zdjecie
+			'zdjecie'=>$zdjecie
 			));
 		
 		return View::make('places');	
@@ -107,7 +107,7 @@ class HomeController extends BaseController {
 	
 	public function getWyswietl()
 	{
-		$noclegi = MiejsceNoclegowe::all();
+		$noclegi = Nocleg::all();
 		
 		echo "<table>";
 		foreach ($noclegi as $noc)
@@ -136,7 +136,7 @@ class HomeController extends BaseController {
 	{
 		if($id>0)
 		{
-			$nocleg = MiejsceNoclegowe::find($id);
+			$nocleg = Nocleg::find($id);
 			$nocleg->delete();
 		}
 		return View::make('places');
