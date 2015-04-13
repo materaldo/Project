@@ -14,9 +14,9 @@ class CreateOpiekunowieTable extends Migration {
 	{
 		Schema::create('opiekunowie', function($table)
 		{
-			$table->increments('id');
-			$table->integer('uzytkownik_id')->unsigned();
-			$table->foreign('uzytkownik_id')->references('id')->on('uzytkownicy');
+			$table->integer('id')->unsigned();
+			$table->foreign('id')->references('id')->on('uzytkownicy');
+			$table->primary('id');
 			$table->string('imie');
 			$table->string('nazwisko');
 			$table->date('data_urodzenia');
