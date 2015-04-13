@@ -12,13 +12,13 @@ class CreateGrupynoclegoweTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('grupynoclegowe', function($table)
+		Schema::create('groups_accommodations', function($table)
 		{
 			$table->increments('id');
-			$table->integer('grupa_id')->unsigned();
-			$table->foreign('grupa_id')->references('id')->on('grupy');
-			$table->integer('nocleg_id')->unsigned();
-			$table->foreign('nocleg_id')->references('id')->on('noclegi');
+			$table->integer('id_gr')->unsigned();
+			$table->foreign('id_gr')->references('id')->on('groups');
+			$table->integer('id_acc')->unsigned();
+			$table->foreign('id_acc')->references('id')->on('accommodations');
 			$table->timestamps();
 		});
 	}
@@ -30,7 +30,7 @@ class CreateGrupynoclegoweTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('grupynoclegowe');
+		Schema::drop('groups_accommodations');
 	}
 
 }

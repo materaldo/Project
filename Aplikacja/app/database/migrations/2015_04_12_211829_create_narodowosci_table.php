@@ -12,10 +12,10 @@ class CreateNarodowosciTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('narodowosci', function($table)
+		Schema::create('countries', function($table)
 		{
 			$table->increments('id');
-			$table->string('kraj');
+			$table->string('country');
 			$table->timestamps();
 		});
 	}
@@ -27,7 +27,7 @@ class CreateNarodowosciTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('narodowosci');
+		Schema::drop('countries');
 	}
 
 }

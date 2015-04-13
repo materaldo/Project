@@ -12,13 +12,15 @@ class CreateUzytkownicyTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('uzytkownicy', function($table)
+		
+		Schema::create('users', function($table)
 		{
 			$table->increments('id');
-			$table->string('login')->unique();
-			$table->string('haslo');
-			$table->integer('rola');
+			$table->string('name')->unique();
 			$table->string('email')->unique();
+			$table->string('password');
+			$table->integer('role');
+			$table->rememberToken();
 			$table->timestamps();
 		});
 	}
@@ -30,7 +32,7 @@ class CreateUzytkownicyTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('uzytkownicy');
+		Schema::drop('users');
 	}
 
 }

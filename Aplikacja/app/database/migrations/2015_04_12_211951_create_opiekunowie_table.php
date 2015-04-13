@@ -12,22 +12,22 @@ class CreateOpiekunowieTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('opiekunowie', function($table)
+		Schema::create('protectors', function($table)
 		{
 			$table->integer('id')->unsigned();
-			$table->foreign('id')->references('id')->on('uzytkownicy');
+			$table->foreign('id')->references('id')->on('users');
 			$table->primary('id');
-			$table->string('imie');
-			$table->string('nazwisko');
-			$table->date('data_urodzenia');
-			$table->string('telefon');
-			$table->string('nr_zapasowy')->nullable();
-			$table->integer('kraj_id')->unsigned();
-			$table->foreign('kraj_id')->references('id')->on('narodowosci');
-			$table->integer('jezyk_id')->unsigned();
-			$table->foreign('jezyk_id')->references('id')->on('jezyki');
-			$table->string('numer_dokumentu');
-			$table->string('numer_ubezpieczenia');
+			$table->string('first_name');
+			$table->string('last_name');
+			$table->date('date_of_birth');
+			$table->string('phone_number');
+			$table->string('alt_phone_number')->nullable();
+			$table->integer('id_coun')->unsigned();
+			$table->foreign('id_coun')->references('id')->on('countries');
+			$table->integer('id_lang')->unsigned();
+			$table->foreign('id_lang')->references('id')->on('languages');
+			$table->string('document_number');
+			$table->string('insurance_number');
 			$table->timestamps();
 		});
 	}
@@ -39,7 +39,7 @@ class CreateOpiekunowieTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('opiekunowie');
+		Schema::drop('protectors');
 	}
 
 }

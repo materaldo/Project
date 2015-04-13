@@ -11,7 +11,7 @@
 
     <h1>Rejestracja</h1>
 
-    <form action="http://zpi.dev/index.php/login/registered">
+    <form action="http://zpi.dev/index.php/registred" method="post">
         Login:
         <input type="text" name="login">
         <br>
@@ -52,6 +52,8 @@
         Numer ubezpieczenia:
         <input type="text" name="nr_ubezpieczenia">
         <br>
+        <input type="checkbox" name="zgoda">Wyrażam zgodę...<br>
+
         <input type="submit" id="submit" value="Zarejestruj">
     </form>
     

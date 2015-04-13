@@ -11,7 +11,7 @@
 
     <h1>Login</h1>
 
-    <form action = "http://zpi.dev/index.php">
+    <form action = "http://zpi.dev/index.php" method="post">
         Login:
         <input type="text" name="login">
         <br>

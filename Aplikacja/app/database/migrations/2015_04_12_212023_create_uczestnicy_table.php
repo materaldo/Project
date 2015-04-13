@@ -12,22 +12,22 @@ class CreateUczestnicyTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('uczestnicy', function($table)
+		Schema::create('participants', function($table)
 		{
 			$table->integer('id')->unsigned();
-			$table->foreign('id')->references('id')->on('uzytkownicy');
+			$table->foreign('id')->references('id')->on('users');
 			$table->primary('id');
-			$table->string('imie');
-			$table->string('nazwisko');	
-			$table->date('data_urodzenia');
-			$table->integer('kraj_id')->unsigned();
-			$table->foreign('kraj_id')->references('id')->on('narodowosci');
-			$table->integer('jezyk_id')->unsigned();
-			$table->foreign('jezyk_id')->references('id')->on('jezyki');
-			$table->integer('grupa_id')->unsigned();
-			$table->foreign('grupa_id')->references('id')->on('grupy');
-			$table->string('numer_dokumentu');
-			$table->string('numer_ubezpieczenia');
+			$table->string('first_name');
+			$table->string('last_name');	
+			$table->date('date_of_birth');
+			$table->integer('id_coun')->unsigned();
+			$table->foreign('id_coun')->references('id')->on('countries');
+			$table->integer('id_lang')->unsigned();
+			$table->foreign('id_lang')->references('id')->on('languages');
+			$table->integer('id_gr')->unsigned();
+			$table->foreign('id_gr')->references('id')->on('groups');
+			$table->string('document_number');
+			$table->string('insurance_number');
 			$table->timestamps();
 		});
 	}
@@ -39,7 +39,7 @@ class CreateUczestnicyTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('uczestnicy');
+		Schema::drop('participants');
 	}
 
 }

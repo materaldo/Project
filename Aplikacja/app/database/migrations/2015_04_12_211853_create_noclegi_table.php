@@ -12,19 +12,19 @@ class CreateNoclegiTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('noclegi', function($table)
+		Schema::create('accommodations', function($table)
 		{
 			$table->increments('id');
-			$table->string('nazwa');
-			$table->string('ulica');
-			$table->string('nr_budynku');
-			$table->string('kod_pocztowy');
-			$table->string('miejscowosc');
-			$table->string('telefon');
-			$table->string('zdjecie');
-			$table->string('mapa');
-			$table->integer('miejsca_wolne');
-			$table->integer('miejsca_ogolem');
+			$table->string('name');
+			$table->string('street');
+			$table->string('buildings');
+			$table->string('post_code');
+			$table->string('city');
+			$table->string('phone_number');
+			$table->string('image');
+			$table->string('map');
+			$table->integer('free_places');
+			$table->integer('all_places');
 			$table->timestamps();
 		});		
 	}
@@ -36,7 +36,7 @@ class CreateNoclegiTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('noclegi');
+		Schema::drop('accommodations');
 	}
 
 }

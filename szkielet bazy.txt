@@ -1,14 +1,18 @@
 ﻿Schemat bazy danych:
 
-JEZYKI(id, język)
-NARODOWOSCI(id, kraj)
-NOCLEGI(id, nazwa, ulica, nr_budynku, kod_pocztowy, miejscowosc, telefon, zdjecie, mapa, miejsca_zajete, miejsca_ogolem)
-UZYTKOWNICY(id, login unique, haslo, rola, email unique)
-OPIEKUNOWIE(id, #id_u, imie, nazwisko, data_urodzenia, telefon, nr_alternatywny-nullable, #id_n, #id_j, nr_dokumentu, nr_ubezpieczenia)
-GRUPY(id, #id_op, liczba_osob, srodek_transportu, ....)
-UCZESTNICY(id, #id_u, imie, nazwisko, data_urodzenia, #id_n, #id_j, #id_gr, nr_dokumentu, nr_ubezpieczenia)
-ORGANIZATORZY(id, #id_u, telefon)
-ADMINISTRATORZY(id, #id_u)
-GRUPYNOCLEGOWE(id, #id_gr, #id_noc)
+LANGUAGES(id, language)
+COUNTRIES(id, country)
+ACCOMMODATIONS(id, name, street, building, post_code, city, phone_number,
+ image, map, free_places, all_places)
+USERS(id, name unique, password, role, email unique)
+PROTECTORS(#id(Users), first_name, last_name, date_of_birth, phone_number,
+ alt_phone_number(nullable), #id_coun, #id_lang, document_number,
+ insurance_number
+GROUPS(id, #id_prot, number_of_people, means_of_transport, ....)
+PARTICIPANTS(#id(Users), first_name, last_name, date_of_birth,
+ #id_coun, #id_lang, #id_gr, document_number, insurance_number)
+ORGANIZERS(#id(Users), phone_number)
+ADMINISTRATORS(#id(Users))
+GROUPS_ACCOMMODATIONS(id, #id_gr, #id_acc)
 
 

@@ -12,10 +12,10 @@ class CreateJezykiTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('jezyki', function($table)
+		Schema::create('languages', function($table)
 		{
 			$table->increments('id');
-			$table->string('jezyk');
+			$table->string('language');
 			$table->timestamps();
 		});
 	}
@@ -27,7 +27,7 @@ class CreateJezykiTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('jezyki');
+		Schema::drop('languages');
 	}
 
 }

@@ -12,10 +12,10 @@ class CreateAdministratorzyTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('administratorzy', function($table)
+		Schema::create('administrators', function($table)
 		{
 			$table->integer('id')->unsigned();
-			$table->foreign('id')->references('id')->on('uzytkownicy');
+			$table->foreign('id')->references('id')->on('users');
 			$table->primary('id');
 			$table->timestamps();
 		});
@@ -28,7 +28,7 @@ class CreateAdministratorzyTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('administratorzy');
+		Schema::drop('administrators');
 	}
 
 }

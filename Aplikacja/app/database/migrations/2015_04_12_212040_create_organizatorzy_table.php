@@ -12,12 +12,12 @@ class CreateOrganizatorzyTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('organizatorzy', function($table)
+		Schema::create('organizers', function($table)
 		{
 			$table->integer('id')->unsigned();
-			$table->foreign('id')->references('id')->on('uzytkownicy');
+			$table->foreign('id')->references('id')->on('users');
 			$table->primary('id');
-			$table->string('telefon')->nullable();
+			$table->string('phone_number')->nullable();
 			$table->timestamps();
 		});
 	}
@@ -29,7 +29,7 @@ class CreateOrganizatorzyTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('organizatorzy');
+		Schema::drop('organizers');
 	}
 
 }
