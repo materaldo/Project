@@ -14,11 +14,9 @@ class CreateOrganizatorzyTable extends Migration {
 	{
 		Schema::create('organizatorzy', function($table)
 		{
-			$table->increments('id_org');
-			//$table->primary('id_org');
-			$table->string('login')->unique();
-			$table->string('haslo');
-			$table->string('email')->unique();
+			$table->increments('id');
+			$table->integer('uzytkownik_id')->unsigned();
+			$table->foreign('uzytkownik_id')->references('id')->on('uzytkownicy');
 			$table->string('telefon')->nullable();
 			$table->timestamps();
 		});

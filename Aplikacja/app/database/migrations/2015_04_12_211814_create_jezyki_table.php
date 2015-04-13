@@ -14,8 +14,7 @@ class CreateJezykiTable extends Migration {
 	{
 		Schema::create('jezyki', function($table)
 		{
-			$table->increments('id_j');
-			//$table->primary('id_j');
+			$table->increments('id');
 			$table->string('jezyk');
 			$table->timestamps();
 		});

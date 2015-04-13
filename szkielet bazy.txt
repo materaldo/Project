@@ -1,11 +1,14 @@
 ﻿Schemat bazy danych:
 
-OPIEKUNOWIE(id_op, login UNIQUE, haslo, imie NOT NULL, nazwisko NOT NULL, data_urodzenia, email UNIQUE NOT NULL, telefon NOT NULL, nr_alternatywny, #id_n not null, #id_j not null, nr_dokumentu, nr_ubezpieczenia)
-GRUPY(id_gr, #id_op not null, liczba_osob, srodek_transportu, ....)
-GRUPYNOCLEGOWE(id_gn, #id_gr, #id_noc)
-UCZESTNICY(id, email NOT NULL UNIQUE, haslo, imie, nazwisko, data_urodzenia, #id_n not null, #id_j not null, #id_gr, nr_dokumentu, nr_ubezpieczenia)
-NARODOWOSCI(id, kraj)
 JEZYKI(id, język)
+NARODOWOSCI(id, kraj)
 NOCLEGI(id, nazwa, ulica, nr_budynku, kod_pocztowy, miejscowosc, telefon, zdjecie, mapa, miejsca_zajete, miejsca_ogolem)
-ORGANIZATORZY(id, login, haslo, email NOT NULL UNIQUE, telefon)
+UZYTKOWNICY(id, login unique, haslo, rola, email unique)
+OPIEKUNOWIE(id, #id_u, imie, nazwisko, data_urodzenia, telefon, nr_alternatywny-nullable, #id_n, #id_j, nr_dokumentu, nr_ubezpieczenia)
+GRUPY(id, #id_op, liczba_osob, srodek_transportu, ....)
+UCZESTNICY(id, #id_u, imie, nazwisko, data_urodzenia, #id_n, #id_j, #id_gr, nr_dokumentu, nr_ubezpieczenia)
+ORGANIZATORZY(id, #id_u, telefon)
+ADMINISTRATORZY(id, #id_u)
+GRUPYNOCLEGOWE(id, #id_gr, #id_noc)
+
 

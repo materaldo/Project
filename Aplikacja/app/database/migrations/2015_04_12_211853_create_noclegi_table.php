@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMiejscanoclegoweTable extends Migration {
+class CreateNoclegiTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,16 @@ class CreateMiejscanoclegoweTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('miejscanoclegowe', function($table)
+		Schema::create('noclegi', function($table)
 		{
-			$table->increments('id_noc');
+			$table->increments('id');
+			$table->string('nazwa');
 			$table->string('ulica');
-			$table->string('nr_mieszkania');
+			$table->string('nr_budynku');
 			$table->string('kod_pocztowy');
 			$table->string('miejscowosc');
 			$table->string('telefon');
+			$table->string('zdjecie');
 			$table->string('mapa');
 			$table->integer('miejsca_wolne');
 			$table->integer('miejsca_ogolem');
@@ -34,7 +36,7 @@ class CreateMiejscanoclegoweTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('miejscanoclegowe');
+		Schema::drop('noclegi');
 	}
 
 }
