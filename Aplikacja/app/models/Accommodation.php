@@ -1,11 +1,11 @@
 <?php
 
-class Nocleg extends Eloquent {
+class Accommodation extends Eloquent {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'noclegi';
+	protected $table = 'accommodations';
 }

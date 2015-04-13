@@ -8,22 +8,22 @@
 	<meta name="Keywords" content="" />
 	<?php
 	
-	$noc = Nocleg::find($idN);
+	$acc = Accommodation::find($idN);
 	
 		if (isset($idN)){
 			echo "
 	 <script type=\"text/javascript\">
         function loadData() 
 		{
-			document.getElementById(\"nazwa\").value = \"" . $noc->nazwa . "\";
-			document.getElementById(\"ulica\").value = \"" . $noc->ulica . "\";
-			document.getElementById(\"numer\").value = \"" . $noc->nr_budynku . "\";
-			document.getElementById(\"kod\").value = \"" . $noc->kod_pocztowy . "\";
-			document.getElementById(\"miasto\").value = \"" . $noc->miejscowosc . "\";
-			document.getElementById(\"telefon\").value = \"" . $noc->telefon . "\";
-			document.getElementById(\"mapa\").value = \"" . $noc->mapa . "\";
-			document.getElementById(\"miejsca\").value = \"" . $noc->miejsca_ogolem . "\";
-			document.getElementById(\"zdjecie\").value = \"" . $noc->zdjecie . "\";
+			document.getElementById(\"name\").value = \"" . $acc->name . "\";
+			document.getElementById(\"street\").value = \"" . $acc->street . "\";
+			document.getElementById(\"building\").value = \"" . $acc->buildings . "\";
+			document.getElementById(\"post_code\").value = \"" . $acc->post_code . "\";
+			document.getElementById(\"city\").value = \"" . $acc->city . "\";
+			document.getElementById(\"phone_number\").value = \"" . $acc->phone_number . "\";
+			document.getElementById(\"map\").value = \"" . $acc->map . "\";
+			document.getElementById(\"all_places\").value = \"" . $acc->all_places . "\";
+			document.getElementById(\"image\").value = \"" . $acc->image . "\";
         }
         window.onload = loadData;
         </script>";}
@@ -34,39 +34,39 @@
               
 <form action = "http://zpi.dev/index.php/nocleg/zatwierdzedycje/{{$idN}}">			 
         <h4><label>Nazwa:<br>
-            <input name = "nazwa" id = "nazwa" type = "text" size = "28"
+            <input name = "name" id = "name" type = "text" size = "28"
                 maxlength = "255">
         </label></h4>
         <h4><label>Ulica:<br>
-            <input name = "ulica" id="ulica" type = "text" size = "28"
+            <input name = "street" id="street" type = "text" size = "28"
                 maxlength = "255">
         </label></h4>
         <h4><label>Numer budynku:<br>
-            <input name = "numer" id="numer" type = "text" size = "28"
+            <input name = "building" id="building" type = "text" size = "28"
                 maxlength = "30">
         </label></h4>
 		<h4><label>Kod pocztowy:<br>
-            <input name = "kod" id="kod" type = "text" size = "28"
+            <input name = "post_code" id="post_code" type = "text" size = "28"
                 maxlength = "30">
         </label></h4>
         <h4><label>Miejscowość:<br>
-            <input name = "miasto" id="miasto" type = "text" size = "28"
+            <input name = "city" id="city" type = "text" size = "28"
                 maxlength = "30">
         </label></h4>
         <h4><label>Numer kontaktowy:<br>
-            <input name = "telefon" id="telefon" type = "text" size = "28"
+            <input name = "phone_number" id="phone_number" type = "text" size = "28"
                 maxlength = "30">
         </label></h4>
         <h4><label>Mapa Google:<br>
-            <input name = "mapa" id="mapa" type = "text" size = "28"
+            <input name = "map" id="map" type = "text" size = "28"
                 maxlength = "255">
         </label></h4>
         <h4><label>Udostępniane miejsca:<br>
-            <input name = "miejsca" id="miejsca" type = "text" size = "28"
+            <input name = "all_places" id="all_places" type = "text" size = "28"
                 maxlength = "30">
         </label></h4>
         <h4><label>Zdjęcie:<br>
-            <input name = "zdjecie" id="zdjecie" type = "text" size = "28"
+            <input name = "image" id="image" type = "text" size = "28"
                 maxlength = "255">
         </label></h4>   
 	<p>		

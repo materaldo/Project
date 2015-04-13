@@ -21,21 +21,21 @@
 			<td>Liczba miejsc ogółem</td>
 		</tr>	
 <?php
-	$noclegi = Nocleg::all();
+	$noclegi = Accommodation::all();
 	
 	foreach ($noclegi as $noc)
 		{
 			echo "<tr>
 				<td>
-					<a href=http://zpi.dev/index.php/nocleg/details/" . $noc->id . "><img src=\"" . $noc->zdjecie ."\" alt=\"" . $noc->nazwa ."\" height=\"150\" width=\"100\"/></a>
+					<a href=http://zpi.dev/index.php/nocleg/details/" . $noc->id . "><img src=\"" . $noc->image ."\" alt=\"" . $noc->name ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
-					$noc->nazwa . "<br>" . $noc->ulica . " " . $noc->nr_budynku . ", " . $noc->kod_pocztowy . " " . $noc->miejscowosc . 
+					$noc->name . "<br>" . $noc->street . " " . $noc->building . ", " . $noc->post_code . " " . $noc->city . 
 				"</td>
 				<td align=\"middle\">" . 
-					$noc->miejsca_wolne . 
+					$noc->free_places . 
 				"</td>
-				<td align=\"middle\">" . $noc->miejsca_ogolem . 
+				<td align=\"middle\">" . $noc->all_places . 
 			"</tr>";
 		}	
 ?>

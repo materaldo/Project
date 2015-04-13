@@ -30,17 +30,17 @@ class NoclegController extends BaseController {
 		$miejsca = Input::get('miejsca');
 		$zdjecie = Input::get('zdjecie');
 		
-		$nocleg = new Nocleg();
-		$nocleg->nazwa = $nazwa;
-		$nocleg->ulica = $ulica;
-		$nocleg->nr_budynku = $numer;
-		$nocleg->miejscowosc = $miasto;
-		$nocleg->kod_pocztowy = $kod;
-		$nocleg->telefon = $telefon;
-		$nocleg->mapa = $mapa;
-		$nocleg->miejsca_wolne = $miejsca;
-		$nocleg->miejsca_ogolem = $miejsca;
-		$nocleg->zdjecie = $zdjecie;
+		$nocleg = new Accommodation();
+		$nocleg->name = $nazwa;
+		$nocleg->street = $ulica;
+		$nocleg->buildings = $numer;
+		$nocleg->city = $miasto;
+		$nocleg->post_code = $kod;
+		$nocleg->phone_number = $telefon;
+		$nocleg->map = $mapa;
+		$nocleg->free_places = $miejsca;
+		$nocleg->all_places = $miejsca;
+		$nocleg->image = $zdjecie;
 		
 		$nocleg->save();
 
@@ -49,26 +49,26 @@ class NoclegController extends BaseController {
 	
 	public function getZatwierdzedycje($id)
 	{
-		$nazwa = Input::get('nazwa');
-		$ulica = Input::get('ulica');
-		$numer = Input::get('numer');
-		$miasto = Input::get('miasto');
-		$kod = Input::get('kod');
-		$telefon = Input::get('telefon');
-		$mapa = Input::get('mapa');
-		$miejsca = Input::get('miejsca');
-		$zdjecie = Input::get('zdjecie');
+		$nazwa = Input::get('name');
+		$ulica = Input::get('street');
+		$numer = Input::get('buildings');
+		$miasto = Input::get('city');
+		$kod = Input::get('post_code');
+		$telefon = Input::get('phone_number');
+		$mapa = Input::get('map');
+		$miejsca = Input::get('all_places');
+		$zdjecie = Input::get('image');
 		
-		Nocleg::where('id', $id)->update(array(
-			'nazwa'=>$nazwa,
-			'ulica'=>$ulica,
-			'nr_budynku'=>$numer,
-			'miejscowosc'=>$miasto,
-			'kod_pocztowy'=>$kod,
-			'telefon'=>$telefon,
-			'mapa'=>$mapa,
-			'miejsca_ogolem'=>$miejsca,
-			'zdjecie'=>$zdjecie
+		Accommodation::where('id', $id)->update(array(
+			'name'=>$nazwa,
+			'street'=>$ulica,
+			'buildings'=>$numer,
+			'city'=>$miasto,
+			'post_code'=>$kod,
+			'phone_number'=>$telefon,
+			'map'=>$mapa,
+			'all_places'=>$miejsca,
+			'image'=>$zdjecie
 			));
 		
 		return View::make('places');	
@@ -105,7 +105,7 @@ class NoclegController extends BaseController {
 	{
 		if($id>0)
 		{
-			$nocleg = Nocleg::find($id);
+			$nocleg = Accommodation::find($id);
 			$nocleg->delete();
 		}
 		return View::make('places');

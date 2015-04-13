@@ -15,9 +15,9 @@
 <a href="http://zpi.dev/index.php/nocleg/delete/{{$idN}}" onclick="return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')">Usuń</a><br><br>
 <?php
 
-	$noc = Nocleg::find($idN);
+	$noc = Accommodation::find($idN);
 	
-	echo "<img style=\"max-width:60%;\" src=\"" . $noc->zdjecie ."\" alt=\"" . $noc->nazwa ."\"/><h2> " . $noc->		nazwa . "</h2><strong>Adres</strong>: " . $noc->ulica . " " . $noc->nr_budynku . "<br>" . $noc->kod_pocztowy . " " . $noc->miejscowosc . "<br><br><strong>Kontakt: </strong>" . $noc->telefon . "<br><br><strong>Miejsca (wolne/ogółem): </strong>" . $noc->miejsca_wolne . "/" . $noc->miejsca_ogolem . "<br><br><strong>Mapa: </strong><a href=\"" . $noc->mapa . "\">". $noc->mapa . "</a>";
+	echo "<img style=\"max-width:60%;\" src=\"" . $noc->image ."\" alt=\"" . $noc->name ."\"/><h2> " . $noc->name . "</h2><strong>Adres</strong>: " . $noc->street . " " . $noc->buildings . "<br>" . $noc->post_code . " " . $noc->city . "<br><br><strong>Kontakt: </strong>" . $noc->phone_number . "<br><br><strong>Miejsca (wolne/ogółem): </strong>" . $noc->free_places . "/" . $noc->all_places . "<br><br><strong>Mapa: </strong><a href=\"" . $noc->map . "\">". $noc->map . "</a>";
 			
 ?>	
 
