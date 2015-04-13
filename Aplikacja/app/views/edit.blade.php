@@ -32,7 +32,7 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/zatwierdzedycje/{{$idN}}">			 
+<form action = "http://zpi.dev/index.php/nocleg/zatwierdzedycje/{{$idN}}">			 
         <h4><label>Nazwa:<br>
             <input name = "nazwa" id = "nazwa" type = "text" size = "28"
                 maxlength = "255">
