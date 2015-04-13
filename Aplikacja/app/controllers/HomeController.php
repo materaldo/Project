@@ -19,7 +19,6 @@ class HomeController extends BaseController {
 	{
 		return View::make('index');
 	}
-	
 	public function getAbout()
 	{
 		return View::make('about');
@@ -32,9 +31,9 @@ class HomeController extends BaseController {
 	{
 		return View::make('places');
 	}
-	public function getInformations()
+	public function getInformation()
 	{
-		return View::make('informations');
+		return View::make('information');
 	}
 	public function getContact()
 	{
@@ -44,7 +43,6 @@ class HomeController extends BaseController {
 	{
 		return View::make('nocleg_dodaj');
 	}
-
 	public function getLogin()
 	{
 		return View::make('login');

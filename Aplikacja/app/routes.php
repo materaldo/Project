@@ -17,4 +17,6 @@ Route::get('/', function()
 });
 */
 Route::controller('login', 'LoginController');
+Route::controller('/nocleg','NoclegController');
+Route::controller('/grupa','GrupaController');
 Route::controller('/', 'HomeController');
