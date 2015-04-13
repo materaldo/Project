@@ -1,11 +1,11 @@
 <?php
 
-class Organizator extends Eloquent {
+class Nationality extends Eloquent {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'organizatorzy';
+	protected $table = 'nationalities';
 }

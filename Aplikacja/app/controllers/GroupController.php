@@ -1,6 +1,6 @@
 <?php
 
-class GrupaController extends BaseController {
+class GroupController extends BaseController {
 
 	public function getIndex()
 	{
@@ -14,10 +14,10 @@ class GrupaController extends BaseController {
 	{
 		$liczbaOsob = Input::get('liczbaOsob');
 		$srodekTransportu = Input::get('srodekTransportu');
-		$grupa = new Grupa();
-		$grupa -> ilosc_osob = $liczbaOsob;
-		$grupa -> opiekun_id = "2";
-		$grupa -> srodek_transportu = $srodekTransportu;
+		$grupa = new Group();
+		$grupa -> number_of_people = $liczbaOsob;
+		$grupa -> id_prot = "2";
+		$grupa -> means_of_transport = $srodekTransportu;
 		
 		$grupa->save();
 		return View::make('dodajUczestnikow');
