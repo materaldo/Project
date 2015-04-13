@@ -7,5 +7,5 @@ class Uczestnik extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'uczestnicy';
+	protected $table = 'participants';
 }

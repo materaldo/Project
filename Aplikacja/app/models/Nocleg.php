@@ -7,5 +7,5 @@ class Nocleg extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'noclegi';
+	protected $table = 'accommodations';
 }
