@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOpiekunowieTable extends Migration {
+class CreateUczestnicyTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,20 +12,20 @@ class CreateOpiekunowieTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('opiekunowie', function($table)
+		Schema::create('uczestnicy', function($table)
 		{
-			$table->increments('id');
-			$table->integer('uzytkownik_id')->unsigned();
-			$table->foreign('uzytkownik_id')->references('id')->on('uzytkownicy');
+			$table->increments('id_ucz');
+			$table->string('haslo');
 			$table->string('imie');
-			$table->string('nazwisko');
+			$table->string('nazwisko');	
 			$table->date('data_urodzenia');
-			$table->string('telefon');
-			$table->string('nr_zapasowy')->nullable();
+			$table->string('email')->unique();
 			$table->integer('kraj_id')->unsigned();
-			$table->foreign('kraj_id')->references('id')->on('narodowosci');
+			$table->foreign('kraj_id')->references('id_n')->on('narodowosci');
 			$table->integer('jezyk_id')->unsigned();
-			$table->foreign('jezyk_id')->references('id')->on('jezyki');
+			$table->foreign('jezyk_id')->references('id_j')->on('jezyki');
+			$table->integer('grupa_id')->unsigned();
+			$table->foreign('grupa_id')->references('id_gr')->on('grupy');
 			$table->string('numer_dokumentu');
 			$table->string('numer_ubezpieczenia');
 			$table->timestamps();
@@ -39,7 +39,7 @@ class CreateOpiekunowieTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('opiekunowie');
+		Schema::drop('uczestnicy');
 	}
 
 }

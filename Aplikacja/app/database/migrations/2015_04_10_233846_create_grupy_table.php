@@ -15,11 +15,11 @@ class CreateGrupyTable extends Migration {
 		
 		Schema::create('grupy', function($table)
 		{
-			$table->increments('id');
+			$table->increments('id_gr');
 			$table->integer('ilosc_osob');
 			$table->string('srodek_transportu');
 			$table->integer('opiekun_id')->unsigned();
-			$table->foreign('opiekun_id')->references('id')->on('opiekunowie');
+			$table->foreign('opiekun_id')->references('id_op')->on('opiekunowie');
 		});
 		
 	}
@@ -31,7 +31,7 @@ class CreateGrupyTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('grupy');
 	}
 
 }
