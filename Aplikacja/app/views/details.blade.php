@@ -11,8 +11,8 @@
 @section('content')
 
 <h2>BAZA NOCLEGOWA</h2>
-<a href="http://zpi.dev/index.php/edit/{{$idN}}">Edytuj</a>
-<a href="http://zpi.dev/index.php/delete/{{$idN}}" onclick="return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')">Usuń</a><br><br>
+<a href="http://zpi.dev/index.php/nocleg/edit/{{$idN}}">Edytuj</a>
+<a href="http://zpi.dev/index.php/nocleg/delete/{{$idN}}" onclick="return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')">Usuń</a><br><br>
 <?php
 
 	$noc = Nocleg::find($idN);
@@ -22,6 +22,6 @@
 ?>	
 
 <br><br><br>
-<a href="http://zpi.dev/index.php/places">Powrót do bazy</a>
+<a href="http://zpi.dev/index.php/nocleg/places">Powrót do bazy</a>
 
 @stop

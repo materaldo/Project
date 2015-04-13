@@ -11,7 +11,7 @@
 @section('content')
 
 <h2>BAZA NOCLEGOWA</h2>
-<a class="clickMe" href="http://zpi.dev/index.php/add">Dodaj nowe miejsce</a>
+<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Dodaj nowe miejsce</a>
 
 	<table id="baza">	
 		<tr>
@@ -27,7 +27,7 @@
 		{
 			echo "<tr>
 				<td>
-					<a href=http://zpi.dev/index.php/details/" . $noc->id . "><img src=\"" . $noc->zdjecie ."\" alt=\"" . $noc->nazwa ."\" height=\"150\" width=\"100\"/></a>
+					<a href=http://zpi.dev/index.php/nocleg/details/" . $noc->id . "><img src=\"" . $noc->zdjecie ."\" alt=\"" . $noc->nazwa ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
 					$noc->nazwa . "<br>" . $noc->ulica . " " . $noc->nr_budynku . ", " . $noc->kod_pocztowy . " " . $noc->miejscowosc . 
