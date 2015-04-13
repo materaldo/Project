@@ -38,6 +38,7 @@ class NoclegController extends BaseController {
 		$nocleg->kod_pocztowy = $kod;
 		$nocleg->telefon = $telefon;
 		$nocleg->mapa = $mapa;
+		$nocleg->miejsca_wolne = $miejsca;
 		$nocleg->miejsca_ogolem = $miejsca;
 		$nocleg->zdjecie = $zdjecie;
 		
