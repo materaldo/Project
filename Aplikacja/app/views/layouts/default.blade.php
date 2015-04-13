@@ -68,11 +68,11 @@
         </div>
         <footer>
 
-            <p> <a href="index.php">Aktualności</a> |
-                <a href="examples.php">O ŚDM</a> |
-                <a href="contact.php">Zgłoś grupę</a> |
-                <a href="contact.php">Nasze miejsca noclegowe</a> |
-                <a href="contact.php">Kontakt</a>
+            <p> <a href="http://zpi.dev/index.php/index">Aktualności</a> |
+                <a href="http://zpi.dev/index.php/about">O ŚDM</a> |
+                <a href="http://zpi.dev/index.php/grupa/addgroup">Zgłoś grupę</a> |
+                <a href="http://zpi.dev/index.php/nocleg/places">Nasze miejsca noclegowe</a> |
+                <a href="http://zpi.dev/index.php/contact">Kontakt</a>
             </p>
 
         </footer>
