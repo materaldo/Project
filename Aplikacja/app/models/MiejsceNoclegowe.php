@@ -7,5 +7,5 @@ class MiejsceNoclegowe extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'accommodations';
+	protected $table = 'noclegi';
 }

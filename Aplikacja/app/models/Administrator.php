@@ -7,5 +7,5 @@ class Organizator extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'administrators';
+	protected $table = 'administratorzy';
 }

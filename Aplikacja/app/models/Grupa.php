@@ -7,5 +7,5 @@ class Grupa extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'groups';
+	protected $table = 'grupy';
 }

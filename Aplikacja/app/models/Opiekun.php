@@ -7,5 +7,5 @@ class Opiekun extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'protectors';
+	protected $table = 'opiekunowie';
 }

@@ -7,5 +7,5 @@ class Narodowosc extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'nationalities';
+	protected $table = 'narodowosci';
 }
