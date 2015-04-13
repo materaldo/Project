@@ -26,7 +26,7 @@
                 <ul class="sf-menu" id="nav">
                     <li><a href="http://zpi.dev/index.php/index">Aktualności</a></li>
                     <li><a href="http://zpi.dev/index.php/about">O ŚDM</a></li>
-                    <li><a href="http://zpi.dev/index.php/addgroup">Zgłoś grupę</a></li>
+                    <li><a href="http://zpi.dev/index.php/grupa/addgroup">Zgłoś grupę</a></li>
                     <li><a href="http://zpi.dev/index.php/places">Miejsca noclegowe</a></li>
 					<li><a href="http://zpi.dev/index.php/search">Wyszukaj</a></li>
                     <li><a href="http://zpi.dev/index.php/contact">Kontakt</a></li>

@@ -16,5 +16,5 @@ Route::get('/', function()
 	return View::make('hello');
 });
 */
-
+Route::controller('/grupa','GrupaController');
 Route::controller('/', 'HomeController');
