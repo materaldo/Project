@@ -11,7 +11,7 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/zatwierdz">			 
+<form action = "http://zpi.dev/index.php/nocleg/zatwierdz">			 
         <h4><label>Nazwa:<br>
             <input name = "nazwa" id = "nazwa" type = "text" size = "28"
                 maxlength = "255">
