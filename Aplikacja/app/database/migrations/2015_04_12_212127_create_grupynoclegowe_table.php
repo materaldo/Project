@@ -19,6 +19,7 @@ class CreateGrupynoclegoweTable extends Migration {
 			$table->foreign('grupa_id')->references('id')->on('grupy');
 			$table->integer('nocleg_id')->unsigned();
 			$table->foreign('nocleg_id')->references('id')->on('noclegi');
+			$table->timestamps();
 		});
 	}
 

@@ -6,5 +6,8 @@ class LoginController extends BaseController {
 	{
 		return View::make('login');
 	}
-	
+	public function getRegistration()
+	{
+		return View::make('registration');
+	}
 }

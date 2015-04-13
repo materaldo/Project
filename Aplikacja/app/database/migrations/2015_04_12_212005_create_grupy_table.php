@@ -16,10 +16,11 @@ class CreateGrupyTable extends Migration {
 		Schema::create('grupy', function($table)
 		{
 			$table->increments('id');
-			$table->integer('ilosc_osob');
+			$table->integer('liczba_osob');
 			$table->string('srodek_transportu');
 			$table->integer('opiekun_id')->unsigned();
 			$table->foreign('opiekun_id')->references('id')->on('opiekunowie');
+			$table->timestamps();
 		});
 		
 	}
