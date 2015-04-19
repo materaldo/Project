@@ -8,7 +8,11 @@
 	<link rel="Stylesheet" type="text/css" href="styles/style.css"/>
 	<script type="text/javascript" src="scripts/wyszukiwanie.js"></script>
 	<title>Strona główna orgranizatora</title>
-	
+	<style>
+		table {
+			display:none;
+		}
+	</style>
 	{{HTML::style('css/style.css');}}
 	{{HTML::script('js/wyszukiwanie.js');}}
 
@@ -32,6 +36,8 @@
 			<td>						 
                 <h4><label>Imię:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
+		</tr>
+		<tr>
 			<td>
                 <h4><label>Nazwisko:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
@@ -40,6 +46,8 @@
 			<td>						 
                 <h4><label>Narodowość:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
+		</tr>
+		<tr>
 			<td>
                 <h4><label>Wiek:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>

@@ -51,7 +51,7 @@ class AccommodationController extends BaseController {
 	{
 		$nazwa = Input::get('name');
 		$ulica = Input::get('street');
-		$numer = Input::get('buildings');
+		$numer = Input::get('building');
 		$miasto = Input::get('city');
 		$kod = Input::get('post_code');
 		$telefon = Input::get('phone_number');
@@ -72,18 +72,6 @@ class AccommodationController extends BaseController {
 			));
 		
 		return View::make('places');	
-	}
-	
-	public function getWyswietl()
-	{
-		$noclegi = Nocleg::all();
-		
-		echo "<table>";
-		foreach ($noclegi as $noc)
-		{
-			echo "<tr><td>" . $noc->zdjecie . "</td><td>" . $noc->nazwa . "<br>" . $noc->ulica . " " . $noc->numer . ", " . $noc->kod . " " . $noc->miasto;
-		}	
-		echo "</table>"; 	
 	}
 	
 	public function getAddgroup()

@@ -1,2 +1,3 @@
 buildings --> building
 problem ze strzalka
+w uczestniku nie ma numeru telefonu?

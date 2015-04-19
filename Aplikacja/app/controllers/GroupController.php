@@ -16,11 +16,11 @@ class GroupController extends BaseController {
 		$srodekTransportu = Input::get('srodekTransportu');
 		$grupa = new Group();
 		$grupa -> number_of_people = $liczbaOsob;
-		$grupa -> id_prot = "2";
+		$grupa -> id_prot = "1";
 		$grupa -> means_of_transport = $srodekTransportu;
 		
 		$grupa->save();
-		return View::make('dodajUczestnikow');
+		return View::make('addParticipants');
 	}
 	
 	

@@ -4,7 +4,8 @@ function start()
 	document.getElementById("szukajOpiekun").style.visibility = "hidden";
 	document.getElementById("szukajGrupa").style.visibility = "hidden";
 	document.getElementById("szukajNocleg").style.visibility = "hidden";
-	document.getElementById("szukajUczestnik").style.display = "none";		document.getElementById("szukajOpiekun").style.display = "none";
+	document.getElementById("szukajUczestnik").style.display = "none";		
+	document.getElementById("szukajOpiekun").style.display = "none";
 	document.getElementById("szukajGrupa").style.display = "none";
 	document.getElementById("szukajNocleg").style.display = "none";
 }

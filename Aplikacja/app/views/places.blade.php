@@ -30,7 +30,7 @@
 					<a href=http://zpi.dev/index.php/nocleg/details/" . $noc->id . "><img src=\"" . $noc->image ."\" alt=\"" . $noc->name ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
-					$noc->name . "<br>" . $noc->street . " " . $noc->building . ", " . $noc->post_code . " " . $noc->city . 
+					$noc->name . "<br>" . $noc->street . " " . $noc->buildings . ", " . $noc->post_code . " " . $noc->city . 
 				"</td>
 				<td align=\"middle\">" . 
 					$noc->free_places . 
