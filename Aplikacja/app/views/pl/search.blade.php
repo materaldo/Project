@@ -7,7 +7,6 @@
 	<meta name="Keywords" content=""/>
 	<link rel="Stylesheet" type="text/css" href="styles/style.css"/>
 	<script type="text/javascript" src="scripts/wyszukiwanie.js"></script>
-	<title>Strona główna orgranizatora</title>
 	<style>
 		table {
 			display:none;
@@ -117,10 +116,12 @@
     <form action = "http://zpi.dev/index.php/results">
 		<tr>
 			<td>						 
-                <h4><label>Nazwa:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>Nazwa:<br><input name = "name" type = "text" size = "28" maxlength = "255"></label></h4>
 			</td>
+		</tr>
+		<tr>
 			<td>
-                <h4><label>Adres:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>Ulica:<br><input name = "street" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
         <tr>
