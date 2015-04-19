@@ -21,4 +21,5 @@ Route::controller('nocleg','AccommodationController');
 Route::controller('grupa','GroupController');
 Route::controller('participant', 'ParticipantController');
 Route::controller('language', 'LanguageController');
+Route::controller('country', 'CountryController');
 Route::controller('/', 'HomeController');

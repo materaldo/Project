@@ -9,13 +9,42 @@
 @stop
 
 @section('content')
-<p>Zarządzaj bazą danych<br>
-<a class="clickMe" href="http://zpi.dev/index.php/language">Języki</a><br>
-<a class="clickMe" href="http://zpi.dev/index.php/country/new">Dodaj państwa</a><br></p>
-<p>Przydział miejsc<br>
-<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Automatycznie przydziel miejsca</a><br>
-<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Przydziel ręcznie</a><br></p>
-<p>Kontakt<br>
-<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Wyślij wiadomość do opiekunów</a><br></p>
-
+<br>
+<h4>Zarządzaj grupami</h4>
+	<ul>
+		<li>
+			<a class="clickMe" href="http://zpi.dev/index.php/language">Przeglądaj zatwierdzone istniejące grupy</a>
+		</li>
+		<li>
+			<a class="clickMe" href="http://zpi.dev/index.php/country">Pokaż grupy czekające na zatwierdzenie</a>
+		</li>
+	</ul>
+	
+<h4>Zarządzaj bazą danych</h4>
+	<ul>
+		<li>
+			<a class="clickMe" href="http://zpi.dev/index.php/language">Języki</a>
+		</li>
+		<li>
+			<a class="clickMe" href="http://zpi.dev/index.php/country">Państwa</a>
+		</li>
+	</ul>
+	
+<h4>Przydział miejsc</h4>
+	<ul>
+		<li>
+			<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Automatycznie przydziel miejsca</a>
+		</li>
+		<li>
+			<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Przydziel ręcznie</a>
+		</li>
+	</ul>
+	
+<h4>Kontakt</h4>
+	<ul>
+		<li>
+			<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Wyślij wiadomość do opiekunów</a>
+		</li>
+	</ul>
+	
 @stop

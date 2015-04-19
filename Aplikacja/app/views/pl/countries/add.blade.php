@@ -11,10 +11,10 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/language/add">			 
-        <h4><label>Dodaj język:<br>
-            <input name = "language" id = "language" type = "text" size = "28"
-                maxlength = "255">
+<form action = "http://zpi.dev/index.php/country/add">			 
+        <h4><label>Dodaj kraj:<br>
+            <input name = "country" id = "country" type = "text" size = "28"
+                maxlength = "255" autofocus>
         </label></h4>
         
 		<input type = "submit" id="submit" value = "Dodaj">

@@ -8,7 +8,7 @@ class LanguageController extends BaseController {
 	}
 	public function getNew()
 	{
-		return View::make('pl.languages.addLanguage');
+		return View::make('pl.languages.add');
 	}
 	public function getAdd()
 	{
@@ -31,7 +31,7 @@ class LanguageController extends BaseController {
 	}
 	public function getEdit($id)
 	{
-		return View::make('pl.languages.editLang')->with('idL', $id);
+		return View::make('pl.languages.edit')->with('idL', $id);
 	}
 	public function getConfirm($id)
 	{
