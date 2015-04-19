@@ -4,50 +4,41 @@ class AccommodationController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.index');
+		return View::make('pl.places.places');
+	}
+	public function getNew()
+	{
+		return View::make('pl.places.add');
 	}
 	public function getAdd()
 	{
-		return View::make('pl.add');
-	}
-	public function getPlaces()
-	{
-		return View::make('pl.places');
-	}
-	public function getDodaj()
-	{
-		return View::make('pl.nocleg_dodaj');
-	}
-	public function getZatwierdz()
-	{
-		$nazwa = Input::get('nazwa');
-		$ulica = Input::get('ulica');
-		$numer = Input::get('numer');
-		$miasto = Input::get('miasto');
-		$kod = Input::get('kod');
-		$telefon = Input::get('telefon');
-		$mapa = Input::get('mapa');
-		$miejsca = Input::get('miejsca');
-		$zdjecie = Input::get('zdjecie');
+		$name = Input::get('name');
+		$street = Input::get('street');
+		$building = Input::get('building');
+		$city = Input::get('city');
+		$post_code = Input::get('post_code');
+		$phone_number = Input::get('phone_number');
+		$map = Input::get('map');
+		$all_places = Input::get('all_places');
+		$image = Input::get('image');
 		
-		$nocleg = new Accommodation();
-		$nocleg->name = $nazwa;
-		$nocleg->street = $ulica;
-		$nocleg->buildings = $numer;
-		$nocleg->city = $miasto;
-		$nocleg->post_code = $kod;
-		$nocleg->phone_number = $telefon;
-		$nocleg->map = $mapa;
-		$nocleg->free_places = $miejsca;
-		$nocleg->all_places = $miejsca;
-		$nocleg->image = $zdjecie;
+		$acc = new Accommodation();
+		$acc->name = $name;
+		$acc->street = $street;
+		$acc->buildings = $building;
+		$acc->city = $city;
+		$acc->post_code = $post_code;
+		$acc->phone_number = $phone_number;
+		$acc->map = $map;
+		$acc->free_places = $all_places;
+		$acc->all_places = $all_places;
+		$acc->image = $image;
 		
-		$nocleg->save();
+		$acc->save();
 
-		return View::make('pl.places');	
+		return View::make('pl.places.places');	
 	}
-	
-	public function getZatwierdzedycje($id)
+	public function getConfirm($id)
 	{
 		$nazwa = Input::get('name');
 		$ulica = Input::get('street');
@@ -71,24 +62,16 @@ class AccommodationController extends BaseController {
 			'image'=>$zdjecie
 			));
 		
-		return View::make('pl.places');	
-	}
-	
-	public function getAddgroup()
-	{
-		echo "TODO";
-	}
-	
+		return View::make('pl.places.places');	
+	}	
 	public function getDetails($id)
 	{
-		return View::make('pl.details')->with('idN', $id);
+		return View::make('pl.places.details')->with('idA', $id);
 	}
-	
 	public function getEdit($id)
 	{
-		return View::make('pl.edit')->with('idN', $id);
+		return View::make('pl.places.edit')->with('idA', $id);
 	}
-	
 	public function getDelete($id)
 	{
 		if($id>0)
@@ -96,7 +79,7 @@ class AccommodationController extends BaseController {
 			$nocleg = Accommodation::find($id);
 			$nocleg->delete();
 		}
-		return View::make('pl.places');
+		return View::make('pl.places.places');
 	}
 	
 }

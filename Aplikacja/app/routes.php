@@ -17,8 +17,8 @@ Route::get('/', function()
 });
 */
 Route::controller('login', 'LoginController');
-Route::controller('nocleg','AccommodationController');
-Route::controller('grupa','GroupController');
+Route::controller('accommodation','AccommodationController');
+Route::controller('group','GroupController');
 Route::controller('participant', 'ParticipantController');
 Route::controller('language', 'LanguageController');
 Route::controller('country', 'CountryController');

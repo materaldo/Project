@@ -26,8 +26,8 @@
                 <ul class="sf-menu" id="nav">
                     <li><a href="http://zpi.dev/index.php/index">Aktualności</a></li>
                     <li><a href="http://zpi.dev/index.php/about">O ŚDM</a></li>
-                    <li><a href="http://zpi.dev/index.php/grupa/addgroup">Zgłoś grupę</a></li>
-                    <li><a href="http://zpi.dev/index.php/nocleg/places">Miejsca noclegowe</a></li>
+                    <li><a href="http://zpi.dev/index.php/group/addgroup">Zgłoś grupę</a></li>
+                    <li><a href="http://zpi.dev/index.php/accommodation">Miejsca noclegowe</a></li>
 					<li><a href="http://zpi.dev/index.php/management">Zarządzanie</a></li>
 					<li><a href="http://zpi.dev/index.php/search">Wyszukaj</a></li>
                     <li><a href="http://zpi.dev/index.php/contact">Kontakt</a></li>
@@ -71,8 +71,8 @@
 
             <p> <a href="http://zpi.dev/index.php/index">Aktualności</a> |
                 <a href="http://zpi.dev/index.php/about">O ŚDM</a> |
-                <a href="http://zpi.dev/index.php/grupa/addgroup">Zgłoś grupę</a> |
-                <a href="http://zpi.dev/index.php/nocleg/places">Nasze miejsca noclegowe</a> |
+                <a href="http://zpi.dev/index.php/group/addgroup">Zgłoś grupę</a> |
+                <a href="http://zpi.dev/index.php/accommodation/places">Nasze miejsca noclegowe</a> |
                 <a href="http://zpi.dev/index.php/contact">Kontakt</a>
             </p>
 

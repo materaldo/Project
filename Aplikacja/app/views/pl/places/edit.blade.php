@@ -8,9 +8,9 @@
 	<meta name="Keywords" content="" />
 	<?php
 	
-	$acc = Accommodation::find($idN);
+	$acc = Accommodation::find($idA);
 	
-		if (isset($idN)){
+		if (isset($idA)){
 			echo "
 	 <script type=\"text/javascript\">
         function loadData() 
@@ -32,7 +32,7 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/nocleg/zatwierdzedycje/{{$idN}}">			 
+<form action = "http://zpi.dev/index.php/accommodation/confirm/{{$idA}}">			 
         <h4><label>Nazwa:<br>
             <input name = "name" id = "name" type = "text" size = "28"
                 maxlength = "255">
