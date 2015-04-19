@@ -17,34 +17,34 @@ class HomeController extends BaseController {
 	
 	public function getIndex()
 	{
-		return View::make('index');
+		return View::make('pl.index');
 	}
 	public function getAbout()
 	{
-		return View::make('about');
+		return View::make('pl.about');
 	}
 	public function getContact()
 	{
-		return View::make('contact');
+		return View::make('pl.contact');
 	}
 	public function getLogin()
 	{
-		return View::make('login');
+		return View::make('pl.login');
 	}
 	public function getRegistration()
 	{
-		return View::make('registration');
+		return View::make('pl.registration');
 	}
 	public function getSearch()
 	{
-		return View::make('search');
+		return View::make('pl.search');
 	}
 	public function getResults()
 	{
-		return View::make('search_results');
+		return View::make('pl.search_results');
 	}
 	public function getManagement()
 	{
-		return View::make('management');
+		return View::make('pl.management');
 	}
 }

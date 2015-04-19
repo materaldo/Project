@@ -10,7 +10,7 @@
 @section('content')
 
 <p>
-<h2>Gdzie za rok spotkamy się z Papieżem Franciszkiem?</h2><br>
+<h2>Gdzie za rok spotkamy się z Papieżem Franciszkiem?</h2>
 <h6>2015-03-30</h6><br>
 „Campus Misericordiae” – Pole Miłosierdzia. Od dziś tak oficjalnie nazywa się miejsce spotkania młodzieży z papieżem w lipcu 2016 roku. Na granicy Krakowa i Wieliczki odbędzie się sobotnie czuwanie z Ojcem Świętym i niedzielna Msza Posłania. Pozostałe Wydarzenia Centralne ŚDM: Msza na otwarcie, powitanie Ojca Świętego i Droga Krzyżowa, odbędą się na krakowskich Błoniach.
  <br><br>

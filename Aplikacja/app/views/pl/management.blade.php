@@ -10,8 +10,8 @@
 
 @section('content')
 <p>Zarządzaj bazą danych<br>
-<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Dodaj języki</a><br>
-<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Dodaj państwa</a><br></p>
+<a class="clickMe" href="http://zpi.dev/index.php/language">Języki</a><br>
+<a class="clickMe" href="http://zpi.dev/index.php/country/new">Dodaj państwa</a><br></p>
 <p>Przydział miejsc<br>
 <a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Automatycznie przydziel miejsca</a><br>
 <a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Przydziel ręcznie</a><br></p>

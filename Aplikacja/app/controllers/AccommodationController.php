@@ -4,19 +4,19 @@ class AccommodationController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('index');
+		return View::make('pl.index');
 	}
 	public function getAdd()
 	{
-		return View::make('add');
+		return View::make('pl.add');
 	}
 	public function getPlaces()
 	{
-		return View::make('places');
+		return View::make('pl.places');
 	}
 	public function getDodaj()
 	{
-		return View::make('nocleg_dodaj');
+		return View::make('pl.nocleg_dodaj');
 	}
 	public function getZatwierdz()
 	{
@@ -44,7 +44,7 @@ class AccommodationController extends BaseController {
 		
 		$nocleg->save();
 
-		return View::make('places');	
+		return View::make('pl.places');	
 	}
 	
 	public function getZatwierdzedycje($id)
@@ -71,7 +71,7 @@ class AccommodationController extends BaseController {
 			'image'=>$zdjecie
 			));
 		
-		return View::make('places');	
+		return View::make('pl.places');	
 	}
 	
 	public function getAddgroup()
@@ -81,12 +81,12 @@ class AccommodationController extends BaseController {
 	
 	public function getDetails($id)
 	{
-		return View::make('details')->with('idN', $id);
+		return View::make('pl.details')->with('idN', $id);
 	}
 	
 	public function getEdit($id)
 	{
-		return View::make('edit')->with('idN', $id);
+		return View::make('pl.edit')->with('idN', $id);
 	}
 	
 	public function getDelete($id)
@@ -96,7 +96,7 @@ class AccommodationController extends BaseController {
 			$nocleg = Accommodation::find($id);
 			$nocleg->delete();
 		}
-		return View::make('places');
+		return View::make('pl.places');
 	}
 	
 }

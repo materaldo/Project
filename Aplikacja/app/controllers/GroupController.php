@@ -4,11 +4,11 @@ class GroupController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('index');
+		return View::make('pl.index');
 	}
 	public function getAddgroup()
 	{
-		return View::make('addgroup');
+		return View::make('pl.addgroup');
 	}
 	public function getZatwierdz()
 	{
@@ -20,7 +20,7 @@ class GroupController extends BaseController {
 		$grupa -> means_of_transport = $srodekTransportu;
 		
 		$grupa->save();
-		return View::make('addParticipants');
+		return View::make('pl.addParticipants');
 	}
 	
 	

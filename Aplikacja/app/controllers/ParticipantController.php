@@ -4,7 +4,7 @@ class ParticipantController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('index');
+		return View::make('pl.index');
 	}
 	
 	public function getAddparticipant()
