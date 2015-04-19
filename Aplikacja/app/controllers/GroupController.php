@@ -4,23 +4,23 @@ class GroupController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.index');
+		return View::make('pl.groups.groups');
 	}
-	public function getAddgroup()
+	public function getNew()
 	{
-		return View::make('pl.addgroup');
+		return View::make('pl.groups.add');
 	}
-	public function getZatwierdz()
+	public function getAdd()
 	{
-		$liczbaOsob = Input::get('liczbaOsob');
-		$srodekTransportu = Input::get('srodekTransportu');
-		$grupa = new Group();
-		$grupa -> number_of_people = $liczbaOsob;
-		$grupa -> id_prot = "1";
-		$grupa -> means_of_transport = $srodekTransportu;
+		$num_of_people = Input::get('num_of_people');
+		$mean_of_trans = Input::get('mean_of_trans');
+		$group = new Group();
+		$group -> number_of_people = $num_of_people;
+		$group -> id_prot = "1";
+		$group -> mean_of_transport = $mean_of_trans;
 		
-		$grupa->save();
-		return View::make('pl.addParticipants');
+		$group->save();
+		return View::make('pl.participants.add');
 	}
 	
 	

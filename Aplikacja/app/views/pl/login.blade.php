@@ -16,7 +16,7 @@
         <input type="text" name="login">
         <br>
         Hasło:
-        <input type="password" name="haslo">
+        <input type="password" name="password">
         <br>
         <input type = "submit" id="submit" value = "Zaloguj">
     </form>

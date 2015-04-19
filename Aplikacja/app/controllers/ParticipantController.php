@@ -7,7 +7,7 @@ class ParticipantController extends BaseController {
 		return View::make('pl.index');
 	}
 	
-	public function getAddparticipant()
+	public function getAdd()
 	{
 		$first_name = Input::get('first_name');
 		$last_name = Input::get('last_name');

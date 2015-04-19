@@ -33,17 +33,17 @@
 <h4>Przydział miejsc</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Automatycznie przydziel miejsca</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">Automatycznie przydziel miejsca</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Przydziel ręcznie</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">Przydziel ręcznie</a>
 		</li>
 	</ul>
 	
 <h4>Kontakt</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/nocleg/add">Wyślij wiadomość do opiekunów</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">Wyślij wiadomość do opiekunów</a>
 		</li>
 	</ul>
 	

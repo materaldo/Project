@@ -11,12 +11,12 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/grupa/zatwierdz">			 
+<form action = "http://zpi.dev/index.php/group/add">			 
         <h4><label>Liczba osób:<br>
-            <input name = "liczbaOsob" id = "liczbaOsob" type = "text" size = "28"maxlength = "20" required>
+            <input name = "num_of_people" id = "num_of_people" type = "text" size = "28" maxlength = "20" required>
         </label></h4>
         <h4><label>Środek transportu:<br>
-            <input name = "srodekTransportu" id="srodekTransportu" type = "text" size = "28" maxlength = "50" required>
+            <input name = "mean_of_trans" id="mean_of_trans" type = "text" size = "28" maxlength = "50" required>
         </label></h4>
 		 <h4><label>Kraj:<br>
             <input name = "country" id="country" type = "text" size = "28" maxlength = "50" required>
