@@ -19,4 +19,5 @@ Route::get('/', function()
 Route::controller('login', 'LoginController');
 Route::controller('nocleg','AccommodationController');
 Route::controller('grupa','GroupController');
+Route::controller('participant', 'ParticipantController');
 Route::controller('/', 'HomeController');

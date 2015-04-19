@@ -28,6 +28,7 @@
                     <li><a href="http://zpi.dev/index.php/about">O ŚDM</a></li>
                     <li><a href="http://zpi.dev/index.php/grupa/addgroup">Zgłoś grupę</a></li>
                     <li><a href="http://zpi.dev/index.php/nocleg/places">Miejsca noclegowe</a></li>
+					<li><a href="http://zpi.dev/index.php/management">Zarządzanie</a></li>
 					<li><a href="http://zpi.dev/index.php/search">Wyszukaj</a></li>
                     <li><a href="http://zpi.dev/index.php/contact">Kontakt</a></li>
                     <li><a href="http://zpi.dev/index.php/login">Zaloguj się</a></li>

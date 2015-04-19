@@ -39,9 +39,12 @@ class HomeController extends BaseController {
 	{
 		return View::make('search');
 	}
-	
 	public function getResults()
 	{
 		return View::make('search_results');
+	}
+	public function getManagement()
+	{
+		return View::make('management');
 	}
 }

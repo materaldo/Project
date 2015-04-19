@@ -11,17 +11,15 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/grupa/addparticipant">			 
+<form action = "http://zpi.dev/index.php/participant/addparticipant">			 
     <table>
-		<tr><td>Imię</td><td>Nazwisko</td><td>Email</td><td>Nr telefonu</td></tr>
+		<tr><td>Imię</td><td>Nazwisko</td><td>Email</td><td>Narodowość</td></tr>
 		<tr><td>
-            <input name = "liczbaOsob" id = "liczbaOsob" type = "text" size = "15" maxlength = "20" required>
+            <input name = "first_name" id = "first_name" type = "text" size = "15" maxlength = "20" required>
 		</td><td>
-            <input name = "srodekTransportu" id="srodekTransportu" type = "text" size = "15" maxlength = "50" required>
+            <input name = "last_name" id="last_name" type = "text" size = "15" maxlength = "50" required>
 		</td><td>
-            <input name = "srodekTransportu" id="srodekTransportu" type = "text" size = "15" maxlength = "50" required>
-		</td><td>
-            <input name = "srodekTransportu" id="srodekTransportu" type = "text" size = "15" maxlength = "50" required>
+            <input name = "email" id="email" type = "text" size = "15" maxlength = "50" required>
 		</td></tr>
 		<tr><td>
 		<input type = "submit" id="submit" value = "Dodaj">
@@ -30,4 +28,6 @@
 	</table>
 </form>
 			  
+			  
+	
 @stop
