@@ -18,7 +18,7 @@
 @stop
 
 @section('content')
-       
+{{Lang::get('search.search')}}
 <h2>WYSZUKIWANIE</h2>
 		<p>Wybierz czego szukasz: </p>
 				<select id="wyborSzukanych" onchange="wyswietlFormularz()">
