@@ -62,6 +62,10 @@
                     <li><a href="#">Last One</a></li>
                 </ul>
             </div>
+			
+			
+			
+			
         </div>
 @yield('content')
 
@@ -76,6 +80,8 @@
                 <a href="http://zpi.dev/index.php/group/addgroup">Zgłoś grupę</a> |
                 <a href="http://zpi.dev/index.php/accommodation/places">Nasze miejsca noclegowe</a> |
                 <a href="http://zpi.dev/index.php/contact">Kontakt</a>
+
+				
             </p>
 
         </footer>
