@@ -17,6 +17,22 @@ class HomeController extends BaseController {
 	
 	public function getIndex()
 	{
+		/*$owner = new Role;
+		$owner->name = 'Owner';
+		$owner->save();
+
+		$admin = new Role;
+		$admin->name = 'Admin';
+		$admin->save();
+		//$admin=Role::where('name', 'Admin');
+		$user = User::where('username','=','joanna')->first();
+
+		/* role attach alias 
+		$user->attachRole( $admin ); // Parameter can be an Role object, array or id.
+*/
+		/* OR the eloquent's original: */
+		//$user->roles()->attach( $admin->id ); // id only
+		
 		return View::make('pl.index');
 	}
 	public function getAbout()

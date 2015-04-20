@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,8 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	//'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'sdmtest12@gmail.com', 'name' => 'Laravel SDM2016'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'sdmtest12@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +94,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => 'SDMTest1',
 
 	/*
 	|--------------------------------------------------------------------------

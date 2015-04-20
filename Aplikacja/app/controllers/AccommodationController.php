@@ -10,7 +10,7 @@ class AccommodationController extends BaseController {
 	{
 		return View::make('pl.places.add');
 	}
-	public function getAdd()
+	public function postAdd()
 	{
 		$name = Input::get('name');
 		$street = Input::get('street');
@@ -25,7 +25,7 @@ class AccommodationController extends BaseController {
 		$acc = new Accommodation();
 		$acc->name = $name;
 		$acc->street = $street;
-		$acc->buildings = $building;
+		$acc->building = $building;
 		$acc->city = $city;
 		$acc->post_code = $post_code;
 		$acc->phone_number = $phone_number;
@@ -53,7 +53,7 @@ class AccommodationController extends BaseController {
 		Accommodation::where('id', $id)->update(array(
 			'name'=>$name,
 			'street'=>$street,
-			'buildings'=>$building,
+			'building'=>$building,
 			'city'=>$city,
 			'post_code'=>$post_code,
 			'phone_number'=>$phone_number,

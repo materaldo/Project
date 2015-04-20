@@ -17,7 +17,7 @@ class CreateNoclegiTable extends Migration {
 			$table->increments('id');
 			$table->string('name');
 			$table->string('street');
-			$table->string('buildings');
+			$table->string('building');
 			$table->string('post_code');
 			$table->string('city');
 			$table->string('phone_number');
