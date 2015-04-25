@@ -3,7 +3,7 @@
 LANGUAGES(id, language)
 COUNTRIES(id, country)
 ACCOMMODATIONS(id, name, street, building, post_code, city, phone_number,
- image, map, free_places, all_places)
+ image, map, free_places, all_places, price)
 USERS(id, name unique, password, role, email unique)
 PROTECTORS(#id(Users), first_name, last_name, date_of_birth, phone_number,
  alt_phone_number(nullable), #id_coun, #id_lang, document_number,
