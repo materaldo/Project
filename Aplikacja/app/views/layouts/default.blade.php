@@ -13,6 +13,13 @@
 
 <body>
 
+<?php
+if (Auth::user()!==null)
+{
+	$user=Auth::user();
+	echo $user->username;
+}?>
+
 <div id="main">
     <header>
         <div id="logo">
@@ -21,22 +28,83 @@
          
             </div>
         </div>
-        <nav>
-            <div id="menu_container">
-                <ul class="sf-menu" id="nav">
-                    <li><a href="http://zpi.dev/index.php/index">Aktualności</a></li>
-                    <li><a href="http://zpi.dev/index.php/about">O ŚDM</a></li>
-                    <li><a href="http://zpi.dev/index.php/group/new">Zgłoś grupę</a></li>
-                    <li><a href="http://zpi.dev/index.php/accommodation">Miejsca noclegowe</a></li>
-					<li><a href="http://zpi.dev/index.php/management">Zarządzanie</a></li>
-					<li><a href="http://zpi.dev/index.php/search">Wyszukaj</a></li>
-                    <li><a href="http://zpi.dev/index.php/contact">Kontakt</a></li>
-                    <li><a href="http://zpi.dev/index.php/users/create">Zarejestruj się</a></li>
-					<li><a href="http://zpi.dev/index.php/users/login">Zaloguj się</a></li>
-					<li><a href="http://zpi.dev/index.php/users/logout">Zaloguj się</a></li>
+		<?php
+		if (isset($user))
+		{
+		if ($user->hasRole("Admin"))
+        {
+			echo "<nav>
+            <div id=\"menu_container\">
+                <ul class=\"sf-menu\" id=\"nav\">
+                    <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
+					<li><a href=\"http://zpi.dev/index.php/management\">Zarządzanie</a></li>
+					<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
+					<li><a href=\"http://zpi.dev/index.php/users/logout\">Wyloguj się</a></li>
                 </ul>
             </div>
-        </nav>
+        </nav>";
+		}
+		elseif ($user->hasRole("Organizer"))
+        {
+			echo "<nav>
+            <div id=\"menu_container\">
+                <ul class=\"sf-menu\" id=\"nav\">
+                    <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/management\">Zarządzanie</a></li>
+					<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
+					<li><a href=\"http://zpi.dev/index.php/users/logout\">Wyloguj się</a></li>
+                </ul>
+            </div>
+        </nav>";
+		}
+		elseif ($user->hasRole("Protector"))
+        {
+			echo "<nav>
+            <div id=\"menu_container\">
+                <ul class=\"sf-menu\" id=\"nav\">
+                    <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/group/new\">Zgłoś grupę</a></li>
+					<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
+					<li><a href=\"http://zpi.dev/index.php/users/logout\">Wyloguj się</a></li>
+                </ul>
+            </div>
+        </nav>";
+		}
+		elseif ($user->hasRole("Participant"))
+        {
+			echo "<nav>
+            <div id=\"menu_container\">
+                <ul class=\"sf-menu\" id=\"nav\">
+                    <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
+					<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
+					<li><a href=\"http://zpi.dev/index.php/users/logout\">Wyloguj się</a></li>
+                </ul>
+            </div>
+        </nav>";
+		}	
+		}
+		else {
+		echo "<nav>
+            <div id=\"menu_container\">
+                <ul class=\"sf-menu\" id=\"nav\">
+                    <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
+                   	<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
+                    <li><a href=\"http://zpi.dev/index.php/users/create\">Zarejestruj się</a></li>
+					<li><a href=\"http://zpi.dev/index.php/users/login\">Zaloguj się</a></li>
+                </ul>
+            </div>
+        </nav>";}
+	?>
     </header>
     <div id="site_content">
         <div id="sidebar_container">

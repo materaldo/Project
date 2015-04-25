@@ -4,7 +4,9 @@
 
 	<meta name="Description" content="" />
 	<meta name="Keywords" content="" />
-
+	<style>
+	fieldset {border: none}
+	</style>
 @stop
 
 @section('content')

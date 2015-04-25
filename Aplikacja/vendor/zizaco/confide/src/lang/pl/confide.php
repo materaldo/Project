@@ -5,13 +5,17 @@ return array(
     'username' => 'Nazwa użytkownika',
     'password' => 'Hasło',
     'password_confirmation' => 'Potwierdź hasło',
-    'e_mail' => 'Email',
+    'e_mail' => 'E-mail',
     'username_e_mail' => 'Nazwa użytkownika lub Email',
 
     'signup' => array(
+		'username' => 'Wybierz nazwę użtkownika',
+		'e_mail' => 'Twój adres e-mail*',
+		'password' => 'Wybierz hasło',
+		'username_e_mail' => 'Nazwa użytkownika lub Email',
         'title' => 'Rejestracja',
         'desc' => 'Rejestracja nowego konta',
-        'confirmation_required' => 'Wymagane potwierdzenie adresu email',
+        'confirmation_required' => '*(Wymagane potwierdzenie adresu e-mail)',
         'submit' => 'Utwórz nowe konto',
     ),
 
