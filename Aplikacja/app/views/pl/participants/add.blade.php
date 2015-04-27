@@ -11,7 +11,7 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/participant/add">			 
+<form action = "http://zpi.dev/index.php/participant/add" method="post">			 
     <table>
 		<tr><td>Imię</td><td>Nazwisko</td><td>Email</td><td>Narodowość</td></tr>
 		<tr><td>
