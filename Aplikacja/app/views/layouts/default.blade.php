@@ -14,18 +14,18 @@
 <body>
 
 <?php
-if (Auth::user()!==null)
+if (Auth::user()!== null)
 {
 	$user=Auth::user();
-	echo $user->username;
 }?>
 
 <div id="main">
     <header>
         <div id="logo">
             <div id="logo_text">
+            </div>
+            <div id="language">
 
-         
             </div>
         </div>
 		<?php
