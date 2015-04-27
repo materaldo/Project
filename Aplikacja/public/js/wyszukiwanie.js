@@ -12,8 +12,9 @@ function start()
 
 function wyswietlFormularz()
 {	
-	var wybor=document.getElementById("wyborSzukanych");
-	var str=wybor.options[wybor.selectedIndex].innerHTML;
+	//var wybor=document.getElementById("wyborSzukanych");
+	var str=document.getElementById("wyborSzukanych").value;
+	//var str=wybor.options[wybor.value].innerHTML;
 
 	switch(str)
 	{

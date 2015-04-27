@@ -10,40 +10,40 @@
 
 @section('content')
 <br>
-<h4>Zarządzaj grupami</h4>
+<h4>{{Lang::get('management.groupManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/language">Przeglądaj zatwierdzone istniejące grupy</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/language">{{Lang::get('management.browse')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/country">Pokaż grupy czekające na zatwierdzenie</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/country">{{Lang::get('management.show')}}</a>
 		</li>
 	</ul>
 	
-<h4>Zarządzaj bazą danych</h4>
+<h4>{{Lang::get('management.baseManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/language">Języki</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/language">{{Lang::get('management.languages')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/country">Państwa</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/country">{{Lang::get('management.countries')}}</a>
 		</li>
 	</ul>
 	
-<h4>Przydział miejsc</h4>
+<h4>{{Lang::get('management.allocationManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">Automatycznie przydziel miejsca</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">{{Lang::get('management.automatic')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">Przydziel ręcznie</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">{{Lang::get('management.manual')}}</a>
 		</li>
 	</ul>
 	
-<h4>Kontakt</h4>
+<h4>{{Lang::get('management.contact')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">Wyślij wiadomość do opiekunów</a>
+			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">{{Lang::get('management.messages')}}</a>
 		</li>
 	</ul>
 	

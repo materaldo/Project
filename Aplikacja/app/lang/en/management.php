@@ -13,16 +13,16 @@ return array(
 	|
 	*/
 	
-	'groupManagement' => 'Group management'
-	'browse' => 'Browse existing and approved groups'
-	'show' => 'Show groups awaiting for approval'
-	'baseManagement' => 'Data base management'
-	'languages' => 'Languages'
-	'countries' => 'Countries'
-	'allocationManagement' => 'Allocation'
-	'automatic' => 'Automatic allocation'
-	'manual' => 'Manual allocation'
-	'contact' => 'Contact'
+	'groupManagement' => 'Group management',
+	'browse' => 'Browse existing and approved groups',
+	'show' => 'Show groups awaiting for approval',
+	'baseManagement' => 'Data base management',
+	'languages' => 'Languages',
+	'countries' => 'Countries',
+	'allocationManagement' => 'Allocation',
+	'automatic' => 'Automatic allocation',
+	'manual' => 'Manual allocation',
+	'contact' => 'Contact',
 	'message' => 'Send a message to protectors'
 	
 	

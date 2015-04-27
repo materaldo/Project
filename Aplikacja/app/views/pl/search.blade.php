@@ -18,43 +18,43 @@
 @stop
 
 @section('content')
-{{Lang::get('search.search')}}
-<h2>WYSZUKIWANIE</h2>
-		<p>Wybierz czego szukasz: </p>
+
+<h2>{{Lang::get('search.search')}}</h2>
+		<p>{{Lang::get('search.description')}}</p>
 				<select id="wyborSzukanych" onchange="wyswietlFormularz()">
 					<option value=""></option>
-					<option value="uczestnik">Uczestnik</option>
-					<option value="opiekun">Opiekun</option>
-					<option value="grupa">Grupa</option>
-					<option value="nocleg">Nocleg</option>
+					<option value="Uczestnik">{{Lang::get('search.participant')}}</option>
+					<option value="Opiekun">{{Lang::get('search.protector')}}</option>
+					<option value="Grupa">{{Lang::get('search.group')}}</option>
+					<option value="Nocleg">{{Lang::get('search.accommodation')}}</option>
 				</select>
 			
 <table id="szukajUczestnik">
     <form action = "http://zpi.dev/index.php/results">
 		<tr>
 			<td>						 
-                <h4><label>Imię:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.name')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
 		<tr>
 			<td>
-                <h4><label>Nazwisko:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.surname')}}<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
         <tr>
 			<td>						 
-                <h4><label>Narodowość:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.nationality')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
 		<tr>
 			<td>
-                <h4><label>Wiek:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.age')}}<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
 		<tr>
 			<td>
-                        <input type = "submit" value = "Wyszukaj">
-                        <input type = "reset" value = "Wyczyść">
+                        <input type = "submit" value = {{Lang::get('search.searchBTN')}}>
+                        <input type = "reset" value = {{Lang::get('search.clearBTN')}}>
 			</td>
         </tr>       
     </form>
@@ -63,24 +63,24 @@
     <form action = "http://zpi.dev/index.php/results">
 		<tr>
 			<td>						 
-                <h4><label>Imię:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.name')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 			<td>
-                <h4><label>Nazwisko:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.surname')}}<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
         <tr>
 			<td>						 
-                <h4><label>Email:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.email')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 			<td>
-                <h4><label>Narodowość:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.nationality')}}<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
 		<tr>
 			<td>
-                        <input type = "submit" value = "Wyszukaj">
-                        <input type = "reset" value = "Wyczyść">
+                        <input type = "submit" value = {{Lang::get('search.searchBTN')}}>
+                        <input type = "reset" value = {{Lang::get('search.clearBTN')}}>
 			</td>
         </tr>       
     </form>
@@ -89,24 +89,24 @@
     <form action = "http://zpi.dev/index.php/results">
 		<tr>
 			<td>						 
-                <h4><label>Nazwa:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.nameGR')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 			<td>
-                <h4><label>Opiekun:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.protector')}}<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
         <tr>
 			<td>						 
-                <h4><label>Narodowość:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.nationality')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 			<td>
-                <h4><label>Liczba członków:<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.members')}}<br><input name = "nazwisko" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
 		<tr>
 			<td>
-                        <input type = "submit" value = "Wyszukaj">
-                        <input type = "reset" value = "Wyczyść">
+                        <input type = "submit" value = {{Lang::get('search.searchBTN')}}>
+                        <input type = "reset" value = {{Lang::get('search.clearBTN')}}>
 			</td>
         </tr>       
     </form>
@@ -115,24 +115,24 @@
 <table id="szukajNocleg">
     <form action = "http://zpi.dev/index.php/results">
 		<tr>
-			<td>						 
-                <h4><label>Nazwa:<br><input name = "name" type = "text" size = "28" maxlength = "255"></label></h4>
+			<td>					 
+                <h4><label>{{trans('search.name')}}<br><input name = "name" type = "text" size = "28" maxlength = "255"></label></h4>
 			</td>
 		</tr>
 		<tr>
 			<td>
-                <h4><label>Ulica:<br><input name = "street" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.street')}}<br><input name = "street" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
         <tr>
 			<td>						 
-                <h4><label>Typ:<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
+                <h4><label>{{Lang::get('search.type')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
 			</td>
 		</tr>
 		<tr>
 			<td>
-                        <input type = "submit" value = "Wyszukaj">
-                        <input type = "reset" value = "Wyczyść">
+                        <input type = "submit" value = {{Lang::get('search.searchBTN')}}>
+                        <input type = "reset" value = {{Lang::get('search.clearBTN')}}>
 			</td>
         </tr>       
     </form>
