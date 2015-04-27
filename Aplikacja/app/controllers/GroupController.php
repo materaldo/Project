@@ -10,6 +10,10 @@ class GroupController extends BaseController {
 	{
 		return View::make('pl.groups.add');
 	}
+	public function getEdit()
+	{
+		return View::make('pl.groups.edit');
+	}
 	public function getManagement()
 	{
 		return View::make('pl.groups.management');

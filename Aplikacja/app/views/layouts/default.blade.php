@@ -17,7 +17,7 @@
 if (Auth::user()!==null)
 {
 	$user=Auth::user();
-	echo $user->username;
+	//echo $user->username;
 }?>
 
 <div id="main">
