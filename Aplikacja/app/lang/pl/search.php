@@ -13,24 +13,27 @@ return array(
 	|
 	*/
 	
-	'search' => 'Search',
-	'description' => 'Choose what you are looking for:',
-	'participant' => 'Participant',
-	'protector' => 'Protector',
-	'group' => 'Group',
-	'accommodation' => 'Accommodation',
-	'name' => 'Name',
-	'street' => 'Street',
-	'surname' => 'Surname',
-	'nationality' => 'Nationality',
-	'age' => 'Age',
-	'searchBTN' => 'Search',
-	'clearBTN' => 'Clear',
+	'search' => 'Wyszukiwanie',
+	'description' => 'Wybierz czego szukasz:',
+	'participant' => 'Uczestnik',
+	'protector' => 'Opiekun',
+	'group' => 'Grupa',
+	'accommodation' => 'Nocleg',
+	'name' => 'Imię',
+	'street' => 'Ulica',
+	'surname' => 'Nazwisko',
+	'nationality' => 'Narodowość',
+	'age' => 'Wiek',
+	'searchBTN' => 'Wyszukaj',
+	'clearBTN' => 'Wyczyść',
 	'email' => 'e-mail',
-	'nameGR' => 'Name',
-	'members' => 'Amount of members',
-	'hotel' => 'Name',
-	'type' => 'Type'
+	'nameGR' => 'Nazwa',
+	'members' => 'Liczba członków',
+	'hotel' => 'Nazwa',
+	'type' => 'Typ'
+	
+
+
 	
 
 );
