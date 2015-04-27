@@ -10,6 +10,10 @@ class GroupController extends BaseController {
 	{
 		return View::make('pl.groups.add');
 	}
+	public function getManagement()
+	{
+		return View::make('pl.groups.management');
+	}
 	public function postAdd()
 	{
 		$num_of_people = Input::get('num_of_people');

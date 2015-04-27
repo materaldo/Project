@@ -69,6 +69,7 @@ if (Auth::user()!==null)
                     <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
                     <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
                     <li><a href=\"http://zpi.dev/index.php/group/new\">Zgłoś grupę</a></li>
+					<li><a href=\"http://zpi.dev/index.php/group/management\">Zarządzaj grupą</a></li>
 					<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
                     <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
 					<li><a href=\"http://zpi.dev/index.php/users/logout\">Wyloguj się</a></li>
