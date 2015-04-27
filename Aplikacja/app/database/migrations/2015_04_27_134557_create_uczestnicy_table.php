@@ -18,7 +18,7 @@ class CreateUczestnicyTable extends Migration {
 			$table->foreign('id')->references('id')->on('users');
 			$table->primary('id');
 			$table->string('first_name');
-			$table->string('last_name');	
+			$table->string('last_name');			
 			$table->date('date_of_birth');
 			$table->string('phone_number');
 			$table->integer('id_coun')->unsigned();

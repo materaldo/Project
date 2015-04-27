@@ -8,7 +8,7 @@ USERS(id, name unique, password, role, email unique)
 PROTECTORS(#id(Users), first_name, last_name, date_of_birth, phone_number,
  alt_phone_number(nullable), #id_coun, #id_lang, document_number,
  insurance_number
-GROUPS(id, #id_prot, number_of_people, mean_of_transport, ....)
+GROUPS(id, #id_prot(users), number_of_people, mean_of_transport, ....)
 PARTICIPANTS(#id(Users), first_name, last_name, date_of_birth,
  #id_coun, #id_lang, #id_gr, document_number, insurance_number)
 ORGANIZERS(#id(Users), phone_number)
