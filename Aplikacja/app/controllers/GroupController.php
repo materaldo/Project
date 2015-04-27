@@ -10,14 +10,24 @@ class GroupController extends BaseController {
 	{
 		return View::make('pl.groups.add');
 	}
-	public function getAdd()
+	public function postAdd()
 	{
 		$num_of_people = Input::get('num_of_people');
 		$mean_of_trans = Input::get('mean_of_trans');
+		$country = Input::get('country');
+		$first_lang = Input::get('lang1');
+		$second_lang = Input::get('lang2');
+		$third_lang = Input::get('lang3');
 		$group = new Group();
 		$group -> number_of_people = $num_of_people;
-		$group -> id_prot = "1";
 		$group -> mean_of_transport = $mean_of_trans;
+		$group -> id_prot = Auth::id();
+		$group -> id_coun = $country;
+		$group -> id_first_lang = $first_lang;
+		$group -> id_second_lang = $second_lang;
+		$group -> id_third_lang = $third_lang;
+		
+		
 		
 		$group->save();
 		return View::make('pl.participants.add');
