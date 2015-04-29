@@ -8,7 +8,7 @@
 @stop
 
 @section('content')
-<form method="post" action="http://zpi.dev/index.php/group/messagesender/{{$idG}}">
+<form method="post" action="http://zpi.dev/group/messagesender/{{$idG}}">
     <textarea rows="4" cols="50" name="emailText" id="emailText">
             Treść maila
     </textarea>

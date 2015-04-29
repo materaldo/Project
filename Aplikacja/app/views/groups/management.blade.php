@@ -30,14 +30,14 @@
             if ($gr->id_prot == $protector) {
                 echo "<tr>
                     <td>
-                    <a href=http://zpi.dev/index.php/group/message/" . $gr->id . ">Wiadomość grupowa
+                    <a href=http://zpi.dev/group/message/" . $gr->id . ">Wiadomość grupowa
 </td>
 <td>
 $gr->number_of_people
 </td>
 <td>$gr->mean_of_transport</td>
-<td><a href=http://zpi.dev/index.php/group/edit/" . $gr->id . ">Kliknij by edytować</td>
-<td><a href=http://zpi.dev/index.php/participant/add/" . $gr->id . ">Dodaj uczestników</td>
+<td><a href=http://zpi.dev/group/edit/" . $gr->id . ">Kliknij by edytować</td>
+<td><a href=http://zpi.dev/participant/add/" . $gr->id . ">Dodaj uczestników</td>
 <td>$gr->created_at</td>
 </tr>";
                 //	echo ;

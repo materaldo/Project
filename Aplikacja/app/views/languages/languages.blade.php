@@ -11,7 +11,7 @@
 @section('content')
 
 <h2>JĘZYKI: </h2>
-<a class="clickMe" href="http://zpi.dev/index.php/language/new">Dodaj język</a><br>
+<a class="clickMe" href="http://zpi.dev/language/new">Dodaj język</a><br>
 
 <table>
 <?php
@@ -19,7 +19,7 @@
 	
 	foreach ($languages as $lang)
 		{
-			echo "<tr><td width=\"120\">". $lang->language ."</td><td><a href=http://zpi.dev/index.php/language/edit/" . $lang->id . ">Edytuj </a></td><td><a href=http://zpi.dev/index.php/language/delete/" . $lang->id . "> Usuń</a></td></tr>";
+			echo "<tr><td width=\"120\">". $lang->language ."</td><td><a href=http://zpi.dev/language/edit/" . $lang->id . ">Edytuj </a></td><td><a href=http://zpi.dev/language/delete/" . $lang->id . "> Usuń</a></td></tr>";
 		}	
 ?>
 </table>

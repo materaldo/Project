@@ -11,7 +11,7 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/country/add">			 
+<form action = "http://zpi.dev/country/add">			 
         <h4><label>Dodaj kraj:<br>
             <input name = "country" id = "country" type = "text" size = "28"
                 maxlength = "255" autofocus>

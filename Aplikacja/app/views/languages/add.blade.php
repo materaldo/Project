@@ -11,7 +11,7 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/language/add">			 
+<form action = "http://zpi.dev/language/add">			 
         <h4><label>Dodaj język:<br>
             <input name = "language" id = "language" type = "text" size = "28"
                 maxlength = "255" autofocus>

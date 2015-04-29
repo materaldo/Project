@@ -24,7 +24,7 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/index.php/language/confirm/{{$idL}}">			 
+<form action = "http://zpi.dev/language/confirm/{{$idL}}">			 
         <h4><label>Edytuj język:<br>
             <input name = "language" id = "language" type = "text" size = "28"
                 maxlength = "255" autofocus>

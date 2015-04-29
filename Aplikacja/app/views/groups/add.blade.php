@@ -9,7 +9,7 @@
 
 @section('content')
 
-    <form action="http://zpi.dev/index.php/group/add" method="post">
+    <form action="http://zpi.dev/group/add" method="post">
         <h4><label>Liczba osób:<br>
                 <input name="num_of_people" id="num_of_people" type="text" size="28" maxlength="20" required>
             </label></h4>
