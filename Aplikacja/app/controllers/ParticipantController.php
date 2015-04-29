@@ -14,7 +14,7 @@ class ParticipantController extends BaseController {
 	
 	public function getChange()
 	{
-		return View::make('pl.uczestnik_zamiana');
+		return View::make('pl.participant_change');
 	}
 	
 	

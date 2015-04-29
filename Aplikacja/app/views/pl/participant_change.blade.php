@@ -13,7 +13,7 @@
 			
 			
              
-              <h3><label>Podaj przyczynę zmiany miejsca:</label></h3>
+             <h3><label>Podaj przyczynę zmiany miejsca:</label></h3>
 			  
               <p><input name="przyczyna1" type="checkbox">
               Chcę być zakwaterowany razem z:
@@ -38,6 +38,6 @@
                <input type="reset" value="Wyczyść">
               </p>
             </form>
-            <p><a href="http://zpi.dev/participant/accommodation">Powrót</a></p>
+             <p><a href="http://zpi.dev/participant/accommodation">Powrót</a></p>
 
     @stop
