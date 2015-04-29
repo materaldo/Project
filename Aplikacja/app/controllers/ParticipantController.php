@@ -7,6 +7,17 @@ class ParticipantController extends BaseController {
 		return View::make('pl.index');
 	}
 	
+	public function getAccommodation()
+	{
+		return View::make('pl.myaccommodation');
+	}
+	
+	public function getChange()
+	{
+		return View::make('pl.uczestnik_zamiana');
+	}
+	
+	
 	public function getAdd($id)
 	{
 		/*$first_name = Input::get('first_name');
