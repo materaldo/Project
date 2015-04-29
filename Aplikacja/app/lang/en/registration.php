@@ -13,8 +13,21 @@ return array(
 	|
 	*/
 
-	'text1' => '1st paragraph at about page'
-	'text2' => '2nd paragraph at about page'
-	'text3' => '3rd paragraph at about page'
+	'registration' => 'Registration',
+	'login' => 'Login:',
+	'password' => 'Password:',
+	'password2' => 'Confirm password:',
+	'email' => 'E-mail:',
+	'email2' => 'Confirm e-mail:',
+	'name' => 'Name:',
+	'date' => 'Date of birth:',
+	'telephone' => 'Telephone:',
+	'telephoneALT' => 'Alternative telephone:',
+	'nationality' => 'Nationality:',
+	'language' => 'Language:',
+	'document' => ' Document number(visa, ID Card):',
+	'insurance' => 'Insurance number:',
+	'agree' => 'I agree...',
+	'Register' => 'Register'
 
 );

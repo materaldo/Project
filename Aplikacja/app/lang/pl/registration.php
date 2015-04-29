@@ -12,13 +12,22 @@ return array(
 	| as the size rules. Feel free to tweak each of these messages here.
 	|
 	*/
-	'rejestration_title' => 'Rejestracja'
-	'text1' => 'pierwszy paragraf tekstu na stronie głównej'
-	'text2' => 'drugi paragraf tekstu na stronie głównej'
-	'text3' => 'trzeci paragraf tekstu na stronie głównej'
-	'text4' => 'czwarty paragraf tekstu na stronie główneje'
-	'text5' => 'piąty paragraf tekstu na stronie głównej'
-	'text6' => 'szósty paragraf tekstu na stronie głównej'
-	'text7' => 'siódmy paragraf tekstu na stronie głównej'
+	'registration' => 'Rejestracja',
+	'login' => 'Login:',
+	'password' => 'Hasło:',
+	'password2' => 'Powtórz hasło:',
+	'email' => 'E-mail:',
+	'email2' => 'Powtórz e-mail:',
+	'name' => 'Imię:',
+	'date' => 'Data urodzenia:',
+	'telephone' => 'Numer telefonu:',
+	'telephoneALT' => 'Alternatywny numer telefonu:',
+	'nationality' => 'Narodowość:',
+	'language' => 'Język:',
+	'document' => ' Numer dokumentu(paszport, dowód osobisty):',
+	'insurance' => 'Numer ubezpieczenia:',
+	'agree' => 'Wyrażam zgodę na przetwarzanie danych...',
+	'Register' => 'Zarejestruj'
+	
 
 );

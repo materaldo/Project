@@ -12,7 +12,7 @@
 @section('content')
       
 <h4>
-Dodawanie uczestników, jeszcze nie wiem jak zrobić xD
+Dodano grupę, możesz teraz w panelu zarządzania dodać informacje o uczestnikach!
 		</h4>	  
 	
 @stop

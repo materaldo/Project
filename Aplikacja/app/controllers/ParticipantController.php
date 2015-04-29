@@ -7,9 +7,9 @@ class ParticipantController extends BaseController {
 		return View::make('pl.index');
 	}
 	
-	public function getAdd()
+	public function getAdd($id)
 	{
-		$first_name = Input::get('first_name');
+		/*$first_name = Input::get('first_name');
 		$last_name = Input::get('last_name');
 		$email = Input::get('email');
 		
@@ -27,6 +27,7 @@ class ParticipantController extends BaseController {
 		$participant -> document_number = "7485268";
 		$participant -> insurance_number = "89562489562";
 
-		//$participant->save();
+		//$participant->save();*/
+        return View::make('pl.participants.add')->with('idG',$id);
 	}
 }

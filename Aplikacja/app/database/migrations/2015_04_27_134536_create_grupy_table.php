@@ -19,7 +19,7 @@ class CreateGrupyTable extends Migration {
 			$table->integer('number_of_people');
 			$table->string('mean_of_transport')->nullable();
 			$table->integer('id_prot')->unsigned();
-			$table->foreign('id_prot')->references('id')->on('protectors');
+			$table->foreign('id_prot')->references('id')->on('users');
 			$table->integer('id_coun')->unsigned();
 			$table->foreign('id_coun')->references('id')->on('countries');
 			$table->integer('id_first_lang')->unsigned();
@@ -42,5 +42,4 @@ class CreateGrupyTable extends Migration {
 	{
 		Schema::drop('groups');
 	}
-
 }

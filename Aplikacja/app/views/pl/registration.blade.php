@@ -9,13 +9,13 @@
 
 @section('content')
 
-    <h1>Rejestracja</h1>
+    <h1>{{Lang::get('registration.registration')}}</h1>
 
     <form action="http://zpi.dev/index.php/registred" method="post">
-        Login:
+        {{Lang::get('registration.login')}}
         <input type="text" name="login">
         <br>
-        Hasło:
+        {{Lang::get('registration.password')}}
         <input type="password" name="password">
         <br>
         Powtórz hasło:
