@@ -1,4 +1,6 @@
-﻿@section('header')
+﻿@extends('layouts.default')
+
+@section('header')
             <title>Światowe Dni Młodzieży - Wrocław</title>
 
 @stop
