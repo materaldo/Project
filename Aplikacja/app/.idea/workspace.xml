@@ -28,8 +28,8 @@
       <file leaf-file-name="management.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pl/groups/management.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.192307" vertical-offset="372" max-vertical-offset="969">
-              <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="969">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <marker date="1430315722784" expanded="true" signature="741:1150" placeholder="..." />
                 <marker date="1430315722784" expanded="true" signature="766:873" placeholder="..." />
@@ -39,11 +39,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="add.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pl/groups/add.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.461538" vertical-offset="124" max-vertical-offset="731">
+              <caret line="34" column="12" selection-start-line="31" selection-start-column="8" selection-end-line="34" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GroupController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/GroupController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20481928" vertical-offset="255" max-vertical-offset="1275">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.43889844" vertical-offset="238" max-vertical-offset="1343">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -52,8 +62,8 @@
       <file leaf-file-name="message.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pl/groups/message.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="357">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="425">
+              <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -455,20 +465,8 @@
         <state vertical-scroll-proportion="-8.0" vertical-offset="47" max-vertical-offset="1411">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
           <folding>
-            <marker date="1429511145463" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1429511145463" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pl/groups/management.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.192307" vertical-offset="372" max-vertical-offset="969">
-          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
-          <folding>
-            <marker date="1430315722784" expanded="true" signature="741:1150" placeholder="..." />
-            <marker date="1430315722784" expanded="true" signature="766:873" placeholder="..." />
-            <marker date="1430315722784" expanded="true" signature="878:906" placeholder="..." />
+            <marker date="1430325358740" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1430325358740" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -508,26 +506,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/pl/groups/management.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="969">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <marker date="1430315722784" expanded="true" signature="741:1150" placeholder="..." />
+            <marker date="1430315722784" expanded="true" signature="766:873" placeholder="..." />
+            <marker date="1430315722784" expanded="true" signature="878:906" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/pl/groups/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.106712565" vertical-offset="125" max-vertical-offset="731">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="52" />
+        <state vertical-scroll-proportion="-17.461538" vertical-offset="124" max-vertical-offset="731">
+          <caret line="34" column="12" selection-start-line="31" selection-start-column="8" selection-end-line="34" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pl/groups/message.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="357">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="425">
+          <caret line="10" column="79" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/GroupController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20481928" vertical-offset="255" max-vertical-offset="1275">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.43889844" vertical-offset="238" max-vertical-offset="1343">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding />
         </state>
       </provider>

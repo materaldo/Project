@@ -18,12 +18,16 @@ class GroupController extends BaseController {
     {
         return View::make('pl.groups.message')->with('idG',$id);
     }
-    public function postMessage($id,$text)
+    public function postMessagesender($id)
     {
-        Mail::send('emails.welcome', array('key' => 'value'), function($message)
+
+        Mail::send('emails.groupMessage', array('key' => 'value'), function($message)
         {
-            $message->to('mlteusz_711@wp.pl', 'John Smith')->subject('Welcome!');
+            $message->to('mlteusz_711@wp.pl', 'Jacek taki chuj')->subject('elo ty kurwo!');
+
+
         });
+        return View::make('pl.index');
     }
     public function postConfirm($id)
     {
