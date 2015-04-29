@@ -10,10 +10,14 @@ class GroupController extends BaseController {
 	{
 		return View::make('pl.groups.add');
 	}
-	public function getEdit()
+	public function getEdit($id)
 	{
-		return View::make('pl.groups.edit');
+		return View::make('pl.groups.edit')-> with('idG',$id);
 	}
+    public function postConfirmEditGroup($id)
+    {
+
+    }
 	public function getManagement()
 	{
 		return View::make('pl.groups.management');
@@ -38,7 +42,7 @@ class GroupController extends BaseController {
 		
 		
 		$group->save();
-		return View::make('pl.participants.add');
+		return View::make('pl.groups.info');
 	}
 	
 	
