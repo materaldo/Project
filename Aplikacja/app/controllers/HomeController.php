@@ -48,7 +48,7 @@ class HomeController extends BaseController {
 		return View::make('pl.management');
 	}
 		public function getSkrypt()
-	{
+	{/*
 		//utworzenie ról
 		$adminRole = new Role;
 		$adminRole->name = 'Admin';
@@ -128,5 +128,72 @@ class HomeController extends BaseController {
 		$organizer->attachRole($organizerRole);
 		$protector->attachRole($protectorRole);
 		$participant->attachRole($participantRole);
+		*/
+		
+		//$user=User::find('3');
+		//echo $user->id;
+		
+		//test
+	/*	$lang=new Language();
+		$lang->language='polski';
+		$lang->save();
+		
+		$coun=new Country();
+		$coun->country='Polska';
+		$coun->save();
+		*/
+		$user=User::find('3');
+		/*
+		$prot=new Protector();
+		$prot->id = $user->id;
+		$prot->first_name = 'jasiu';
+		$prot->last_name = 'nowak';
+		$prot->date_of_birth = '1999-02-02';
+		$prot->phone_number = '098765678';
+		$prot->id_coun = '1';
+		$prot->id_first_lang = '1';
+		$prot->document_number ='jsedag';
+		$prot->insurance_number ='54841986526';
+		
+		$prot->save();
+		*/
+		$group=new Group();
+		$group->number_of_people='21';
+		$group->id_prot=$user->id;
+		$group->id_coun='1';
+		$group->id_first_lang='1';
+		
+		$group->save();
+		
+		$participant = new User;
+		$participant->username = 'jasiu';
+        $participant->email = 'jasiu@testowyemail.pl';
+		$h=md5(uniqid(mt_rand(), true));
+        $participant->password = $h;
+        $participant->password_confirmation = $h;
+        $participant->confirmation_code = md5(uniqid(mt_rand(), true));
+        $participant->confirmed = 1;
+
+        if(! $participant->save()) {
+            Log::info('Unable to create user '.$participant->email, (array)$participant->errors());
+        } else {
+            Log::info('Created user '.$participant->email);
+        }
+		echo $participant->id;
+		$part=new Participant();
+		
+		$part->id = $participant->id;
+		$part->first_name = 'jasiu';
+		$part->last_name = 'nowak';
+		$part->date_of_birth = '1999-02-02';
+		$part->phone_number = '098765678';
+		$part->id_coun = '1';
+		$part->id_first_lang = '1';
+		$part->id_gr = '2';
+		$part->document_number ='jsedag';
+		$part->insurance_number ='54841986526';
+		
+		$part->save();
+	
 	}
 }
