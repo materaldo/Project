@@ -6,6 +6,8 @@
 @stop
 
 @section('content')
+
+
             <h1>Zmiana Zakwaterowania</h1>
 			<p>Prszę wypałnić formularz dotyczący preferencji miejsca zakwaterownia. Pomoże nam on znaleźć odpowiedznie dla Ciebie miejsce.
             

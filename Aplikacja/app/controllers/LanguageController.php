@@ -4,11 +4,11 @@ class LanguageController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.languages.languages');
+		return View::make('languages.languages');
 	}
 	public function getNew()
 	{
-		return View::make('pl.languages.add');
+		return View::make('languages.add');
 	}
 	public function getAdd()
 	{
@@ -18,7 +18,7 @@ class LanguageController extends BaseController {
 		$language->language = $lang;
 		
 		$language->save();
-		return View::make('pl.languages.languages');
+		return View::make('languages.languages');
 	}
 	public function getDelete($id)
 	{
@@ -27,11 +27,11 @@ class LanguageController extends BaseController {
 			$lang = Language::find($id);
 			$lang->delete();
 		}
-		return View::make('pl.languages.languages');
+		return View::make('languages.languages');
 	}
 	public function getEdit($id)
 	{
-		return View::make('pl.languages.edit')->with('idL', $id);
+		return View::make('languages.edit')->with('idL', $id);
 	}
 	public function getConfirm($id)
 	{
@@ -41,6 +41,6 @@ class LanguageController extends BaseController {
 			'language'=>$lang,
 			));
 		
-		return View::make('pl.languages.languages');	
+		return View::make('languages.languages');	
 	}
 }
