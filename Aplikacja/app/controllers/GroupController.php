@@ -14,6 +14,17 @@ class GroupController extends BaseController {
 	{
 		return View::make('pl.groups.edit')-> with('idG',$id);
 	}
+    public function getMessage($id)
+    {
+        return View::make('pl.groups.message')->with('idG',$id);
+    }
+    public function postMessage($id,$text)
+    {
+        Mail::send('emails.welcome', array('key' => 'value'), function($message)
+        {
+            $message->to('mlteusz_711@wp.pl', 'John Smith')->subject('Welcome!');
+        });
+    }
     public function postConfirm($id)
     {
         $number_of_peopleEdited = Input::get('num_of_people');
@@ -52,12 +63,7 @@ class GroupController extends BaseController {
 		$group -> id_first_lang = $first_lang;
 		$group -> id_second_lang = $second_lang;
 		$group -> id_third_lang = $third_lang;
-		
-		
-		
 		$group->save();
 		return View::make('pl.groups.info');
 	}
-	
-	
 }
