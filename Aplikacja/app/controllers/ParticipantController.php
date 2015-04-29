@@ -9,12 +9,12 @@ class ParticipantController extends BaseController {
 	
 	public function getAccommodation()
 	{
-		return View::make('myaccommodation');
+		return View::make('participants.myaccommodation');
 	}
 	
 	public function getChange()
 	{
-		return View::make('participant_change');
+		return View::make('participants.participant_change');
 	}
 	
 	
