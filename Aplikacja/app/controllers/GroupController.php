@@ -14,9 +14,23 @@ class GroupController extends BaseController {
 	{
 		return View::make('pl.groups.edit')-> with('idG',$id);
 	}
-    public function postConfirmEditGroup($id)
+    public function postConfirm($id)
     {
-
+        $number_of_peopleEdited = Input::get('num_of_people');
+        $mean_of_transportEdited = Input::get('mean_of_trans');
+        $countryEdited = Input::get('country');
+        $language1Edited = Input::get('lang1');
+        $language2Edited = Input::get('lang2');
+        $language3Edited = Input::get('lang3');
+        Group::where('id', $id)->update(array(
+            'number_of_people'=>$number_of_peopleEdited,
+            'mean_of_transport'=>$mean_of_transportEdited,
+            'id_coun'=>$countryEdited,
+            'id_first_lang'=>$language1Edited,
+            'id_second_lang'=>$language2Edited,
+            'id_third_lang'=>$language3Edited,
+        ));
+        return View::make('pl.groups.management');
     }
 	public function getManagement()
 	{
