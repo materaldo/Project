@@ -4,8 +4,19 @@ class ParticipantController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.index');
+		return View::make('index');
 	}
+	
+	public function getAccommodation()
+	{
+		return View::make('myaccommodation');
+	}
+	
+	public function getChange()
+	{
+		return View::make('participant_change');
+	}
+	
 	
 	public function getAdd($id)
 	{
@@ -28,6 +39,6 @@ class ParticipantController extends BaseController {
 		$participant -> insurance_number = "89562489562";
 
 		//$participant->save();*/
-        return View::make('pl.participants.add')->with('idG',$id);
+        return View::make('participants.add')->with('idG',$id);
 	}
 }

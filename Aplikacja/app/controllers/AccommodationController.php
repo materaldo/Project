@@ -4,11 +4,11 @@ class AccommodationController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.places.places');
+		return View::make('places.places');
 	}
 	public function getNew()
 	{
-		return View::make('pl.places.add');
+		return View::make('places.add');
 	}
 	public function postAdd()
 	{
@@ -36,7 +36,7 @@ class AccommodationController extends BaseController {
 		
 		$acc->save();
 
-		return View::make('pl.places.places');	
+		return View::make('places.places');	
 	}
 	public function getConfirm($id)
 	{
@@ -62,15 +62,15 @@ class AccommodationController extends BaseController {
 			'image'=>$image
 			));
 		
-		return View::make('pl.places.places');	
+		return View::make('places.places');	
 	}	
 	public function getDetails($id)
 	{
-		return View::make('pl.places.details')->with('idA', $id);
+		return View::make('places.details')->with('idA', $id);
 	}
 	public function getEdit($id)
 	{
-		return View::make('pl.places.edit')->with('idA', $id);
+		return View::make('places.edit')->with('idA', $id);
 	}
 	public function getDelete($id)
 	{
@@ -79,7 +79,7 @@ class AccommodationController extends BaseController {
 			$accommod = Accommodation::find($id);
 			$accommod->delete();
 		}
-		return View::make('pl.places.places');
+		return View::make('places.places');
 	}
 	
 }

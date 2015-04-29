@@ -4,16 +4,31 @@ class GroupController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.groups.groups');
+		return View::make('groups.groups');
 	}
 	public function getNew()
 	{
-		return View::make('pl.groups.add');
+		return View::make('groups.add');
 	}
 	public function getEdit($id)
 	{
-		return View::make('pl.groups.edit')-> with('idG',$id);
+		return View::make('groups.edit')-> with('idG',$id);
 	}
+    public function getMessage($id)
+    {
+        return View::make('groups.message')->with('idG',$id);
+    }
+    public function postMessagesender($id)
+    {
+
+        Mail::send('emails.groupMessage', array('key' => 'value'), function($message)
+        {
+            $message->to('mlteusz_711@wp.pl', 'Jacek taki chuj')->subject('elo ty kurwo!');
+
+
+        });
+        return View::make('index');
+    }
     public function postConfirm($id)
     {
         $number_of_peopleEdited = Input::get('num_of_people');
@@ -30,11 +45,11 @@ class GroupController extends BaseController {
             'id_second_lang'=>$language2Edited,
             'id_third_lang'=>$language3Edited,
         ));
-        return View::make('pl.groups.management');
+        return View::make('groups.management');
     }
 	public function getManagement()
 	{
-		return View::make('pl.groups.management');
+		return View::make('groups.management');
 	}
 	public function postAdd()
 	{
@@ -52,12 +67,7 @@ class GroupController extends BaseController {
 		$group -> id_first_lang = $first_lang;
 		$group -> id_second_lang = $second_lang;
 		$group -> id_third_lang = $third_lang;
-		
-		
-		
 		$group->save();
-		return View::make('pl.groups.info');
+		return View::make('groups.info');
 	}
-	
-	
 }

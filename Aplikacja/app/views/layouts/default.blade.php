@@ -67,13 +67,13 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
-                    <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
-                    <li><a href=\"http://zpi.dev/index.php/group/new\">Zgłoś grupę</a></li>
-					<li><a href=\"http://zpi.dev/index.php/group/management\">Zarządzaj grupą</a></li>
-					<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
-                    <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
-					<li><a href=\"http://zpi.dev/index.php/users/logout\">Wyloguj się</a></li>
+                    <li><a href=\"http://zpi.dev/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/about\">O ŚDM</a></li>
+                    <li><a href=\"http://zpi.dev/group/new\">Zgłoś grupę</a></li>
+					<li><a href=\"http://zpi.dev/group/management\">Zarządzaj grupą</a></li>
+					<li><a href=\"http://zpi.dev/search\">Wyszukaj</a></li>
+                    <li><a href=\"http://zpi.dev/contact\">Kontakt</a></li>
+					<li><a href=\"http://zpi.dev/users/logout\">Wyloguj się</a></li>
                 </ul>
             </div>
         </nav>";
@@ -83,11 +83,12 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
-                    <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
-					<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
-                    <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
-					<li><a href=\"http://zpi.dev/index.php/users/logout\">Wyloguj się</a></li>
+                    <li><a href=\"http://zpi.dev/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/about\">O ŚDM</a></li>
+					<li><a href=\"http://zpi.dev/search\">Wyszukaj</a></li>
+					<li><a href=\"http://zpi.dev/participant/accommodation\">Moje zakwaterowanie</a></li>
+                    <li><a href=\"http://zpi.dev/contact\">Kontakt</a></li>
+					<li><a href=\"http://zpi.dev/users/logout\">Wyloguj się</a></li>
                 </ul>
             </div>
         </nav>";
@@ -97,12 +98,12 @@ if (Auth::user()!==null)
 		echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index.php/index\">Aktualności</a></li>
-                    <li><a href=\"http://zpi.dev/index.php/about\">O ŚDM</a></li>
-                   	<li><a href=\"http://zpi.dev/index.php/search\">Wyszukaj</a></li>
-                    <li><a href=\"http://zpi.dev/index.php/contact\">Kontakt</a></li>
-                    <li><a href=\"http://zpi.dev/index.php/users/create\">Zarejestruj się</a></li>
-					<li><a href=\"http://zpi.dev/index.php/users/login\">Zaloguj się</a></li>
+                    <li><a href=\"http://zpi.dev/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/about\">O ŚDM</a></li>
+                   	<li><a href=\"http://zpi.dev/search\">Wyszukaj</a></li>
+                    <li><a href=\"http://zpi.dev/contact\">Kontakt</a></li>
+                    <li><a href=\"http://zpi.dev/users/create\">Zarejestruj się</a></li>
+					<li><a href=\"http://zpi.dev/users/login\">Zaloguj się</a></li>
                 </ul>
             </div>
         </nav>";}
@@ -145,13 +146,10 @@ if (Auth::user()!==null)
         </div>
         <footer>
 
-            <p> <a href="http://zpi.dev/index.php/index">Aktualności</a> |
-                <a href="http://zpi.dev/index.php/about">O ŚDM</a> |
-                <a href="http://zpi.dev/index.php/group/addgroup">Zgłoś grupę</a> |
-                <a href="http://zpi.dev/index.php/accommodation/places">Nasze miejsca noclegowe</a> |
-                <a href="http://zpi.dev/index.php/contact">Kontakt</a>
-
-				
+            <p> 
+				<a href="http://zpi.dev">Aktualności</a> |
+                <a href="http://zpi.dev/about">O ŚDM</a> |
+                <a href="http://zpi.dev/contact">Kontakt</a>
             </p>
 
         </footer>

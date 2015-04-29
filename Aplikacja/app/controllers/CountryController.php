@@ -4,11 +4,11 @@ class CountryController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.countries.countries');
+		return View::make('countries.countries');
 	}
 	public function getNew()
 	{
-		return View::make('pl.countries.add');
+		return View::make('countries.add');
 	}
 	public function getAdd()
 	{
@@ -18,7 +18,7 @@ class CountryController extends BaseController {
 		$country->country = $co;
 		
 		$country->save();
-		return View::make('pl.countries.countries');
+		return View::make('countries.countries');
 	}
 	public function getDelete($id)
 	{
@@ -27,11 +27,11 @@ class CountryController extends BaseController {
 			$country = Country::find($id);
 			$country->delete();
 		}
-		return View::make('pl.countries.countries');
+		return View::make('countries.countries');
 	}
 	public function getEdit($id)
 	{
-		return View::make('pl.coutries.edit')->with('idC', $id);
+		return View::make('coutries.edit')->with('idC', $id);
 	}
 	public function getConfirm($id)
 	{
@@ -41,6 +41,6 @@ class CountryController extends BaseController {
 			'country'=>$co,
 			));
 		
-		return View::make('pl.countries.countries');	
+		return View::make('countries.countries');	
 	}
 }
