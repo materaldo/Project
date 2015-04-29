@@ -10,7 +10,7 @@
 @section('content')
 
 <p>
-Koordynator ŚDM we Wrocławiu:<br>
+{{Lang::get('contact.contact1')}}<br>
 +48 555 555 555
 </p>
 
