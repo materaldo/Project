@@ -11,7 +11,7 @@
 
     <h1>{{Lang::get('registration.registration')}}</h1>
 
-    <form action="http://zpi.dev/index.php/registred" method="post">
+    <form action="http://zpi.dev/registred" method="post">
         {{Lang::get('registration.login')}}
         <input type="text" name="login">
         <br>

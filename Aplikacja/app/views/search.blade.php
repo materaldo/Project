@@ -30,7 +30,7 @@
 				</select>
 			
 <table id="szukajUczestnik">
-    <form action = "http://zpi.dev/index.php/results">
+    <form action = "http://zpi.dev/results">
 		<tr>
 			<td>						 
                 <h4><label>{{Lang::get('search.name')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
@@ -60,7 +60,7 @@
     </form>
 </table>
 <table id="szukajOpiekun">
-    <form action = "http://zpi.dev/index.php/results">
+    <form action = "http://zpi.dev/results">
 		<tr>
 			<td>						 
                 <h4><label>{{Lang::get('search.name')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
@@ -86,7 +86,7 @@
     </form>
 </table>
 <table id="szukajGrupa">
-    <form action = "http://zpi.dev/index.php/results">
+    <form action = "http://zpi.dev/results">
 		<tr>
 			<td>						 
                 <h4><label>{{Lang::get('search.nameGR')}}<br><input name = "imie" type = "text" size = "28" maxlength = "30"></label></h4>
@@ -113,7 +113,7 @@
 </table>
 
 <table id="szukajNocleg">
-    <form action = "http://zpi.dev/index.php/results">
+    <form action = "http://zpi.dev/results">
 		<tr>
 			<td>					 
                 <h4><label>{{trans('search.name')}}<br><input name = "name" type = "text" size = "28" maxlength = "255"></label></h4>

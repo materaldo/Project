@@ -4,6 +4,6 @@ class MiejsceNoclegoweController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.index');
+		return View::make('index');
 	}
 }

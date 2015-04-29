@@ -13,37 +13,37 @@
 <h4>{{Lang::get('management.groupManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/language">{{Lang::get('management.browse')}}</a>
+			<a class="clickMe" href="http://zpi.dev/language">{{Lang::get('management.browse')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/country">{{Lang::get('management.show')}}</a>
+			<a class="clickMe" href="http://zpi.dev/country">{{Lang::get('management.show')}}</a>
 		</li>
 	</ul>
 	
 <h4>{{Lang::get('management.baseManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/language">{{Lang::get('management.languages')}}</a>
+			<a class="clickMe" href="http://zpi.dev/language">{{Lang::get('management.languages')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/country">{{Lang::get('management.countries')}}</a>
+			<a class="clickMe" href="http://zpi.dev/country">{{Lang::get('management.countries')}}</a>
 		</li>
 	</ul>
 	
 <h4>{{Lang::get('management.allocationManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">{{Lang::get('management.automatic')}}</a>
+			<a class="clickMe" href="http://zpi.dev/accommodation/add">{{Lang::get('management.automatic')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">{{Lang::get('management.manual')}}</a>
+			<a class="clickMe" href="http://zpi.dev/accommodation/add">{{Lang::get('management.manual')}}</a>
 		</li>
 	</ul>
 	
 <h4>{{Lang::get('management.contact')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/index.php/accommodation/add">{{Lang::get('management.messages')}}</a>
+			<a class="clickMe" href="http://zpi.dev/accommodation/add">{{Lang::get('management.messages')}}</a>
 		</li>
 	</ul>
 	

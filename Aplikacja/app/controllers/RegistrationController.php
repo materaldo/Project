@@ -4,10 +4,10 @@ class LoginController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.registration');
+		return View::make('registration');
 	}
 	public function getRegistred()
 	{
-		return View::make('pl.registred');
+		return View::make('registred');
 	}
 }
