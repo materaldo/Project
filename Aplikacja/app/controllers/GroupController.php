@@ -4,19 +4,19 @@ class GroupController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('pl.groups.groups');
+		return View::make('groups.groups');
 	}
 	public function getNew()
 	{
-		return View::make('pl.groups.add');
+		return View::make('groups.add');
 	}
 	public function getEdit($id)
 	{
-		return View::make('pl.groups.edit')-> with('idG',$id);
+		return View::make('groups.edit')-> with('idG',$id);
 	}
     public function getMessage($id)
     {
-        return View::make('pl.groups.message')->with('idG',$id);
+        return View::make('groups.message')->with('idG',$id);
     }
     public function postMessagesender($id)
     {
@@ -27,7 +27,7 @@ class GroupController extends BaseController {
 
 
         });
-        return View::make('pl.index');
+        return View::make('index');
     }
     public function postConfirm($id)
     {
@@ -45,11 +45,11 @@ class GroupController extends BaseController {
             'id_second_lang'=>$language2Edited,
             'id_third_lang'=>$language3Edited,
         ));
-        return View::make('pl.groups.management');
+        return View::make('groups.management');
     }
 	public function getManagement()
 	{
-		return View::make('pl.groups.management');
+		return View::make('groups.management');
 	}
 	public function postAdd()
 	{
@@ -68,6 +68,6 @@ class GroupController extends BaseController {
 		$group -> id_second_lang = $second_lang;
 		$group -> id_third_lang = $third_lang;
 		$group->save();
-		return View::make('pl.groups.info');
+		return View::make('groups.info');
 	}
 }
