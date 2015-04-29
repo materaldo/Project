@@ -20,6 +20,47 @@ class UserRepository
     public function signup($input)
     {
         $user = new User;
+        $prot = new Protector;
+
+        $user->username = array_get($input, 'username');
+        $user->email    = array_get($input, 'email');
+        $user->password = array_get($input, 'password');
+
+        // The password confirmation will be removed from model
+        // before saving. This field will be used in Ardent's
+        // auto validation.
+        $user->password_confirmation = array_get($input, 'password_confirmation');
+
+        // Generate a random confirmation code
+        $user->confirmation_code     = md5(uniqid(mt_rand(), true));
+
+        // Save if valid. Password field will be hashed before save
+
+        $prot->first_name = array_get($input, 'first_name');
+        $prot->last_name = array_get($input, 'last_name');
+        $prot->date_of_birth = array_get($input, 'date_of_birth');
+        $prot->phone_number  = array_get($input, 'phone_number');
+        $prot->alt_phone_number  = array_get($input, 'alt_phone_number');
+        $co=DB::table('countries')->where('id', array_get($input, 'country_select'))->first();
+        $prot->id_coun = $co->id;
+        $la=DB::table('languages')->where('id', array_get($input, 'language_select'))->first();
+        $prot->id_first_lang = $la->id;
+        $prot->document_number = array_get($input, 'document_number');
+        $prot->insurance_number  = array_get($input, 'insurance_number');
+
+        $this->save($user);
+        $user2 = DB::table('users')->where('username', array_get($input, 'username'))->first();
+        $prot->id = $user2->id;
+
+        $prot->save();
+
+        return $user;
+    }
+
+    public function signup2($input)
+    {
+        $user = new User;
+
 
         $user->username = array_get($input, 'username');
         $user->email    = array_get($input, 'email');

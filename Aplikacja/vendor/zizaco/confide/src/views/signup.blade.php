@@ -34,6 +34,43 @@
             <h4><label for="password_confirmation">{{{ Lang::get('confide::confide.password_confirmation') }}}</label></h4>
             <input class="form-control" placeholder="{{{ Lang::get('confide::confide.password_confirmation') }}}" type="password" name="password_confirmation" id="password_confirmation">
         </div><br>
+            <div class="form-group">
+                <h4><label for="first_name">{{{ Lang::get('confide::confide.signup.first_name') }}}</label></h4>
+                <input class="form-control" placeholder="{{{ Lang::get('confide::confide.signup.first_name') }}}" type="text" name="first_name" id="first_name">
+            </div><br>
+            <div class="form-group">
+                <h4><label for="last_name">{{{ Lang::get('confide::confide.signup.last_name') }}}</label></h4>
+                <input class="form-control" placeholder="{{{ Lang::get('confide::confide.signup.last_name') }}}" type="text" name="last_name" id="last_name">
+            </div><br>
+            <div class="form-group">
+                <h4><label for="date_of_birth">{{{ Lang::get('confide::confide.signup.date_of_birth') }}}</label></h4>
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth">
+            </div><br>
+            <div class="form-group">
+                <h4><label for="phone_number">{{{ Lang::get('confide::confide.signup.phone_number') }}}</label></h4>
+                <input class="form-control" placeholder="{{{ Lang::get('confide::confide.signup.phone_number') }}}" type="text" name="phone_number" id="phone_number">
+            </div><br>
+            <div class="form-group">
+                <h4><label for="alt_phone_number">{{{ Lang::get('confide::confide.signup.alt_phone_number') }}}</label></h4>
+                <input class="form-control" placeholder="{{{ Lang::get('confide::confide.signup.alt_phone_number') }}}" type="text" name="alt_phone_number" id="alt_phone_number">
+            </div><br>
+            <div class="form-group">
+                <h4><label for="country_select">{{{ Lang::get('confide::confide.signup.country_select') }}}</label></h4>
+                {{ Form::select('country_select', $countries)}}
+                <?php echo $countries[1]; ?>
+            </div><br>
+            <div class="form-group">
+                <h4><label for="language_select">{{{ Lang::get('confide::confide.signup.language_select') }}}</label></h4>
+                {{ Form::select('language_select', $languages)}}
+            </div><br>
+            <div class="form-group">
+                <h4><label for="document_number">{{{ Lang::get('confide::confide.signup.document_number') }}}</label></h4>
+                <input class="form-control" placeholder="{{{ Lang::get('confide::confide.signup.document_number') }}}" type="text" name="document_number" id="document_number">
+            </div><br>
+            <div class="form-group">
+                <h4><label for="insurance_number">{{{ Lang::get('confide::confide.signup.insurance_number') }}}</label></h4>
+                <input class="form-control" placeholder="{{{ Lang::get('confide::confide.signup.insurance_number') }}}" type="text" name="insurance_number" id="insurance_number">
+            </div><br>
 
         @if (Session::get('error'))
             <div class="alert alert-error alert-danger">

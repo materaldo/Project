@@ -447,7 +447,6 @@ return array(
     'LaravelBook\\Ardent\\Facades\\Ardent' => $vendorDir . '/laravelbook/ardent/src/LaravelBook/Ardent/Facades/Ardent.php',
     'LaravelBook\\Ardent\\InvalidModelException' => $vendorDir . '/laravelbook/ardent/src/LaravelBook/Ardent/InvalidModelException.php',
     'LaravelBook\\Ardent\\Providers\\ArdentServiceProvider' => $vendorDir . '/laravelbook/ardent/src/LaravelBook/Ardent/Providers/ArdentServiceProvider.php',
-    'LoginController' => $baseDir . '/app/controllers/LoginController.php',
     'Math_BigInteger' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Math/BigInteger.php',
     'MiejsceNoclegowe' => $baseDir . '/app/models/MiejsceNoclegowe.php',
     'MiejsceNoclegoweController' => $baseDir . '/app/controllers/MiejsceNoclegoweController.php',

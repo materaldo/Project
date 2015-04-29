@@ -16,7 +16,6 @@ Route::get('/', function()
 	return View::make('hello');
 });
 */
-Route::controller('login', 'LoginController');
 Route::controller('accommodation','AccommodationController');
 Route::controller('group','GroupController');
 Route::controller('participant', 'ParticipantController');

@@ -17,7 +17,21 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return View::make(Config::get('confide::signup_form'));
+        $countries = Country::all();
+        $countriesArr = array();
+        foreach($countries as $count)
+        {
+            $countriesArr[$count->id] =$count->country;
+        }
+
+        $languages = Language::all();
+        $languagesArr = array();
+        foreach($languages as $lang)
+        {
+            $languagesArr[$lang->id] =$lang->language;
+        }
+
+        return View::make(Config::get('confide::signup_form'))->with('countries', $countriesArr)->with('languages', $languagesArr);
     }
 
     /**
@@ -29,11 +43,10 @@ class UsersController extends Controller
     {
 		$repo = App::make('UserRepository');
         $user = $repo->signup(Input::all());
-		
-		
+
 		$prot = Role::where('name','=','Protector')->first();
      //  die($prot->name);
-	    $user->attachRole( $prot );
+	   // $user->attachRole( $prot );
 		//$user->roles()->attach( $prot->id );
 		
 		if ($user->id) {
@@ -49,7 +62,7 @@ class UsersController extends Controller
                     }
                 );
             }
-
+            $user->attachRole( $prot );
             return Redirect::action('UsersController@login')
                 ->with('notice', Lang::get('confide::confide.alerts.account_created'));
         } else {

@@ -17,6 +17,15 @@ return array(
         'desc' => 'Rejestracja nowego konta',
         'confirmation_required' => '*(Wymagane potwierdzenie adresu e-mail)',
         'submit' => 'Utwórz nowe konto',
+        'first_name' => 'Imię',
+        'last_name' => 'Nazwisko',
+        'date_of_birth' => 'Data urodzenia',
+        'phone_number' => 'Numer telefonu',
+        'alt_phone_number' => 'Alternatywny numer telefonu',
+        'country_select' => 'Kraj',
+        'language_select' => 'Język',
+        'document_number' => 'Numer dokumentu',
+        'insurance_number' => 'Numer ubezpieczenia',
     ),
 
     'login' => array(
