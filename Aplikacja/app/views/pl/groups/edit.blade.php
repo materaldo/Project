@@ -12,7 +12,7 @@
 
 @section('content')
     EDYCJA DANYCH
-    <form action="http://zpi.dev/index.php/group/confirm/{{$idG}}" method="post">
+    <form action="http://zpi.dev/group/confirm/{{$idG}}" method="post">
         <h4><label>Liczba osób:<br>
                 <input name="num_of_people" id="num_of_people" type="text" size="28" maxlength="20" value="{{$editedGroup->number_of_people}}"required>
             </label></h4>
