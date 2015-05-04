@@ -48,7 +48,7 @@ class HomeController extends BaseController {
 		return View::make('management');
 	}
 		public function getSkrypt()
-	{/*
+	{
 		//utworzenie ról
 		$adminRole = new Role;
 		$adminRole->name = 'Admin';
@@ -128,7 +128,7 @@ class HomeController extends BaseController {
 		$organizer->attachRole($organizerRole);
 		$protector->attachRole($protectorRole);
 		$participant->attachRole($participantRole);
-		*/
+		
 		
 		//$user=User::find('3');
 		//echo $user->id;
@@ -143,7 +143,7 @@ class HomeController extends BaseController {
 		$coun->save();
 		*/
 		$user=User::find('3');
-		/*
+		
 		$prot=new Protector();
 		$prot->id = $user->id;
 		$prot->first_name = 'jasiu';
@@ -156,7 +156,7 @@ class HomeController extends BaseController {
 		$prot->insurance_number ='54841986526';
 		
 		$prot->save();
-		*/
+		
 		$group=new Group();
 		$group->number_of_people='21';
 		$group->id_prot=$user->id;
