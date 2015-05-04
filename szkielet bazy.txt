@@ -13,4 +13,18 @@ PARTICIPANTS(#id(Users), first_name, last_name, date_of_birth,
  #id_coun, #id_lang, #id_gr, document_number, insurance_number)
 GROUPS_ACCOMMODATIONS(id, #id_gr, #id_acc)
 
+Schemat bazy danych:
 
+LANGUAGES(id, language)
+COUNTRIES(id, country)
+ACCOMMODATIONS(id, name, street, building, post_code, city, phone_number,
+ image, map, free_places, all_places, price) --
+USERS(id, name unique, password, role, email unique)
+PROTECTORS(#id(Users), first_name, last_name, date_of_birth, phone_number,
+ alt_phone_number(nullable), #id_coun, #id_first_lang, #id_second_lang(nullable), #id_third_lang(nullable), document_number,
+ insurance_number)
+GROUPS(id, #id_prot(users), number_of_people, mean_of_transport,  #id_coun, 
+#id_first_lang, #id_second_lang(nullable), #id_third_lang(nullable), confirmed)
+PARTICIPANTS(#id(Users), first_name, last_name, date_of_birth,
+ #id_coun, #id_lang, #id_gr, document_number, insurance_number)
+USERS_ACCOMMODATIONS(id, #id_us, #id_acc)

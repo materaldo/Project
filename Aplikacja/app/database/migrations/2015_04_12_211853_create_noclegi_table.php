@@ -25,6 +25,7 @@ class CreateNoclegiTable extends Migration {
 			$table->string('map');
 			$table->integer('free_places');
 			$table->integer('all_places');
+			$table->integer('price');
 			$table->timestamps();
 		});		
 	}
