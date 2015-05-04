@@ -20,25 +20,49 @@ class ParticipantController extends BaseController {
 	
 	public function getAdd($id)
 	{
-		/*$first_name = Input::get('first_name');
-		$last_name = Input::get('last_name');
-		$email = Input::get('email');
-		
-		$user=new Users();
-		//za trudne :(
-		
-		$participant = new Participant();
-		$participant -> first_name = $first_name;
-		$participant -> last_name = $last_name;
-		//$participant -> email = $email;
-		$participant -> date_of_birth = "1990-05-12";
-		$participant -> id_coun = "1";
-		$participant -> id_lang = "1";
-		$participant -> id_gr = "1";
-		$participant -> document_number = "7485268";
-		$participant -> insurance_number = "89562489562";
 
-		//$participant->save();*/
         return View::make('participants.add')->with('idG',$id);
 	}
+    public function postAdduser($id)
+    {
+
+        $first_name = Input::get('first_name');
+        $last_name = Input::get('last_name');
+        $email = Input::get('email');
+        $date = Input::get('date');
+        $password = Str::random(10);
+        $phone_number = Input::get('phone_number');
+        $country = Input::get('country');
+        $lang1 = Input::get('lang1');
+        $lang2 = Input::get('lang2');
+        $lang3 = Input::get('lang3');
+        $document_number = Input::get('document_number');
+        $insurance_number = Input::get('insurance_number');
+        $user=new User;
+        $user -> username = $email;
+        $user -> email = $email;
+        $user -> password = $password;
+        $user -> password_confirmation = $password;
+        $user->confirmation_code= md5(uniqid(mt_rand(), true));
+        $user -> confirmed =0;
+        $user ->save();
+
+       /* //$user2 = DB::table('users')->where('username',$email)->first();
+        $participant = new Participant();
+        $participant -> id = $user->id;
+        $participant -> first_name = $last_name;
+        $participant -> last_name = $first_name;
+        $participant -> phone_number = $phone_number;
+        $participant -> date_of_birth = $date;
+        $participant -> id_coun = $country;
+        $participant -> id_first_lang = $lang1;
+        $participant -> id_second_lang = $lang2;
+        $participant -> id_third_lang = $lang3;
+        $participant -> id_gr = $id;
+        $participant -> document_number = $document_number;
+        $participant -> insurance_number = $insurance_number;
+
+        $participant->save();*/
+        return View::make('participants.add')->with('idG',$id);
+    }
 }
