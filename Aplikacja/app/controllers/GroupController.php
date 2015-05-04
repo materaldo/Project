@@ -18,6 +18,14 @@ class GroupController extends BaseController {
 	{
 		return View::make('groups.edit')-> with('idG',$id);
 	}
+	public function getAssign($id)
+	{
+		return View::make('groups.chooseplace')->with('idG', $id);
+	}
+	public function getAssignn($idd, $iddd)
+	{
+		return View::make('groups.groups')->with('conf', '1');
+	}
 	public function getDetails($id)
 	{
 		return View::make('groups.details')->with('idG', $id);

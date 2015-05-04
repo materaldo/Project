@@ -13,10 +13,10 @@
 <h4>{{Lang::get('management.groupManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/language">{{Lang::get('management.browse')}}</a>
+			<a class="clickMe" href="http://zpi.dev/group">{{Lang::get('management.browse')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/country">{{Lang::get('management.show')}}</a>
+			<a class="clickMe" href="http://zpi.dev/group/unconfirmed">{{Lang::get('management.show')}}</a>
 		</li>
 	</ul>
 	
