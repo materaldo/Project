@@ -18,13 +18,27 @@ class GroupController extends BaseController {
 	{
 		return View::make('groups.edit')-> with('idG',$id);
 	}
-	public function getAssign($id)
+	public function getChooseplace($id)
 	{
-		return View::make('groups.chooseplace')->with('idG', $id);
+		return View::make('groups.assign')->with('idG', $id);
 	}
-	public function getAssignn($idd, $iddd)
+	public function getAssign($idAcc, $idGr)
 	{
-		return View::make('groups.groups')->with('conf', '1');
+		$users=Participant::where('id_gr', '=', $idGr)->get();
+		
+		$zmienna=var_export($users, true);
+		
+		foreach ($users as $us)
+		{
+		$user_acc = new UserAccommodation();
+		
+		$user_acc->id_acc = $idAcc;
+		$user_acc->id_us = $us->id;
+		$user_acc->save();
+		}
+		
+		
+		return View::make('groups.groups')->with('conf', '1')->with('zmienna', $zmienna);
 	}
 	public function getDetails($id)
 	{
@@ -43,9 +57,12 @@ class GroupController extends BaseController {
 	}
     public function postMessagesender($id)
     {
+
         Mail::send('emails.groupMessage', array('key' => 'value'), function($message)
         {
-            $message->to('mlteusz_711@wp.pl', 'Mateusz Brożyna')->subject('!');
+            $message->to('mlteusz_711@wp.pl', 'Jacek')->subject('!');
+
+
         });
         return View::make('index');
     }

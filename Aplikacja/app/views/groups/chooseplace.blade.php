@@ -9,8 +9,7 @@
 
 @section('content')
 
-<h2>BAZA NOCLEGOWA</h2>
-<a href="http://zpi.dev/accommodation/new">Dodaj nowe miejsce</a>
+<h2>WYBIERZ MIEJSCE</h2>
 
 	<table>	
 		<tr>
@@ -26,7 +25,7 @@
 		{
 			echo "<tr>
 				<td>
-					<a href=http://zpi.dev/group/assign/" . $acc->id . "/". $idG ."><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>
+					<a href=http://zpi.dev/group/assignn/" . $acc->id . "/". $idG ."><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
 					$acc->name . "<br>" . $acc->street . " " . $acc->buildings . ", " . $acc->post_code . " " . $acc->city . 

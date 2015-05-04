@@ -1,7 +1,6 @@
-
 <?php
 
-class User_Accommodation extends Eloquent {
+class UserAccommodation extends Eloquent {
 
 	/**
 	 * The database table used by the model.

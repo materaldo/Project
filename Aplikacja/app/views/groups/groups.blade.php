@@ -40,7 +40,7 @@
 				<td>";
 				if ($conf)
 				{
-					echo "<a href=http://zpi.dev/group/assign/" . $gr->id . ">Przydziel </a>";
+					echo "<a href=http://zpi.dev/group/chooseplace/" . $gr->id . ">Przydziel </a>";
 				}
 				else
 				{
