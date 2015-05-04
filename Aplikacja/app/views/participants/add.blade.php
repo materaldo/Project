@@ -10,7 +10,10 @@
 @stop
 
 @section('content')
+<?php
 
+
+?>
     <form action="http://zpi.dev/participant/adduser/{{$idG}}" method="post">
         <h4><label>Imię:<br>
                 <input name="first_name" id="first_name" type="text" size="28" maxlength="20" required>
@@ -45,7 +48,7 @@
         <h4><label>Numer ubezpieczenia:<br>
                 <input name="insurance_number" id="insurance_number" type="text" size="28" maxlength="50" required>
             </label></h4>
-    {{$idG}}
+
 
         <p>
             <input type="submit" id="submit" value="Dodaj">

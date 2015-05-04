@@ -47,22 +47,27 @@ class ParticipantController extends BaseController {
         $user -> confirmed =0;
         $user ->save();
 
-       /* //$user2 = DB::table('users')->where('username',$email)->first();
-        $participant = new Participant();
-        $participant -> id = $user->id;
-        $participant -> first_name = $last_name;
-        $participant -> last_name = $first_name;
-        $participant -> phone_number = $phone_number;
-        $participant -> date_of_birth = $date;
-        $participant -> id_coun = $country;
-        $participant -> id_first_lang = $lang1;
-        $participant -> id_second_lang = $lang2;
-        $participant -> id_third_lang = $lang3;
-        $participant -> id_gr = $id;
-        $participant -> document_number = $document_number;
-        $participant -> insurance_number = $insurance_number;
+        if($user->id !=NULL) {
+            $participant = new Participant;
 
-        $participant->save();*/
+            $participant->id = $user->id;
+            $participant->first_name = $last_name;
+            $participant->last_name = $first_name;
+            $participant->phone_number = $phone_number;
+            $participant->date_of_birth = $date;
+            $participant->id_coun = $country;
+            $participant->id_first_lang = $lang1;
+            $participant->id_second_lang = $lang2;
+            $participant->id_third_lang = $lang3;
+            $participant->id_gr = $id;
+            $participant->document_number = $document_number;
+            $participant->insurance_number = $insurance_number;
+
+            $participant->save();
+        }
+        else{
+            DB::table('users')->where('id', '=', $user->id)->delete();
+        }
         return View::make('participants.add')->with('idG',$id);
     }
 }

@@ -35,14 +35,9 @@ class GroupController extends BaseController {
 	}
     public function postMessagesender($id)
     {
-
         Mail::send('emails.groupMessage', array('key' => 'value'), function($message)
         {
-
             $message->to('mlteusz_711@wp.pl', 'Mateusz Brożyna')->subject('!');
-
-
-
         });
         return View::make('index');
     }
