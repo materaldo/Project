@@ -116,7 +116,7 @@
     <form action = "http://zpi.dev/results">
 		<tr>
 			<td>					 
-                <h4><label>{{trans('search.name')}}<br><input name = "name" type = "text" size = "28" maxlength = "255"></label></h4>
+                <h4><label>{{trans('search.hotel')}}<br><input name = "name" type = "text" size = "28" maxlength = "255"></label></h4>
 			</td>
 		</tr>
 		<tr>
