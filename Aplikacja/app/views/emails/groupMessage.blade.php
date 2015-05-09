@@ -6,7 +6,7 @@
 	<body>
 		<h2>Wiadomość grupowa</h2>
 		<div>
-			Ty kurwo zmarnowałaś mi 20 lat życia, a teraz będę próbował pobrać tekst z textarea i ci wysłać jeszcze kilka obelg.
+			Grupowa1
 		</div>
 	</body>
 </html>

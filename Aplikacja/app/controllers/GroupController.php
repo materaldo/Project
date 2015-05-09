@@ -4,26 +4,63 @@ class GroupController extends BaseController {
 
 	public function getIndex()
 	{
-		return View::make('groups.groups');
+		return View::make('groups.groups')->with('conf', '1');
 	}
 	public function getNew()
 	{
 		return View::make('groups.add');
 	}
+	public function getUnconfirmed()
+	{
+		return View::make('groups.groups')->with('conf', '0');
+	}
 	public function getEdit($id)
 	{
 		return View::make('groups.edit')-> with('idG',$id);
+	}
+	public function getChooseplace($id)
+	{
+		return View::make('groups.assign')->with('idG', $id);
+	}
+	public function getAssign($idAcc, $idGr)
+	{
+		$users=Participant::where('id_gr', '=', $idGr)->get();
+		
+		$zmienna=var_export($users, true);
+		
+		foreach ($users as $us)
+		{
+		$user_acc = new UserAccommodation();
+		
+		$user_acc->id_acc = $idAcc;
+		$user_acc->id_us = $us->id;
+		$user_acc->save();
+		}
+		
+		
+		return View::make('groups.groups')->with('conf', '1')->with('zmienna', $zmienna);
+	}
+	public function getDetails($id)
+	{
+		return View::make('groups.details')->with('idG', $id);
 	}
     public function getMessage($id)
     {
         return View::make('groups.message')->with('idG',$id);
     }
+	public function getConfirm($id)
+	{
+		$group=Group::find($id);
+		$group->confirmed='1';
+		$group->save();
+		return View::make('groups.groups')->with('conf', '0');
+	}
     public function postMessagesender($id)
     {
 
         Mail::send('emails.groupMessage', array('key' => 'value'), function($message)
         {
-            $message->to('mlteusz_711@wp.pl', 'Jacek taki chuj')->subject('elo ty kurwo!');
+            $message->to('mlteusz_711@wp.pl', 'Jacek')->subject('!');
 
 
         });

@@ -43,12 +43,12 @@ class UserValidator implements UserValidatorInterface
      */
     public $rules = [
         'create' => [
-            'username' => 'alpha_dash',
+            //'username' => 'alpha_dash',
             'email'    => 'required|email',
             'password' => 'required|min:4',
         ],
         'update' => [
-            'username' => 'alpha_dash',
+           // 'username' => 'alpha_dash',
             'email'    => 'required|email',
             'password' => 'required|min:4',
         ]
