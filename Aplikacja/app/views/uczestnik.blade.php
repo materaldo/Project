@@ -2,6 +2,8 @@
 
 @section('header')
 
+{{App::setLocale(Session::get('lang', 'pl'));}}
+
 @stop
 	
 @section('content')

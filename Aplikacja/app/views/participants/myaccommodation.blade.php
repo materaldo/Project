@@ -2,10 +2,9 @@
 
 @section('header')
 
+	{{App::setLocale(Session::get('lang', 'pl'));}}
 	<meta name="Description" content=""/>
 	<meta name="Keywords" content=""/>
-
-
 
 @stop
 

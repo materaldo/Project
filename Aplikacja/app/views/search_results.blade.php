@@ -2,6 +2,7 @@
 
 @section('header')
 
+	{{App::setLocale(Session::get('lang', 'pl'));}}
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="Description" content="" />
 	<meta name="Keywords" content="" />
