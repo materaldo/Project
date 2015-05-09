@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder {
 //require_once 'CountriesTableSeeder.php';
 		$this->call('CountriesTableSeeder');
 		$this->call('LanguagesTableSeeder');
+		$this->call('TestTableSeeder');
 	}
 
 }

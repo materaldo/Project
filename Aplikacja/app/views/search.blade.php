@@ -2,9 +2,9 @@
 
 @section('header')
 
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="Description" content=""/>
 	<meta name="Keywords" content=""/>
+	{{App::setLocale(Session::get('lang', 'pl'));}}
 	<link rel="Stylesheet" type="text/css" href="styles/style.css"/>
 	<script type="text/javascript" src="scripts/wyszukiwanie.js"></script>
 	<style>

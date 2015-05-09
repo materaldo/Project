@@ -14,9 +14,14 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-	
+    public function select($lang)
+    {
+        Session::put('lang', $lang);
+
+        return Redirect::route('home');
+    }
 	public function getIndex()
-	{
+    {
 		return View::make('index');
 	}
 	public function getAbout()

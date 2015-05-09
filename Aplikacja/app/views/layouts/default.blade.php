@@ -8,6 +8,7 @@
     <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
     <title>ŚDM Wrocław 2016</title>
     {{ HTML::style('css/style.css'); }}
+    {{App::setLocale(Session::get('lang', 'en'));}}
     @yield('header')
 </head>
 
@@ -24,8 +25,14 @@ if (Auth::user()!==null)
     <header>
         <div id="logo">
             <div id="logo_text">
+            </div>
+            <div>
 
-         
+                    <ul>
+                        <li>{{link_to_route('language.select', 'English', array('en'))}}</li>
+                        <li>{{link_to_route('language.select', 'Polski', array('pl'))}} </li>
+                    </ul>
+
             </div>
         </div>
 		<?php
