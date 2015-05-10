@@ -13,15 +13,15 @@ return array(
 	|
 	*/
 
-	'news' => 'News'
-	'about' => 'About WYD'
-	'group' => 'Group registration'
-	'accommodation' => 'Accommodation'
-	'management' => 'Management'
-	'search' => 'Search'
-	'contact' => 'Contact'
-	'login' => 'Login'
-	'links1' => 'Links 1'
+	'news' => 'News',
+	'about' => 'About WYD',
+	'group' => 'Group registration',
+	'accommodation' => 'Accommodation',
+	'management' => 'Management',
+	'search' => 'Search',
+	'contact' => 'Contact',
+	'login' => 'Login',
+	'links1' => 'Links 1',
 	'links2' => 'Links 2'
 
 );
