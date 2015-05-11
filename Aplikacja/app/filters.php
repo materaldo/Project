@@ -21,6 +21,8 @@ App::after(function($request, $response)
 {
 	//
 });
+Entrust::routeNeedsRole( 'management', 'Admin' );
+//Entrust::routeNeedsPermission( 'management', 'managment');
 
 /*
 |--------------------------------------------------------------------------
