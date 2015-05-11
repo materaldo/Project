@@ -110,7 +110,7 @@ if (Auth::user()!==null)
                 <ul class=\"sf-menu\" id=\"nav\">
                     <li><a href=\"http://zpi.dev/index\">" . Lang::get('default.news') . "</a></li>
                     <li><a href=\"http://zpi.dev/about\">" . Lang::get('default.about') . "</a></li>
-                   	<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.about') . "</a></li>
+                   	<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.search') . "</a></li>
                     <li><a href=\"http://zpi.dev/contact\">" . Lang::get('default.contact') . "</a></li>
                     <li><a href=\"http://zpi.dev/users/create\">" . Lang::get('default.register') . "</a></li>
 					<li><a href=\"http://zpi.dev/users/login\">" . Lang::get('default.login') . "</a></li>
