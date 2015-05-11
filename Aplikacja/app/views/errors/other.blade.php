@@ -10,6 +10,6 @@
 
 @section('content')
               
-Brak strony
+Inny błąd
 
 @stop
