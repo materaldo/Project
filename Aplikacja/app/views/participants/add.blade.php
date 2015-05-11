@@ -17,8 +17,10 @@ $picked_group = DB::table('groups')->where('id', '=', $idG)->first();
 if($grouped_people == $picked_group->number_of_people)
     {
         echo "Dodałeś już wszystkich uczestników do tej grupy";
+
     }
 else{
+
     echo"
     <form action=\"http://zpi.dev/participant/adduser/" . "$idG\" method=\"post\">
         <h4><label>" . Lang::get('add.name') . "<br>
@@ -37,18 +39,22 @@ else{
         <h4><label>" . Lang::get('add.telephone') . "<br>
                 <input name=\"phone_number\" id=\"phone_number\" type=\"text\" size=\"28\" maxlength=\"50\" required>
             </label></h4>
-        <h4><label>" . Lang::get('add.country') . "<br>
-                <input name=\"country\" id=\"country\" type=\"text\" size=\"28\" maxlength=\"50\" required>
-            </label></h4>
-        <h4><label>" . Lang::get('add.lang1') . "<br>
-                <input name=\"lang1\" id=\"lang1\" type=\"text\" size=\"28\" maxlength=\"50\" required>
-            </label></h4>
-        <h4><label>" . Lang::get('add.lang2') . "<br>
-                <input name=\"lang2\" id=\"lang2\" type=\"text\" size=\"28\" maxlength=\"50\" required>
-            </label></h4>
-        <h4><label>" . Lang::get('add.lang3'). "<br>
-                <input name=\"lang3\" id=\"lang3\" type=\"text\" size=\"28\" maxlength=\"50\" required>
-            </label></h4>
+        <div class=\"form-list\">
+            <h4><label for=\"country_select\"> " .  Lang::get('confide::confide.signup.country_select') . "</label></h4>" .
+            Form::select('country_select',  $countries  ) . "
+        </div><br>
+        <div class=\"form-list\">
+            <h4><label for=\"language1_select\">" .  Lang::get('confide::confide.signup.language_select'). "</label></h4>
+            " . Form::select('language1_select', $languages) . "
+        </div><br>
+        <div class=\"form-list\">
+            <h4><label for=\"language2_select\">" .  Lang::get('confide::confide.signup.language_select')  . "</label></h4>
+            " .  Form::select('language2_select', $languages) . "
+        </div><br>
+        <div class=\"form-list\">
+            <h4><label for=\"language3_select\">" .  Lang::get('confide::confide.signup.language_select') ." </label></h4>
+            " . Form::select('language3_select', $languages) . "
+        </div><br>
         <h4><label>" . Lang::get('add.doc') ."<br>
                 <input name=\"document_number\" id=\"document_number\" type=\"text\" size=\"28\" maxlength=\"50\" required>
             </label></h4>

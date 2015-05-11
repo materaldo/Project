@@ -18,18 +18,22 @@ class ParticipantController extends BaseController {
 	}
 	public function getAdd($id)
 	{
-        return View::make('participants.add')->with('idG', $id);
-       // if($grouped_people == $picked_group->numer_od_people){
-            return View::make('participants.addinfo')-> with('idG', $id);
-
-       //}
-      //  else{
-
-    //}
+        $countries = Country::all();
+        $countriesArr = array();
+        foreach($countries as $count)
+        {
+            $countriesArr[$count->id] =$count->country;
+        }
+        $languages = Language::all();
+        $languagesArr = array();
+        foreach($languages as $lang)
+        {
+            $languagesArr[$lang->id] =$lang->language;
+        }
+        return View::make('participants.add')->with('idG', $id)->with('countries', $countriesArr)->with('languages', $languagesArr);
 	}
     public function postAdduser($id)
     {
-
         $first_name = Input::get('first_name');
         $last_name = Input::get('last_name');
         $email = Input::get('email');
