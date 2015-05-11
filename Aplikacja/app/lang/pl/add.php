@@ -12,16 +12,21 @@ return array(
 	| as the size rules. Feel free to tweak each of these messages here.
 	|
 	*/
+
+	'name' => "Imię",
+	'surname' => "Nazwisko:",
+	'email' => "Email:",
+	'date' => "Data:",
+	'telephone' => "Numer telefonu:",
+	'country' => "Kraj:",
+	'lang1' => "Język 1:",
+	'lang2' => "Język 2:",
+	'lang3' => "Język 3:",
+	'doc' => "Numer dokumentu:",
+	'ins' => "Numer ubezpieczenia:",
+	'add' => "Dodaj",
+	'cln' => "Wyczyść"
 	
-	'news' => 'Aktualności',
-	'about' => 'O ŚDM',
-	'group' => 'Zgłoś grupę',
-	'accommodation' => 'Miejsca noclegowe',
-	'management' => 'Zarządzanie',
-	'search' => 'Wyszukaj',
-	'contact' => 'Kontakt',
-	'login' => 'Zaloguj się',
-	'links1' => 'Linki 1',
-	'links2' => 'Linki 2'
+
 
 );

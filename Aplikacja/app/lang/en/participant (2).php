@@ -13,9 +13,9 @@ return array(
 	|
 	*/
 
-	'welcome' => "Witaj"
-	'accommodation' => "YTwoe miejsce zakwaterowania to: "
-	'change' => "Chcę zmienić zakwaterowanie"
+	'welcome' => "Welcome",
+	'accommodation' => "Your place of accommodation: ",
+	'change' => "I want to change my accommodation"
 
 
 );

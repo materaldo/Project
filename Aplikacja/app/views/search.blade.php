@@ -2,9 +2,9 @@
 
 @section('header')
 
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="Description" content=""/>
 	<meta name="Keywords" content=""/>
+	{{App::setLocale(Session::get('lang', 'pl'));}}
 	<link rel="Stylesheet" type="text/css" href="styles/style.css"/>
 	<script type="text/javascript" src="scripts/wyszukiwanie.js"></script>
 	<style>
@@ -116,7 +116,7 @@
     <form action = "http://zpi.dev/results">
 		<tr>
 			<td>					 
-                <h4><label>{{trans('search.name')}}<br><input name = "name" type = "text" size = "28" maxlength = "255"></label></h4>
+                <h4><label>{{trans('search.hotel')}}<br><input name = "name" type = "text" size = "28" maxlength = "255"></label></h4>
 			</td>
 		</tr>
 		<tr>

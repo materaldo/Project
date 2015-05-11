@@ -1,60 +1,5 @@
-<?php
-
-class HomeController extends BaseController {
-
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-    public function select($lang)
-    {
-        Session::put('lang', $lang);
-
-        return Redirect::route('home');
-    }
-	public function getIndex()
-    {
-		return View::make('index');
-	}
-	public function getAbout()
-	{
-		return View::make('about');
-	}
-	public function getContact()
-	{
-		return View::make('contact');
-	}
-	public function getLogin()
-	{
-		return View::make('login');
-	}
-	public function getRegistration()
-	{
-		return View::make('registration');
-	}
-	public function getSearch()
-	{
-		return View::make('search');
-	}
-	public function getResults()
-	{
-		return View::make('search_results');
-	}
-	public function getManagement()
-	{
-		return View::make('management');
-	}
-		public function getSkrypt()
-	{
-		//utworzenie rÃ³l
+{/*
+		//utworzenie ról
 		$adminRole = new Role;
 		$adminRole->name = 'Admin';
 		$adminRole->save();
@@ -71,7 +16,7 @@ class HomeController extends BaseController {
 		$participantRole->name = 'Participant';
 		$participantRole->save();
 		
-		//utworzenie przykÅ‚adowych uÅ¼ytkownikÃ³w
+		//utworzenie przyk³adowych u¿ytkowników
 		$admin = new User;
 		$admin->username = 'admin';
         $admin->email = 'admin@testowyemail.pl';
@@ -128,27 +73,27 @@ class HomeController extends BaseController {
             Log::info('Created user '.$participant->email);
         }
 		
-		//przypisanie rÃ³l
+		//przypisanie ról
 		$admin->attachRole($adminRole);
 		$organizer->attachRole($organizerRole);
 		$protector->attachRole($protectorRole);
 		$participant->attachRole($participantRole);
-	
+		*/
 		
-		$user=User::find('3');
-		echo $user->id;
+		//$user=User::find('3');
+		//echo $user->id;
 		
 		//test
-	$lang=new Language();
+	/*	$lang=new Language();
 		$lang->language='polski';
 		$lang->save();
 		
 		$coun=new Country();
 		$coun->country='Polska';
 		$coun->save();
-		
+		*/
 		$user=User::find('3');
-		
+		/*
 		$prot=new Protector();
 		$prot->id = $user->id;
 		$prot->first_name = 'jasiu';
@@ -161,7 +106,7 @@ class HomeController extends BaseController {
 		$prot->insurance_number ='54841986526';
 		
 		$prot->save();
-		
+		*/
 		$group=new Group();
 		$group->number_of_people='21';
 		$group->id_prot=$user->id;
@@ -199,6 +144,3 @@ class HomeController extends BaseController {
 		$part->insurance_number ='54841986526';
 		
 		$part->save();
-	
-	}
-}

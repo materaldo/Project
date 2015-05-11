@@ -2,12 +2,14 @@
 
 <html>
 <head>
+	
     <meta charset = "utf-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
     <title>ŚDM Wrocław 2016</title>
     {{ HTML::style('css/style.css'); }}
+    {{App::setLocale(Session::get('lang', 'pl'));}}
     @yield('header')
 </head>
 
@@ -24,8 +26,14 @@ if (Auth::user()!==null)
     <header>
         <div id="logo">
             <div id="logo_text">
+            </div>
+            <div>
 
-         
+                    <ul>
+                        <li>{{link_to_route('language.select', 'English', array('en'))}}</li>
+                        <li>{{link_to_route('language.select', 'Polski', array('pl'))}} </li>
+                    </ul>
+
             </div>
         </div>
 		<?php
@@ -36,8 +44,8 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev\">Aktualności</a></li>
-                    <li><a href=\"http://zpi.dev/about\">O ŚDM</a></li>
+                    <li><a href=\"http://zpi.dev\">{{Lang::get('default.news')}}</a></li>
+                    <li><a href=\"http://zpi.dev/about\">{{Lang::get('default.about')}}</a></li>
 					<li><a href=\"http://zpi.dev/management\">Zarządzanie</a></li>
 					<li><a href=\"http://zpi.dev/search\">Wyszukaj</a></li>
                     <li><a href=\"http://zpi.dev/contact\">Kontakt</a></li>
@@ -51,7 +59,7 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev\">{{Lang::get('default.news')}}</a></li>
                     <li><a href=\"http://zpi.dev/about\">O ŚDM</a></li>
 					<li><a href=\"http://zpi.dev/accommodation\">Miejsca noclegowe</a></li>
                     <li><a href=\"http://zpi.dev/management\">Zarządzanie</a></li>
@@ -67,7 +75,7 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/index\">{{Lang::get('default.news')}}</a></li>
                     <li><a href=\"http://zpi.dev/about\">O ŚDM</a></li>
                     <li><a href=\"http://zpi.dev/group/new\">Zgłoś grupę</a></li>
 					<li><a href=\"http://zpi.dev/group/management\">Zarządzaj grupą</a></li>
@@ -83,7 +91,7 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/index\">{{Lang::get('default.news')}}</a></li>
                     <li><a href=\"http://zpi.dev/about\">O ŚDM</a></li>
 					<li><a href=\"http://zpi.dev/search\">Wyszukaj</a></li>
 					<li><a href=\"http://zpi.dev/participant/accommodation\">Moje zakwaterowanie</a></li>
@@ -98,7 +106,7 @@ if (Auth::user()!==null)
 		echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index\">Aktualności</a></li>
+                    <li><a href=\"http://zpi.dev/index\">{{Lang::get('default.news')}}</a></li>
                     <li><a href=\"http://zpi.dev/about\">O ŚDM</a></li>
                    	<li><a href=\"http://zpi.dev/search\">Wyszukaj</a></li>
                     <li><a href=\"http://zpi.dev/contact\">Kontakt</a></li>
@@ -147,7 +155,7 @@ if (Auth::user()!==null)
         <footer>
 
             <p> 
-				<a href="http://zpi.dev">Aktualności</a> |
+				<a href="http://zpi.dev">{{Lang::get('default.news')}}</a> |
                 <a href="http://zpi.dev/about">O ŚDM</a> |
                 <a href="http://zpi.dev/contact">Kontakt</a>
             </p>

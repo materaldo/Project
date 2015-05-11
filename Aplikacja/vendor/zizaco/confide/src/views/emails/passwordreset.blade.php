@@ -1,3 +1,17 @@
+@extends ('layouts.default')
+
+@section('header')
+
+	{{App::setLocale(Session::get('lang', 'pl'));}}
+	<meta name="Description" content="" />
+	<meta name="Keywords" content="" />
+	<style>
+	fieldset {border: none}
+	</style>
+@stop
+
+@section('content')
+
 <h1>{{ Lang::get('confide::confide.email.password_reset.subject') }}</h1>
 
 <p>{{ Lang::get('confide::confide.email.password_reset.greetings', array( 'name' => (isset($user['username'])) ? $user['username'] : $user['email'])) }},</p>
@@ -8,3 +22,5 @@
 </a>
 
 <p>{{ Lang::get('confide::confide.email.password_reset.farewell') }}</p>
+
+@stop
