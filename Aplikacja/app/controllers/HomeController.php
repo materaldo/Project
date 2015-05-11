@@ -21,7 +21,7 @@ class HomeController extends BaseController {
         return Redirect::route('home');
     }
 	public function getIndex()
-    {
+    {	
 		return View::make('index');
 	}
 	public function getAbout()

@@ -75,4 +75,10 @@ class ParticipantController extends BaseController {
         }
         return View::make('participants.add')->with('idG',$id);
     }
+	
+	public function accName(){
+		echo Auth::id();
+		
+	}
+	
 }
