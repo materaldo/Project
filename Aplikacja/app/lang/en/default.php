@@ -22,6 +22,11 @@ return array(
 	'contact' => 'Contact',
 	'login' => 'Login',
 	'links1' => 'Links 1',
-	'links2' => 'Links 2'
+	'links2' => 'Links 2',
+	'logout' => 'Log out',
+	'myacc' => 'My Accommodation',
+	'register' => 'Register',
+	'groupmng' => 'Group Management'
+
 
 );

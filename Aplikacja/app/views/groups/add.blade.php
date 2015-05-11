@@ -17,19 +17,22 @@
         <h4><label>Środek transportu:<br>
                 <input name="mean_of_trans" id="mean_of_trans" type="text" size="28" maxlength="50" required>
             </label></h4>
-        <h4><label>Kraj:<br>
-                <input name="country" id="country" type="text" size="28" maxlength="50" required>
-            </label></h4>
-        <h4><label>Język 1:<br>
-                <input name="lang1" id="lang1" type="text" size="28" maxlength="50" required>
-            </label></h4>
-        <h4><label>Język 2:<br>
-                <input name="lang2" id="lang2" type="text" size="28" maxlength="50" required>
-            </label></h4>
-        <h4><label>Język 3:<br>
-                <input name="lang3" id="lang3" type="text" size="28" maxlength="50" required>
-            </label></h4>
-
+        <div class="form-list">
+            <h4><label for="country_select">{{{ Lang::get('confide::confide.signup.country_select') }}}</label></h4>
+            {{Form::select('country_select', $countries)}}
+        </div><br>
+        <div class="form-list">
+            <h4><label for="language1_select">{{{ Lang::get('confide::confide.signup.language_select') }}}</label></h4>
+            {{ Form::select('language1_select', $languages)}}
+        </div><br>
+        <div class="form-list">
+            <h4><label for="language2_select">{{{ Lang::get('confide::confide.signup.language_select') }}}</label></h4>
+            {{ Form::select('language2_select', $languages)}}
+        </div><br>
+        <div class="form-list">
+            <h4><label for="language3_select">{{{ Lang::get('confide::confide.signup.language_select') }}}</label></h4>
+            {{ Form::select('language3_select', $languages)}}
+        </div><br>
         <p>
             <input type="submit" id="submit" value="Dodaj">
             <input type="reset" value="Wyczyść">
