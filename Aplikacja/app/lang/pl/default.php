@@ -26,6 +26,6 @@ return array(
 	'logout' => 'Wyloguj się',
 	'myacc' => 'Moje zakwaterowanie',
 	'register' => 'Zarejestruj się',
-	'groupmng' => 'Zarządzanie grupą"
+	'groupmng' => 'Zarządzanie grupą'
 
 );
