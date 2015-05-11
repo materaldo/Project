@@ -69,20 +69,30 @@ class GroupController extends BaseController {
     public function postConfirm($id)
     {
         $number_of_peopleEdited = Input::get('num_of_people');
-        $mean_of_transportEdited = Input::get('mean_of_trans');
-        $countryEdited = Input::get('country');
-        $language1Edited = Input::get('lang1');
-        $language2Edited = Input::get('lang2');
-        $language3Edited = Input::get('lang3');
-        Group::where('id', $id)->update(array(
-            'number_of_people'=>$number_of_peopleEdited,
-            'mean_of_transport'=>$mean_of_transportEdited,
-            'id_coun'=>$countryEdited,
-            'id_first_lang'=>$language1Edited,
-            'id_second_lang'=>$language2Edited,
-            'id_third_lang'=>$language3Edited,
-        ));
-        return View::make('groups.management');
+        $number_of_added_participants = DB::table('participants')->where('id_gr', '=', $id)->count();
+        if ($number_of_added_participants <= $number_of_peopleEdited) {
+
+            $mean_of_transportEdited = Input::get('mean_of_trans');
+            $countryEdited = Input::get('country');
+            $language1Edited = Input::get('lang1');
+            $language2Edited = Input::get('lang2');
+            $language3Edited = Input::get('lang3');
+            Group::where('id', $id)->update(array(
+                'number_of_people' => $number_of_peopleEdited,
+                'mean_of_transport' => $mean_of_transportEdited,
+                'id_coun' => $countryEdited,
+                'id_first_lang' => $language1Edited,
+                'id_second_lang' => $language2Edited,
+                'id_third_lang' => $language3Edited,
+            ));
+
+            return View::make('groups.management');
+        }
+        else{
+            $info = "Liczba uczestników nie może być mniejsza, od liczby już wprowadzonych. Spróbuj jeszcze raz";
+        return View::make('groups.info')-> with('idG',$id)->with('info', $info);
+    }
+
     }
 	public function getManagement()
 	{
@@ -105,6 +115,7 @@ class GroupController extends BaseController {
 		$group -> id_second_lang = $second_lang;
 		$group -> id_third_lang = $third_lang;
 		$group->save();
-		return View::make('groups.info');
+        $info = "Dodano grupę, możesz teraz w panelu zarządzania dodać informacje o uczestnikach!";
+		return View::make('groups.info')->with('info', $info);
 	}
 }

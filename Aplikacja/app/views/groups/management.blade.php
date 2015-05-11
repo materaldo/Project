@@ -9,7 +9,6 @@
 @stop
 
 @section('content')
-
     Twoje grupy:
     <table>
         <tr>
@@ -23,8 +22,6 @@
         <?php
         $protector = Auth::id();
         $index = 1;
-        //echo $protector;
-        //$group = Group::select('select * from groups where id_prot = $protector', array(1));
         $group = Group::all();
 
         foreach ($group as $gr) {

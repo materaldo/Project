@@ -16,12 +16,16 @@ class ParticipantController extends BaseController {
 	{
 		return View::make('participants.participant_change');
 	}
-	
-	
 	public function getAdd($id)
 	{
+        return View::make('participants.add')->with('idG', $id);
+       // if($grouped_people == $picked_group->numer_od_people){
+            return View::make('participants.addinfo')-> with('idG', $id);
 
-        return View::make('participants.add')->with('idG',$id);
+       //}
+      //  else{
+
+    //}
 	}
     public function postAdduser($id)
     {
@@ -49,7 +53,6 @@ class ParticipantController extends BaseController {
 
         if($user->id !=NULL) {
             $participant = new Participant;
-
             $participant->id = $user->id;
             $participant->first_name = $last_name;
             $participant->last_name = $first_name;
