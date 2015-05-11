@@ -10,10 +10,11 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
+		
 //require_once 'CountriesTableSeeder.php';
+		$this->call('TestTableSeeder');
 		$this->call('CountriesTableSeeder');
 		$this->call('LanguagesTableSeeder');
-		$this->call('TestTableSeeder');
 	}
 
 }
