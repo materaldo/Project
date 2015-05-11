@@ -28,7 +28,7 @@
             if ($gr->id_prot == $protector) {
                 echo "<tr>
                     <td>
-                    <a href=http://zpi.dev/group/message/" . $gr->id . ">Wiadomość grupowa
+                    <a href=http://zpi.dev/group/details/" . $gr->id . ">Szczegóły
 </td>
 <td>
 $gr->number_of_people

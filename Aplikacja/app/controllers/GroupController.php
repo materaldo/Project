@@ -8,7 +8,20 @@ class GroupController extends BaseController {
 	}
 	public function getNew()
 	{
-		return View::make('groups.add');
+        $countries = Country::all();
+        $countriesArr = array();
+        foreach($countries as $count)
+        {
+            $countriesArr[$count->id] =$count->country;
+        }
+
+        $languages = Language::all();
+        $languagesArr = array();
+        foreach($languages as $lang)
+        {
+            $languagesArr[$lang->id] =$lang->language;
+        }
+		return View::make('groups.add')->with('countries', $countriesArr)->with('languages', $languagesArr);
 	}
 	public function getUnconfirmed()
 	{
@@ -98,22 +111,28 @@ class GroupController extends BaseController {
 	{
 		return View::make('groups.management');
 	}
+    public function getAboutgroup($idG)
+    {
+        return View::make('groups.details')->with('idG', $idG);
+    }
 	public function postAdd()
 	{
 		$num_of_people = Input::get('num_of_people');
 		$mean_of_trans = Input::get('mean_of_trans');
-		$country = Input::get('country');
-		$first_lang = Input::get('lang1');
-		$second_lang = Input::get('lang2');
-		$third_lang = Input::get('lang3');
+		//$country = Input::get('country');
+        $country=DB::table('countries')->where('id', Input::get('country_select'))->first();
+		$first_lang = DB::table('languages')->where('id', Input::get('language1_select'))->first();
+		$second_lang = DB::table('languages')->where('id', Input::get('language2_select'))->first();
+		$third_lang = DB::table('languages')->where('id', Input::get('language3_select'))->first();
 		$group = new Group();
 		$group -> number_of_people = $num_of_people;
 		$group -> mean_of_transport = $mean_of_trans;
 		$group -> id_prot = Auth::id();
-		$group -> id_coun = $country;
-		$group -> id_first_lang = $first_lang;
-		$group -> id_second_lang = $second_lang;
-		$group -> id_third_lang = $third_lang;
+        $group->id_coun = $country->id;
+        //$group -> id_coun = $country;
+		$group -> id_first_lang = $first_lang->id;
+		$group -> id_second_lang = $second_lang->id;
+		$group -> id_third_lang = $third_lang->id;
 		$group->save();
         $info = "Dodano grupę, możesz teraz w panelu zarządzania dodać informacje o uczestnikach!";
 		return View::make('groups.info')->with('info', $info);
