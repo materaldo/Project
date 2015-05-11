@@ -10,9 +10,9 @@
 @stop
 
 @section('content')
-      
-<h4>
-Dodano grupę, możesz teraz w panelu zarządzania dodać informacje o uczestnikach!
-		</h4>	  
+      <?php
+          echo "<h4>$info</h4>";
+      ?>
+
 	
 @stop

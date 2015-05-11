@@ -11,11 +11,17 @@
 
 @section('content')
 <?php
+$grouped_people = DB::table('participants')->where('id_gr', '=', $idG)->count();
+$picked_group = DB::table('groups')->where('id', '=', $idG)->first();
+if($grouped_people == $picked_group->number_of_people)
+    {
+        echo "Dodałeś już wszystkich uczestników do tej grupy";
 
-
-?>
-    <form action="http://zpi.dev/participant/adduser/{{$idG}}" method="post">
-        <h4><label>Imię:<br>
+    }
+else{
+    echo "
+    <form action='http://zpi.dev/participant/adduser/$idG' . method='post'>";
+    echo'    <h4><label>Imię:<br>
                 <input name="first_name" id="first_name" type="text" size="28" maxlength="20" required>
             </label></h4>
         <h4><label>Nazwisko:<br>
@@ -54,6 +60,7 @@
             <input type="submit" id="submit" value="Dodaj">
             <input type="reset" value="Wyczyść">
         </p>
-    </form>
-	
+    </form>';
+    }
+?>
 @stop
