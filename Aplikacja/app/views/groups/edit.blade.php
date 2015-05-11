@@ -7,7 +7,7 @@
     <meta name="Keywords" content=""/>
     <?php
     $editedGroup = Group::find($idG);
-
+    $number_of_added_participants = DB::table('participants')->where('id_gr', '=', $idG)->count();
     ?>
 @stop
 
@@ -17,6 +17,7 @@
         <h4><label>Liczba osób:<br>
                 <input name="num_of_people" id="num_of_people" type="text" size="28" maxlength="20" value="{{$editedGroup->number_of_people}}"required>
             </label></h4>
+
         <h4><label>Środek transportu:<br>
                 <input name="mean_of_trans" id="mean_of_trans" type="text" size="28" maxlength="50" value="{{$editedGroup->mean_of_transport}}"required>
             </label></h4>
@@ -33,10 +34,14 @@
                 <input name="lang3" id="lang3" type="text" size="28" maxlength="50"value="{{$editedGroup->id_third_lang}}" required>
             </label></h4>
 
-        <p>
+
+
+         <p>
             <input type="submit" id="submit" value="OK">
             <input type="reset" value="Wyczyść">
-        </p>
+            </p>
+
+
     </form>
 
 @stop
