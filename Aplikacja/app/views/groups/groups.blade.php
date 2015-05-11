@@ -5,7 +5,6 @@
 	{{App::setLocale(Session::get('lang', 'pl'));}}
     <meta name="Description" content=""/>
     <meta name="Keywords" content=""/>
-
 @stop
 
 @section('content')
@@ -17,6 +16,7 @@
 			<td>Nr grupy</td>
 			<td>Liczba członków</td>
 			<td>Kraj</td>
+			<td>Opiekun</td>
 			<td></td>
 		</tr>	
 <?php
@@ -26,7 +26,7 @@
 	foreach ($groups as $gr)
 		{
 			$country=Country::find($gr->id_coun);
-			
+			$prot=Protector::find($gr->id_prot);
 			
 			echo "<tr>
 				<td>
@@ -37,6 +37,9 @@
 				"</td>
 				<td>" . 
 					$country->country . 
+				"</td>
+				<td>" .
+					$prot->first_name . " " . $prot->last_name .
 				"</td>
 				<td>";
 				if ($conf)

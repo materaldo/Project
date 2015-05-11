@@ -11,11 +11,30 @@ class ParticipantController extends BaseController {
 	{
 		return View::make('participants.myaccommodation');
 	}
-	
+	public function postChooseplace()
+	{
+		$sel = Input::get('participants');
+		$string = "";
+		
+		foreach ($sel as $selected){
+					$string=$string . " " . $selected;
+				}
+		echo $string;
+		
+		return View::make('participants.assign')->with('sel', $string);
+	}
 	public function getChange()
 	{
 		return View::make('participants.participant_change');
 	}
+	public function getAssign()
+	{
+		$sel=Input::get('parts');
+		echo $sel;
+	
+		return View::make('groups.groups')->with('conf', '1');
+	}
+	
 	public function getAdd($id)
 	{
         $countries = Country::all();

@@ -30,27 +30,28 @@
 	"<br><br><h4>Członkowie: </h4>";
 		
 		$participants=Participant::where('id_gr', '=', $gr->id)->get();
-		echo "<form action=\"\"><table>";
+		echo "<form action=\"http://zpi.dev/participant/chooseplace\" method=\"post\"><table>";
 
 		foreach ($participants as $part)
 		{			
 			echo "<tr>
 					<td>
-						<input type=\"checkbox\" name=\"participants\" value=\"". $part->id ."\">
+						<input type=\"checkbox\" name=\"participants[]\" value=\"". $part->id ."\">
 					</td>
 					<td>"
 						. $part->first_name . " " . $part->last_name ."
-					</td>
-					<td>
-						<a href=http://zpi.dev/participant/assign/" . $part->id . ">Przydziel </a>
 					</td>
 					<td>
 						<a href=http://zpi.dev/participant/details/" . $part->id . "> Szczegóły</a>
 					</td>
 				</tr>";
 		}	
-	
-	echo "</table></form>";
+	echo "</table>
+		<p>
+            <input type=\"submit\" id=\"submit\" value=\"Przydziel\">
+            <input type=\"reset\" value=\"Odznacz\">
+        </p>
+	</form>";
 			
 ?>	
 

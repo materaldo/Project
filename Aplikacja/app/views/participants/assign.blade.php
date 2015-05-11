@@ -27,7 +27,7 @@
 		{
 			echo "<tr>
 				<td>
-					<a href=http://zpi.dev/group/assign/" . $acc->id . "/". $idG ."><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>
+					<a href=\"http://zpi.dev/participant/assign/" . $acc->id . "/". $sel ."\"><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>			
 				</td>
 				<td>" . 
 					$acc->name . "<br>" . $acc->street . " " . $acc->buildings . ", " . $acc->post_code . " " . $acc->city . 
@@ -41,5 +41,10 @@
 ?>
 </table>
 
+<form action="http://zpi.dev/participant/assign/" method="post">
+	<input type="hidden" name="parts" value="{{$sel}}">
+<input type="submit" id="submit" value="Dodaj">
+            <input type="reset" value="Wyczyść">
+</form>
 
 @stop

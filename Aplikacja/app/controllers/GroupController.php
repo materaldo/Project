@@ -50,7 +50,6 @@ class GroupController extends BaseController {
 		$user_acc->save();
 		}
 		
-		
 		return View::make('groups.groups')->with('conf', '1')->with('zmienna', $zmienna);
 	}
 	public function getDetails($id)
