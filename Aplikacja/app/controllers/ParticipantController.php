@@ -70,6 +70,8 @@ class ParticipantController extends BaseController {
         }
         else{
             DB::table('users')->where('id', '=', $user->id)->delete();
+            $info = "Nie dodano użytkownika, podany adres e-mail już istnieje w bazie, lubi był niepoprawny!";
+            return View::make('participants.info') ->with('info', $info);
         }
         return View::make('participants.add')->with('idG',$id);
     }
