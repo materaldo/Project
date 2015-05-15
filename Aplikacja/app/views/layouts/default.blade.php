@@ -30,12 +30,11 @@ if (Auth::user()!==null)
             <div id="logo_text">
             </div>
             <div>
-
-                    <ul>
+				<nav id = "lang">Język                    <ul>
                         <li>{{link_to_route('language.select', 'English', array('en'))}}</li>
                         <li>{{link_to_route('language.select', 'Polski', array('pl'))}} </li>
                     </ul>
-
+				</nav>
             </div>
         </div>
 		<?php
@@ -65,7 +64,7 @@ if (Auth::user()!==null)
                     <li><a href=\"http://zpi.dev/about\">" . Lang::get('default.about') . "</a></li>
 					<li><a href=\"http://zpi.dev/accommodation\">" . Lang::get('default.accommodation') . "</a></li>
                     <li><a href=\"http://zpi.dev/management\">" . Lang::get('default.management') . "</a></li>
-					<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.about') . "</a></li>
+					<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.search') . "</a></li>
                     <li><a href=\"http://zpi.dev/contact\">" . Lang::get('default.contact') . "</a></li>
 					<li><a href=\"http://zpi.dev/users/logout\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
@@ -81,7 +80,7 @@ if (Auth::user()!==null)
                     <li><a href=\"http://zpi.dev/about\">" . Lang::get('default.about') . "</a></li>
                     <li><a href=\"http://zpi.dev/group/new\">" . Lang::get('default.group') . "</a></li>
 					<li><a href=\"http://zpi.dev/group/management\">" . Lang::get('default.groupmng') . "</a></li>
-					<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.about') . "</a></li>
+					<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.search') . "</a></li>
                     <li><a href=\"http://zpi.dev/contact\">" . Lang::get('default.contact') . "</a></li>
 					<li><a href=\"http://zpi.dev/users/logout\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
