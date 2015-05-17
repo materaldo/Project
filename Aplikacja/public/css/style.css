@@ -224,7 +224,7 @@ nav {
 	  width: 120px;
 	  height: 20px;
 	  color: white;
-	  border: 2px solid white;
+	  border: 2px solid #EFF3E5;
 	  text-align: center;
 	  background-color: #555747;
 
@@ -242,8 +242,8 @@ nav {
 #lang:hover > ul {
 	  display: block;
 	  padding: 4px;
-	  background-color: white;
-	  
+	  background-color: #EFF3E5;
+	  padding-bottom: 2px;
 	  border: 5px solid #555747;
 	}		
 	
