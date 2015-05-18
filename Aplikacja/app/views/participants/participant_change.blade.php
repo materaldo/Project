@@ -1,13 +1,15 @@
-﻿@extends('layouts.default')
+﻿
+@extends('layouts.default')
 
 @section('header')
 
 	{{App::setLocale(Session::get('lang', 'pl'));}}
-	<meta name="Description" content=""/>
-	<meta name="Keywords" content=""/>
+	<meta name="Description" content="" />
+	<meta name="Keywords" content="" />
 
 
 @stop
+
 
 @section('content')
 
@@ -15,7 +17,8 @@
             <h1>Zmiana Zakwaterowania</h1>
 			<p>Prszę wypałnić formularz dotyczący preferencji miejsca zakwaterownia. Pomoże nam on znaleźć odpowiedznie dla Ciebie miejsce.</p>
             
-            <form name="FormularzZmiana" action="zamiana.php" method="post">
+            <form name="FormularzZmiana" action="http://zpi.dev/participant/sendmail" method="post">
+		
 
              <h3><label>Podaj przyczynę zmiany miejsca:</label></h3>
 			  
@@ -42,6 +45,7 @@
                <input type="reset" value="Wyczyść">
               </p>
             </form>
+			
 			
              <p><a href="http://zpi.dev/participant/accommodation">Powrót</a></p>
 

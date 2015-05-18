@@ -98,10 +98,23 @@ class ParticipantController extends BaseController {
         }
         return View::make('participants.add')->with('idG',$id);
     }
-	
+		public function postSendmail(){
+		
+		
+		Mail::send('emails.change', array('key' => 'value'), function($message)
+{
+		$message->to('joanna.drabik.93@gmail.com')->subject('Zmiana zakwaterowania');
+		
+		
+		});
+
+		echo 'wiadomość wysłana';
+	}
+
 	public function accName(){
 		echo Auth::id();
 		
 	}
+	
 	
 }
