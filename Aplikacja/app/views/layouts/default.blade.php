@@ -20,8 +20,8 @@
 <?php
 if (Auth::user()!==null)
 {
-	$user=Auth::user();
-	//echo $user->username;
+	$userLogged=Auth::user();
+	//echo $userLogged->username;
 }?>
 
 <div id="main">
@@ -38,9 +38,9 @@ if (Auth::user()!==null)
             </div>
         </div>
 		<?php
-		if (isset($user))
+		if (isset($userLogged))
 		{
-		if ($user->hasRole("Admin"))
+		if ($userLogged->hasRole("Admin"))
         {
 			echo "<nav>
             <div id=\"menu_container\">
@@ -55,7 +55,7 @@ if (Auth::user()!==null)
             </div>
         </nav>";
 		}
-		elseif ($user->hasRole("Organizer"))
+		elseif ($userLogged->hasRole("Organizer"))
         {
 			echo "<nav>
             <div id=\"menu_container\">
@@ -71,7 +71,7 @@ if (Auth::user()!==null)
             </div>
         </nav>";
 		}
-		elseif ($user->hasRole("Protector"))
+		elseif ($userLogged->hasRole("Protector"))
         {
 			echo "<nav>
             <div id=\"menu_container\">
@@ -87,7 +87,7 @@ if (Auth::user()!==null)
             </div>
         </nav>";
 		}
-		else //if ($user->hasRole("Participant"))
+		elseif ($userLogged->hasRole("Participant"))
         {
 			echo "<nav>
             <div id=\"menu_container\">

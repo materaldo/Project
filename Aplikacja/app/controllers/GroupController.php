@@ -56,7 +56,7 @@ class GroupController extends BaseController {
 	{
 		return View::make('groups.details')->with('idG', $id);
 	}
-    public function getParticiantdetails($id)
+    public function getParticipantdetails($id)
     {
         return View::make('groups.participantgroupdetails')->with('idG', $id);
     }

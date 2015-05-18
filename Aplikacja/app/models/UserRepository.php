@@ -49,11 +49,13 @@ class UserRepository
         $prot->insurance_number  = array_get($input, 'insurance_number');
 
         $this->save($user);
-        $user2 = DB::table('users')->where('username', array_get($input, 'username'))->first();
-        $prot->id = $user2->id;
-
-        $prot->save();
-
+		
+		$user2 = DB::table('users')->where('username', array_get($input, 'username'))->first();
+        if($user2!=null)
+		{
+			$prot->id = $user2->id;	
+			$prot->save();
+		}
         return $user;
     }
 

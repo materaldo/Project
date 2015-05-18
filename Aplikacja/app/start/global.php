@@ -53,15 +53,14 @@ App::error(function(Exception $exception, $code)
     {
 		case 403:
 			return Response::view('errors.nopermission', array(), 403);
-
-        case 404:
-            return Response::view('errors.missing', array(), 404);
+        //case 404:
+       //     return Response::view('errors.missing', array(), 404);
     }
 });
 
 App::missing(function($exception)
 {
-    return Response::view('errors.missing', array(), 404);
+   //return Response::view('errors.missing', array(), 404);
 });
 
 /*
