@@ -30,6 +30,10 @@ class TestTableSeeder extends Seeder
 		//User::create(['username'=>'superorganizer', 'email'=>'superorganizer@testowy123.pl', 'password'=>'superorganizer123', 'confirmation_code'=>md5(uniqid(mt_rand(), true)), 'confirmed' => '1']);
 		
 		$roleAdmin = Role::create(['name'=>'Admin']);
+		//$roleAdmin = new Role;
+		//$roleAdmin->name = 'Admin';
+		//$roleAdmin->save();
+		
 		$roleOrganizer = Role::create(['name'=>'Organizer']);
 		$roleProtector = Role::create(['name'=>'Protector']);
 		$roleParticipant = Role::create(['name'=>'Participant']);
@@ -85,13 +89,14 @@ class TestTableSeeder extends Seeder
 		$protector->attachRole($roleProtector);
 		$participant->attachRole($roleParticipant);
 		$superorg->attachRole($roleSuperOrg);
-
-		$managment = new Permission;
-		$managment->name = 'managment';
-		$managment->save();
 		
-		$roleAdmin->perms()->sync(array($managment->id));
-		$roleOrganizer->perms()->sync(array($managment->id));
+		$management = new Permission;
+		$management->name = 'management';
+		$management->display_name = 'Zarzadzanie';
+		$management->save();
+		
+		$roleAdmin->perms()->sync(array($management->id));
+		$roleOrganizer->perms()->sync(array($management->id));
 		
 		
 		//kolejny seed po jezykach i krajach

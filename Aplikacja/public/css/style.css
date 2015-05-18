@@ -100,7 +100,7 @@ ul {
 }
 
 ul li { 
-  list-style-type: circle;
+  
   margin: 0 0 6px 0; 
   padding: 0 0 4px 5px;
   line-height: 1.5em;
@@ -215,7 +215,40 @@ nav {
   float: right;
   width: 234px;
   margin-top: 20px;
+  
 }
+
+#lang{
+      position: absolute;
+	 
+	  width: 120px;
+	  height: 20px;
+	  color: white;
+	  border: 2px solid #EFF3E5;
+	  text-align: center;
+	  background-color: #555747;
+
+	}
+		
+#lang > ul {
+		
+	  display: none;
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+
+	}		
+	
+#lang:hover > ul {
+	  display: block;
+	  padding: 4px;
+	  background-color: #EFF3E5;
+	  padding-bottom: 2px;
+	  border: 5px solid #555747;
+	}		
+	
+
+
 
 .sidebar { 
   width: 200px;
