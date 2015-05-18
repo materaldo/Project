@@ -22,7 +22,7 @@
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
 	echo $ac->name;}
-	else{ echo "jeszcze nie ma";
+	else{ echo  'Wkrótce...' ;
 		}
 ?>
 </p>

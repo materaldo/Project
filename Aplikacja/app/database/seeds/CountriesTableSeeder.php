@@ -8,7 +8,8 @@ class CountriesTableSeeder extends Seeder
     {
         DB::table('countries')->delete();
 		DB::unprepared("ALTER TABLE countries AUTO_INCREMENT = 1;");
-        Country::create(['country'=>'United States']);
+		Country::create(['country'=>'']);
+Country::create(['country'=>'United States']);
 Country::create(['country'=>'Canada']);
 Country::create(['country'=>'Afghanistan']);
 Country::create(['country'=>'Albania']);

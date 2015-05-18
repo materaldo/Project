@@ -38,8 +38,14 @@ class GroupController extends BaseController {
 	public function getAssign($idAcc, $idGr)
 	{
 		$users=Participant::where('id_gr', '=', $idGr)->get();
-		
+		$acc=Accommodation::where('id', '=', $idAcc)->first();
 		$zmienna=var_export($users, true);
+		
+		if (sizeof($users)>($acc->free_places))
+		{
+			echo "<script>alert(\"Brak wystarczającej ilości miejsc w tym miejscu noclegowym. Wybierz inne miejsce lub podziel grupę.\");</script>";
+			return View::make('groups.groups')->with('conf', '1');
+		}
 		
 		foreach ($users as $us)
 		{
@@ -48,6 +54,8 @@ class GroupController extends BaseController {
 		$user_acc->id_acc = $idAcc;
 		$user_acc->id_us = $us->id;
 		$user_acc->save();
+		
+		$acc->decrement('free_places');
 		}
 		
 		return View::make('groups.groups')->with('conf', '1')->with('zmienna', $zmienna);

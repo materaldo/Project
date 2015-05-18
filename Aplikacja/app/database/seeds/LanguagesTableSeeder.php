@@ -8,6 +8,7 @@ class LanguagesTableSeeder extends Seeder
     {
         DB::table('languages')->delete();
 		DB::unprepared("ALTER TABLE languages AUTO_INCREMENT = 1;");
+		Language::create(['language'=>'']);
         Language::create(['language'=>'Chinese, Mandarin']);
 Language::create(['language'=>'English']);
 Language::create(['language'=>'Spanish']);
