@@ -87,7 +87,7 @@ if (Auth::user()!==null)
             </div>
         </nav>";
 		}
-		elseif ($user->hasRole("Participant"))
+		else //if ($user->hasRole("Participant"))
         {
 			echo "<nav>
             <div id=\"menu_container\">
@@ -101,7 +101,7 @@ if (Auth::user()!==null)
                 </ul>
             </div>
         </nav>";
-		}	
+		}
 		}
 		else {
 		echo "<nav>
