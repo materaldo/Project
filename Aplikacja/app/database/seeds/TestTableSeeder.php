@@ -10,6 +10,8 @@ class TestTableSeeder extends Seeder
 		DB::table('permission_role')->delete();
 		DB::table('permissions')->delete();
 		DB::table('assigned_roles')->delete();
+		DB::table('users_accommodations')->delete();
+		DB::table('accommodation')->delete();
 		DB::table('participants')->delete();
 		DB::table('groups')->delete();
 		DB::table('protectors')->delete();
@@ -22,6 +24,7 @@ class TestTableSeeder extends Seeder
 		DB::unprepared("ALTER TABLE permission_role AUTO_INCREMENT = 1;");
 		DB::unprepared("ALTER TABLE assigned_roles AUTO_INCREMENT = 1;");
 		DB::unprepared("ALTER TABLE groups AUTO_INCREMENT = 1;");
+		DB::unprepared("ALTER TABLE users_accommodations AUTO_INCREMENT = 1;");
 		
 		//User::create(['username'=>'admin', 'email'=>'admin@testowy123.pl', 'password'=>'admin123', 'confirmation_code'=>'j89j48fj389jf398jf839jd893j', 'confirmed' => '1']);
 		//User::create(['username'=>'organizer', 'email'=>'organizer@testowy123.pl', 'password'=>'organizer123', 'confirmation_code'=>md5(uniqid(mt_rand(), true)), 'confirmed' => '1']);
