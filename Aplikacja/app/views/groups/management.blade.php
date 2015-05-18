@@ -28,7 +28,7 @@
             if ($gr->id_prot == $protector) {
                 echo "<tr>
                     <td>
-                    <a href=http://zpi.dev/group/details/" . $gr->id . ">Szczegóły
+                    <a href=http://zpi.dev/group/participantdetails/" . $gr->id . ">Szczegóły
 </td>
 <td>
 $gr->number_of_people
