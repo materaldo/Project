@@ -26,7 +26,8 @@ return array(
 	'logout' => 'Log out',
 	'myacc' => 'My Accommodation',
 	'register' => 'Register',
-	'groupmng' => 'Group Management'
+	'groupmng' => 'Group Management',
+	'lang' => 'Language'
 
 
 );
