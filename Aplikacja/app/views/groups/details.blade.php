@@ -30,10 +30,19 @@
 	"<br><br><h4>Członkowie: </h4>";
 		
 		$participants=Participant::where('id_gr', '=', $gr->id)->get();
-		echo "<form action=\"http://zpi.dev/participant/chooseplace\" method=\"post\"><table>";
+		echo "<form action=\"http://zpi.dev/participant/chooseplace\" method=\"post\"><table>
+		<tr>
+			<td></td>
+			<td>Imię i nazwisko</td>
+			<td>Zakwaterowanie</td>
+			<td></td>
+		</tr>";
 
 		foreach ($participants as $part)
 		{			
+		
+		$us_acc=UserAccommodation::where('id_us', '=', $part->id)->first();
+		$acc=Accommodation::findOrFail($us_acc->id_acc);
 			echo "<tr>
 					<td>
 						<input type=\"checkbox\" name=\"participants[]\" value=\"". $part->id ."\">
@@ -41,6 +50,9 @@
 					<td>"
 						. $part->first_name . " " . $part->last_name ."
 					</td>
+					<td>"
+						. $acc->name .
+					"</td>
 					<td>
 						<a href=http://zpi.dev/participant/details/" . $part->id . "> Szczegóły</a>
 					</td>
@@ -48,7 +60,7 @@
 		}	
 	echo "</table>
 		<p>
-            <input type=\"submit\" id=\"submit\" value=\"Przydziel\">
+            <input type=\"submit\" id=\"submit\" value=\"Przydziel zaznaczonych\">
             <input type=\"reset\" value=\"Odznacz\">
         </p>
 	</form>";
