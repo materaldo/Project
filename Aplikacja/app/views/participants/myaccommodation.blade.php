@@ -13,53 +13,66 @@
 <h2>{{Lang::get('participant.accommodation')}}</h2>
 <p>
 <?php
+
+
 	$user = Auth::id();
+	
 	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
-	echo $ac->name;
+	echo $ac->name;}
+	else{ echo "jeszcze nie ma";
+		}
 ?>
 </p>
 
-<p>ul. 
+<p> 
 <?php
 	$user = Auth::id();
 	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
-	echo $ac->street;
+	echo "ul. ";
+	echo $ac->street;}
 ?>
  
 <?php
 	$user = Auth::id();
 	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
-	echo $ac->building;
+	echo $ac->building;}
 ?>
 </p>
 <p>
 <?php
 	$user = Auth::id();
 	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
-	echo $ac->post_code;
+	echo $ac->post_code;}
 ?> 
 <?php
 	$user = Auth::id();
 	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
-	echo $ac->city;
+	echo $ac->city;}
 ?>
-</p><p>tel: 
+</p><p>
 <?php
 	$user = Auth::id();
 	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
-	echo $ac->phone_number;
+	echo 'tel: '; 
+	echo $ac->phone_number;}
 ?>
 </p>
 
