@@ -21,8 +21,9 @@ App::after(function($request, $response)
 {
 	//
 });
-Entrust::routeNeedsRole( 'management', array('Admin', 'Organizer') );
-//Entrust::routeNeedsPermission( 'management', 'managment');
+
+//Entrust::routeNeedsRole('language', array('Organizer')); ///dostep tylko dla danego uzytkownika
+Entrust::routeNeedsPermission('management', 'management'); //dostep z wykorzystaniem permisji
 
 /*
 |--------------------------------------------------------------------------
