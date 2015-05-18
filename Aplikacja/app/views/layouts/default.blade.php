@@ -30,7 +30,7 @@ if (Auth::user()!==null)
             <div id="logo_text">
             </div>
             <div>
-				<nav id = "lang">Język                    <ul>
+				<nav id = "lang">{{Lang::get('default.lang')}}                   <ul>
                         <li>{{link_to_route('language.select', 'English', array('en'))}}</li>
                         <li>{{link_to_route('language.select', 'Polski', array('pl'))}} </li>
                     </ul>
