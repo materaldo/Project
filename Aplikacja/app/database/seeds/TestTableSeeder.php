@@ -86,7 +86,7 @@ class TestTableSeeder extends Seeder
 		$participant->attachRole($roleParticipant);
 		$superorg->attachRole($roleSuperOrg);
 
-		$managment = new Permission();
+		$managment = new Permission;
 		$managment->name = 'managment';
 		$managment->save();
 		
