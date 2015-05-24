@@ -81,13 +81,20 @@ class GroupController extends BaseController {
 	}
     public function postMessagesender($id)
     {
-
-        Mail::send('emails.groupMessage', array('key' => 'value'), function($message)
+		$gr=Group::find($id);
+		$parts=Participant::where('id_gr', '=', $gr->id)->get();
+		
+		foreach ($parts as $p)
+		{
+			
+        Mail::send('emails.groupMessage', array('key' => 'value'), function($message) use ($p)
         {
-            $message->to('mlteusz_711@wp.pl', 'Jacek')->subject('!');
+			$us=User::where('id','=',$p->id)->first();
+            $message->to($us->email, 'Jacek')->subject('!');
 
 
         });
+		}
         return View::make('index');
     }
     public function postConfirm($id)
