@@ -24,6 +24,8 @@ return array(
 	'manual' => 'Przydziel ręcznie',
 	'contact' => 'Kontakt',
 	'message' => 'Wyślij wiadomość do opiekunów',
+	'exportManagement' => 'Export',
+	'export' => 'Wyeksportuj dane',
 	
 	
 

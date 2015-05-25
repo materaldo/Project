@@ -23,7 +23,9 @@ return array(
 	'automatic' => 'Automatic allocation',
 	'manual' => 'Manual allocation',
 	'contact' => 'Contact',
-	'message' => 'Send a message to protectors'
+	'message' => 'Send a message to protectors',
+	'exportManagement' => 'Export',
+	'export' => 'Data export',
 	
 	
 

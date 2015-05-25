@@ -1,4 +1,4 @@
-@extends('layouts.default')
+	@extends('layouts.default')
 
 @section('header')
 
@@ -37,6 +37,13 @@
 		</li>
 		<li>
 			<a class="clickMe" href="http://zpi.dev/accommodation/add">{{Lang::get('management.manual')}}</a>
+		</li>
+	</ul>
+
+<h4>{{Lang::get('management.exportManagement')}}</h4>
+	<ul>
+		<li>
+			<a class="clickMe" href="{{ URL::to('/dataexport')}}">{{Lang::get('management.export')}}</a>
 		</li>
 	</ul>
 	

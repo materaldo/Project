@@ -46,12 +46,12 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev\">" . Lang::get('default.news') . "</a></li>
-                    <li><a href=\"http://zpi.dev/about\">" . Lang::get('default.about') . "</a></li>
-					<li><a href=\"http://zpi.dev/management\">" . Lang::get('default.management') . "</a></li>
-					<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.search') . "</a></li>
-                    <li><a href=\"http://zpi.dev/contact\">" . Lang::get('default.contact') . "</a></li>
-					<li><a href=\"http://zpi.dev/users/logout\">" . Lang::get('default.logout') . "</a></li>
+                    <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
+                    <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
+					<li><a href=\"" . URL::to('/management') . "\">" . Lang::get('default.management') . "</a></li>
+					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+                    <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
+					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
             </div>
         </nav>";
@@ -61,13 +61,13 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev\">" . Lang::get('default.news') . "</a></li>
-                    <li><a href=\"http://zpi.dev/about\">" . Lang::get('default.about') . "</a></li>
-					<li><a href=\"http://zpi.dev/accommodation\">" . Lang::get('default.accommodation') . "</a></li>
-                    <li><a href=\"http://zpi.dev/management\">" . Lang::get('default.management') . "</a></li>
-					<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.search') . "</a></li>
-                    <li><a href=\"http://zpi.dev/contact\">" . Lang::get('default.contact') . "</a></li>
-					<li><a href=\"http://zpi.dev/users/logout\">" . Lang::get('default.logout') . "</a></li>
+                    <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
+                    <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
+					<li><a href=\"" . URL::to('/accommodation') . "\">" . Lang::get('default.accommodation') . "</a></li>
+                    <li><a href=\"" . URL::to('/management') . "\">" . Lang::get('default.management') . "</a></li>
+					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+                    <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
+					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
             </div>
         </nav>";
@@ -77,28 +77,28 @@ if (Auth::user()!==null)
 			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index\">" . Lang::get('default.news') . "</a></li>
-                    <li><a href=\"http://zpi.dev/about\">" . Lang::get('default.about') . "</a></li>
-                    <li><a href=\"http://zpi.dev/group/new\">" . Lang::get('default.group') . "</a></li>
-					<li><a href=\"http://zpi.dev/group/management\">" . Lang::get('default.groupmng') . "</a></li>
-					<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.search') . "</a></li>
-                    <li><a href=\"http://zpi.dev/contact\">" . Lang::get('default.contact') . "</a></li>
-					<li><a href=\"http://zpi.dev/users/logout\">" . Lang::get('default.logout') . "</a></li>
+                    <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
+                    <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
+                    <li><a href=\"" . URL::to('/group/new') . "\">" . Lang::get('default.group') . "</a></li>
+					<li><a href=\"" . URL::to('/group/management') . "\">" . Lang::get('default.groupmng') . "</a></li>
+					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+                    <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
+					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
             </div>
         </nav>";
 		}
 		elseif ($userLogged->hasRole("Participant"))
         {
-			echo "<nav>
+			echo "<nav>   participant/accommodation
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index\">" . Lang::get('default.news') . "</a></li>
-                    <li><a href=\"http://zpi.dev/about\">" . Lang::get('default.about') . "</a></li>
-					<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.search') . "</a></li>
-					<li><a href=\"http://zpi.dev/participant/accommodation\">" . Lang::get('default.myacc') . "</a></li>
-                    <li><a href=\"http://zpi.dev/contact\">" . Lang::get('default.contact') . "</a></li>
-					<li><a href=\"http://zpi.dev/users/logout\">" . Lang::get('default.logout') . "</a></li>
+                    <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
+                    <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
+					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+					<li><a href=\"" . URL::to('/participant/accommodation') . "\">" . Lang::get('default.myacc') . "</a></li>
+                    <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
+					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
             </div>
         </nav>";
@@ -154,9 +154,9 @@ if (Auth::user()!==null)
         <footer>
 
             <p> 
-				<a href="http://zpi.dev">{{Lang::get('default.news')}}</a> |
-                <a href="http://zpi.dev/about">{{Lang::get('default.about')}}</a> |
-                <a href="http://zpi.dev/contact">{{Lang::get('default.contact')}}</a>
+				<a href="{{ URL::to('/index') }}">{{Lang::get('default.news')}}</a> |
+                <a href="{{ URL::to('/about') }}">{{Lang::get('default.about')}}</a> |
+                <a href="{{ URL::to('/contact') }}">{{Lang::get('default.contact')}}</a>
             </p>
 
         </footer>

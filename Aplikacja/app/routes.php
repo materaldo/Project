@@ -24,6 +24,8 @@ Route::get('language/{lang}',
     )
 );
 
+Route::get('export', array('uses' => 'HomeController@export', 'as' => 'export'));
+
 Route::controller('accommodation','AccommodationController');
 Route::controller('group','GroupController');
 Route::controller('participant', 'ParticipantController');
@@ -43,4 +45,5 @@ Route::post('users/reset_password', 'UsersController@doResetPassword');
 Route::get('users/logout', 'UsersController@logout');
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@index'));
 Route::controller('/', 'HomeController');//
+
 //
