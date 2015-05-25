@@ -38,6 +38,23 @@
 			<td>Opcje</td>
 		</tr>";
 
+		$protector=Protector::where('id', '=', $gr->id_prot)->first();
+		
+		echo "<tr>
+					<td>
+						<input type=\"checkbox\" name=\"participants[]\" value=\"". $protector->id ."\">
+					</td>
+					<td><b>"
+						. $protector->first_name . " " . $protector->last_name ."
+					</b></td>
+					<td>"
+						.  (isset($protector->id_acco)? Accommodation::where('id', '=', $protector->id_acco)->
+						first()->name : "brak") .
+					"</td>
+					<td>
+						<a href=http://zpi.dev/participant/details/" . $protector->id . "> Szczegóły</a>
+					</td>
+				</tr>";
 		
 		foreach ($participants as $part)
 		{			

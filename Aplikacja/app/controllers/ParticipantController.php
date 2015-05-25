@@ -49,6 +49,11 @@ class ParticipantController extends BaseController {
 		for ($i=1; $i<sizeof($arr); $i++)
 		{
 		$us=Participant::where('id', '=', $arr[$i])->first();
+		
+		if (!isset($us)) 
+		{
+			$us=Protector::where('id', '=', $arr[$i])->first();
+		}
 		$us->id_acco=$idAcc;
 		$us->save();
 		}
