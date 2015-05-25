@@ -71,7 +71,7 @@ class ParticipantController extends BaseController {
         $user -> password = $password;
         $user -> password_confirmation = $password;
         $user->confirmation_code= md5(uniqid(mt_rand(), true));
-        $user -> confirmed =0;
+        $user -> confirmed=0;
         $user ->save();
 
         if($user->id !=NULL) {
@@ -91,11 +91,11 @@ class ParticipantController extends BaseController {
 
             $participant->save();
         }
-        else{
+     /*   else{
             DB::table('users')->where('id', '=', $user->id)->delete();
             $info = "Nie dodano użytkownika, podany adres e-mail już istnieje w bazie, lubi był niepoprawny!";
             return View::make('participants.info') ->with('info', $info);
-        }
+        }*/
         return View::make('participants.add')->with('idG',$id);
     }
 		public function postSendmail(){
