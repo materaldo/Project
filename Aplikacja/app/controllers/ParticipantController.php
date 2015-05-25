@@ -75,22 +75,37 @@ class ParticipantController extends BaseController {
         $user ->save();
 
        if($user->id !=NULL) {
-            $participant = new Participant;
-            $participant->id = $user->id;
-            $participant->first_name = $last_name;
-            $participant->last_name = $first_name;
-            $participant->phone_number = $phone_number;
-            $participant->date_of_birth = $date;
-            $participant->id_coun = $country;
-            $participant->id_first_lang = $lang1;
-            $participant->id_second_lang = $lang2;
-            $participant->id_third_lang = $lang3;
-            $participant->id_gr = $id;
-            $participant->document_number = $document_number;
-            $participant->insurance_number = $insurance_number;
-
-            $participant->save();
-        }
+           $participant = new Participant;
+           $participant->id = $user->id;
+           $participant->first_name = $last_name;
+           $participant->last_name = $first_name;
+           $participant->phone_number = $phone_number;
+           $participant->date_of_birth = $date;
+           $participant->id_coun = $country;
+           $participant->id_first_lang = $lang1;
+           $participant->id_second_lang = $lang2;
+           $participant->id_third_lang = $lang3;
+           $participant->id_gr = $id;
+           $participant->document_number = $document_number;
+           $participant->insurance_number = $insurance_number;
+           $participant->save();
+           $data = array('pass' =>$password);
+           if ($user->id) {
+               if (Config::get('confide::signup_email')) {
+                   Mail::queueOn(
+                       Config::get('confide::email_queue'),
+                       Config::get('confide::email_account_confirmation'),
+                       compact('user'),
+                        $data,
+                       function ($message) use ($user) {
+                           $message
+                               ->to($user->email, $user->username)
+                               ->subject(Lang::get('confide::confide.email.account_confirmation.subject'));
+                       }
+                   );
+               }
+           }
+       }
 		else{
            DB::table('users')->where('id', '=', $user->id)->delete();
             $info = "Nie dodano użytkownika, podany adres e-mail już istnieje w bazie, lubi był niepoprawny!";
