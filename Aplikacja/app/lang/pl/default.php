@@ -27,6 +27,7 @@ return array(
 	'myacc' => 'Moje zakwaterowanie',
 	'register' => 'Zarejestruj się',
 	'groupmng' => 'Zarządzanie grupą',
-	'lang' => 'Język'
+	'lang' => 'Język',
+	'lost' => 'Zgubiłem się'
 
 );

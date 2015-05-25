@@ -97,6 +97,7 @@ if (Auth::user()!==null)
                     <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
 					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
 					<li><a href=\"" . URL::to('/participant/accommodation') . "\">" . Lang::get('default.myacc') . "</a></li>
+					<li><a href=\"" . URL::to('/participant/lost') . "\">" . Lang::get('default.lost') . "</a></li>
                     <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
 					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>

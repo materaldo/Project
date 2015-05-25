@@ -11,6 +11,13 @@ class ParticipantController extends BaseController {
 	{
 		return View::make('participants.myaccommodation');
 	}
+	
+	public function getLost()
+	{
+		return View::make('participants.lost');
+	}
+	
+	
 	public function postChooseplace()
 	{
 		$sel = Input::get('participants');
@@ -115,6 +122,10 @@ class ParticipantController extends BaseController {
     }
 		public function postSendmail(){
 		
+		$id = Auth::id();
+		
+		$title = Input::get('title');
+		
 		
 		Mail::send('emails.change', array('key' => 'value'), function($message)
 {
@@ -124,6 +135,7 @@ class ParticipantController extends BaseController {
 		});
 
 		echo 'wiadomość wysłana';
+		return View::make('index');
 	}
 
 	public function accName(){

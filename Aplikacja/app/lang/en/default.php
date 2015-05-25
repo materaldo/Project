@@ -27,7 +27,8 @@ return array(
 	'myacc' => 'My Accommodation',
 	'register' => 'Register',
 	'groupmng' => 'Group Management',
-	'lang' => 'Language'
+	'lang' => 'Language',
+	'lost' => 'I am lost'
 
 
 );
