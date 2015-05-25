@@ -34,7 +34,7 @@ class ParticipantController extends BaseController {
 	
 		return View::make('groups.groups')->with('conf', '1');
 	}
-	
+
 	public function getAdd($id)
 	{
         $countries = Country::all();
@@ -59,10 +59,10 @@ class ParticipantController extends BaseController {
         $date = Input::get('date');
         $password = Str::random(10);
         $phone_number = Input::get('phone_number');
-        $co=DB::table('countries')->where('id', array_get($input, 'country_select'))->first();
-        $lang1=DB::table('languages')->where('id', array_get($input, 'language1_select'))->first();
-        $lang2=DB::table('languages')->where('id', array_get($input, 'language2_select'))->first();
-        $lang3=DB::table('languages')->where('id', array_get($input, 'language3_select'))->first();
+        $country=Input::get('country_select');
+        $lang1=Input::get('language1_select');
+        $lang2=Input::get('language2_select');
+        $lang3=Input::get('language3_select');
         $document_number = Input::get('document_number');
         $insurance_number = Input::get('insurance_number');
         $user=new User;
@@ -74,31 +74,44 @@ class ParticipantController extends BaseController {
         $user -> confirmed=0;
         $user ->save();
 
-        if($user->id !=NULL) {
-            $participant = new Participant;
-            $participant->id = $user->id;
-            $participant->first_name = $last_name;
-            $participant->last_name = $first_name;
-            $participant->phone_number = $phone_number;
-            $participant->date_of_birth = $date;
-            $participant->id_coun = $country;
-            $participant->id_first_lang = $lang1;
-            $participant->id_second_lang = $lang2;
-            $participant->id_third_lang = $lang3;
-
-
-            $participant->id_gr = $id;
-            $participant->document_number = $document_number;
-            $participant->insurance_number = $insurance_number;
-
-            $participant->save();
-        }
+       if($user->id !=NULL) {
+           $participant = new Participant;
+           $participant->id = $user->id;
+           $participant->first_name = $last_name;
+           $participant->last_name = $first_name;
+           $participant->phone_number = $phone_number;
+           $participant->date_of_birth = $date;
+           $participant->id_coun = $country;
+           $participant->id_first_lang = $lang1;
+           $participant->id_second_lang = $lang2;
+           $participant->id_third_lang = $lang3;
+           $participant->id_gr = $id;
+           $participant->document_number = $document_number;
+           $participant->insurance_number = $insurance_number;
+           $participant->save();
+           $part = Role::where('name','=','Participant')->first();
+           $user->attachRole( $part);
+           if ($user->id) {
+               if (Config::get('confide::signup_email')) {
+                   Mail::queueOn(
+                       Config::get('confide::email_queue'),
+                       Config::get('confide::email_account_confirmation'),
+                       compact('user', 'password'),
+                       function ($message) use ($user) {
+                           $message
+                               ->to($user->email, $user->username)
+                               ->subject(Lang::get('confide::confide.email.account_confirmation.subject'));
+                       }
+                   );
+               }
+           }
+       }
 		else{
            DB::table('users')->where('id', '=', $user->id)->delete();
             $info = "Nie dodano użytkownika, podany adres e-mail już istnieje w bazie, lubi był niepoprawny!";
             return View::make('participants.info') ->with('info', $info);
         }
-        return View::make('participants.add')->with('idG',$id);
+        return View::make('groups.management');
     }
 		public function postSendmail(){
 		
