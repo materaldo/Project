@@ -30,6 +30,8 @@ class CreateOpiekunowieTable extends Migration {
 			$table->foreign('id_second_lang')->references('id')->on('languages');
 			$table->integer('id_third_lang')->unsigned()->nullable();
 			$table->foreign('id_third_lang')->references('id')->on('languages');
+			$table->integer('id_acco')->unsigned()->nullable();
+			$table->foreign('id_acco')->references('id')->on('accommodations');
 			$table->string('document_number');
 			$table->string('insurance_number');
 			$table->timestamps();

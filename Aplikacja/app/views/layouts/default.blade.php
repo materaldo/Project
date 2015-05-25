@@ -30,7 +30,8 @@ if (Auth::user()!==null)
             <div id="logo_text">
             </div>
             <div>
-				<nav id = "lang">{{Lang::get('default.lang')}}                   <ul>
+				<nav id = "lang">{{Lang::get('default.lang')}}
+                    <ul>
                         <li>{{link_to_route('language.select', 'English', array('en'))}}</li>
                         <li>{{link_to_route('language.select', 'Polski', array('pl'))}} </li>
                     </ul>
@@ -107,7 +108,7 @@ if (Auth::user()!==null)
 		echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
-                    <li><a href=\"http://zpi.dev/index\">" . Lang::get('default.news') . "</a></li>
+                    <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
                     <li><a href=\"http://zpi.dev/about\">" . Lang::get('default.about') . "</a></li>
                    	<li><a href=\"http://zpi.dev/search\">" . Lang::get('default.search') . "</a></li>
                     <li><a href=\"http://zpi.dev/contact\">" . Lang::get('default.contact') . "</a></li>
@@ -143,10 +144,6 @@ if (Auth::user()!==null)
                     <li><a href="#">Last One</a></li>
                 </ul>
             </div>
-			
-			
-			
-			
         </div>
 @yield('content')
 
