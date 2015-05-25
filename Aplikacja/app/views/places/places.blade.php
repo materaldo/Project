@@ -28,7 +28,6 @@
 		{
 			echo "<tr>
 				<td>
-					<a href=http://zpi.dev/accommodation/details/" . $acc->id . "><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
 					$acc->name . "<br>" . $acc->street . " " . $acc->buildings . ", " . $acc->post_code . " " . $acc->city . 
