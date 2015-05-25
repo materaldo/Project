@@ -13,30 +13,30 @@
 <h4>{{Lang::get('management.groupManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/group">{{Lang::get('management.browse')}}</a>
+			<a class="clickMe" href="{{URL::to('/group')}}">{{Lang::get('management.browse')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/group/unconfirmed">{{Lang::get('management.show')}}</a>
+			<a class="clickMe" href="{{URL::to('/group/unconfirmed')}}">{{Lang::get('management.show')}}</a>
 		</li>
 	</ul>
 	
 <h4>{{Lang::get('management.baseManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/language">{{Lang::get('management.languages')}}</a>
+			<a class="clickMe" href="{{URL::to('/language')}}">{{Lang::get('management.languages')}}</a>
 		</li>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/country">{{Lang::get('management.countries')}}</a>
+			<a class="clickMe" href="{{URL::to('/country')}}">{{Lang::get('management.countries')}}</a>
 		</li>
 	</ul>
 	
 <h4>{{Lang::get('management.allocationManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/group">{{Lang::get('management.manual')}}</a>
+			<a class="clickMe" href="{{URL::to('/group')}}">{{Lang::get('management.manual')}}</a>
 		</li>		
 		<li>
-			<a class="clickMe" href="http://zpi.dev/group">{{Lang::get('management.manual')}}</a>
+			<a class="clickMe" href="{{URL::to('/group')}}">{{Lang::get('management.manual')}}</a>
 		</li>
 	</ul>
 
@@ -50,7 +50,7 @@
 <h4>{{Lang::get('management.contact')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/organizer/message">{{Lang::get('management.message')}}</a>
+			<a class="clickMe" href="{{URL::to('/organizer/message')}}">{{Lang::get('management.message')}}</a>
 		</li>
 	</ul>
 	
