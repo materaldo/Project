@@ -59,10 +59,10 @@ class ParticipantController extends BaseController {
         $date = Input::get('date');
         $password = Str::random(10);
         $phone_number = Input::get('phone_number');
-        $country = Input::get('country');
-        $lang1 = Input::get('lang1');
-        $lang2 = Input::get('lang2');
-        $lang3 = Input::get('lang3');
+        $co=DB::table('countries')->where('id', array_get($input, 'country_select'))->first();
+        $lang1=DB::table('languages')->where('id', array_get($input, 'language1_select'))->first();
+        $lang2=DB::table('languages')->where('id', array_get($input, 'language2_select'))->first();
+        $lang3=DB::table('languages')->where('id', array_get($input, 'language3_select'))->first();
         $document_number = Input::get('document_number');
         $insurance_number = Input::get('insurance_number');
         $user=new User;
@@ -71,7 +71,7 @@ class ParticipantController extends BaseController {
         $user -> password = $password;
         $user -> password_confirmation = $password;
         $user->confirmation_code= md5(uniqid(mt_rand(), true));
-        $user -> confirmed =0;
+        $user -> confirmed=0;
         $user ->save();
 
         if($user->id !=NULL) {
@@ -85,14 +85,16 @@ class ParticipantController extends BaseController {
             $participant->id_first_lang = $lang1;
             $participant->id_second_lang = $lang2;
             $participant->id_third_lang = $lang3;
+
+
             $participant->id_gr = $id;
             $participant->document_number = $document_number;
             $participant->insurance_number = $insurance_number;
 
             $participant->save();
         }
-        else{
-            DB::table('users')->where('id', '=', $user->id)->delete();
+		else{
+           DB::table('users')->where('id', '=', $user->id)->delete();
             $info = "Nie dodano użytkownika, podany adres e-mail już istnieje w bazie, lubi był niepoprawny!";
             return View::make('participants.info') ->with('info', $info);
         }
