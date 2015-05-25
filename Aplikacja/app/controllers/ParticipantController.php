@@ -149,8 +149,7 @@ class ParticipantController extends BaseController {
 		public function postSendmail(){
 		
 		$id = Auth::id();
-		
-		$title = Input::get('title');
+		$res = Input::get('r1');
 		
 		
 		Mail::send('emails.change', array('key' => 'value'), function($message)
@@ -159,13 +158,15 @@ class ParticipantController extends BaseController {
 		
 		
 		});
-
-		echo 'wiadomość wysłana';
-		return View::make('index');
+		if(r1==true){
+		echo $id;}
+		
+		
 	}
 
 	public function accName(){
 		echo Auth::id();
+		return View::make('index');
 		
 	}
 	
