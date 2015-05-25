@@ -4,4 +4,6 @@ w uczestniku nie ma numeru telefonu?
 zrobic wszedzie 403
 stopka (podzia³ na role)
 accomodation: zmieniæ conirm z get na post + wywaliæ skrypt js w edycji i dodaæ
-normalnie u¿ywaj¹c laravela, ¿eby nie by³o widaæ w Ÿródle strony
+
+group->participantdetails - przydziel tylko w przypadku, gdy jest jakiœ zaznaczony
+
