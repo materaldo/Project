@@ -17,7 +17,9 @@
 
 	$user = Auth::id();
 	
-	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	$participant = Participant::where('id', '=', $user)->first();
+	$accus = $participant->id_acco;
+	
 	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
@@ -30,7 +32,10 @@
 <p> 
 <?php
 	$user = Auth::id();
-	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	
+	$participant = Participant::where('id', '=', $user)->first();
+	$accus = $participant->id_acco;
+	
 	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
@@ -40,7 +45,10 @@
  
 <?php
 	$user = Auth::id();
-	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	
+	$participant = Participant::where('id', '=', $user)->first();
+	$accus = $participant->id_acco;
+	
 	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
@@ -50,7 +58,10 @@
 <p>
 <?php
 	$user = Auth::id();
-	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	
+	$participant = Participant::where('id', '=', $user)->first();
+	$accus = $participant->id_acco;
+	
 	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
@@ -58,7 +69,10 @@
 ?> 
 <?php
 	$user = Auth::id();
-	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	
+	$participant = Participant::where('id', '=', $user)->first();
+	$accus = $participant->id_acco;
+	
 	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();
@@ -66,8 +80,11 @@
 ?>
 </p><p>
 <?php
-	$user = Auth::id();
-	$accus = UserAccommodation::where('id_us', '=', $user)->first();
+	$$user = Auth::id();
+	
+	$participant = Participant::where('id', '=', $user)->first();
+	$accus = $participant->id_acco;
+	
 	if($accus != null){
 	$idac = $accus->id;
 	$ac = Accommodation::where('id', '=', $idac)->first();

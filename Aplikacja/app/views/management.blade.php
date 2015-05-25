@@ -33,10 +33,7 @@
 <h4>{{Lang::get('management.allocationManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/accommodation/add">{{Lang::get('management.automatic')}}</a>
-		</li>
-		<li>
-			<a class="clickMe" href="http://zpi.dev/accommodation/add">{{Lang::get('management.manual')}}</a>
+			<a class="clickMe" href="http://zpi.dev/group">{{Lang::get('management.manual')}}</a>
 		</li>
 	</ul>
 
@@ -50,7 +47,7 @@
 <h4>{{Lang::get('management.contact')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/accommodation/add">{{Lang::get('management.messages')}}</a>
+			<a class="clickMe" href="http://zpi.dev/organizer/message">{{Lang::get('management.message')}}</a>
 		</li>
 	</ul>
 	
