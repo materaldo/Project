@@ -29,8 +29,21 @@ class GroupController extends BaseController {
 	}
 	public function getEdit($id)
 	{
-		return View::make('groups.edit')-> with('idG',$id);
-	}
+
+        $countries = Country::all();
+        $countriesArr = array();
+        foreach($countries as $count)
+        {
+            $countriesArr[$count->id] =$count->country;
+        }
+
+        $languages = Language::all();
+        $languagesArr = array();
+        foreach($languages as $lang)
+        {
+            $languagesArr[$lang->id] =$lang->language;
+        }
+        return View::make('groups.edit')->with('countries', $countriesArr)->with('languages', $languagesArr)->with('idG',$id);	}
 	public function getChooseplace($id)
 	{
 		return View::make('groups.assign')->with('idG', $id);
@@ -110,26 +123,24 @@ class GroupController extends BaseController {
         if ($number_of_added_participants <= $number_of_peopleEdited) {
 
             $mean_of_transportEdited = Input::get('mean_of_trans');
-            $countryEdited = Input::get('country');
-            $language1Edited = Input::get('lang1');
-            $language2Edited = Input::get('lang2');
-            $language3Edited = Input::get('lang3');
-            Group::where('id', $id)->update(array(
-                'number_of_people' => $number_of_peopleEdited,
-                'mean_of_transport' => $mean_of_transportEdited,
-                'id_coun' => $countryEdited,
-                'id_first_lang' => $language1Edited,
-                'id_second_lang' => $language2Edited,
-                'id_third_lang' => $language3Edited,
-            ));
-
+            $countryEdited=DB::table('countries')->where('id', Input::get('country_select'))->first();
+            $language1Edited = DB::table('languages')->where('id', Input::get('language1_select'))->first();
+            $language2Edited = DB::table('languages')->where('id', Input::get('language2_select'))->first();
+            $language3Edited = DB::table('languages')->where('id', Input::get('language3_select'))->first();
+             Group::where('id', $id)->update(array(
+                 'number_of_people' => $number_of_peopleEdited,
+                 'mean_of_transport' => $mean_of_transportEdited,
+                 'id_coun' => $countryEdited->id,
+                 'id_first_lang' => $language1Edited->id,
+                 'id_second_lang' => $language2Edited->id,
+                 'id_third_lang' => $language3Edited->id,
+             ));
             return View::make('groups.management');
         }
         else{
             $info = "Liczba uczestników nie może być mniejsza, od liczby już wprowadzonych. Spróbuj jeszcze raz";
         return View::make('groups.info')-> with('idG',$id)->with('info', $info);
     }
-
     }
 	public function getManagement()
 	{

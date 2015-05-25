@@ -93,7 +93,7 @@
 ?>
 </p>
 
-<p><a href="http://zpi.dev/participant/change">{{Lang::get('participant.change')}}</a></p>
+<p><a href="{{URL::to('/participant/change')}}">{{Lang::get('participant.change')}}</a></p>
 
 		
 <br><br>

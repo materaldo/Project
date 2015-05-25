@@ -30,7 +30,7 @@
 	"<br><br><h4>Członkowie: </h4>";
 		
 		$participants=Participant::where('id_gr', '=', $gr->id)->get();
-		echo "<form action=\"http://zpi.dev/participant/chooseplace\" method=\"post\"><table>
+		echo "<form action=\"" . URL::to('/participant/chooseplace') . "\" method=\"post\"><table>
 		<tr>
 			<td></td>
 			<td>Imię i nazwisko</td>
@@ -68,5 +68,5 @@
 ?>	
 
 <br>
-<a href="http://zpi.dev/group">Powrót do grup</a>
+<a href="{{URL::to('/group')}}">Powrót do grup</a>
 @stop

@@ -35,7 +35,7 @@ else {
 			
 			echo "<tr>
 				<td style=\"min-width:60px\" align=\"center\">
-					<a href=http://zpi.dev/group/details/" . $gr->id . ">" . $gr->id ."</a>
+					<a href=" . URL::to('/group/details') . "/" . $gr->id . ">" . $gr->id ."</a>
 				</td>
 				<td style=\"min-width:60px\" align=\"center\">" . 
 					$gr->number_of_people . 
@@ -49,21 +49,20 @@ else {
 				<td style=\"min-width:60px\">";
 				if ($conf)
 				{
-					echo "<a href=http://zpi.dev/group/chooseplace/" . $gr->id . ">Przydziel </a>";
+					echo "<a href=" . URL::to('/group/chooseplace') . "/" . $gr->id . ">Przydziel </a>";
 				}
 				else
 				{
-					echo "<a href=http://zpi.dev/group/confirm/" . $gr->id . ">Zatwierdź </a>";
+					echo "<a href=" . URL::to('/group/confirm') . "/" . $gr->id . ">Zatwierdź </a>";
 				}
-				
-				echo "<a href=http://zpi.dev/group/details/" . $gr->id . "> Szczegóły</a>
+				echo "<a href=" . URL::to('/group/confirm') . "/" . $gr->id . "> Szczegóły</a>
 				</td>
 			</tr>";
 		}	
 ?>
 </table>
 
-<a href="http://zpi.dev/management">Powrót</a>
+<a href="{{URL::to('/management')}}">Powrót</a>
 
 
 @stop

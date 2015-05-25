@@ -35,6 +35,6 @@
 			</tr>
 		</table>
 	<br>
-<a href="index.php">Powrót do strony głównej</a>
+<a href="{{ URL::to('/index')}}">Powrót do strony głównej</a>
 
 @stop

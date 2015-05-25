@@ -12,7 +12,7 @@
 @section('content')
 
 <h2>BAZA NOCLEGOWA</h2>
-<a href="http://zpi.dev/accommodation/new">Dodaj nowe miejsce</a>
+<a href="{{ URL::to('/accommodation/new')}}">Dodaj nowe miejsce</a>
 
 	<table>	
 		<tr>

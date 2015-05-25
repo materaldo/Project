@@ -12,8 +12,8 @@
 @section('content')
 
 <h2>BAZA NOCLEGOWA</h2>
-<a href="http://zpi.dev/accommodation/edit/{{$idA}}">Edytuj</a>
-<a href="http://zpi.dev/accommodation/delete/{{$idA}}" onclick="return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')">Usuń</a><br><br>
+<a href="{{ URL::to('/accommodation/edit')}}/{{$idA}}">Edytuj</a>
+<a href="{{ URL::to('/accommodation/delete')}}/{{$idA}}" onclick="return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')">Usuń</a><br><br>
 <?php
 
 	$acc = Accommodation::find($idA);
@@ -23,6 +23,6 @@
 ?>	
 
 <br><br><br>
-<a href="http://zpi.dev/accommodation">Powrót do bazy</a>
+<a href="{{ URL::to('/accommodation')}}">Powrót do bazy</a>
 
 @stop
