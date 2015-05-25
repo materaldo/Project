@@ -47,7 +47,7 @@
 <h4>{{Lang::get('management.contact')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="http://zpi.dev/organizer/mail">{{Lang::get('management.message')}}</a>
+			<a class="clickMe" href="http://zpi.dev/organizer/message">{{Lang::get('management.message')}}</a>
 		</li>
 	</ul>
 	

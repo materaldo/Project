@@ -41,8 +41,8 @@
 		foreach ($participants as $part)
 		{			
 		
-		$us_acc=UserAccommodation::where('id_us', '=', $part->id)->first();
-		$acc=Accommodation::findOrFail($us_acc->id_acc);
+		//$us_acc=UserAccommodation::where('id_us', '=', $part->id)->first();
+		//$acc=Accommodation::findOrFail($us_acc->id_acc);
 			echo "<tr>
 					<td>
 						<input type=\"checkbox\" name=\"participants[]\" value=\"". $part->id ."\">
@@ -51,7 +51,7 @@
 						. $part->first_name . " " . $part->last_name ."
 					</td>
 					<td>"
-						. $acc->name .
+						. //$acc->name .
 					"</td>
 					<td>
 						<a href=http://zpi.dev/participant/details/" . $part->id . "> Szczegóły</a>

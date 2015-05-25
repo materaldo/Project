@@ -13,20 +13,24 @@ class OrganizerController extends BaseController {
 		$last_name = Input::get('last_name');
 		$email = Input::get('email');
 	}
-	
-	public function getMail()
+	public function getMessage()
 	{
+		return View::make('organizers.message');
+	}
+	public function postMail()
+	{
+		$title = Input::get('title');
+		$text = Input::get('emailText');
 		$protectors=Protector::all();
 		
 		foreach ($protectors as $p)
 		{
-			
-        Mail::send('emails.protMessage', array('key' => 'value'), function($message) use ($p)
+        Mail::queue('emails.protMessage', array('title' => $title, 'text' => $text), function($message) use ($p, $title)
         {
 			$us=User::where('id','=',$p->id)->first();
-            $message->to($us->email, 'Jacek')->subject('!');
-        });
+            $message->to($us->email, '?')->subject($title);
+		});
 		}
-        return View::make('index');
+		return View::make('index');
 	}
 }

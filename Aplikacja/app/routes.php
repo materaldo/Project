@@ -29,6 +29,7 @@ Route::get('export', array('uses' => 'HomeController@export', 'as' => 'export'))
 Route::controller('accommodation','AccommodationController');
 Route::controller('group','GroupController');
 Route::controller('participant', 'ParticipantController');
+Route::controller('organizer', 'OrganizerController');
 Route::controller('language', 'LanguageController');
 Route::controller('country', 'CountryController');
 

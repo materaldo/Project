@@ -51,10 +51,14 @@ class GroupController extends BaseController {
 		{
 		$us->id_acco=$idAcc;
 		$us->save();
-		
-		$acc->decrement('free_places');
 		}
-		echo "<script>alert(\"Pomyślnie przydzielono do noclegu.\");</script>";
+		
+		$usersCount = DB::table('participants')->where('id_acco', '=', $idAcc)->count();
+		
+		$acc->free_places=$acc->all_places-$usersCount;
+		$acc->save();
+		
+		echo "<script>alert(\"Pomyślnie przydzielono do noclegu\");</script>";
 		
 		return View::make('groups.groups')->with('conf', '1')->with('zmienna', $zmienna);
 	}
@@ -89,8 +93,6 @@ class GroupController extends BaseController {
         {
 			$us=User::where('id','=',$p->id)->first();
             $message->to($us->email, 'Jacek')->subject('!');
-
-
         });
 		}
         return View::make('index');

@@ -1,4 +1,2 @@
-
-<h1>Witaj!</h1>
-
-<p>Mam dla ciebie wiadomość</p>
+<p><b>Wiadomość od organizatora Światowych Dni Młodzieży 2016:<br></b></p>
+{{$text}}
