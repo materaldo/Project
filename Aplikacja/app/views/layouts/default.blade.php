@@ -90,7 +90,7 @@ if (Auth::user()!==null)
 		}
 		elseif ($userLogged->hasRole("Participant"))
         {
-			echo "<nav>   participant/accommodation
+			echo "<nav>
             <div id=\"menu_container\">
                 <ul class=\"sf-menu\" id=\"nav\">
                     <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
@@ -150,7 +150,7 @@ if (Auth::user()!==null)
 
     </div>
         <div id="scroll">
-            <a title="Scroll to the top" class="top" href="#"><img src="images/top.png" alt="top"/></a>
+            <a title="Scroll to the top" class="top" href="#"><img src="/images/top.png" alt="top"/></a>
         </div>
         <footer>
 
