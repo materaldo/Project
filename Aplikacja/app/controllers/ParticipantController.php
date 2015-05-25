@@ -95,7 +95,7 @@ class ParticipantController extends BaseController {
                if (Config::get('confide::signup_email')) {
                    Mail::queueOn(
                        Config::get('confide::email_queue'),
-                       Config::get('confide::email_account_confirmation'),
+                       Config::get('confide::user_account_confirmation'),
                        compact('user', 'password'),
                        function ($message) use ($user) {
                            $message
