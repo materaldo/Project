@@ -49,11 +49,8 @@ class GroupController extends BaseController {
 		
 		foreach ($users as $us)
 		{
-		$user_acc = new UserAccommodation();
-		
-		$user_acc->id_acc = $idAcc;
-		$user_acc->id_us = $us->id;
-		$user_acc->save();
+		$us->id_acco=$idAcc;
+		$us->save();
 		
 		$acc->decrement('free_places');
 		}
