@@ -7,6 +7,7 @@
 	<style>
 	fieldset {border: none}
 	</style>
+	{{App::setLocale(Session::get('lang', 'pl'));}}
 @stop
 
 @section('content')

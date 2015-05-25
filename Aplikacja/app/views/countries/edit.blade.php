@@ -24,8 +24,8 @@
 @stop
 
 @section('content')
-              
-<form action = "http://zpi.dev/country/confirm/{{$idC}}">			 
+              	
+<form action = "{{URL::to('/country/confirm')}}/{{$idC}}">		 
         <h4><label>Edytuj kraj:<br>
             <input name = "country" id = "country" type = "text" size = "28"
                 maxlength = "255" autofocus>

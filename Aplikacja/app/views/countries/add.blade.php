@@ -11,8 +11,8 @@
 @stop
 
 @section('content')
-              
-<form action = "http://zpi.dev/country/add">			 
+              			 
+<form action = "{{URL::to('/country/add') }}">			 
         <h4><label>Dodaj kraj:<br>
             <input name = "country" id = "country" type = "text" size = "28"
                 maxlength = "255" autofocus>
