@@ -10,7 +10,6 @@ class TestTableSeeder extends Seeder
 		DB::table('permission_role')->delete();
 		DB::table('permissions')->delete();
 		DB::table('assigned_roles')->delete();
-		DB::table('users_accommodations')->delete();
 		DB::table('accommodations')->delete();
 		DB::table('participants')->delete();
 		DB::table('groups')->delete();
@@ -24,7 +23,6 @@ class TestTableSeeder extends Seeder
 		DB::unprepared("ALTER TABLE permission_role AUTO_INCREMENT = 1;");
 		DB::unprepared("ALTER TABLE assigned_roles AUTO_INCREMENT = 1;");
 		DB::unprepared("ALTER TABLE groups AUTO_INCREMENT = 1;");
-		DB::unprepared("ALTER TABLE users_accommodations AUTO_INCREMENT = 1;");
 		DB::unprepared("ALTER TABLE accommodations AUTO_INCREMENT = 1;");
 		
 		
