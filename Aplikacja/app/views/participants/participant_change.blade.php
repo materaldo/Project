@@ -17,7 +17,7 @@
             <h1>Zmiana Zakwaterowania</h1>
 			<p>Prszę wypałnić formularz dotyczący preferencji miejsca zakwaterownia. Pomoże nam on znaleźć odpowiedznie dla Ciebie miejsce.</p>
             
-            <form name="FormularzZmiana" action="http://zpi.dev/participant/sendmail" method="post">
+            <form name="FormularzZmiana" action="{{URL::to('/participant/sendmail')}}" method="post">
 		
 
              <h3><label>Podaj przyczynę zmiany miejsca:</label></h3>
@@ -47,6 +47,6 @@
             </form>
 			
 			
-             <p><a href="http://zpi.dev/participant/accommodation">Powrót</a></p>
+             <p><a href="{{URL::to('/participant/accommodation')}}">Powrót</a></p>
 
 @stop

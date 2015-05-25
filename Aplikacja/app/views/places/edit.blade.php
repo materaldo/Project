@@ -15,7 +15,8 @@
 
 @section('content')
               
-<form action = "http://zpi.dev/accommodation/confirm/{{$idA}}">			 
+<form action = "{{ URL::to('/accommodation/confirm')}}/{{$idA}}">
+	 
         <h4><label>Nazwa:<br>
             <input name = "name" id = "name" type = "text" size = "28" value="{{$editedAcc->name}}" maxlength = "255">
         </label></h4>

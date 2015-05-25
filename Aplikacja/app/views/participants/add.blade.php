@@ -18,7 +18,7 @@
     } else {
 
         echo "
-    <form action=\"http://zpi.dev/participant/adduser/" . "$idG\" method=\"post\">
+	<form action=\"" . URL::to('/participant/adduser') . "/" . "$idG\" method=\"post\">
         <h4><label>" . Lang::get('add.name') . "<br>
                 <input name='first_name' id='first_name' type=\"text\" size=\"28\" maxlength=\"20\" required>
             </label></h4>

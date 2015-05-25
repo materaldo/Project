@@ -12,7 +12,7 @@
 
 @section('content')
               
-<form method="post" action = "http://zpi.dev/accommodation/add">			 
+<form method="post" action = "{{ URL::to('/accommodation/add')}}">			 
         <h4><label>Nazwa:<br>
             <input name = "name" id = "name" type = "text" size = "28"
                 maxlength = "255">
