@@ -55,7 +55,7 @@ else {
 				{
 					echo "<a href=" . URL::to('/group/confirm') . "/" . $gr->id . ">Zatwierdź </a>";
 				}
-				echo "<a href=" . URL::to('/group/confirm') . "/" . $gr->id . "> Szczegóły</a>
+				echo "<a href=" . URL::to('/group/details') . "/" . $gr->id . "> Szczegóły</a>
 				</td>
 			</tr>";
 		}	

@@ -16,8 +16,8 @@
 
 	$gr = Group::find($idG);
 	
-	echo "<a href=\"http://zpi.dev/group/edit/{{$idG}}\">Edytuj</a>
-		<a href=\"http://zpi.dev/group/delete/{{$idG}}\" onclick=\"return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')\">Usuń</a><br><br>";
+	echo "<a href=\"http://zpi.dev/group/edit/{$idG}\">Edytuj</a>
+		<a href=\"http://zpi.dev/group/delete/{$idG}\" onclick=\"return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')\">Usuń</a><br><br>";
 	
 	echo "<h4><b>Grupa nr " . $gr->id . "</b></h4>
 	<br>Liczba członków:" . $gr->number_of_people . 
@@ -41,8 +41,6 @@
 		
 		foreach ($participants as $part)
 		{			
-		//$users = DB::table('participants')->whereNull('id_acco')->get();
-		
 			echo "<tr>
 					<td>
 						<input type=\"checkbox\" name=\"participants[]\" value=\"". $part->id ."\">
@@ -51,7 +49,8 @@
 						. $part->first_name . " " . $part->last_name ."
 					</td>
 					<td>"
-						.// $acc .
+						.  (isset($part->id_acco)? Accommodation::where('id', '=', $part->id_acco)->
+						first()->name : "brak") .
 					"</td>
 					<td>
 						<a href=http://zpi.dev/participant/details/" . $part->id . "> Szczegóły</a>

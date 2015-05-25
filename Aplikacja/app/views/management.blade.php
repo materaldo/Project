@@ -34,6 +34,9 @@
 	<ul>
 		<li>
 			<a class="clickMe" href="http://zpi.dev/group">{{Lang::get('management.manual')}}</a>
+		</li>		
+		<li>
+			<a class="clickMe" href="http://zpi.dev/group">{{Lang::get('management.manual')}}</a>
 		</li>
 	</ul>
 
