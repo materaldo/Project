@@ -31,6 +31,8 @@ class CreateUczestnicyTable extends Migration {
 			$table->foreign('id_third_lang')->references('id')->on('languages');
 			$table->integer('id_gr')->unsigned();
 			$table->foreign('id_gr')->references('id')->on('groups');
+			$table->integer('id_acco')->unsigned()->nullable();
+			$table->foreign('id_acco')->references('id')->on('accommodations');
 			$table->string('document_number');
 			$table->string('insurance_number');
 			$table->timestamps();

@@ -57,6 +57,7 @@ class GroupController extends BaseController {
 		
 		$acc->decrement('free_places');
 		}
+		echo "<script>alert(\"Pomyślnie przydzielono do noclegu.\");</script>";
 		
 		return View::make('groups.groups')->with('conf', '1')->with('zmienna', $zmienna);
 	}
@@ -137,8 +138,7 @@ class GroupController extends BaseController {
 	{
 		$num_of_people = Input::get('num_of_people');
 		$mean_of_trans = Input::get('mean_of_trans');
-		//$country = Input::get('country');
-        $country=DB::table('countries')->where('id', Input::get('country_select'))->first();
+		$country=DB::table('countries')->where('id', Input::get('country_select'))->first();
 		$first_lang = DB::table('languages')->where('id', Input::get('language1_select'))->first();
 		$second_lang = DB::table('languages')->where('id', Input::get('language2_select'))->first();
 		$third_lang = DB::table('languages')->where('id', Input::get('language3_select'))->first();
@@ -147,8 +147,7 @@ class GroupController extends BaseController {
 		$group -> mean_of_transport = $mean_of_trans;
 		$group -> id_prot = Auth::id();
         $group->id_coun = $country->id;
-        //$group -> id_coun = $country;
-		$group -> id_first_lang = $first_lang->id;
+        $group -> id_first_lang = $first_lang->id;
 		$group -> id_second_lang = $second_lang->id;
 		$group -> id_third_lang = $third_lang->id;
 		$group->save();
