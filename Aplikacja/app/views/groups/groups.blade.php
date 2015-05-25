@@ -9,15 +9,20 @@
 
 @section('content')
 
-<h2>GRUPY</h2>
-
+<?php if ($conf==1) 
+{
+	echo "<h2>ZATWIERDZONE GRUPY</h2>";
+}
+else {
+	echo "<h2>GRUPY CZEKAJĄCE NA ZATWIERDZENIE</h2>";
+}?>
 	<table>	
 		<tr>
-			<td>Nr grupy</td>
-			<td>Liczba członków</td>
-			<td>Kraj</td>
-			<td>Opiekun</td>
-			<td></td>
+			<td style="min-width:60px">Nr grupy</td>
+			<td style="min-width:60px">Liczba członków</td>
+			<td style="min-width:60px">Kraj</td>
+			<td style="min-width:60px">Opiekun</td>
+			<td style="min-width:60px">Opcje</td>
 		</tr>	
 <?php
 
@@ -29,19 +34,19 @@
 			$prot=Protector::find($gr->id_prot);
 			
 			echo "<tr>
-				<td>
+				<td style=\"min-width:60px\" align=\"center\">
 					<a href=http://zpi.dev/group/details/" . $gr->id . ">" . $gr->id ."</a>
 				</td>
-				<td>" . 
+				<td style=\"min-width:60px\" align=\"center\">" . 
 					$gr->number_of_people . 
 				"</td>
-				<td>" . 
+				<td style=\"min-width:60px\">" . 
 					$country->country . 
 				"</td>
-				<td>" .
+				<td style=\"min-width:60px\">" .
 					$prot->first_name . " " . $prot->last_name .
 				"</td>
-				<td>";
+				<td style=\"min-width:60px\">";
 				if ($conf)
 				{
 					echo "<a href=http://zpi.dev/group/chooseplace/" . $gr->id . ">Przydziel </a>";

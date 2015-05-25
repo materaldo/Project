@@ -38,14 +38,19 @@ class GroupController extends BaseController {
 	public function getAssign($idAcc, $idGr)
 	{
 		$users=Participant::where('id_gr', '=', $idGr)->get();
+		$group=Group::where('id','=',$idGr)->first();
+		$protector=Protector::where('id', '=', $group->id_prot)->first();
 		$acc=Accommodation::where('id', '=', $idAcc)->first();
 		$zmienna=var_export($users, true);
 		
-		if (sizeof($users)>($acc->free_places))
+		if ((sizeof($users)+1)>($acc->free_places))
 		{
 			echo "<script>alert(\"Brak wystarczającej ilości miejsc w tym miejscu noclegowym. Wybierz inne miejsce lub podziel grupę.\");</script>";
 			return View::make('groups.groups')->with('conf', '1');
 		}
+		
+		$protector->id_acco=$idAcc;
+		$protector->save();
 		
 		foreach ($users as $us)
 		{
@@ -54,6 +59,7 @@ class GroupController extends BaseController {
 		}
 		
 		$usersCount = DB::table('participants')->where('id_acco', '=', $idAcc)->count();
+		$usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $idAcc)->count();
 		
 		$acc->free_places=$acc->all_places-$usersCount;
 		$acc->save();
