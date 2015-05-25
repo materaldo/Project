@@ -13,7 +13,7 @@ return array(
 		'username' => 'Username',
 		'e_mail' => 'e-mail',
 		'password' => 'Password',
-		'username_e_mail' => 'Ussername or password',
+		'username_e_mail' => 'Ussername or e-mail',
         'title' => 'Registration',
         'desc' => 'Register new account',
         'confirmation_required' => '*(e-mail confirmation required)',
