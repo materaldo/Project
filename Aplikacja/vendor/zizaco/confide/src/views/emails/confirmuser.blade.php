@@ -9,4 +9,4 @@
 </a>
 
 <p>{{ Lang::get('confide::confide.email.account_confirmation.farewell') }}</p>
-	{{$pass}}
+	{{$password}}

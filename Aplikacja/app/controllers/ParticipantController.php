@@ -89,14 +89,14 @@ class ParticipantController extends BaseController {
            $participant->document_number = $document_number;
            $participant->insurance_number = $insurance_number;
            $participant->save();
-           $data = array('pass' =>$password);
+           $part = Role::where('name','=','Participant')->first();
+           $user->attachRole( $part);
            if ($user->id) {
                if (Config::get('confide::signup_email')) {
                    Mail::queueOn(
                        Config::get('confide::email_queue'),
                        Config::get('confide::email_account_confirmation'),
-                       compact('user'),
-                        $data,
+                       compact('user', 'password'),
                        function ($message) use ($user) {
                            $message
                                ->to($user->email, $user->username)
