@@ -16,17 +16,16 @@
 
 	$gr = Group::find($idG);
 	
-	echo "<a href=\"http://zpi.dev/group/edit/{$idG}\">Edytuj</a>
-		<a href=\"http://zpi.dev/group/delete/{$idG}\" onclick=\"return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')\">Usuń</a><br><br>";
+	echo "<a href=\"" . URL::to('/group/edit') . "/{$idG}\">Edytuj</a>
+		<a href=\"" . URL::to('/group/delete') . "/{$idG}\" onclick=\"return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')\">Usuń</a><br><br>";
 	
 	echo "<h4><b>Grupa nr " . $gr->id . "</b></h4>
 	<br>Liczba członków:" . $gr->number_of_people . 
 	"<br>Środek transportu: " . $gr->mean_of_transport . 
 	"<br>Kraj pochodzenia: " . Country::find($gr->id_coun)->country . 
 	"<br>Język ojczysty: " . Language::find($gr->id_first_lang)->language .
-	/*"<br>Język alternatywny 1: " . Language::find($gr->id_second_lang)->language .
-	"<br>Język alternatywny 2: " . Language::find($gr->id_third_lang)->language .
-	*/
+	"<br>Język alternatywny 1: " . ((isset($gr->id_second_lang))? Language::find($gr->id_second_lang)->language : "nie podano") .
+	"<br>Język alternatywny 2: " . ((isset($gr->third))? Language::find($gr->id_third_lang)->language : "nie podano") .
 	"<br><br><h4>Członkowie: </h4>";
 		
 		$participants=Participant::where('id_gr', '=', $gr->id)->get();
@@ -52,7 +51,7 @@
 						first()->name : "brak") .
 					"</td>
 					<td>
-						<a href=http://zpi.dev/participant/details/" . $protector->id . "> Szczegóły</a>
+						<a href=\"" . URL::to('/participant/details') . "/" . $protector->id . "\"> Szczegóły</a>
 					</td>
 				</tr>";
 		
@@ -70,7 +69,7 @@
 						first()->name : "brak") .
 					"</td>
 					<td>
-						<a href=http://zpi.dev/participant/details/" . $part->id . "> Szczegóły</a>
+						<a href=" . URL::to('/participant/details') . "/" . $part->id . "> Szczegóły</a>
 					</td>
 				</tr>";
 		}	

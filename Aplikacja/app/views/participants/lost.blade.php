@@ -20,7 +20,7 @@
 	$accus = $participant->id_acco;
 	
 	if($accus != null){
-	$idac = $accus->id;
+	$idac = $accus;
 	$ac = Accommodation::where('id', '=', $idac)->first();
 	echo $ac->name;}
 	else{ echo  'Wkrótce...';}
