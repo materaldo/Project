@@ -38,6 +38,7 @@
                 . $part->first_name . " " . $part->last_name ."
 					</td>
 					<td>
+						<a href=" . URL::to('/participant/details') . "/" . $part->id . "> Szczegóły</a>
 					</td>
 				</tr>";
     }

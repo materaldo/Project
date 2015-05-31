@@ -36,7 +36,7 @@
 			<a class="clickMe" href="{{URL::to('/group')}}">{{Lang::get('management.manual')}}</a>
 		</li>		
 		<li>
-			<a class="clickMe" href="{{URL::to('/group')}}">{{Lang::get('management.manual')}}</a>
+			<a class="clickMe" href="{{URL::to('/assignment')}}">{{Lang::get('management.assignment')}}</a>
 		</li>
 	</ul>
 

@@ -28,6 +28,7 @@
 		{
 			echo "<tr>
 				<td>
+					<a href=" . URL::to('/accommodation/details') . "/" . $acc->id . "><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
 					$acc->name . "<br>" . $acc->street . " " . $acc->buildings . ", " . $acc->post_code . " " . $acc->city . 
