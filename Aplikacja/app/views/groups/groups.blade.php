@@ -18,11 +18,11 @@ else {
 }?>
 	<table>	
 		<tr>
-			<td style="min-width:60px">Nr grupy</td>
-			<td style="min-width:60px">Liczba członków</td>
-			<td style="min-width:60px">Kraj</td>
-			<td style="min-width:60px">Opiekun</td>
-			<td style="min-width:60px">Opcje</td>
+			<td  style="background-color:#CCCCCC; min-width:60px">Nr grupy</td>
+			<td style="background-color:#CCCCCC; min-width:60px">Kraj</td>
+			<td style="background-color:#CCCCCC; min-width:60px">Opiekun</td>
+			<td style="background-color:#CCCCCC; min-width:60px">Liczba członków</td>
+			<td style="background-color:#CCCCCC; min-width:60px">Opcje</td>
 		</tr>	
 <?php
 
@@ -37,16 +37,16 @@ else {
 				<td style=\"min-width:60px\" align=\"center\">
 					<a href=" . URL::to('/group/details') . "/" . $gr->id . ">" . $gr->id ."</a>
 				</td>
-				<td style=\"min-width:60px\" align=\"center\">" . 
-					$gr->number_of_people . 
-				"</td>
-				<td style=\"min-width:60px\">" . 
+				<td style=\"min-width:100px\">" . 
 					$country->country . 
 				"</td>
-				<td style=\"min-width:60px\">" .
+				<td style=\"min-width:100px\">" .
 					$prot->first_name . " " . $prot->last_name .
 				"</td>
-				<td style=\"min-width:60px\">";
+				<td style=\"min-width:100px\" align=\"center\">" . 
+					$gr->number_of_people . 
+				"</td>
+				<td style=\"min-width:100px\">";
 				if ($conf)
 				{
 					echo "<a href=" . URL::to('/group/chooseplace') . "/" . $gr->id . ">Przydziel </a>";
