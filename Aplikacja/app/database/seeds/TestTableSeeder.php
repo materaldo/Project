@@ -10,10 +10,10 @@ class TestTableSeeder extends Seeder
 		DB::table('permission_role')->delete();
 		DB::table('permissions')->delete();
 		DB::table('assigned_roles')->delete();
-		DB::table('accommodations')->delete();
 		DB::table('participants')->delete();
 		DB::table('groups')->delete();
 		DB::table('protectors')->delete();
+		DB::table('accommodations')->delete();
 		DB::table('users')->delete();
 		DB::table('roles')->delete();
 		
