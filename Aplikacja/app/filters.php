@@ -23,8 +23,16 @@ App::after(function($request, $response)
 });
 
 //Entrust::routeNeedsRole('language', array('Organizer')); ///dostep tylko dla danego uzytkownika
-Entrust::routeNeedsPermission('management', 'management'); //dostep z wykorzystaniem permisji
+//Entrust::routeNeedsPermission('management', 'perm1'); //dostep z wykorzystaniem permisji
 
+Entrust::routeNeedsPermission('management', 'perm5');//dostep do zarzadzania dla adminow, organizatorow	
+Entrust::routeNeedsPermission('language*', 'perm1');//dostep do jezykow dla admina
+Entrust::routeNeedsPermission('country*', 'perm1');//jw
+Entrust::routeNeedsPermission('participant/chooseplace', 'perm6');
+Entrust::routeNeedsPermission('participant/details*', 'perm6');
+Entrust::routeNeedsPermission('participant/sendmail', 'perm4');
+Entrust::routeNeedsPermission('participant/accommodation', 'perm4');
+Entrust::routeNeedsPermission('participant/change', 'perm4');
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters

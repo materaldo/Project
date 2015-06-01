@@ -52,6 +52,10 @@ class HomeController extends BaseController {
 	{
 		return View::make('management');
 	}
+	public function getAssignment()
+	{
+		return View::make('assignment');
+	}
 	public function getDataexport()
 	{
 		return View::make('dataexport');

@@ -15,8 +15,7 @@
             <td></td>
             <td>Liczba osób</td>
             <td>Środek transportu</td>
-            <td>Edycja grupy</td>
-            <td>Dodaj uczestników</td>
+            <td>Wyślij maila</td>
             <td>Dodano dnia</td>
         </tr>
         <?php
@@ -34,8 +33,7 @@
 $gr->number_of_people
 </td>
 <td>$gr->mean_of_transport</td>
-<td><a href=" . URL::to('/group/edit') . "/" . $gr->id . ">Kliknij by edytować</td>
-<td><a href=" . URL::to('/participant/add') . "/" . $gr->id . ">Dodaj uczestników</td>
+<td id = \"kopertaImage\"><a href =". URL::to('/group/message') ."/" . $gr->id . "><img style=\"margin:0px 17px\"src='/images/koperta.png'/> </td>
 <td>$gr->created_at</td>
 </tr>";
                 //	echo ;

@@ -10,10 +10,10 @@ class TestTableSeeder extends Seeder
 		DB::table('permission_role')->delete();
 		DB::table('permissions')->delete();
 		DB::table('assigned_roles')->delete();
-		DB::table('accommodations')->delete();
 		DB::table('participants')->delete();
 		DB::table('groups')->delete();
 		DB::table('protectors')->delete();
+		DB::table('accommodations')->delete();
 		DB::table('users')->delete();
 		DB::table('roles')->delete();
 		
@@ -36,69 +36,86 @@ class TestTableSeeder extends Seeder
 		//$roleAdmin = new Role;
 		//$roleAdmin->name = 'Admin';
 		//$roleAdmin->save();
-		
 		$roleOrganizer = Role::create(['name'=>'Organizer']);
 		$roleProtector = Role::create(['name'=>'Protector']);
 		$roleParticipant = Role::create(['name'=>'Participant']);
-		$roleSuperOrg = Role::create(['name'=>'SuperOrganizer']);
+		//$roleSuperOrg = Role::create(['name'=>'SuperOrganizer']);
 		
 		$admin = new User;
 		$admin->username = 'admin';
-        $admin->email = 'admin@testowyemail.pl';
+        $admin->email = 'mateusz_1993_11_22@o2.pl';
         $admin->password = 'admin123';
         $admin->password_confirmation = 'admin123';
         $admin->confirmation_code = md5(uniqid(mt_rand(), true));
         $admin->confirmed = 1;
 		$admin->save();
 		
-		$organizer = new User;
-		$organizer->username='organizer';
-        $organizer->email = 'organizer@testowyemail.pl';
-        $organizer->password = 'organizer123';
-        $organizer->password_confirmation = 'organizer123';
-        $organizer->confirmation_code = md5(uniqid(mt_rand(), true));
-        $organizer->confirmed = 1;
-		$organizer->save();
-		
-		$protector = new User;
-		$protector->username = 'protector';
-        $protector->email = 'protector@testowyemail.pl';
-        $protector->password = 'protector123';
-        $protector->password_confirmation = 'protector123';
-        $protector->confirmation_code = md5(uniqid(mt_rand(), true));
-        $protector->confirmed = 1;
-        $protector->save();
-		
-		$participant = new User;
-		$participant->username = 'participant';
-        $participant->email = 'participant@testowyemail.pl';
-        $participant->password = 'participant123';
-        $participant->password_confirmation = 'participant123';
-        $participant->confirmation_code = md5(uniqid(mt_rand(), true));
-        $participant->confirmed = 1;
-		$participant->save();
-		
-		$superorg = new User;
+		/*$superorg = new User;
 		$superorg->username = 'superorg';
         $superorg->email = 'superorg@testowyemail.pl';
         $superorg->password = 'superorg123';
         $superorg->password_confirmation = 'superorg123';
         $superorg->confirmation_code = md5(uniqid(mt_rand(), true));
         $superorg->confirmed = 1;
-		$superorg->save();
+		$superorg->save();*/
 		
+		$organizer = new User;
+		$organizer->username='organizer';
+        $organizer->email = 'asiaa0393@wp.pl';
+        $organizer->password = 'organizer123';
+        $organizer->password_confirmation = 'organizer123';
+        $organizer->confirmation_code = md5(uniqid(mt_rand(), true));
+        $organizer->confirmed = 1;
+		$organizer->save();
+		
+		$organizer2 = new User;
+		$organizer2->username='organizer2';
+        $organizer2->email = 'mateuszek_1993_11_22@prokonto.pl';
+        $organizer2->password = 'organizer2123';
+        $organizer2->password_confirmation = 'organizer2123';
+        $organizer2->confirmation_code = md5(uniqid(mt_rand(), true));
+        $organizer2->confirmed = 1;
+		$organizer2->save();
+		
+		$protector = new User;
+		$protector->username = 'protector';
+        $protector->email = 'mlteusz_711@wp.pl';
+        $protector->password = 'protector123';
+        $protector->password_confirmation = 'protector123';
+        $protector->confirmation_code = md5(uniqid(mt_rand(), true));
+        $protector->confirmed = 1;
+        $protector->save();
+
 		$protector2 = new User;
 		$protector2->username = 'protector2';
-        $protector2->email = 'protector2@testowyemail.pl';
+        $protector2->email = 'j.lichodij@wp.pl';
         $protector2->password = 'protector123';
         $protector2->password_confirmation = 'protector123';
         $protector2->confirmation_code = md5(uniqid(mt_rand(), true));
         $protector2->confirmed = 1;
         $protector2->save();
 		
+		$protector3 = new User;
+		$protector3->username = 'protector3';
+        $protector3->email = 'mateusz_1993_11_22@prokonto.pl';
+        $protector3->password = 'protector123';
+        $protector3->password_confirmation = 'protector123';
+        $protector3->confirmation_code = md5(uniqid(mt_rand(), true));
+        $protector3->confirmed = 1;
+        $protector3->save();
+		
+		$participant = new User;
+		$participant->username = 'participant';
+        $participant->email = 'mateusz_1993_11_22@tlen.pl';
+        $participant->password = 'participant123';
+        $participant->password_confirmation = 'participant123';
+        $participant->confirmation_code = md5(uniqid(mt_rand(), true));
+        $participant->confirmed = 1;
+		$participant->save();
+		
 		$participant2 = new User;
 		$participant2->username = 'participant2';
-        $participant2->email = 'participant2@testowyemail.pl';
+        $participant2->email = 'j.lichodij@gmail.com';
         $participant2->password = 'participant123';
         $participant2->password_confirmation = 'participant123';
         $participant2->confirmation_code = md5(uniqid(mt_rand(), true));
@@ -107,7 +124,7 @@ class TestTableSeeder extends Seeder
 		
 		$participant3 = new User;
 		$participant3->username = 'participant3';
-        $participant3->email = 'participant3@testowyemail.pl';
+        $participant3->email = 'matbrozyna7@gmail.com';
         $participant3->password = 'participant123';
         $participant3->password_confirmation = 'participant123';
         $participant3->confirmation_code = md5(uniqid(mt_rand(), true));
@@ -116,22 +133,54 @@ class TestTableSeeder extends Seeder
 		
 		$participant4 = new User;
 		$participant4->username = 'participant4';
-        $participant4->email = 'participant4@testowyemail.pl';
+        $participant4->email = 'mateusz_1993_11_22@go2.pl';
         $participant4->password = 'participant123';
         $participant4->password_confirmation = 'participant123';
         $participant4->confirmation_code = md5(uniqid(mt_rand(), true));
         $participant4->confirmed = 1;
 		$participant4->save();
+		
+		$participant5 = new User;
+		$participant5->username = 'participant5';
+        $participant5->email = 'mateuszek_1993_11_22@tlen.pl';
+        $participant5->password = 'participant123';
+        $participant5->password_confirmation = 'participant123';
+        $participant5->confirmation_code = md5(uniqid(mt_rand(), true));
+        $participant5->confirmed = 1;
+		$participant5->save();
+		
+		$participant6 = new User;
+		$participant6->username = 'participant6';
+        $participant6->email = 'mateuszek_1993_11_22@o2.pl';
+        $participant6->password = 'participant123';
+        $participant6->password_confirmation = 'participant123';
+        $participant6->confirmation_code = md5(uniqid(mt_rand(), true));
+        $participant6->confirmed = 1;
+		$participant6->save();
+		
+		$participant7 = new User;
+		$participant7->username = 'participant7';
+        $participant7->email = 'mateuszek_1993_11_22@go2.pl';
+        $participant7->password = 'participant123';
+        $participant7->password_confirmation = 'participant123';
+        $participant7->confirmation_code = md5(uniqid(mt_rand(), true));
+        $participant7->confirmed = 1;
+		$participant7->save();
 			
 		$admin->attachRole($roleAdmin);
 		$organizer->attachRole($roleOrganizer);
+		$organizer2->attachRole($roleOrganizer);
 		$protector->attachRole($roleProtector);
 		$protector2->attachRole($roleProtector);
+		$protector3->attachRole($roleProtector);
 		$participant->attachRole($roleParticipant);
 		$participant2->attachRole($roleParticipant);
 		$participant3->attachRole($roleParticipant);
 		$participant4->attachRole($roleParticipant);
-		$superorg->attachRole($roleSuperOrg);
+		$participant5->attachRole($roleParticipant);
+		$participant6->attachRole($roleParticipant);
+		$participant7->attachRole($roleParticipant);
+		//$superorg->attachRole($roleSuperOrg);
 		
 		$management = new Permission;
 		$management->name = 'management';
@@ -146,7 +195,42 @@ class TestTableSeeder extends Seeder
 		//Protector::create(['id'=>'3','first_name'=>'Michał','last_name'=>'Nowak','date_of_birth'=>'22.12.1990','phone_number'=>'38473923427','id_coun'=>'1','id_first_lang'=>'2','document_number'=>'d82j83d9d','insurance_number'=>'jd29h3389j']);
 		//Group::create(['id_coun'=>'1','id_first_lang'=>'2', 'id_prot'=>'3', 'number_of_people'=>'22', 'mean_of_transport'=>'Autobus']);
 		//Participant::create(['id'=>'4','first_name'=>'Mateusz','last_name'=>'Kowalski','date_of_birth'=>'11.02.1990','phone_number'=>'377543427','id_coun'=>'1','id_first_lang'=>'2','document_number'=>'d82j83d9d','insurance_number'=>'jd29h3389j']);
+
 		
+		$perm1 = new Permission; //admin
+		$perm1->name = 'perm1';
+		$perm1->display_name = 'Admin';
+		$perm1->save();
+		
+		$perm2 = new Permission; //org
+		$perm2->name = 'perm2';
+		$perm2->display_name = 'Organizer';
+		$perm2->save();
+		
+		$perm3 = new Permission; //protector
+		$perm3->name = 'perm3';
+		$perm3->display_name = 'Protector';
+		$perm3->save();
+		
+		$perm4 = new Permission; //participant
+		$perm4->name = 'perm4';
+		$perm4->display_name = 'Participant';
+		$perm4->save();
+		
+		$perm5 = new Permission; //admin, org
+		$perm5->name = 'perm5';
+		$perm5->display_name = 'AdminOrg';
+		$perm5->save();
+		
+		$perm6 = new Permission; //admin, org, prot
+		$perm6->name = 'perm6';
+		$perm6->display_name = 'AdminOrgProt';
+		$perm6->save();
+		
+		$roleAdmin->perms()->sync(array($perm1->id, $perm5->id, $perm6->id));
+		$roleOrganizer->perms()->sync(array($perm2->id, $perm5->id, $perm6->id));
+		$roleProtector->perms()->sync(array($perm3->id, $perm6->id));
+		$roleParticipant->perms()->sync(array($perm4->id));
 
     }
 

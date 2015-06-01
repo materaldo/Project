@@ -15,13 +15,12 @@
 <?php
 
 	$gr = Group::find($idG);
-	
+
 	echo "<h4><b>Grupa nr " . $gr->id . "</b></h4>";
 
 	//	echo "<a href=\"" . URL::to('/group/edit') . "/{$idG}\">Edytuj</a>	<a href=\"" . URL::to('/group/delete') . "/{$idG}\" onclick=\"return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')\">Usuń</a><br><br>";
 
 	echo "<br>Liczba członków:" . $gr->number_of_people . 
-	"<br>Liczba członków:" . $gr->number_of_people . 
 	"<br>Środek transportu: " . $gr->mean_of_transport . 
 	"<br>Kraj pochodzenia: " . Country::find($gr->id_coun)->country . 
 	"<br>Język ojczysty: " . Language::find($gr->id_first_lang)->language .
@@ -32,57 +31,47 @@
 		$participants=Participant::where('id_gr', '=', $gr->id)->get();
 		echo "<form action=\"" . URL::to('/participant/chooseplace') . "\" method=\"post\"><table>
 		<tr>
-			<td></td>
-			<td>Imię i nazwisko</td>
-			<td>Zakwaterowanie</td>
-			<td>Opcje</td>
+			<td style=\"min-width:400px; background-color: #BBBBBB\">Dane członków grupy</td>
 		</tr>";
 
 		$protector=Protector::where('id', '=', $gr->id_prot)->first();
 		
 		echo "<tr>
-					<td>
-						<input type=\"checkbox\" name=\"participants[]\" value=\"". $protector->id ."\">
-					</td>
-					<td><b>"
+					<td style=\"background-color: #CCCCCC\"><b>"
 						. $protector->first_name . " " . $protector->last_name ."
 					</b></td>
-					<td>"
-						.  (isset($protector->id_acco)? Accommodation::where('id', '=', $protector->id_acco)->
-						first()->name : "brak") .
-					"</td>
+				</tr><tr>
 					<td>
-						<a href=\"" . URL::to('/participant/details') . "/" . $protector->id . "\"> Szczegóły</a>
-					</td>
+					Data urodzenia: " . $protector->date_of_birth .
+					"<br>Numer telefonu: " . $protector->phone_number .
+					"<br>Alternatywny numer telefonu: " . $protector->alt_phone_number .
+					"<br>Kraj: " . Country::where('id','=',$protector->id_coun)->first()->country .
+					"<br>Języki: " . Language::where('id','=',$protector->id_first_lang)->first()->language . ", " .
+					(isset($protector->id_second_lang)? (Language::where('id','=',$protector->id_second_lang)->first()->language . ", ") : "") .
+					(isset($protector->id_third_lang)? (Language::where('id','=',$protector->id_third_lang)->first()->language) : "") .
+					"</td>
 				</tr>";
 		
 		foreach ($participants as $part)
 		{			
 			echo "<tr>
-					<td>
-						<input type=\"checkbox\" name=\"participants[]\" value=\"". $part->id ."\">
-					</td>
-					<td>"
+					<td style=\"background-color: #CCCCCC\">"
 						. $part->first_name . " " . $part->last_name ."
 					</td>
-					<td>"
-						.  (isset($part->id_acco)? Accommodation::where('id', '=', $part->id_acco)->
-						first()->name : "brak") .
-					"</td>
+				</tr><tr>
 					<td>
-						<a href=" . URL::to('/participant/details') . "/" . $part->id . "> Szczegóły</a>
-					</td>
+					Data urodzenia: " . $part->date_of_birth .
+					"<br>Numer telefonu: " . $part->phone_number .
+					"<br>Alternatywny numer telefonu: " . $part->alt_phone_number .
+					"<br>Kraj: " . Country::where('id','=',$part->id_coun)->first()->country .
+					"<br>Języki: " . Language::where('id','=',$part->id_first_lang)->first()->language .
+					(isset($part->id_second_lang)? (", " . Language::where('id','=',$part->id_second_lang)->first()->language) : "") .
+					(isset($part->id_third_lang)? (", " . Language::where('id','=',$part->id_third_lang)->first()->language) : "") .
+					"</td>
 				</tr>";
-		}	
-	echo "</table>
-		<p>
-            <input type=\"submit\" id=\"submit\" value=\"Przydziel zaznaczonych\">
-            <input type=\"reset\" value=\"Odznacz\">
-        </p>
-	</form>";
-			
+		}		
 ?>	
-
+</table>
 <br>
 <a href="{{URL::to('/group')}}">Powrót do grup</a>
 @stop

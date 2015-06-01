@@ -21,7 +21,7 @@ return array(
 	'search' => 'Wyszukaj',
 	'contact' => 'Kontakt',
 	'login' => 'Zaloguj się',
-	'links1' => 'Linki 1',
+	'links1' => 'Powiązane strony',
 	'links2' => 'Linki 2',
 	'logout' => 'Wyloguj się',
 	'myacc' => 'Moje zakwaterowanie',

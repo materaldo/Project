@@ -24,8 +24,9 @@ return array(
 	'manual' => 'Manual allocation',
 	'contact' => 'Contact',
 	'message' => 'Send a message to protectors',
-	'exportManagement' => 'Export',
+	'exportManagement' => 'Export data',
 	'export' => 'Data export',
+	'assignment' => 'Display assignment',
 	
 	
 

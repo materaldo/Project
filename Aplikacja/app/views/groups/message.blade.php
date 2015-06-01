@@ -9,13 +9,15 @@
 @stop
 
 @section('content')
-<form method="post" action="{{URL::to('/group/messagesender')}}/{{$idG}}">
-    <textarea rows="4" cols="50" name="emailText" id="emailText">
+<form method="post" id="mailForm" action="{{URL::to('/group/messagesender')}}/{{$idG}}">
+        <input name = "title" id="title" type = "text" size = "53" maxlength = "255"value="tytuł"><br>
+<br>
+    <textarea rows="4" cols="50" form="mailForm" name="emailText" id="emailText">
             Treść maila
     </textarea>
-    <p>
-        <input type="submit" id="submit" value="Dodaj">
-        <input type="reset" value="Wyczyść">
-    </p>
-</form>
+    <br><br><input type="submit" id="submit" value="Wyślij">
+    </form>
+<br>
+
+
 @stop

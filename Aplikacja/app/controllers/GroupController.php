@@ -29,7 +29,6 @@ class GroupController extends BaseController {
 	}
 	public function getEdit($id)
 	{
-
         $countries = Country::all();
         $countriesArr = array();
         foreach($countries as $count)
@@ -84,6 +83,10 @@ class GroupController extends BaseController {
 	public function getDetails($id)
 	{
 		return View::make('groups.details')->with('idG', $id);
+	}
+	public function getDetailsunconfirmed($id)
+	{
+		return View::make('groups.detailsunconfirmed')->with('idG', $id);
 	}
     public function getParticipantdetails($id)
     {
