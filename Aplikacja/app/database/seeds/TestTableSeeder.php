@@ -36,7 +36,6 @@ class TestTableSeeder extends Seeder
 		//$roleAdmin = new Role;
 		//$roleAdmin->name = 'Admin';
 		//$roleAdmin->save();
-		
 		$roleOrganizer = Role::create(['name'=>'Organizer']);
 		$roleProtector = Role::create(['name'=>'Protector']);
 		$roleParticipant = Role::create(['name'=>'Participant']);
@@ -86,7 +85,7 @@ class TestTableSeeder extends Seeder
         $protector->confirmation_code = md5(uniqid(mt_rand(), true));
         $protector->confirmed = 1;
         $protector->save();
-		
+
 		$protector2 = new User;
 		$protector2->username = 'protector2';
         $protector2->email = 'j.lichodij@wp.pl';
@@ -196,7 +195,32 @@ class TestTableSeeder extends Seeder
 		//Protector::create(['id'=>'3','first_name'=>'Michał','last_name'=>'Nowak','date_of_birth'=>'22.12.1990','phone_number'=>'38473923427','id_coun'=>'1','id_first_lang'=>'2','document_number'=>'d82j83d9d','insurance_number'=>'jd29h3389j']);
 		//Group::create(['id_coun'=>'1','id_first_lang'=>'2', 'id_prot'=>'3', 'number_of_people'=>'22', 'mean_of_transport'=>'Autobus']);
 		//Participant::create(['id'=>'4','first_name'=>'Mateusz','last_name'=>'Kowalski','date_of_birth'=>'11.02.1990','phone_number'=>'377543427','id_coun'=>'1','id_first_lang'=>'2','document_number'=>'d82j83d9d','insurance_number'=>'jd29h3389j']);
+
 		
+		$perm1 = new Permission; //admin, org
+		$perm1->name = 'perm1';
+		$perm1->display_name = 'AdminOrg';
+		$perm1->save();
+		
+		$perm2 = new Permission; //admin
+		$perm2->name = 'perm2';
+		$perm2->display_name = 'Admin';
+		$perm2->save();
+		
+		$perm3 = new Permission; //protector
+		$perm3->name = 'perm3';
+		$perm3->display_name = 'Protector';
+		$perm3->save();
+		
+		$perm4 = new Permission; //participant
+		$perm4->name = 'perm4';
+		$perm4->display_name = 'Participant';
+		$perm4->save();
+		
+		$roleOrganizer->perms()->sync(array($perm1->id));
+		$roleAdmin->perms()->sync(array($perm2->id, $perm1->id));
+		$roleProtector->perms()->sync(array($perm3->id));
+		$roleParticipant->perms()->sync(array($perm4->id));
 
     }
 

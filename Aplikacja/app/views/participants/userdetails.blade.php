@@ -17,11 +17,11 @@
 
        echo " Imię: ". $us->first_name . "<br><br> Nazwisko: " . $us->last_name . " <br><br> Data urodzenia: ". $us->date_of_birth. " <br><br> Numer telefonu: " .
                $us->phone_number . "<br><br> Numer dokumentu: ". $us->document_number . "<br><br> Numer ubezpieczenia: " . $us->insurance_number ;
-        if($us->id_acc != NULL)
+        if($us->id_acco != NULL)
             {
-                $accus = Accomodation::where('id', '=', $us->id_acc);
-                echo"<br><br> Nazwa zakwaterowania: " . $accus->name . " <br> Ulica: " . $accus-> street . " <br><br> Kod pocztowy: " . $accus-> post_code .
-                " <br><br> Miasto: " . $accus -> city . " <br><br> Numer telefonu: " . $accus-> phone_numer . " <br><br> Miejsce: " . $accus->image . " <br><br> Google Maps" . $accus->maps;
+                $accus =Accommodation::where('id', '=', $us->id_acco)->first();
+                echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img src = \"" . $accus->image . " \"></img></center><br><br>  " . $accus->name . ", " . $accus-> street . " <br><br> " . $accus-> post_code .
+                "  " . $accus -> city . " <br><br> Numer telefonu: " . $accus-> phone_number . " <br><br> Mapa:  <a href =\"" . $accus->map . "\">Sprawdź mapę</a>";
             }
         else
             {
