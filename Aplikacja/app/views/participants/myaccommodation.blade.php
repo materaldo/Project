@@ -18,11 +18,11 @@
 	$user = Auth::id();
 	
 	$participant = Participant::where('id', '=', $user)->first();
-	$accus = $participant->id_acco;
+	$accus = $Participant->id_acco;
 	
 	if($accus != null){
-	$idac = $accus->id;
-	$ac = Accommodation::where('id', '=', $idac)->first();
+	
+	$ac = Accommodation::where('id', '=' , $accus)->first();
 	echo $ac->name;}
 	else{ echo  'Wkrótce...' ;
 		}
@@ -34,11 +34,11 @@
 	$user = Auth::id();
 	
 	$participant = Participant::where('id', '=', $user)->first();
-	$accus = $participant->id_acco;
+	$accus = $Participant->id_acco;
 	
 	if($accus != null){
-	$idac = $accus->id;
-	$ac = Accommodation::where('id', '=', $idac)->first();
+	
+	$ac = Accommodation::where('id', '=', $accus)->first();
 	echo "ul. ";
 	echo $ac->street;}
 ?>
@@ -50,8 +50,8 @@
 	$accus = $participant->id_acco;
 	
 	if($accus != null){
-	$idac = $accus->id;
-	$ac = Accommodation::where('id', '=', $idac)->first();
+	
+	$ac = Accommodation::where('id', '=', $accus)->first();
 	echo $ac->building;}
 ?>
 </p>
@@ -63,8 +63,8 @@
 	$accus = $participant->id_acco;
 	
 	if($accus != null){
-	$idac = $accus->id;
-	$ac = Accommodation::where('id', '=', $idac)->first();
+	
+	$ac = Accommodation::where('id', '=', $accus)->first();
 	echo $ac->post_code;}
 ?> 
 <?php
@@ -74,20 +74,20 @@
 	$accus = $participant->id_acco;
 	
 	if($accus != null){
-	$idac = $accus->id;
-	$ac = Accommodation::where('id', '=', $idac)->first();
+	
+	$ac = Accommodation::where('id', '=', $accus)->first();
 	echo $ac->city;}
 ?>
 </p><p>
 <?php
-	$$user = Auth::id();
+	$user = Auth::id();
 	
 	$participant = Participant::where('id', '=', $user)->first();
 	$accus = $participant->id_acco;
 	
 	if($accus != null){
-	$idac = $accus->id;
-	$ac = Accommodation::where('id', '=', $idac)->first();
+	
+	$ac = Accommodation::where('id', '=', $accus)->first();
 	echo 'tel: '; 
 	echo $ac->phone_number;}
 ?>
