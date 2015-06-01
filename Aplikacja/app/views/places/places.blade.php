@@ -26,12 +26,17 @@
 	
 	foreach ($accommod as $acc)
 		{
+			$usersCount = DB::table('participants')->where('id_acco', '=', $acc->id)->count();
+			$usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $acc->id)->count();
+		
+			$acc->free_places=$acc->all_places-$usersCount;
+			$acc->save();
 			echo "<tr>
 				<td>
 					<a href=" . URL::to('/accommodation/details') . "/" . $acc->id . "><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
-					$acc->name . "<br>" . $acc->street . " " . $acc->buildings . ", " . $acc->post_code . " " . $acc->city . 
+					$acc->name . "<br>" . $acc->street . " " . $acc->building . ", " . $acc->post_code . " " . $acc->city . 
 				"</td>
 				<td align=\"middle\">" . 
 					$acc->free_places . 

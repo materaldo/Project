@@ -49,7 +49,7 @@ if (Auth::user()!==null)
                     <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
                     <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
 					<li><a href=\"" . URL::to('/management') . "\">" . Lang::get('default.management') . "</a></li>
-					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+					<!--<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>-->
                     <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
 					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
@@ -65,7 +65,7 @@ if (Auth::user()!==null)
                     <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
 					<li><a href=\"" . URL::to('/accommodation') . "\">" . Lang::get('default.accommodation') . "</a></li>
                     <li><a href=\"" . URL::to('/management') . "\">" . Lang::get('default.management') . "</a></li>
-					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+					<!--<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>-->
                     <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
 					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
@@ -81,7 +81,7 @@ if (Auth::user()!==null)
                     <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
                     <li><a href=\"" . URL::to('/group/new') . "\">" . Lang::get('default.group') . "</a></li>
 					<li><a href=\"" . URL::to('/group/management') . "\">" . Lang::get('default.groupmng') . "</a></li>
-					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+					<!--<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>-->
                     <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
 					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
@@ -95,9 +95,8 @@ if (Auth::user()!==null)
                 <ul class=\"sf-menu\" id=\"nav\">
                     <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
                     <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
-					<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+					<!--<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>-->
 					<li><a href=\"" . URL::to('/participant/accommodation') . "\">" . Lang::get('default.myacc') . "</a></li>
-					<li><a href=\"" . URL::to('/participant/lost') . "\">" . Lang::get('default.lost') . "</a></li>
                     <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
 					<li><a href=\"" . URL::to('/users/logout') . "\">" . Lang::get('default.logout') . "</a></li>
                 </ul>
@@ -111,7 +110,7 @@ if (Auth::user()!==null)
                 <ul class=\"sf-menu\" id=\"nav\">
                     <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
                     <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
-                   	<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>
+                   	<!--<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>-->
                     <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>
                     <li><a href=\"" . URL::to('/users/create') . "\">" . Lang::get('default.register') . "</a></li>
 					<li><a href=\"" . URL::to('/users/login') . "\">" . Lang::get('default.login') . "</a></li>
@@ -128,15 +127,15 @@ if (Auth::user()!==null)
 				<a href="http://www.krakow2016.com"><img src="http://www.krakow2016.com/common/images/logos/logo_pl.png"/></a>
             </div>
             <div class="sidebar">
-                <h3>{{Lang::get('default.links1')}}</h3>
+                <h1>{{Lang::get('default.links1')}}</h1>
                 <ul>
-                    <li><a href="#">First Link</a></li>
-                    <li><a href="#">Another Link</a></li>
-                    <li><a href="#">And Another</a></li>
-                    <li><a href="#">Last One</a></li>
+                    <li><a href="http://sdm.org.pl/">Serce 2.0</a></li>
+                    <li><a href="https://www.facebook.com/sdmkrakow">Strona ŚDM na Facebooku</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
                 </ul>
             </div>
-            <div class="sidebar">
+			<!--<div class="sidebar">
                 <h3>{{Lang::get('default.links2')}}</h3>
                 <ul>
                     <li><a href="#">First Link</a></li>
@@ -144,7 +143,7 @@ if (Auth::user()!==null)
                     <li><a href="#">And Another</a></li>
                     <li><a href="#">Last One</a></li>
                 </ul>
-            </div>
+            </div>-->
         </div>
 @yield('content')
 

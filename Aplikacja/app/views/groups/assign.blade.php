@@ -26,6 +26,12 @@
 	
 	foreach ($accommod as $acc)
 		{
+			$usersCount = DB::table('participants')->where('id_acco', '=', $idAcc)->count();
+			$usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $idAcc)->count();
+		
+			$acc->free_places=$acc->all_places-$usersCount;
+			$acc->save();
+			
 			echo "<tr>
 				<td>
 					<a href= " . URL::to('/group/assign') . "/" . $acc->id . "/". $idG ."><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" onclick=\"return confirm('Ta akcja spowoduje przypisanie całej grupy do wybranego noclegu. Dotychczasowy przydział tej grupy zostanie zastąpiony. Jesteś pewien?')\" height=\"150\" width=\"100\"/></a>
