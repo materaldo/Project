@@ -8,12 +8,14 @@
 
 @stop
 
+
+
 @section('content')
     <form action=" {{URL::to('/group/add')}}" method="post">
-        <h4><label>Liczba osób:<br>
+        <h4><label>{{Lang::get('group.numPeople')}}<br>
                 <input name="num_of_people" id="num_of_people" type="text" size="28" maxlength="20" required>
             </label></h4>
-        <h4><label>Środek transportu:<br>
+        <h4><label>{{Lang::get('group.transport')}}<br>
                 <input name="mean_of_trans" id="mean_of_trans" type="text" size="28" maxlength="50" required>
             </label></h4>
         <div class="form-list">
@@ -33,8 +35,8 @@
             {{ Form::select('language3_select', $languages)}}
         </div><br>
         <p>
-            <input type="submit" id="submit" value="Dodaj">
-            <input type="reset" value="Wyczyść">
+            <input type="submit" id="submit" value={{Lang::get('group.add')}}>
+            <input type="reset" value={{Lang::get('group.cln')}}>
         </p>
     </form>
 
