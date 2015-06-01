@@ -52,13 +52,15 @@ class ParticipantController extends BaseController {
 		if ((sizeof($arr)-1)>($acc->free_places))
 		{
 			echo "<script>alert(\"Brak wystarczającej ilości miejsc w tym miejscu noclegowym. Wybierz inne miejsce lub podziel grupę.\");</script>";
-			return View::make('groups.groups')->with('conf', '1');
+
+				return View::make('groups.groups')->with('conf', '1');
+
 		}
 	
 		for ($i=1; $i<sizeof($arr); $i++)
 		{
 		$us=Participant::where('id', '=', $arr[$i])->first();
-		
+
 		if (!isset($us)) 
 		{
 			$us=Protector::where('id', '=', $arr[$i])->first();
