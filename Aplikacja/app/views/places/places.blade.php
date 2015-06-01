@@ -12,7 +12,8 @@
 @section('content')
 
 <h2>{{Lang::get('place.title')}}</h2>
-<a href="{{ URL::to('/accommodation/new')}}">{{Lang::get('add.add')}}</a>
+<a href="{{ URL::to('/accommodation/new')}}">Dodaj nowe miejsce</a><br>
+<a href="{{ URL::to('/management')}}">Powrót</a>
 
 	<table>	
 		<tr>
