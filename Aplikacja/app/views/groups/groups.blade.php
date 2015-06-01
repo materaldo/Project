@@ -19,10 +19,10 @@ else {
 	<table>	
 		<tr>
 			<td  style="background-color:#CCCCCC; min-width:60px">Nr grupy</td>
-			<td style="background-color:#CCCCCC; min-width:60px">Kraj</td>
-			<td style="background-color:#CCCCCC; min-width:60px">Opiekun</td>
-			<td style="background-color:#CCCCCC; min-width:60px">Liczba członków</td>
-			<td style="background-color:#CCCCCC; min-width:60px">Opcje</td>
+			<td style="background-color:#CCCCCC; min-width:100px">Kraj</td>
+			<td style="background-color:#CCCCCC; min-width:100px">Opiekun</td>
+			<td style="background-color:#CCCCCC; min-width:100px">Liczba członków</td>
+			<td style="background-color:#CCCCCC; min-width:100px">Opcje</td>
 		</tr>	
 <?php
 
@@ -50,14 +50,16 @@ else {
 				if ($conf)
 				{
 					echo "<a href=" . URL::to('/group/chooseplace') . "/" . $gr->id . ">Przydziel </a>";
+				echo "<a href=" . URL::to('/group/details') . "/" . $gr->id . "> Szczegóły</a>
+				</td>";
 				}
 				else
 				{
-					echo "<a href=" . URL::to('/group/confirm') . "/" . $gr->id . ">Zatwierdź </a>";
+					echo "<a href=" . URL::to('/group/confirm') . "/" . $gr->id . " onclick=\"return confirm('Czy na pewno chcesz zatwierdzić tę grupę?')\">Zatwierdź </a>";
+				echo "<a href=" . URL::to('/group/detailsunconfirmed') . "/" . $gr->id . "> Szczegóły</a>
+				</td>";
 				}
-				echo "<a href=" . URL::to('/group/details') . "/" . $gr->id . "> Szczegóły</a>
-				</td>
-			</tr>";
+			echo "</tr>";
 		}	
 ?>
 </table>
