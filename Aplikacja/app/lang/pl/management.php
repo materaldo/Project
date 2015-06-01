@@ -21,7 +21,7 @@ return array(
 	'countries' => 'Państwa',
 	'allocationManagement' => 'Przydział miejsc',
 	'automatic' => 'Automatyczne przydzielanie miejsc',
-	'manual' => 'Przydziel ręcznie',
+	'manual' => 'Przydziel noclegi',
 	'contact' => 'Kontakt',
 	'message' => 'Wyślij wiadomość do opiekunów',
 	'exportManagement' => 'Eksportuj dane',
