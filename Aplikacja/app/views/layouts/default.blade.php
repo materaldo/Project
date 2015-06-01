@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css"/>
     <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
     <title>ŚDM Wrocław 2016</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
     {{ HTML::style('css/style.css'); }}
 
     @yield('header')
