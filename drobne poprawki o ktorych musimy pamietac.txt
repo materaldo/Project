@@ -7,3 +7,4 @@ accomodation: zmieniæ conirm z get na post + wywaliæ skrypt js w edycji i dodaæ
 
 group->participantdetails - przydziel tylko w przypadku, gdy jest jakiœ zaznaczony
 
+zmienic opis w wysy³aniu maila: potwierdzenie zamiast potwiedzenie!

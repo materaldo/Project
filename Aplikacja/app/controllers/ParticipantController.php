@@ -172,6 +172,6 @@ class ParticipantController extends BaseController {
 	
 	public function getDetails($id)
 	{
-		echo "TODO";
+		return View::make('participants.userdetails')->with('idU', $id);
 	}
 }
