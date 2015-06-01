@@ -36,7 +36,7 @@ class ParticipantController extends BaseController {
             foreach ($sel as $selected) {
                 $string = $string . ":" . $selected;
             }
-            return View::make('participants.assign')->with('sel', $string);
+            return View::make('participants.participantgroupassign')->with('sel', $string);
             }
     }
 	public function getChange()
@@ -58,14 +58,32 @@ class ParticipantController extends BaseController {
 		for ($i=1; $i<sizeof($arr); $i++)
 		{
 		$us=Participant::where('id', '=', $arr[$i])->first();
+            if($us->id_acco!=null)
+            {
+                    $acc = Accommodation::where('id', '=', $us->id_acco);
+                $temp = $acc ->free_places;
+                    $temp++;
+                $acc->free_places = $temp;
+                    $acc->save();
+            }
 		
 		if (!isset($us)) 
 		{
 			$us=Protector::where('id', '=', $arr[$i])->first();
+            if($us->id_acco!=null)
+            {
+                $acc = Accommodation::where('id', '=', $us->id_acco);
+                $temp = $acc->free_places;
+                $temp++;
+                $acc->free_places = $temp;
+                $acc->save();
+                }
 		}
 		$us->id_acco=$idAcc;
 		$us->save();
 		}
+
+
 		
 		$usersCount = DB::table('participants')->where('id_acco', '=', $idAcc)->count();
 		$usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $idAcc)->count();
@@ -76,6 +94,39 @@ class ParticipantController extends BaseController {
 		echo "<script>alert(\"Pomyślnie przydzielono do noclegu\");</script>";
 		return View::make('groups.groups')->with('conf', '1');
 	}
+    public function getProtectorassign($idAcc,$sel)
+    {
+        $arr = explode(':', $sel);
+
+        $acc=Accommodation::where('id', '=', $idAcc)->first();
+
+        if ((sizeof($arr)-1)>($acc->free_places))
+        {
+            echo "<script>alert(\"Brak wystarczającej ilości miejsc w tym miejscu noclegowym. Wybierz inne miejsce lub podziel grupę.\");</script>";
+            return View::make('groups.management')->with('conf', '1');
+        }
+
+        for ($i=1; $i<sizeof($arr); $i++)
+        {
+            $us=Participant::where('id', '=', $arr[$i])->first();
+
+            if (!isset($us))
+            {
+                $us=Protector::where('id', '=', $arr[$i])->first();
+            }
+            $us->id_acco=$idAcc;
+            $us->save();
+        }
+
+        $usersCount = DB::table('participants')->where('id_acco', '=', $idAcc)->count();
+        $usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $idAcc)->count();
+
+        $acc->free_places=$acc->all_places-$usersCount;
+        $acc->save();
+
+        echo "<script>alert(\"Pomyślnie przydzielono do noclegu\");</script>";
+        return View::make('index');
+    }
 
 	public function getAdd($id)
 	{
