@@ -30,8 +30,8 @@ return array(
 	
 	
 	'nameP' => 'Name',
-	'street' => 'Streer',
-	'buildingN' => 'Building number',
+	'street' => 'Street',
+	'building' => 'Building number',
 	'postcode' => 'Post code',
 	'city' => 'City',
 	'map' => 'Google Map',
