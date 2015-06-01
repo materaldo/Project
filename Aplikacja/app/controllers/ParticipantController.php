@@ -6,17 +6,14 @@ class ParticipantController extends BaseController {
 	{
 		return View::make('index');
 	}
-	
 	public function getAccommodation()
 	{
 		return View::make('participants.myaccommodation');
 	}
-	
 	public function getLost()
     {
         return View::make('participants.lost');
     }
-	
 	public function postChooseplace()
 	{
 		$sel = Input::get('participants');
@@ -30,9 +27,6 @@ class ParticipantController extends BaseController {
         else {
             echo "<script>alert(\"Musisz wybrać uczestników do przydziału\");</script>";
         }
-
-		
-
 	}
     public function postChooseplaceprotector($idG)
     {

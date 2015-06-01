@@ -20,7 +20,7 @@
 
 	//	echo "<a href=\"" . URL::to('/group/edit') . "/{$idG}\">Edytuj</a>	<a href=\"" . URL::to('/group/delete') . "/{$idG}\" onclick=\"return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')\">Usuń</a><br><br>";
 
-	echo "<br>Liczba członków:" . $gr->number_of_people . 
+	echo
 	"<br>Liczba członków:" . $gr->number_of_people . 
 	"<br>Środek transportu: " . $gr->mean_of_transport . 
 	"<br>Kraj pochodzenia: " . Country::find($gr->id_coun)->country . 

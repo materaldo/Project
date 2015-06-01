@@ -10,9 +10,8 @@
 
 @section('content')
 <h2>AKTUALNY PRZYDZIAŁ MIEJSC NOCLEGOWYCH</h2>
-<p> nie wiem czemu tu jest taka przerwa!!!!</p>
+<table>
 <?php
-	echo "<table>";
 	$groups=Group::where('confirmed', '=', true)->get();
 	
 	foreach ($groups as $gr)
@@ -23,23 +22,22 @@
 		$acc=Accommodation::where('id', '=', $prot->id_acco)->first();
 
 		if (isset($acc)) {
-		echo "<tr><td colspan=\"3\" style=\"background-color:#CCCCCC\"><h4>" . $gr->id . ", " . $country->country . ", " . $gr->number_of_people . " członków</h4></td></tr>" . 
+		echo "<tr><td colspan=\"3\" style=\"background-color:#CCCCCC\"><h4>Grupa " . $gr->id . ", " . $country->country . ", " . $gr->number_of_people . " członków</h4></td></tr>" . 
 		"<tr><td style=\"min-width:35px\" align=\"center\"><b>" . $prot->id . 
 					"</td><td style=\"min-width:150px\"><b>" . $prot->first_name . " " . $prot->last_name . 
-					"</b></td><td style=\"min-width:150px\"><b>" . (isset($prot->id_acco)? Accommodation::where('id', '=', $prot->id_acco)->first()->name : "brak") . "</b></td></tr><br>";
+					"</b></td><td style=\"min-width:150px\"><b>" . (isset($prot->id_acco)? Accommodation::where('id', '=', $prot->id_acco)->first()->name : "brak") . "</b></td></tr>";
 		
 		foreach ($participants as $part)
 		{
 			$acc=Accommodation::where('id', '=', $part->id_acco)->first();
 			echo 	"<tr><td style=\"min-width:35px\" align=\"center\">" . $part->id . 
 					"</td><td style=\"min-width:150px\">" . $part->first_name . " " . $part->last_name . 
-					"</td><td style=\"min-width:150px\">" . (isset($part->id_acco)? Accommodation::where('id', '=', $part->id_acco)->first()->name : "brak") . "</td></tr><br>";
+					"</td><td style=\"min-width:150px\">" . (isset($part->id_acco)? Accommodation::where('id', '=', $part->id_acco)->first()->name : "brak") . "</td></tr>";
 		}
 		}
 	}	
-	echo "</table>";
 ?>
-
+</table>
 <a href="{{URL::to('/management')}}">Powrót</a>
 
 @stop
