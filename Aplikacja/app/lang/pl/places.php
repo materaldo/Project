@@ -16,8 +16,15 @@ return array(
 	'bck' => 'Powrót do bazy',
 	'nameaddress' => 'Nazwa, adres noclegu',
 	'free' => 'Wolne miejsca',
-	'all' => 'Miejsca ogółem'
-	
+	'all' => 'Miejsca ogółem',
+	'contact' => 'Kontakt: ',
+	'address' => 'Adres: ',
+	'details' => 'Szczegóły',
+	'edit' => 'Edytuj',
+	'delete' => 'Usuń',
+	'places' => 'Miejsca(wolne/ogółem): ',
+	'map' => 'Mapa: ',
+	'bck' => 'Powrót'
 	
 
 

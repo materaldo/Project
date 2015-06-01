@@ -16,7 +16,15 @@ return array(
 	'bck' => 'Back to base',
 	'nameaddress' => 'Accommodation name, address',
 	'free' => 'Available places',
-	'all' => 'All places'
+	'all' => 'All places',
+	'contact' => 'Contact: ',
+	'address' => 'Address: ',
+	'details' => 'Details',
+	'edit' => 'Edit',
+	'delete' => 'Delete',
+	'places' => 'Places(available/all): ',
+	'map' => 'Map: ',
+	'bck' => 'Back'
 	
 
 
