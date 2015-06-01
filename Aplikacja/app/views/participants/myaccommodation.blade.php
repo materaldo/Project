@@ -23,8 +23,7 @@
 	{
 		$acc = Accommodation::where('id', '=', $accus)->first();
 		
-		echo "<img style=\"max-width:60%;\" src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\"/><h2> " . $acc->name . "</h2><strong>Adres</strong>: " . $acc->street . " " . $acc->buildings . "<br>" . $acc->post_code . " " . $acc->city . "<br><br><strong>Kontakt: </strong>" . $acc->phone_number . "<br><br><strong>Miejsca (wolne/ogółem): </strong>" . $acc->free_places . "/" . $acc->all_places . "<br><br><strong>Mapa: </strong><a href=\"" . $acc->map . "\">". $acc->map . "</a>";
-			
+		echo "<img style=\"max-width:60%;\" src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\"/><h2> " . $acc->name . "</h2><strong>Adres</strong>: " . $acc->street . " " . $acc->buildings . "<br>" . $acc->post_code . " " . $acc->city . "<br><br><strong>Kontakt: </strong>" . $acc->phone_number . "<br><br><strong>Miejsca (wolne/ogółem): </strong>" . $acc->free_places . "/" . $acc->all_places . "<br><br><strong>Mapa: </strong><a href=\"" . $acc->map . "\">". $acc->map . "</a>";		
 	}
 	
 	else

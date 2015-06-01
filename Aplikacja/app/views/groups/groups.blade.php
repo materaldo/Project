@@ -34,23 +34,24 @@ else {
 			$prot=Protector::find($gr->id_prot);
 			
 			echo "<tr>
-				<td style=\"min-width:60px\" align=\"center\">
+				<td align=\"center\">
 					<a href=" . URL::to('/group/details') . "/" . $gr->id . ">" . $gr->id ."</a>
 				</td>
-				<td style=\"min-width:100px\">" . 
+				<td>" . 
 					$country->country . 
 				"</td>
-				<td style=\"min-width:100px\">" .
+				<td>" .
 					$prot->first_name . " " . $prot->last_name .
 				"</td>
-				<td style=\"min-width:100px\" align=\"center\">" . 
+				<td align=\"center\">" . 
 					$gr->number_of_people . 
 				"</td>
-				<td style=\"min-width:100px\">";
+				<td>";
 				if ($conf)
 				{
-					echo "<a href=" . URL::to('/group/chooseplace') . "/" . $gr->id . ">Przydziel </a>";
-					echo "<a href=" . URL::to('/group/details') . "/" . $gr->id . "> Szczegóły</a>
+					echo "<a href=" . URL::to('/group/chooseplace') . "/" . $gr->id . ">Przydziel </a> | 
+					<a href=" . URL::to('/group/split') . "/" . $gr->id . ">Podziel </a> |
+					<a href=" . URL::to('/group/details') . "/" . $gr->id . ">Szczegóły</a>
 					</td>";
 				}
 				else

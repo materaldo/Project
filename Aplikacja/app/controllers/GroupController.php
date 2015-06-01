@@ -84,6 +84,10 @@ class GroupController extends BaseController {
 	{
 		return View::make('groups.details')->with('idG', $id);
 	}
+	public function getSplit($id)
+	{
+		return View::make('groups.split')->with('idG', $id);
+	}
 	public function getDetailsunconfirmed($id)
 	{
 		return View::make('groups.detailsunconfirmed')->with('idG', $id);
