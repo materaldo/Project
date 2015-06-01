@@ -28,6 +28,7 @@
 		{
 			$usersCount = DB::table('participants')->where('id_acco', '=', $acc->id)->count();
 			$usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $acc->id)->count();
+		
 			$acc->free_places=$acc->all_places-$usersCount;
 			$acc->save();
 			

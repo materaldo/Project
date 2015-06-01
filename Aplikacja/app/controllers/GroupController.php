@@ -109,19 +109,18 @@ class GroupController extends BaseController {
 	}
     public function postMessagesender($id)
     {
-        $title = Input::get('title');
-        $text = Input::get('emailText');
 		$gr=Group::find($id);
 		$parts=Participant::where('id_gr', '=', $gr->id)->get();
-
-        foreach ($parts as $p)
+		
+		foreach ($parts as $p)
+		{
+			
+        Mail::send('emails.groupMessage', array('key' => 'value'), function($message) use ($p)
         {
-            Mail::queue('emails.protMessage', array('title' => $title, 'text' => $text), function($message) use ($p, $title)
-            {
-                $us=User::where('id','=',$p->id)->first();
-                $message->to($us->email, '?')->subject($title);
-            });
-        }
+			$us=User::where('id','=',$p->id)->first();
+            $message->to($us->email, 'Jacek')->subject('!');
+        });
+		}
         return View::make('index');
     }
     public function postConfirm($id)
