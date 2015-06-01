@@ -26,6 +26,7 @@ return array(
 	'message' => 'Wyślij wiadomość do opiekunów',
 	'exportManagement' => 'Export',
 	'export' => 'Wyeksportuj dane',
+	'assignment' => 'Wyświetl przydział',
 	
 	
 

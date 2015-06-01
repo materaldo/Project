@@ -170,5 +170,8 @@ class ParticipantController extends BaseController {
 		
 	}
 	
-	
+	public function getDetails($id)
+	{
+		echo "TODO";
+	}
 }

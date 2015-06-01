@@ -26,7 +26,7 @@
             "<br><br><h4>Członkowie: </h4>";
 
     $participants=Participant::where('id_gr', '=', $gr->id)->get();
-    echo "<form action=\"http://zpi.dev/participant/chooseplace\" method=\"post\"><table>";
+    echo "<form action=\"" . URL::to('/participant/chooseplace') . "\" method=\"post\"><table>";
 
     foreach ($participants as $part)
     {
@@ -38,7 +38,7 @@
                 . $part->first_name . " " . $part->last_name ."
 					</td>
 					<td>
-						<a href=http://zpi.dev/participant/details/" . $part->id . "> Szczegóły</a>
+						<a href=" . URL::to('/participant/details') . "/" . $part->id . "> Szczegóły</a>
 					</td>
 				</tr>";
     }

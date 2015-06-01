@@ -26,6 +26,7 @@ return array(
 	'message' => 'Send a message to protectors',
 	'exportManagement' => 'Export',
 	'export' => 'Data export',
+	'assignment' => 'Display assignment',
 	
 	
 

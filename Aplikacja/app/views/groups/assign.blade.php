@@ -13,6 +13,7 @@
     
 <h2>WYBIERZ MIEJSCE</h2>
 
+	<a href= "{{URL::to('/group')}}">Powrót</a>
 	<table>	
 		<tr>
 			<td></td>
@@ -27,7 +28,7 @@
 		{
 			echo "<tr>
 				<td>
-					<a href= " . Url::to('/group/assign') . "/" . $acc->id . "/". $idG ."><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" height=\"150\" width=\"100\"/></a>
+					<a href= " . URL::to('/group/assign') . "/" . $acc->id . "/". $idG ."><img src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\" onclick=\"return confirm('Ta akcja spowoduje przypisanie całej grupy do wybranego noclegu. Dotychczasowy przydział tej grupy zostanie zastąpiony. Jesteś pewien?')\" height=\"150\" width=\"100\"/></a>
 				</td>
 				<td>" . 
 					$acc->name . "<br>" . $acc->street . " " . $acc->buildings . ", " . $acc->post_code . " " . $acc->city . 
