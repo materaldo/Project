@@ -197,14 +197,14 @@ class TestTableSeeder extends Seeder
 		//Participant::create(['id'=>'4','first_name'=>'Mateusz','last_name'=>'Kowalski','date_of_birth'=>'11.02.1990','phone_number'=>'377543427','id_coun'=>'1','id_first_lang'=>'2','document_number'=>'d82j83d9d','insurance_number'=>'jd29h3389j']);
 
 		
-		$perm1 = new Permission; //admin, org
+		$perm1 = new Permission; //admin
 		$perm1->name = 'perm1';
-		$perm1->display_name = 'AdminOrg';
+		$perm1->display_name = 'Admin';
 		$perm1->save();
 		
-		$perm2 = new Permission; //admin
+		$perm2 = new Permission; //org
 		$perm2->name = 'perm2';
-		$perm2->display_name = 'Admin';
+		$perm2->display_name = 'Organizer';
 		$perm2->save();
 		
 		$perm3 = new Permission; //protector
@@ -217,9 +217,19 @@ class TestTableSeeder extends Seeder
 		$perm4->display_name = 'Participant';
 		$perm4->save();
 		
-		$roleOrganizer->perms()->sync(array($perm1->id));
-		$roleAdmin->perms()->sync(array($perm2->id, $perm1->id));
-		$roleProtector->perms()->sync(array($perm3->id));
+		$perm5 = new Permission; //admin, org
+		$perm5->name = 'perm5';
+		$perm5->display_name = 'AdminOrg';
+		$perm5->save();
+		
+		$perm6 = new Permission; //admin, org, prot
+		$perm6->name = 'perm6';
+		$perm6->display_name = 'AdminOrgProt';
+		$perm6->save();
+		
+		$roleAdmin->perms()->sync(array($perm1->id, $perm5->id, $perm6->id));
+		$roleOrganizer->perms()->sync(array($perm2->id, $perm5->id, $perm6->id));
+		$roleProtector->perms()->sync(array($perm3->id, $perm6->id));
 		$roleParticipant->perms()->sync(array($perm4->id));
 
     }
