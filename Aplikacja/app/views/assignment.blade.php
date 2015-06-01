@@ -38,6 +38,6 @@
         }      
 ?>
 </table>
-<a href="{{URL::to('/management')}}">{{Lang::get('assignment.back')}</a>
+<a href="{{URL::to('/management')}}">{{Lang::get('assignment.back')}}</a>
  
 @stop
