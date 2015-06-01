@@ -23,7 +23,7 @@
 <h4>{{Lang::get('management.baseManagement')}}</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="{{URL::to('/languages')}}">{{Lang::get('management.languages')}}</a>
+			<a class="clickMe" href="{{URL::to('/language')}}">{{Lang::get('management.languages')}}</a>
 		</li>
 		<li>
 			<a class="clickMe" href="{{URL::to('/country')}}">{{Lang::get('management.countries')}}</a>

@@ -23,7 +23,7 @@
 
 @section('content')
               		 
-<form action = "{{URL::to('/languages/confirm')}}/{{$idL}}">			 
+<form action = "{{URL::to('/language/confirm')}}/{{$idL}}">			 
         <h4><label>Edytuj język:<br>
             <input name = "language" id = "language" type = "text" size = "28"
                 maxlength = "255" autofocus>
