@@ -30,7 +30,7 @@ Route::controller('accommodation','AccommodationController');
 Route::controller('group','GroupController');
 Route::controller('participant', 'ParticipantController');
 Route::controller('organizer', 'OrganizerController');
-Route::controller('language', 'LanguageController');
+Route::controller('languages', 'LanguageController');
 Route::controller('country', 'CountryController');
 
 // Confide routes

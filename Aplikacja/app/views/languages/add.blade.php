@@ -12,7 +12,7 @@
 
 @section('content')
               			 
-<form action = " {{URL::to('/language/add') }}">			 
+<form action = " {{URL::to('/languages/add') }}">			 
         <h4><label>Dodaj język:<br>
             <input name = "language" id = "language" type = "text" size = "28"
                 maxlength = "255" autofocus>
