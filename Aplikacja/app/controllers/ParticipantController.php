@@ -13,23 +13,43 @@ class ParticipantController extends BaseController {
 	}
 	
 	public function getLost()
-	{
-		return View::make('participants.lost');
-	}
-	
+    {
+        return View::make('participants.lost');
+    }
 	
 	public function postChooseplace()
 	{
 		$sel = Input::get('participants');
 		$string = "";
+		if($sel!=NULL) {
+            foreach ($sel as $selected) {
+                $string = $string . ":" . $selected;
+            }
+            return View::make('participants.assign')->with('sel', $string);
+        }
+        else {
+            echo "<script>alert(\"Musisz wybrać uczestników do przydziału\");</script>";
+        }
+
 		
-		foreach ($sel as $selected){
-					$string=$string . ":" . $selected;
-				}
-		//echo $string;
-		
-		return View::make('participants.assign')->with('sel', $string);
+
 	}
+    public function postChooseplaceprotector($idG)
+    {
+        $sel = Input::get('participants');
+        $string = "";
+        if($sel!=NULL) {
+            foreach ($sel as $selected) {
+                $string = $string . ":" . $selected;
+            }
+            return View::make('participants.assign')->with('sel', $string);
+        }
+        else {
+            echo "<script>alert(\"Musisz wybrać uczestników do przydziału\");</script>";
+            return View::make('groups.participantgroupdetails')->with('idG', $idG);
+        }
+        return View::make('index');
+    }
 	public function getChange()
 	{
 		return View::make('participants.participant_change');

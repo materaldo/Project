@@ -26,7 +26,7 @@
             "<br><br><h4>Członkowie: </h4>";
 
     $participants=Participant::where('id_gr', '=', $gr->id)->get();
-    echo "<form action=\"" . URL::to('/participant/chooseplace') . "\" method=\"post\"><table>";
+    echo "<form action=\"" . URL::to('/participant/chooseplaceprotector/'. $idG ).   "\" method=\"post\"><table>";
 
     foreach ($participants as $part)
     {
