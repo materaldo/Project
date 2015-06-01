@@ -25,7 +25,8 @@ return array(
 	'places' => 'Places(available/all): ',
 	'map' => 'Map: ',
 	'back' => 'Back',
-	'add' => 'Add new place'
+	'add' => 'Add new place',
+	'confirm' => 'Do you really want to delete this accommodation?'
 	
 
 

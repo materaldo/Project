@@ -25,7 +25,8 @@ return array(
 	'places' => 'Miejsca(wolne/ogółem): ',
 	'map' => 'Mapa: ',
 	'back' => 'Powrót',
-	'add' => 'Dodaj nowe miejsce'
+	'add' => 'Dodaj nowe miejsce',
+	'confirm' => 'Czy na pewno chcesz usunąć to miejsce z bazy noclegów?'
 	
 	
 
