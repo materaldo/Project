@@ -31,30 +31,43 @@
 		$participants=Participant::where('id_gr', '=', $gr->id)->get();
 		echo "<form action=\"" . URL::to('/participant/chooseplace') . "\" method=\"post\"><table>
 		<tr>
-			<td>Imię i nazwisko</td>
-			<td>Opcje</td>
+			<td style=\"min-width:400px; background-color: #BBBBBB\">Dane członków grupy</td>
 		</tr>";
 
 		$protector=Protector::where('id', '=', $gr->id_prot)->first();
 		
 		echo "<tr>
-					<td><b>"
+					<td style=\"background-color: #CCCCCC\"><b>"
 						. $protector->first_name . " " . $protector->last_name ."
 					</b></td>
+				</tr><tr>
 					<td>
-						<a href=\"" . URL::to('/participant/details') . "/" . $protector->id . "\"> Szczegóły</a>
-					</td>
+					Data urodzenia: " . $protector->date_of_birth .
+					"<br>Numer telefonu: " . $protector->phone_number .
+					"<br>Alternatywny numer telefonu: " . $protector->alt_phone_number .
+					"<br>Kraj: " . Country::where('id','=',$protector->id_coun)->first()->country .
+					"<br>Języki: " . Language::where('id','=',$protector->id_first_lang)->first()->language . ", " .
+					(isset($protector->id_second_lang)? (Language::where('id','=',$protector->id_second_lang)->first()->language . ", ") : "") .
+					(isset($protector->id_third_lang)? (Language::where('id','=',$protector->id_third_lang)->first()->language) : "") .
+					"</td>
 				</tr>";
 		
 		foreach ($participants as $part)
 		{			
 			echo "<tr>
-					<td>"
+					<td style=\"background-color: #CCCCCC\">"
 						. $part->first_name . " " . $part->last_name ."
 					</td>
+				</tr><tr>
 					<td>
-						<a href=" . URL::to('/participant/details') . "/" . $part->id . "> Szczegóły</a>
-					</td>
+					Data urodzenia: " . $part->date_of_birth .
+					"<br>Numer telefonu: " . $part->phone_number .
+					"<br>Alternatywny numer telefonu: " . $part->alt_phone_number .
+					"<br>Kraj: " . Country::where('id','=',$part->id_coun)->first()->country .
+					"<br>Języki: " . Language::where('id','=',$part->id_first_lang)->first()->language .
+					(isset($part->id_second_lang)? (", " . Language::where('id','=',$part->id_second_lang)->first()->language) : "") .
+					(isset($part->id_third_lang)? (", " . Language::where('id','=',$part->id_third_lang)->first()->language) : "") .
+					"</td>
 				</tr>";
 		}		
 ?>	

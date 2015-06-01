@@ -50,14 +50,13 @@ else {
 				if ($conf)
 				{
 					echo "<a href=" . URL::to('/group/chooseplace') . "/" . $gr->id . ">Przydziel </a>";
-				echo "<a href=" . URL::to('/group/details') . "/" . $gr->id . "> Szczegóły</a>
-				</td>";
+					echo "<a href=" . URL::to('/group/details') . "/" . $gr->id . "> Szczegóły</a>
+					</td>";
 				}
 				else
 				{
 					echo "<a href=" . URL::to('/group/confirm') . "/" . $gr->id . " onclick=\"return confirm('Czy na pewno chcesz zatwierdzić tę grupę?')\">Zatwierdź </a>";
-				echo "<a href=" . URL::to('/group/detailsunconfirmed') . "/" . $gr->id . "> Szczegóły</a>
-				</td>";
+					echo "<a href=" . URL::to('/group/detailsunconfirmed') . "/" . $gr->id . "> Szczegóły</a></td>";
 				}
 			echo "</tr>";
 		}	
