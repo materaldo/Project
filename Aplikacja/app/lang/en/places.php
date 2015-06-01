@@ -12,11 +12,19 @@ return array(
 	| as the size rules. Feel free to tweak each of these messages here.
 	|
 	*/
-	'title' => 'Accommodation Base',
+	'title' => 'ACCOMMODATION BASE',
 	'bck' => 'Back to base',
 	'nameaddress' => 'Accommodation name, address',
 	'free' => 'Available places',
-	'all' => 'All places'
+	'all' => 'All places',
+	'contact' => 'Contact: ',
+	'address' => 'Address: ',
+	'details' => 'Details',
+	'edit' => 'Edit',
+	'delete' => 'Delete',
+	'places' => 'Places(available/all): ',
+	'map' => 'Map: ',
+	'bck' => 'Back'
 	
 
 

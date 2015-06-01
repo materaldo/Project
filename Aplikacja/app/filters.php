@@ -47,10 +47,12 @@ Entrust::routeNeedsPermission('participant/accommodation', 'perm4');
 Entrust::routeNeedsPermission('participant/change', 'perm4');
 //protector
 Entrust::routeNeedsPermission('group/new', 'perm3');
+Entrust::routeNeedsPermission('group/edit*', 'perm3');
 Entrust::routeNeedsPermission('group/management', 'perm3');
 Entrust::routeNeedsPermission('group/message*', 'perm3');
 Entrust::routeNeedsPermission('group/participantdetails*', 'perm3');
 Entrust::routeNeedsPermission('participant/add*', 'perm3');
+Entrust::routeNeedsPermission('participant/chooseplaceprotector*', 'perm3');
 
 
 /*
