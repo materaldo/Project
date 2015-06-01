@@ -22,17 +22,28 @@ App::after(function($request, $response)
 	//
 });
 
-//Entrust::routeNeedsRole('language', array('Organizer')); ///dostep tylko dla danego uzytkownika
-//Entrust::routeNeedsPermission('management', 'perm1'); //dostep z wykorzystaniem permisji
-
-Entrust::routeNeedsPermission('management', 'perm5');//dostep do zarzadzania dla adminow, organizatorow	
-Entrust::routeNeedsPermission('language*', 'perm1');//dostep do jezykow dla admina
-Entrust::routeNeedsPermission('country*', 'perm1');//jw
+//admin organizator
+Entrust::routeNeedsPermission('organizer/message', 'perm5');
+Entrust::routeNeedsPermission('management', 'perm5');
+Entrust::routeNeedsPermission('accommodation', 'perm5');
+//admin	
+Entrust::routeNeedsPermission('language*', 'perm1');
+Entrust::routeNeedsPermission('country*', 'perm1');
+//admin, org, prot
 Entrust::routeNeedsPermission('participant/chooseplace', 'perm6');
 Entrust::routeNeedsPermission('participant/details*', 'perm6');
+//participant
 Entrust::routeNeedsPermission('participant/sendmail', 'perm4');
 Entrust::routeNeedsPermission('participant/accommodation', 'perm4');
 Entrust::routeNeedsPermission('participant/change', 'perm4');
+//protector
+Entrust::routeNeedsPermission('group/new', 'perm3');
+Entrust::routeNeedsPermission('group/management', 'perm3');
+Entrust::routeNeedsPermission('group/message*', 'perm3');
+Entrust::routeNeedsPermission('group/participantdetails*', 'perm3');
+Entrust::routeNeedsPermission('participant/add*', 'perm3');
+
+
 /*
 |--------------------------------------------------------------------------
 | Authentication Filters

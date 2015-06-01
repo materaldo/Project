@@ -38,7 +38,7 @@ class AccommodationController extends BaseController {
 
 		return View::make('places.places');	
 	}
-	public function getConfirm($id)
+	public function postConfirm($id)
 	{
 		$name = Input::get('name');
 		$street = Input::get('street');
@@ -66,20 +66,31 @@ class AccommodationController extends BaseController {
 	}	
 	public function getDetails($id)
 	{
-		return View::make('places.details')->with('idA', $id);
+		$acc=Accommodation::where('id','=', $id)->first();
+		if(isset($acc->id))
+			return View::make('places.details')->with('idA', $id);
+		else
+			return Redirect::to('/accommodation');
 	}
 	public function getEdit($id)
 	{
-		return View::make('places.edit')->with('idA', $id);
+		$acc=Accommodation::where('id','=', $id)->first();
+		if(isset($acc->id))
+			return View::make('places.edit')->with('idA', $id);
+		else
+			return Redirect::to('/accommodation');
 	}
 	public function getDelete($id)
 	{
-		if($id>0)
+		$acc=Accommodation::where('id','=', $id)->first();
+		if(isset($acc->id))
 		{
-			$accommod = Accommodation::find($id);
-			$accommod->delete();
+			$acc->delete();
+			return Redirect::to('/accommodation');
 		}
-		return View::make('places.places');
+		else
+			return Redirect::to('/accommodation');
+	
 	}
 	
 }
