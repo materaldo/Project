@@ -14,39 +14,39 @@
 @section('content')
 
 
-            <h1>Zmiana Zakwaterowania</h1>
-			<p>Prszę wypałnić formularz dotyczący preferencji miejsca zakwaterownia. Pomoże nam on znaleźć odpowiedznie dla Ciebie miejsce.</p>
+            <h1>{{Lang::get('participantChange.replacement')}}</h1>
+			<p>{{Lang::get('participantChange.replacmentInfo')}}</p>
             
             <form name="FormularzZmiana" action="{{URL::to('/participant/sendmail')}}" method="post">
 		
 
-             <h3><label>Podaj przyczynę zmiany miejsca:</label></h3>
+             <h3><label>{{Lang::get('participantChange.reason')}}</label></h3>
 			  
               <p><input name="przyczyna1" type="checkbox" id = 'r1'>
-              Chcę być zakwaterowany razem z:
-                 <input name="Imie" type="text" size="50" maxlength="50" placeholder="Tutaj wpisz imię i nazwisko osoby z którą chcesz mieszkać"></p>
+              {{Lang::get('participantChange.accomodationWith')}}
+                 <input name="Imie" type="text" size="50" maxlength="50" placeholder={{Lang::get('participantChange.nameInput')}}></p>
              
 			 <p><input name="przyczyna2" type="checkbox" id = 'r2'>
-              Nie jestem zadowolony ze standardu</p>
+             {{Lang::get('participantChange.standard')}}</p>
 			 
 			 <p><input name="przyczyna3" type="checkbox" id = 'r3'>
-              Miejsce, do którego mnie przydzielono jest za drogie</p>
+             {{Lang::get('participantChange.expensive')}}</p>
 			 
 			 <p><input name="przyczyna4" type="checkbox" id = 'r4'>
-              Chcę mieszkać bliżej <input name="Place" type="text" size="50" maxlength="50" placeholder="Podaj lokalizację, która Cię interesuje"></p>
+              {{Lang::get('participantChange.closer')}}<input name="Place" type="text" size="50" maxlength="50" placeholder={{Lang::get('participantChange.localization')}}></p>
 			  
 			  <p><input name="przyczyna5" type="checkbox" id = 'r5'>
-              Inne <input name="Other" type="text" size="50" maxlength="50" placeholder="Podaj przyczynę"></p>
+              {{Lang::get('participantChange.other')}}<input name="Other" type="text" size="50" maxlength="50" placeholder="{{Lang::get('participantChange.res')}}></p>
 			  
-			  <p>W miarę możliwości postaramy się dobrać odpowiedznie dla Ciebie miejsce. <b>Twoje aktualne miejsce zakwaterowania może nie ulec zmianie z powodu braku miejsc spełniających Twoje kryteria!</b></p>
-			  <p>W razie pytań prosimy dzwonić pod numer: 666 453 242 lub kontakt <a href="mailto:nasz.admin@charytatywna.org.pl">mailowy</a></p>
+			  <p>{{Lang::get('participantChange.info1')}}<b>{{Lang::get('participantChange.info2')}}</b></p>
+			  <p>{{Lang::get('participantChange.info3')}}<a href="mailto:nasz.admin@charytatywna.org.pl">{{Lang::get('participantChange.info4')}}</a></p>
 				<p>
-               <input type="submit" value="Wyślij">
-               <input type="reset" value="Wyczyść">
+               <input type="submit" value={{Lang::get('participantChange.send')}}>
+               <input type="reset" value={{Lang::get('participantChange.reset')}}>
               </p>
             </form>
 			
 			
-             <p><a href="{{URL::to('/participant/accommodation')}}">Powrót</a></p>
+             <p><a href="{{URL::to('/participant/accommodation')}}">{{Lang::get('participantChange.back')}}</a></p>
 
 @stop

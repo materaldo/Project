@@ -11,7 +11,7 @@
 
 @section('content')
 
-<h2>BAZA NOCLEGOWA</h2>
+<h2> {{Lang::get('add.title')}}</h2>
 <a href="{{ URL::to('/accommodation/edit')}}/{{$idA}}">Edytuj</a>
 <a href="{{ URL::to('/accommodation/delete')}}/{{$idA}}" onclick="return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')">Usuń</a><br><br>
 <?php	
@@ -21,6 +21,6 @@ $acc = Accommodation::find($idA);
 ?>	
 
 <br><br><br>
-<a href="{{ URL::to('/accommodation')}}">Powrót do bazy</a>
+<a href="{{ URL::to('/accommodation')}}">{{Lang::get('add.bck')}}</a>
 
 @stop

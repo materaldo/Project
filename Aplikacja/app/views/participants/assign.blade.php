@@ -11,14 +11,14 @@
 @section('content')
 
     
-<h2>WYBIERZ MIEJSCE</h2>
+<h2>{{Lang::get('participant.choose')}}</h2>
 
 	<table>	
 		<tr>
 			<td></td>
-			<td>Nazwa, adres noclegu</td>
-			<td>Liczba wolnych miejsc</td>
-			<td>Liczba miejsc ogółem</td>
+			<td>{{Lang::get('place.nameaddress')}}</td>
+			<td>{{Lang::get('place.free')}}</td>
+			<td>{{Lang::get('place.all')}}</td>
 		</tr>	
 <?php
 	$accommod = Accommodation::all();
@@ -43,8 +43,8 @@
 
 <form action="{{URL::to('/participant/assign')}}" method="post">
 	<input type="hidden" name="parts" value="{{$sel}}">
-<input type="submit" id="submit" value="Dodaj">
-            <input type="reset" value="Wyczyść">
+<input type="submit" id="submit" value={{Lang::get('add.add')}}>
+            <input type="reset" value={{Lang::get('add.cln')}}>
 </form>
 
 @stop

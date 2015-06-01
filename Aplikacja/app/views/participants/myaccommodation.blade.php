@@ -106,7 +106,7 @@
 </p>
 
 <p><a href="{{URL::to('/participant/change')}}">{{Lang::get('participant.change')}}</a><br>
-<a href="{{URL::to('/index')}}">Powrót do strony głównej</a></p>
+<a href="{{URL::to('/index')}}">{{Lang::get('participant.bck')}}</a></p>
 
 		
 <br><br>

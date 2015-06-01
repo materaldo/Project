@@ -9,8 +9,7 @@
 @stop
 
 @section('content')
-<h2>AKTUALNY PRZYDZIAŁ MIEJSC NOCLEGOWYCH</h2>
-<p> nie wiem czemu tu jest taka przerwa!!!!</p>
+<h2>{{Lang::get('assignment.title')}}</h2>
 <?php
 	echo "<table>";
 	$groups=Group::where('confirmed', '=', true)->get();
@@ -40,6 +39,6 @@
 	echo "</table>";
 ?>
 
-<a href="{{URL::to('/management')}}">Powrót</a>
+<a href="{{URL::to('/management')}}">{{Lang::get('assignment.back')}}</a>
 
 @stop

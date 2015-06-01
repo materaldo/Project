@@ -25,7 +25,23 @@ return array(
 	'doc' => "Numer dokumentu:",
 	'ins' => "Numer ubezpieczenia:",
 	'add' => "Dodaj",
-	'cln' => "Wyczyść"
+	'cln' => "Wyczyść",
+	
+	
+	
+	'nameP' => 'Nazwa',
+	'street' => 'Ulica',
+	'buildingN' => 'Numer budynku',
+	'postcode' => 'Kod pocztowy',
+	'city' => 'miejscowość',
+	'map' => 'Mapa Google',
+	'allP' => 'Udostępniane miejsca',
+	'img' => 'Zdjęcie',
+	'confirm' => 'Zatwierdź'
+	
+	
+	
+	
 	
 
 

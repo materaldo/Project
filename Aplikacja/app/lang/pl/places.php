@@ -12,15 +12,11 @@ return array(
 	| as the size rules. Feel free to tweak each of these messages here.
 	|
 	*/
-
-	'welcome' => "Witaj",
-	'accommodation' => "Twoe miejsce zakwaterowania to: ",
-	'change' => "Chcę zmienić zakwaterowanie",
-	
-	'choose' => 'WYBIERZ MIEJSCE',
-	'bck' => 'Powrót',
-	
-	
+	'title' => 'Baza Noclegowa',
+	'bck' => 'Powrót do bazy',
+	'nameaddress' => 'Nazwa, adres noclegu',
+	'free' => 'Wolne miejsca',
+	'all' => 'Miejsca ogółem'
 	
 	
 
