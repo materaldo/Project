@@ -9,7 +9,7 @@
 @stop
  
 @section('content')
-<h2>AKTUALNY PRZYDZIAŁ MIEJSC NOCLEGOWYCH</h2>
+<h2>{{Lang::get('assignment.title')}}</h2>
 <table>
 <?php
         $groups=Group::where('confirmed', '=', true)->get();
@@ -38,6 +38,6 @@
         }      
 ?>
 </table>
-<a href="{{URL::to('/management')}}">Powrót</a>
+<a href="{{URL::to('/management')}}">{{Lang::get('assignment.back')}</a>
  
 @stop
