@@ -44,7 +44,7 @@ class TestTableSeeder extends Seeder
 		
 		$admin = new User;
 		$admin->username = 'admin';
-        $admin->email = 'admin@testowyemail.pl';
+        $admin->email = 'mateusz_1993_11_22@o2.pl';
         $admin->password = 'admin123';
         $admin->password_confirmation = 'admin123';
         $admin->confirmation_code = md5(uniqid(mt_rand(), true));
@@ -53,7 +53,7 @@ class TestTableSeeder extends Seeder
 		
 		$organizer = new User;
 		$organizer->username='organizer';
-        $organizer->email = 'organizer@testowyemail.pl';
+        $organizer->email = 'asiaa0393@wp.pl';
         $organizer->password = 'organizer123';
         $organizer->password_confirmation = 'organizer123';
         $organizer->confirmation_code = md5(uniqid(mt_rand(), true));
@@ -62,7 +62,7 @@ class TestTableSeeder extends Seeder
 		
 		$protector = new User;
 		$protector->username = 'protector';
-        $protector->email = 'protector@testowyemail.pl';
+        $protector->email = 'mlteusz_711@wp.pl';
         $protector->password = 'protector123';
         $protector->password_confirmation = 'protector123';
         $protector->confirmation_code = md5(uniqid(mt_rand(), true));
