@@ -17,7 +17,7 @@ Route::get('/', function()
 });
 */
 
-Route::get('{lang}',
+Route::get('lang/{lang}',
     array(
         'as' => 'language.select',
         'uses' => 'HomeController@select'

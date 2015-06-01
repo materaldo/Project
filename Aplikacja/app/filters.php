@@ -26,7 +26,7 @@ App::after(function($request, $response)
 //Entrust::routeNeedsPermission('management', 'perm1'); //dostep z wykorzystaniem permisji
 
 Entrust::routeNeedsPermission('management', 'perm1');//dostep do zarzadzania dla adminow, organizatorow	
-Entrust::routeNeedsPermission('language', 'perm2');//dostep do jezykow dla admina
+Entrust::routeNeedsPermission('language*', 'perm2');//dostep do jezykow dla admina
 Entrust::routeNeedsPermission('country*', 'perm2');//jw
 
 /*
