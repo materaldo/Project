@@ -182,15 +182,6 @@ class TestTableSeeder extends Seeder
 		$participant7->attachRole($roleParticipant);
 		//$superorg->attachRole($roleSuperOrg);
 		
-		$management = new Permission;
-		$management->name = 'management';
-		$management->display_name = 'Zarzadzanie';
-		$management->save();
-		
-		$roleAdmin->perms()->sync(array($management->id));
-		$roleOrganizer->perms()->sync(array($management->id));
-		
-		
 		//kolejny seed po jezykach i krajach
 		//Protector::create(['id'=>'3','first_name'=>'Michał','last_name'=>'Nowak','date_of_birth'=>'22.12.1990','phone_number'=>'38473923427','id_coun'=>'1','id_first_lang'=>'2','document_number'=>'d82j83d9d','insurance_number'=>'jd29h3389j']);
 		//Group::create(['id_coun'=>'1','id_first_lang'=>'2', 'id_prot'=>'3', 'number_of_people'=>'22', 'mean_of_transport'=>'Autobus']);
