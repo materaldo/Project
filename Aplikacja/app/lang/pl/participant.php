@@ -14,11 +14,12 @@ return array(
 	*/
 
 	'welcome' => "Witaj",
-	'accommodation' => "Twoe miejsce zakwaterowania to: ",
+	'accommodation' => "Twoje miejsce zakwaterowania to: ",
 	'change' => "Chcę zmienić zakwaterowanie",
 	
 	'choose' => 'WYBIERZ MIEJSCE',
 	'bck' => 'Powrót',
+	'soon' => 'Jeszcze nie przydzielono miejsca'
 	
 	
 	

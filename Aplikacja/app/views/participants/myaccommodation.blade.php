@@ -28,13 +28,13 @@
 	
 	else
 	{ 
-		echo  'Wkrótce...' ;
+		echo  Lang::get('participant.soon') ;
 	}
 ?>
 </p>
 
 <p><a href="{{URL::to('/participant/change')}}">{{Lang::get('participant.change')}}</a></p>
-<p><a href="{{URL::to('/participant/change')}}">{{Lang::get('participant.change')}}</a><br>
-<a href="{{URL::to('/index')}}">{{Lang::get('participant.bck')}}</a></p>
+
+<p><a href="{{URL::to('/index')}}">{{Lang::get('participant.bck')}}</a></p>
 
 @stop

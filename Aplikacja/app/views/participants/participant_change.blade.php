@@ -36,7 +36,7 @@
               {{Lang::get('participantChange.closer')}}<input name="Place" type="text" size="50" maxlength="50" placeholder={{Lang::get('participantChange.localization')}}></p>
 			  
 			  <p><input name="przyczyna5" type="checkbox" id = 'r5'>
-              {{Lang::get('participantChange.other')}}<input name="Other" type="text" size="50" maxlength="50" placeholder="{{Lang::get('participantChange.res')}}></p>
+              {{Lang::get('participantChange.other')}}<input name="Other" type="text" size="50" maxlength="50" placeholder={{Lang::get('participantChange.res')}}></p>
 			  
 			  <p>{{Lang::get('participantChange.info1')}}<b>{{Lang::get('participantChange.info2')}}</b></p>
 			  <p>{{Lang::get('participantChange.info3')}}<a href="mailto:nasz.admin@charytatywna.org.pl">{{Lang::get('participantChange.info4')}}</a></p>

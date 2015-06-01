@@ -16,7 +16,7 @@ return array(
 	'replacmentInfo' => 'Please fill out the form for accommodation preferences. This will help us in to find the right place for you.',
 	'reason' => 'Enter a reason:',
 	'accomodationWith' => 'I want to be accommodated together with:',
-	'nameInput' => 'Enter here a name of the person you want to be accommodated with',
+	'nameInput' => 'Nameof person',
 	'standard' => 'I am not satisfied with the standard',
 	'expensive' => 'My accommodation is to expensive',
 	'closer' => 'I want to be accommodated closer to',

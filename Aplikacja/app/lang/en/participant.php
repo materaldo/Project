@@ -15,7 +15,11 @@ return array(
 
 	'welcome' => "Welcome",
 	'accommodation' => "Your place of accommodation: ",
-	'change' => "I want to change my accommodation"
+	'change' => "I want to change my accommodation",
+	
+	'choose' => 'Choose accommodation',
+	'bck' => 'Back',
+	'soon' => 'Still not allocated a place'
 
 
 );

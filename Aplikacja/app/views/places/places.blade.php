@@ -11,15 +11,15 @@
 
 @section('content')
 
-<h2>{{Lang::get('place.title')}}</h2>
+<h2>{{Lang::get('places.title')}}</h2>
 <a href="{{ URL::to('/accommodation/new')}}">{{Lang::get('add.add')}}</a>
 
 	<table>	
 		<tr>
 			<td></td>
-			<td>{{Lang::get('place.nameaddress')}}</td>
-			<td>{{Lang::get('place.free')}}</td>
-			<td>{{Lang::get('place.all')}}</td>
+			<td>{{Lang::get('places.nameaddress')}}</td>
+			<td>{{Lang::get('places.free')}}</td>
+			<td>{{Lang::get('places.all')}}</td>
 		</tr>	
 <?php
 	$accommod = Accommodation::all();
