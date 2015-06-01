@@ -13,7 +13,6 @@
     <label>Tytuł: </label><input name = "title" id="title" type = "text" size = "53" maxlength = "255">
 	<input type="submit" id="submit" value="Wyślij">
 </form>
-	<textarea rows="4" cols="50" form="mailForm" name="emailText" id="emailText">
-            Treść maila
+	<textarea rows="4" cols="50" form="mailForm" name="emailText" id="emailText">Treść maila
     </textarea>
 @stop
