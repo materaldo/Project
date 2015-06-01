@@ -12,7 +12,7 @@ return array(
 	| as the size rules. Feel free to tweak each of these messages here.
 	|
 	*/
-	'title' => 'Accommodation Base',
+	'title' => 'ACCOMMODATION BASE',
 	'bck' => 'Back to base',
 	'nameaddress' => 'Accommodation name, address',
 	'free' => 'Available places',
