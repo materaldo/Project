@@ -26,8 +26,8 @@
 	
 	foreach ($accommod as $acc)
 		{
-			$usersCount = DB::table('participants')->where('id_acco', '=', $idAcc)->count();
-			$usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $idAcc)->count();
+			$usersCount = DB::table('participants')->where('id_acco', '=', $acc->id)->count();
+			$usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $acc->id)->count();
 		
 			$acc->free_places=$acc->all_places-$usersCount;
 			$acc->save();
