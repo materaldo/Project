@@ -58,33 +58,17 @@ class ParticipantController extends BaseController {
 		for ($i=1; $i<sizeof($arr); $i++)
 		{
 		$us=Participant::where('id', '=', $arr[$i])->first();
-            if($us->id_acco!=null)
-            {
-                    $acc = Accommodation::where('id', '=', $us->id_acco);
-                $temp = $acc ->free_places;
-                    $temp++;
-                $acc->free_places = $temp;
-                    $acc->save();
-            }
 		
 		if (!isset($us)) 
 		{
 			$us=Protector::where('id', '=', $arr[$i])->first();
-            if($us->id_acco!=null)
-            {
-                $acc = Accommodation::where('id', '=', $us->id_acco);
-                $temp = $acc->free_places;
-                $temp++;
-                $acc->free_places = $temp;
-                $acc->save();
-                }
 		}
 		$us->id_acco=$idAcc;
 		$us->save();
 		}
 
 
-		
+
 		$usersCount = DB::table('participants')->where('id_acco', '=', $idAcc)->count();
 		$usersCount = $usersCount + DB::table('protectors')->where('id_acco', '=', $idAcc)->count();
 		
@@ -110,9 +94,24 @@ class ParticipantController extends BaseController {
         {
             $us=Participant::where('id', '=', $arr[$i])->first();
 
+            if($us->id_acco!=null)
+            {
+                $acc = Accommodation::where('id','=',$us->id_acco)->first();
+                $temp = $acc->free_places;
+                $acc->free_places = $temp +1;
+                $acc->save();
+            }
+
             if (!isset($us))
             {
                 $us=Protector::where('id', '=', $arr[$i])->first();
+                if($us->id_acco!=null)
+                {
+                    $acc = Accommodation::where('id','=', $us->id_acco)->first();
+                    $temp = $acc->free_places;
+                    $acc->free_places = $temp +1;
+                    $acc->save();
+                }
             }
             $us->id_acco=$idAcc;
             $us->save();
