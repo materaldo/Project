@@ -25,7 +25,16 @@ App::after(function($request, $response)
 //admin organizator
 Entrust::routeNeedsPermission('organizer/message', 'perm5');
 Entrust::routeNeedsPermission('management', 'perm5');
-Entrust::routeNeedsPermission('accommodation', 'perm5');
+Entrust::routeNeedsPermission('accommodation*', 'perm5');
+Entrust::routeNeedsPermission('group', 'perm5');
+Entrust::routeNeedsPermission('group/details*', 'perm5');
+Entrust::routeNeedsPermission('group/chooseplace*', 'perm5');
+Entrust::routeNeedsPermission('group/split*', 'perm5');
+Entrust::routeNeedsPermission('group/unconfirmed', 'perm5');
+Entrust::routeNeedsPermission('group/assign*', 'perm5');
+Entrust::routeNeedsPermission('group/assignment', 'perm5');
+Entrust::routeNeedsPermission('group/dataexport', 'perm5');
+
 //admin	
 Entrust::routeNeedsPermission('language*', 'perm1');
 Entrust::routeNeedsPermission('country*', 'perm1');

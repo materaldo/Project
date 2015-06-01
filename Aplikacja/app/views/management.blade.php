@@ -19,16 +19,23 @@
 			<a class="clickMe" href="{{URL::to('/group/unconfirmed')}}">{{Lang::get('management.show')}}</a>
 		</li>
 	</ul>
-	
-<h4>{{Lang::get('management.baseManagement')}}</h4>
+<?php
+if (isset($userLogged))
+{
+if ($userLogged->hasRole("Admin"))
+{
+
+    echo "<h4>" . Lang::get('management.baseManagement') . "</h4>
 	<ul>
 		<li>
-			<a class="clickMe" href="{{URL::to('/language')}}">{{Lang::get('management.languages')}}</a>
+			<a class=\"clickMe\" href=\"" . URL::to('/language') . "\">" . Lang::get('management.languages') . "</a>
 		</li>
 		<li>
-			<a class="clickMe" href="{{URL::to('/country')}}">{{Lang::get('management.countries')}}</a>
+			<a class=\"clickMe\" href=\"" . URL::to('/country') . "\">" . Lang::get('management.countries') . "</a>
 		</li>
-	</ul>
+	</ul>";
+}
+}?>
 	
 <h4>{{Lang::get('management.allocationManagement')}}</h4>
 	<ul>
