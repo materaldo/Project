@@ -8,7 +8,6 @@ return array(
     'e_mail' => 'Email',
     'username_e_mail' => 'Username or Email',
 
-
 	'signup' => array(
 		'username' => 'Username',
 		'e_mail' => 'e-mail',
@@ -25,6 +24,8 @@ return array(
         'alt_phone_number' => 'Alternative telefon number',
         'country_select' => 'Country',
         'language_select' => 'Language',
+		'language_select_2' => 'Alternative language(optional)',
+		'language_select_3' => 'Alternative language(optional)',
         'document_number' => 'Document number',
         'insurance_number' => 'Insurance number',
     ),

@@ -24,6 +24,8 @@ return array(
         'alt_phone_number' => 'Alternatywny numer telefonu',
         'country_select' => 'Kraj',
         'language_select' => 'Język',
+		'language_select_2' => 'Alternatywny język(opcjonalnie)',
+		'language_select_3' => 'Alternatywny język(opcjonalnie)',
         'document_number' => 'Numer dokumentu',
         'insurance_number' => 'Numer ubezpieczenia',
     ),

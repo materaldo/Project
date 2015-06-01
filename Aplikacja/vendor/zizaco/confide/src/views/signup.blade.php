@@ -58,10 +58,17 @@
             <div class="form-group">
                 <h4><label for="country_select">{{{ Lang::get('confide::confide.signup.country_select') }}}</label></h4>
                 {{ Form::select('country_select', $countries)}}
-                <?php echo $countries[1]; ?>
             </div><br>
             <div class="form-group">
                 <h4><label for="language_select">{{{ Lang::get('confide::confide.signup.language_select') }}}</label></h4>
+                {{ Form::select('language_select', $languages)}}
+            </div><br>
+			<div class="form-group">
+                <h4><label for="language_select_2">{{{ Lang::get('confide::confide.signup.language_select_2') }}}</label></h4>
+                {{ Form::select('language_select', $languages)}}
+            </div><br>
+			<div class="form-group">
+                <h4><label for="language_select_3">{{{ Lang::get('confide::confide.signup.language_select_3') }}}</label></h4>
                 {{ Form::select('language_select', $languages)}}
             </div><br>
             <div class="form-group">

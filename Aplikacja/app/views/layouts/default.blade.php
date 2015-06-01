@@ -49,6 +49,7 @@ if (Auth::user()!==null)
                 <ul class=\"sf-menu\" id=\"nav\">
                     <li><a href=\"" . URL::to('/index') . "\">" . Lang::get('default.news') . "</a></li>
                     <li><a href=\"" . URL::to('/about') . "\">" . Lang::get('default.about') . "</a></li>
+                    <li><a href=\"" . URL::to('/accommodation') . "\">" . Lang::get('default.accommodation') . "</a></li>
 					<li><a href=\"" . URL::to('/management') . "\">" . Lang::get('default.management') . "</a></li>
 					<!--<li><a href=\"" . URL::to('/search') . "\">" . Lang::get('default.search') . "</a></li>-->
                     <li><a href=\"" . URL::to('/contact') . "\">" . Lang::get('default.contact') . "</a></li>

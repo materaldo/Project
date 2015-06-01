@@ -45,6 +45,10 @@ class UserRepository
         $prot->id_coun = $co->id;
         $la=DB::table('languages')->where('id', array_get($input, 'language_select'))->first();
         $prot->id_first_lang = $la->id;
+		$la2=DB::table('languages')->where('id', array_get($input, 'language_select_2'))->first();
+        $prot->id_second_lang = $la2->id;
+		$la3=DB::table('languages')->where('id', array_get($input, 'language_select_3'))->first();
+        $prot->id_third_lang = $la3->id;
         $prot->document_number = array_get($input, 'document_number');
         $prot->insurance_number  = array_get($input, 'insurance_number');
 
