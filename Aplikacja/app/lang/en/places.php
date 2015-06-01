@@ -24,7 +24,8 @@ return array(
 	'delete' => 'Delete',
 	'places' => 'Places(available/all): ',
 	'map' => 'Map: ',
-	'bck' => 'Back'
+	'back' => 'Back'
+	'add' => 'Add new place'
 	
 
 

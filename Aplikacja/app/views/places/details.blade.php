@@ -25,6 +25,6 @@ $acc = Accommodation::find($idA);
 ?>	
 
 <br><br><br>
-<a href="{{ URL::to('/accommodation')}}">{{Lang::get('places.bck')}}</a>
+<a href="{{ URL::to('/accommodation')}}">{{Lang::get('places.back')}}</a>
 
 @stop

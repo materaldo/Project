@@ -24,7 +24,9 @@ return array(
 	'delete' => 'Usuń',
 	'places' => 'Miejsca(wolne/ogółem): ',
 	'map' => 'Mapa: ',
-	'bck' => 'Powrót'
+	'back' => 'Powrót',
+	'add' => 'Dodaj nowe miejsce'
+	
 	
 
 
