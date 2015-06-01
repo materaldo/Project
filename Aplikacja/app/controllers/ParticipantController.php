@@ -37,12 +37,7 @@ class ParticipantController extends BaseController {
                 $string = $string . ":" . $selected;
             }
             return View::make('participants.assign')->with('sel', $string);
-        }
-        else {
-            echo "<script>alert(\"Musisz wybrać uczestników do przydziału\");</script>";
-            return View::make('groups.participantgroupdetails')->with('idG', $idG);
-        }
-        return View::make('index');
+            }
     }
 	public function getChange()
 	{
