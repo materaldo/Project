@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 	'replacement' => 'Accomodation change',
-	'replacmentInfo' => 'Please fill out the form for accommodation preferences. This will help us in to find the right place for you.',
+	'replacementInfo' => 'Please fill out the form for accommodation preferences. This will help us in to find the right place for you.',
 	'reason' => 'Enter a reason:',
 	'accomodationWith' => 'I want to be accommodated together with:',
 	'nameInput' => 'Nameof person',

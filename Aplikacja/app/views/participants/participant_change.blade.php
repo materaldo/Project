@@ -15,7 +15,7 @@
 
 
             <h1>{{Lang::get('participantChange.replacement')}}</h1>
-			<p>{{Lang::get('participantChange.replacmentInfo')}}</p>
+			<p>{{Lang::get('participantChange.replacementInfo')}}</p>
             
             <form name="FormularzZmiana" action="{{URL::to('/participant/sendmail')}}" method="post">
 		

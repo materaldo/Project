@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 	'replacement' => 'Zamiana zakwaterowania',
-	'replacmentInfo' => 'Proszę wypełnić formularz dotyczący preferencji miejsca zakwaterowania. Pomoże nam in znaleźć odpowiednie dla Ciebie miejsce.',
+	'replacementInfo' => 'Proszę wypełnić formularz dotyczący preferencji miejsca zakwaterowania. Pomoże nam in znaleźć odpowiednie dla Ciebie miejsce.',
 	'reason' => 'Podaj przyczynę zmiany miejsca:',
 	'accomodationWith' => 'Chcę być zakwaterowany razem z:',
 	'nameInput' => 'Tutaj wpisz imię i nazwisko osoby z którą chcesz mieszkać',
