@@ -18,7 +18,7 @@
                 $us->phone_number . "<br><br> Numer dokumentu: " . $us->document_number . "<br><br> Numer ubezpieczenia: " . $us->insurance_number;
         if ($us->id_acco != NULL) {
             $accus = Accommodation::where('id', '=', $us->id_acco)->first();
-            echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img src = \"" . $accus->image . " \"></center><br><br>  " . $accus->name . ", " . $accus->street . " <br><br> " . $accus->post_code .
+            echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img src = \"" . $accus->image . " \" . height=\"250\" width=\"250\"></center><br><br>  " . $accus->name . ", " . $accus->street . " <br><br> " . $accus->post_code .
                     "  " . $accus->city . " <br><br> Numer telefonu: " . $accus->phone_number . " <br><br> Mapa:  <a href =\"" . $accus->map . "\">Sprawdź mapę</a>";
         } else {
             echo "<br><br>Zakwaterowanie: brak";
@@ -31,29 +31,14 @@
                     $prot->phone_number . "<br><br> Numer dokumentu: " . $prot->document_number . "<br><br> Numer ubezpieczenia: " . $prot->insurance_number;
             if ($prot->id_acco != NULL) {
                 $accus = Accommodation::where('id', '=', $prot->id_acco)->first();
-                echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img src = \"" . $accus->image . " \"></center><br><br>  " . $accus->name . ", " . $accus->street . " <br><br> " . $accus->post_code .
+                echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img src = \"" . $accus->image . " \" .  height=\"250\" width=\"250\"></center><br><br>  " . $accus->name . ", " . $accus->street . " <br><br> " . $accus->post_code .
                         "  " . $accus->city . " <br><br> Numer telefonu: " . $accus->phone_number . " <br><br> Mapa:  <a href =\"" . $accus->map . "\">Sprawdź mapę</a>";
             } else {
                 echo "<br><br>Zakwaterowanie: brak";
             }
         }
-
     }
 
     ?>
-   {{-- <?php
 
-    $part = Group::where('id_prot', '=', $idU)->first();
-
-    if ($part ->id!=null) {
-        echo "<br><br><form action=" . URL::to('/group/participantdetails') . "/" . $part->id . ">
-        <input type=\"submit\" value=\"Wróć\"></form>";
-                }
-    else {
-                 $part = Participant::where('id', '=', $idU)->first();
-
-    echo "<br><br><form action=" . URL::to('/group/participantdetails') . "/" . $part->id_gr . ">
-        <input type=\"submit\" value=\"Wróć\"></form>";
-    }
-    ?>--}}
 @stop
