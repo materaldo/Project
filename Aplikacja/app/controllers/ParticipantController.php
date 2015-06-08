@@ -116,7 +116,6 @@ class ParticipantController extends BaseController {
                 $temp = $acc->free_places;
                 $acc->free_places = $temp -1;
                 $acc->save();
-                echo $acc->free_places;
                 $us->save();
 
 

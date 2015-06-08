@@ -77,11 +77,5 @@
         }
     }
     ?>
-    <?php
-
-
-        echo "<br><br><br><form action=" . URL::previous() .">
-    <input type=\"submit\" value=\"Wróć\"></form>";
-   ?>
 
 @stop
