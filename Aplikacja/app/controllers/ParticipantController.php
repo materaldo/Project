@@ -92,31 +92,50 @@ class ParticipantController extends BaseController {
             return View::make('groups.management')->with('conf', '1');
         }
 
-        for ($i=1; $i<sizeof($arr); $i++)
-        {
-            $us=Participant::where('id', '=', $arr[$i])->first();
-
-            if($us->id_acco!=null)
-            {
-                $acc = Accommodation::where('id','=',$us->id_acco)->first();
-                $temp = $acc->free_places;
-                $acc->free_places = $temp +1;
-                $acc->save();
-            }
-
-            if (!isset($us))
-            {
-                $us=Protector::where('id', '=', $arr[$i])->first();
-                if($us->id_acco!=null)
-                {
-                    $acc = Accommodation::where('id','=', $us->id_acco)->first();
+        for ($i=1; $i<sizeof($arr); $i++) {
+            $us = Participant::where('id', '=', $arr[$i])->first();
+            if ($us != null) {
+                if ($us->id_acco != null) {
+                    $acc = Accommodation::where('id', '=', $us->id_acco)->first();
                     $temp = $acc->free_places;
-                    $acc->free_places = $temp +1;
+                    $acc->free_places = $temp + 1;
                     $acc->save();
                 }
+
+                if (!isset($us)) {
+                    $us = Protector::where('id', '=', $arr[$i])->first();
+                    if ($us->id_acco != null) {
+                        $acc = Accommodation::where('id', '=', $us->id_acco)->first();
+                        $temp = $acc->free_places;
+                        $acc->free_places = $temp + 1;
+                        $acc->save();
+                    }
+                }
+                $us->id_acco = $idAcc;
+                $us->save();
             }
-            $us->id_acco=$idAcc;
-            $us->save();
+            else {
+                $us = Protector::where('id', '=', $arr[$i])->first();
+                if ($us->id_acco != null) {
+                    $acc = Accommodation::where('id', '=', $us->id_acco)->first();
+                    $temp = $acc->free_places;
+                    $acc->free_places = $temp + 1;
+                    $acc->save();
+                }
+
+                if (!isset($us)) {
+                    $us = Protector::where('id', '=', $arr[$i])->first();
+                    if ($us->id_acco != null) {
+                        $acc = Accommodation::where('id', '=', $us->id_acco)->first();
+                        $temp = $acc->free_places;
+                        $acc->free_places = $temp + 1;
+                        $acc->save();
+                    }
+                }
+                $us->id_acco = $idAcc;
+                $us->save();
+            }
+            
         }
 
         $usersCount = DB::table('participants')->where('id_acco', '=', $idAcc)->count();

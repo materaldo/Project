@@ -9,6 +9,7 @@
 @stop
 
 @section('content')
+    <p>Jako opiekun grupy jesteś do niej przydzielany automatycznie.</p>
     <?php
     $grouped_people = DB::table('participants')->where('id_gr', '=', $idG)->count();
     $picked_group = DB::table('groups')->where('id', '=', $idG)->first();

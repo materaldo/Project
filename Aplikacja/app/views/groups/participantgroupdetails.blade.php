@@ -43,11 +43,27 @@
 
 
     $participants=Participant::where('id_gr', '=', $gr->id)->get();
+    $group = Group::where('id', '=', $idG)->first();
+    $protector=Protector::where('id', '=', $group->id_prot)->first();
     echo "<form action=\"" . URL::to('/participant/chooseplaceprotector/'. $idG ).   "\" method=\"post\"
     {{-- onsubmit=\"return validate()\"--}}><table>";
 
+
+        echo "<tr>
+					<td>
+						<input type=\"checkbox\"  id = \"checked\" name=\"participants[]\" value=\"". $protector->id ."\">
+					</td>
+					<td><b>"
+                . $protector->first_name . " " . $protector->last_name ."
+					</b></td>
+					<td>
+						<a href=" . URL::to('/participant/details') . "/" . $protector->id . "> Szczegóły</a>
+					</td>
+				</tr>";
+
     foreach ($participants as $part)
     {
+
         echo "<tr>
 					<td>
 						<input type=\"checkbox\"  id = \"checked\" name=\"participants[]\" value=\"". $part->id ."\">
