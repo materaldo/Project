@@ -12,11 +12,11 @@ return array(
 	| as the size rules. Feel free to tweak each of these messages here.
 	|
 	*/
-	'replacement' => 'Accomodation change',
+	'replacement' => 'Accommodation change',
 	'replacementInfo' => 'Please fill out the form for accommodation preferences. This will help us in to find the right place for you.',
 	'reason' => 'Enter a reason:',
 	'accomodationWith' => 'I want to be accommodated together with:',
-	'nameInput' => 'Nameof person',
+	'nameInput' => 'Name of person',
 	'standard' => 'I am not satisfied with the standard',
 	'expensive' => 'My accommodation is to expensive',
 	'closer' => 'I want to be accommodated closer to',

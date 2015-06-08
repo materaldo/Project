@@ -26,9 +26,9 @@ return array(
 	'age' => 'Age',
 	'searchBTN' => 'Search',
 	'clearBTN' => 'Clear',
-	'email' => 'e-mail',
+	'email' => 'E-mail',
 	'nameGR' => 'Name',
-	'members' => 'Amount of members',
+	'members' => 'Number of members',
 	'hotel' => 'Name',
 	'type' => 'Type'
 	

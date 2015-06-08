@@ -16,7 +16,7 @@
 <a href="{{ URL::to('/accommodation/delete')}}/{{$idA}}" onclick="return confirm('Czy na pewno chcesz usunąć to miejsce z bazy noclegów?')">{{Lang::get('places.delete')}}</a><br><br>
 <?php	
 $acc = Accommodation::find($idA);
-	echo "<img style=\"max-width:60%;\" src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\"/><h2> " . $acc->name . 
+	echo "<img style=\"max-width:40%;\" src=\"" . $acc->image ."\" alt=\"" . $acc->name ."\"/><h2> " . $acc->name . 
 	"</h2><strong>" . Lang::get('places.address') . "</strong>: " . $acc->street . " " . $acc->building . "<br>" . $acc->post_code . " " . $acc->city . 
 	"<br><br><strong>" . Lang::get('places.contact') . "</strong>" . $acc->phone_number . 
 	"<br><br><strong>" . Lang::get('places.places') . "</strong>" . $acc->free_places . "/" . $acc->all_places . 

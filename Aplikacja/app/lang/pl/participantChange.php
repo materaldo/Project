@@ -13,22 +13,22 @@ return array(
 	|
 	*/
 	'replacement' => 'Zamiana zakwaterowania',
-	'replacementInfo' => 'Proszę wypełnić formularz dotyczący preferencji miejsca zakwaterowania. Pomoże nam in znaleźć odpowiednie dla Ciebie miejsce.',
+	'replacementInfo' => 'Proszę wypełnić formularz dotyczący preferencji miejsca zakwaterowania. Pomoże nam on znaleźć odpowiednie dla Ciebie miejsce.',
 	'reason' => 'Podaj przyczynę zmiany miejsca:',
 	'accomodationWith' => 'Chcę być zakwaterowany razem z:',
-	'nameInput' => 'Tutaj wpisz imię i nazwisko osoby z którą chcesz mieszkać',
+	'nameInput' => 'Tutaj wpisz imię i nazwisko osoby, z którą chcesz mieszkać',
 	'standard' => 'Nie jestem zadowolony ze standardu',
-	'expensive' => 'Miejsce, do którego mnie przydzielono jest za drogie',
+	'expensive' => 'Miejsce, do którego mnie przydzielono, jest za drogie',
 	'closer' => 'Chcę mieszkać bliżej',
 	'localization' => "Podaj lokalizację, która Cię interesuje",
 	'other' => 'Inne',
-	'res' => 'podaj przyczynę',
-	'info1' => 'W miarę możliwości postaramy się dobrać odpowiedznie dla Ciebie miejsce.',
+	'res' => 'Podaj przyczynę',
+	'info1' => 'W miarę możliwości postaramy się dobrać odpowiednie dla Ciebie miejsce.',
 	'info2' => 'Twoje aktualne miejsce zakwaterowania może nie ulec zmianie z powodu braku miejsc spełniających Twoje kryteria!',
 	'info3' => 'W razie pytań prosimy dzwonić pod numer: 666 453 242 lub kontakt',
 	'info4' => ' mailowy',
-	'send' => 'wyślij',
-	'reset' => 'wyczyść',
-	'back' => 'powrót'
+	'send' => 'Wyślij',
+	'reset' => 'Wyczyść',
+	'back' => 'Powrót'
 
 );
