@@ -14,7 +14,6 @@ class GroupController extends BaseController {
         {
             $countriesArr[$count->id] =$count->country;
         }
-
         $languages = Language::all();
         $languagesArr = array();
         foreach($languages as $lang)

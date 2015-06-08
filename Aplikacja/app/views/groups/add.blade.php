@@ -11,7 +11,6 @@
 
 
 @section('content')
-    <p> Opiekun grupy jest dodawany automatycznie, więc nie uwzględniaj go przy liczbie osób!</p>
     <form action=" {{URL::to('/group/add')}}" method="post">
         <h4><label>{{Lang::get('group.numPeople')}}<br>
                 <input name="num_of_people" id="num_of_people" type="text" size="28" maxlength="20" required>
