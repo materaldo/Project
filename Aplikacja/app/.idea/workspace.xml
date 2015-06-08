@@ -114,22 +114,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParticipantController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ParticipantController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/ParticipantController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94014084" vertical-offset="1336" max-vertical-offset="4199">
+            <state vertical-scroll-proportion="-20.538462" vertical-offset="1336" max-vertical-offset="4199">
               <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userdetails.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userdetails.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/participants/userdetails.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.307693" vertical-offset="265" max-vertical-offset="833">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="0.7306338" vertical-offset="605" max-vertical-offset="1173">
+              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+              <folding>
+                <marker date="1433775436790" expanded="true" signature="776:790" placeholder="..." />
+                <marker date="1433775436790" expanded="true" signature="2013:2027" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,8 +179,8 @@
         <option value="$PROJECT_DIR$/controllers/GroupController.php" />
         <option value="$PROJECT_DIR$/views/groups/participantgroupdetails.blade.php" />
         <option value="$PROJECT_DIR$/views/participants/participantgroupassign.blade.php" />
-        <option value="$PROJECT_DIR$/views/participants/userdetails.blade.php" />
         <option value="$PROJECT_DIR$/controllers/ParticipantController.php" />
+        <option value="$PROJECT_DIR$/views/participants/userdetails.blade.php" />
       </list>
     </option>
   </component>
@@ -881,19 +884,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/participants/userdetails.blade.php">
+    <entry file="file://$PROJECT_DIR$/controllers/ParticipantController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.307693" vertical-offset="265" max-vertical-offset="833">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state vertical-scroll-proportion="-20.538462" vertical-offset="1336" max-vertical-offset="4199">
+          <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ParticipantController.php">
+    <entry file="file://$PROJECT_DIR$/views/participants/userdetails.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94014084" vertical-offset="1336" max-vertical-offset="4199">
-          <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
-          <folding />
+        <state vertical-scroll-proportion="0.7306338" vertical-offset="605" max-vertical-offset="1173">
+          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+          <folding>
+            <marker date="1433775436790" expanded="true" signature="776:790" placeholder="..." />
+            <marker date="1433775436790" expanded="true" signature="2013:2027" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

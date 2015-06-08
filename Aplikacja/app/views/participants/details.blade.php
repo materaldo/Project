@@ -20,7 +20,8 @@
         if($us->id_acco != NULL)
             {
                 $accus =Accommodation::where('id', '=', $us->id_acco)->first();
-                echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img src = \"" . $accus->image . " \"></center><br><br>  " . $accus->name . ", " . $accus-> street . " <br><br> " . $accus-> post_code .
+				
+                echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img style=\"max-width:60%;\" src = \"" . $accus->image . " \"></img></center><br><br>  " . $accus->name . ", " . $accus-> street . " <br><br> " . $accus-> post_code .
                 "  " . $accus -> city . " <br><br> Numer telefonu: " . $accus-> phone_number . " <br><br> Mapa:  <a href =\"" . $accus->map . "\">Sprawdź mapę</a>";
             }
         else
@@ -36,7 +37,8 @@
     if($us->id_acco != NULL)
     {
         $accus =Accommodation::where('id', '=', $prot->id_acco)->first();
-        echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img src = \"" . $accus->image . " \"></center><br><br>  " . $accus->name . ", " . $accus-> street . " <br><br> " . $accus-> post_code .
+
+        echo "<br><br>Zakwaterowanie:<br><br> <center><img style=\"max-width:60%;\" src = \"" . $accus->image . " \"></img></center><br><br>  " . $accus->name . ", " . $accus-> street . " <br><br> " . $accus-> post_code .
                 "  " . $accus -> city . " <br><br> Numer telefonu: " . $accus-> phone_number . " <br><br> Mapa:  <a href =\"" . $accus->map . "\">Sprawdź mapę</a>";
     }
     else

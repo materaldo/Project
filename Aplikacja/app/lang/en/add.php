@@ -13,30 +13,30 @@ return array(
 	|
 	*/
 
-	'name' => "Name",
-	'surname' => "Surname",
-	'email' => "Email",
-	'date' => "Date",
-	'telephone' => "Telphone number",
-	'country' => "Country",
+	'name' => "Name:",
+	'surname' => "Surname:",
+	'email' => "E-mail:",
+	'date' => "Date of birth:",
+	'telephone' => "Phone number:",
+	'country' => "Country:",
 	'lang1' => "Language 1:",
 	'lang2' => "Language 2:",
 	'lang3' => "Language 3:",
-	'doc' => "Document number",
-	'ins' => "Insurance number",
+	'doc' => "Document number:",
+	'ins' => "Insurance number:",
 	'add' => "Add",
-	'cln' => "Clean",
+	'cln' => "Clear",
 	
 	
 	
-	'nameP' => 'Name',
-	'street' => 'Street',
-	'building' => 'Building number',
-	'postcode' => 'Post code',
-	'city' => 'City',
-	'map' => 'Google Map',
-	'allP' => 'All places',
-	'img' => 'Photo',
+	'nameP' => 'Name:',
+	'street' => 'Street:',
+	'building' => 'Building number:',
+	'postcode' => 'Post code:',
+	'city' => 'City:',
+	'map' => 'Google Map:',
+	'allP' => 'All places:',
+	'img' => 'Photo:',
 	'confirm' => 'Confirm'
 	
 	

@@ -12,7 +12,7 @@ return array(
 	| as the size rules. Feel free to tweak each of these messages here.
 	|
 	*/
-	'contact1' => 'WYD coordinator in Wrocław:'
+	'contact1' => 'WYD coordinator in Wroclaw:'
 
 
 );

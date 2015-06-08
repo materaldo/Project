@@ -27,16 +27,14 @@ return array(
 	'add' => "Dodaj",
 	'cln' => "Wyczyść",
 	
-	
-	
-	'nameP' => 'Nazwa',
-	'street' => 'Ulica',
-	'buildingN' => 'Numer budynku',
-	'postcode' => 'Kod pocztowy',
-	'city' => 'miejscowość',
-	'map' => 'Mapa Google',
-	'allP' => 'Udostępniane miejsca',
-	'img' => 'Zdjęcie',
+	'nameP' => 'Nazwa:',
+	'street' => 'Ulica:',
+	'building' => 'Numer budynku:',
+	'postcode' => 'Kod pocztowy:',
+	'city' => 'Miejscowość:',
+	'map' => 'Mapa Google:',
+	'allP' => 'Udostępniane miejsca:',
+	'img' => 'Zdjęcie:',
 	'confirm' => 'Zatwierdź'
 	
 	

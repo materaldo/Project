@@ -12,10 +12,10 @@ return array(
 	| as the size rules. Feel free to tweak each of these messages here.
 	|
 	*/
-	'numPeople' => 'Nummber of people',
+	'numPeople' => 'Number of people: ',
 	'transport' => 'Mean of transport: ',
 	'add' => 'Add',
-	'cln' => 'Clean'
+	'cln' => 'Clear'
 	
 
 
