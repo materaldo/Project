@@ -101,6 +101,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="add.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/participants/add.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6048689" vertical-offset="0" max-vertical-offset="1241">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="assign.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/groups/assign.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -124,14 +134,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userdetails.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userdetails.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/participants/userdetails.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7306338" vertical-offset="605" max-vertical-offset="1173">
-              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+            <state vertical-scroll-proportion="-15.307693" vertical-offset="588" max-vertical-offset="1156">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
-                <marker date="1433775436790" expanded="true" signature="776:790" placeholder="..." />
-                <marker date="1433775436790" expanded="true" signature="2013:2027" placeholder="..." />
+                <marker date="1433775573258" expanded="true" signature="776:790" placeholder="..." />
+                <marker date="1433775573258" expanded="true" signature="2013:2027" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -173,7 +183,6 @@
         <option value="$PROJECT_DIR$/views/groups/message.blade.php" />
         <option value="$PROJECT_DIR$/views/groups/assign.blade.php" />
         <option value="$PROJECT_DIR$/views/assignment.blade.php" />
-        <option value="$PROJECT_DIR$/views/participants/add.blade.php" />
         <option value="$PROJECT_DIR$/views/groups/add.blade.php" />
         <option value="$PROJECT_DIR$/views/participants/details.blade.php" />
         <option value="$PROJECT_DIR$/controllers/GroupController.php" />
@@ -181,6 +190,7 @@
         <option value="$PROJECT_DIR$/views/participants/participantgroupassign.blade.php" />
         <option value="$PROJECT_DIR$/controllers/ParticipantController.php" />
         <option value="$PROJECT_DIR$/views/participants/userdetails.blade.php" />
+        <option value="$PROJECT_DIR$/views/participants/add.blade.php" />
       </list>
     </option>
   </component>
@@ -420,9 +430,9 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23938507" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23792094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07401575" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07401575" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -762,14 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/participants/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033707865" vertical-offset="237" max-vertical-offset="1224">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/participants/participantgroupassign.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.230769" vertical-offset="370" max-vertical-offset="952">
@@ -894,12 +896,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/participants/userdetails.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7306338" vertical-offset="605" max-vertical-offset="1173">
-          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        <state vertical-scroll-proportion="-15.307693" vertical-offset="588" max-vertical-offset="1156">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
-            <marker date="1433775436790" expanded="true" signature="776:790" placeholder="..." />
-            <marker date="1433775436790" expanded="true" signature="2013:2027" placeholder="..." />
+            <marker date="1433775573258" expanded="true" signature="776:790" placeholder="..." />
+            <marker date="1433775573258" expanded="true" signature="2013:2027" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/participants/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6048689" vertical-offset="0" max-vertical-offset="1241">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

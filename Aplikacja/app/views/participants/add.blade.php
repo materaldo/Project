@@ -12,6 +12,7 @@
     <p>Jako opiekun grupy jesteś do niej przydzielany automatycznie.</p>
     <?php
     $grouped_people = DB::table('participants')->where('id_gr', '=', $idG)->count();
+    $grouped_people =$grouped_people+1;
     $picked_group = DB::table('groups')->where('id', '=', $idG)->first();
     if ($grouped_people == $picked_group->number_of_people) {
         echo "Dodałeś już wszystkich uczestników do tej grupy";
