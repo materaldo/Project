@@ -41,12 +41,10 @@
             "<br><a href=" . URL::to('/participant/add') . "/" . $gr->id . ">Kliknij by dodać członków</a></br>".
             "<br><br><h4>Członkowie: </h4>";
 
-
     $participants=Participant::where('id_gr', '=', $gr->id)->get();
     $group = Group::where('id', '=', $idG)->first();
     $protector=Protector::where('id', '=', $group->id_prot)->first();
-    echo "<form action=\"" . URL::to('/participant/chooseplaceprotector/'. $idG ).   "\" method=\"post\"
-    {{-- onsubmit=\"return validate()\"--}}><table>";
+    echo "<form action=\"" . URL::to('/participant/chooseplaceprotector/'. $idG ).   "\" method=\"post\"><table>";
 
 
         echo "<tr>
