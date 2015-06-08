@@ -15,6 +15,7 @@
     if ($us != null) {
 
 	$gr = Group::where('id', '=', $us->id_gr)->first();
+
     echo "<h2>" . $us->first_name . " " . $us->last_name . " </h2><b>Data urodzenia: </b>" . $us->date_of_birth . " <br><b>Numer telefonu:</b> " .
             $us->phone_number . "<br><b>Numer dokumentu:</b> " . $us->document_number . "<br><b>Numer ubezpieczenia:</b> " . $us->insurance_number . "<br>";
     if ($us->id_acco != NULL) {
@@ -76,4 +77,5 @@
         }
     }
     ?>
+
 @stop
