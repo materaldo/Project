@@ -41,6 +41,7 @@
 ?>
 </table>
 
+
 {{--<form action="{{URL::to('/participant/assign')}}" method="post">
 	<input type="hidden" name="parts" value="{{$sel}}">
 <input type="submit" id="submit" value="Dodaj">

@@ -161,20 +161,32 @@ class GroupController extends BaseController {
 	public function postAdd()
 	{
 		$num_of_people = Input::get('num_of_people');
+        if($num_of_people<=0)
+        {
+            $info = "Nie dodano grupy, liczba członków jest mniejsza od 0!";
+            return View::make('groups.info')->with('info', $info);
+        }
 		$mean_of_trans = Input::get('mean_of_trans');
 		$country=DB::table('countries')->where('id', Input::get('country_select'))->first();
 		$first_lang = DB::table('languages')->where('id', Input::get('language1_select'))->first();
 		$second_lang = DB::table('languages')->where('id', Input::get('language2_select'))->first();
 		$third_lang = DB::table('languages')->where('id', Input::get('language3_select'))->first();
+        $prot = Auth::id();
+        $protector = Protector::where('id', '=', $prot)->first();
 		$group = new Group();
 		$group -> number_of_people = $num_of_people;
 		$group -> mean_of_transport = $mean_of_trans;
-		$group -> id_prot = Auth::id();
+		$group -> id_prot = $protector->id;
         $group->id_coun = $country->id;
         $group -> id_first_lang = $first_lang->id;
 		$group -> id_second_lang = $second_lang->id;
 		$group -> id_third_lang = $third_lang->id;
 		$group->save();
+
+
+
+
+
         $info = "Dodano grupę, możesz teraz w panelu zarządzania dodać informacje o uczestnikach!";
 		return View::make('groups.info')->with('info', $info);
 	}

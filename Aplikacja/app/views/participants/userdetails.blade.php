@@ -14,6 +14,7 @@
     $us = Participant::where('id', '=', $idU)->first();
     if ($us != null) {
 
+
     echo "<h2>" . $us->first_name . " " . $us->last_name . " </h2><b>Data urodzenia: </b>" . $us->date_of_birth . " <br><b>Numer telefonu:</b> " .
             $us->phone_number . "<br><b>Numer dokumentu:</b> " . $us->document_number . "<br><b>Numer ubezpieczenia:</b> " . $us->insurance_number . "<br>";
     if ($us->id_acco != NULL) {
@@ -40,10 +41,37 @@
         } else {
             echo "<br><br>Zakwaterowanie: brak";
         }
+    } else {
+        $prot = Protector::where('id', '=', $idU)->first();
+        if ($prot != null) {
+
+            echo " Imię: " . $prot->first_name . "<br><br> Nazwisko: " . $prot->last_name . " <br><br> Data urodzenia: " . $prot->date_of_birth . " <br><br> Numer telefonu: " .
+                    $prot->phone_number . "<br><br> Numer dokumentu: " . $prot->document_number . "<br><br> Numer ubezpieczenia: " . $prot->insurance_number;
+            if ($prot->id_acco != NULL) {
+                $accus = Accommodation::where('id', '=', $prot->id_acco)->first();
+                echo "<br><br><center> Zakwaterowanie: </center><br><br> <center><img src = \"" . $accus->image . " \"></center><br><br>  " . $accus->name . ", " . $accus->street . " <br><br> " . $accus->post_code .
+                        "  " . $accus->city . " <br><br> Numer telefonu: " . $accus->phone_number . " <br><br> Mapa:  <a href =\"" . $accus->map . "\">Sprawdź mapę</a>";
+            } else {
+                echo "<br><br>Zakwaterowanie: brak";
             }
+        }
 
     }
 
     ?>
+   {{-- <?php
 
+    $part = Group::where('id_prot', '=', $idU)->first();
+
+    if ($part ->id!=null) {
+        echo "<br><br><form action=" . URL::to('/group/participantdetails') . "/" . $part->id . ">
+        <input type=\"submit\" value=\"Wróć\"></form>";
+                }
+    else {
+                 $part = Participant::where('id', '=', $idU)->first();
+
+    echo "<br><br><form action=" . URL::to('/group/participantdetails') . "/" . $part->id_gr . ">
+        <input type=\"submit\" value=\"Wróć\"></form>";
+    }
+    ?>--}}
 @stop
