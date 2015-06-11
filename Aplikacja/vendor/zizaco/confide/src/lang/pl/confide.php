@@ -52,6 +52,7 @@ return array(
         'wrong_confirmation' => 'Niepoprawny kod potwierdzający.',
         'password_forgot' => 'Informacja o zmianie hasła została wysłana na twój adres email.',
         'wrong_password_forgot' => 'Użytkownik nie istnieje.',
+		'password_confirmation' => 'Hasła są niezgodne.', 
         'password_reset' => 'Twoje hasło zostało zmienione.',
         'wrong_password_reset' => 'Niepoprawne hasło. Spróbuj ponownie.',
         'wrong_token' => 'Token resetowania hasła jest niepoprawny.',

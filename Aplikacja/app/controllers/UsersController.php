@@ -45,9 +45,7 @@ class UsersController extends Controller
         $user = $repo->signup(Input::all());
 
 		$prot = Role::where('name','=','Protector')->first();
-     //  die($prot->name);
-	   // $user->attachRole( $prot );
-		//$user->roles()->attach( $prot->id );
+     
 		
 		if ($user->id) {
             if (Config::get('confide::signup_email')) {
