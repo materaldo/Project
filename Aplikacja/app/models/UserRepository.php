@@ -35,28 +35,30 @@ class UserRepository
         $user->confirmation_code     = md5(uniqid(mt_rand(), true));
 
         // Save if valid. Password field will be hashed before save
-		if(isset($user->id))
-		{
+		
         $prot->first_name = array_get($input, 'first_name');
         $prot->last_name = array_get($input, 'last_name');
-        $prot->date_of_birth = array_get($input, 'date_of_birth');
+        $prot-> date_of_birth = array_get($input, 'date_of_birth');
         $prot->phone_number  = array_get($input, 'phone_number');
         $prot->alt_phone_number  = array_get($input, 'alt_phone_number');
-        $co=DB::table('countries')->where('id', array_get($input, 'country_select'))->first();
-        $prot->id_coun = $co->id;
+       // $co=DB::table('countries')->where('id', array_get($input, 'country_select'))->first();
+        //$prot->id_coun = $co->id;
+		$coun=Input::get('country_select');
         $lang1=Input::get('language_select');
         $lang2=Input::get('language_select2');
         $lang3=Input::get('language_select3');
+		
 		$prot->id_first_lang = $lang1;
         $prot->id_second_lang = $lang2;
         $prot->id_third_lang = $lang3;
+		$prot->id_coun = $coun;
 		
 		//$la=DB::table('languages')->where('id', array_get($input, 'language_select'))->first();
         //$prot->id_first_lang = $la->id;
         
 		$prot->document_number = array_get($input, 'document_number');
         $prot->insurance_number  = array_get($input, 'insurance_number');
-		}
+		
 		
 		$check=true;
 		$user2 = DB::table('users')->where('username', array_get($input, 'username'))->first();//User::where('username','=',Input::get('username'));//
