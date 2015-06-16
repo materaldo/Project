@@ -39,7 +39,7 @@
               {{Lang::get('participantChange.other')}}<input name="Other" type="text" size="50" maxlength="50" placeholder="{{Lang::get('participantChange.res')}}"></p>
 			  
 			  <p>{{Lang::get('participantChange.info1')}}<b>{{Lang::get('participantChange.info2')}}</b></p>
-			  <p>{{Lang::get('participantChange.info3')}}<a href="mailto:nasz.admin@charytatywna.org.pl">{{Lang::get('participantChange.info4')}}</a></p>
+			  <p>{{Lang::get('participantChange.info3')}}<a href="mailto:organizator@sdmwroc2016.pl">{{Lang::get('participantChange.info4')}}</a></p>
 				<p>
                <input type="submit" value={{Lang::get('participantChange.send')}}>
                <input type="reset" value={{Lang::get('participantChange.reset')}}>
