@@ -250,7 +250,7 @@ class ParticipantController extends BaseController {
                 }
                 Mail::queue('emails.acco_change', array('title' => 'Zmiana zakwaterowania' , 'tresc' => $tresc), function($message) use($user)
                 {
-                    $message->to('mlteusz_711@wp.pl')->subject('Zmiana zakwaterowania '. $user->email);
+                    $message->to('organizator@sdmwroc2016.pl')->subject('Zmiana zakwaterowania '. $user->email);
                 });
                 return View::make('index');
             } else {
