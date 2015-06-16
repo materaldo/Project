@@ -22,20 +22,20 @@
 
              <h3><label>{{Lang::get('participantChange.reason')}}</label></h3>
 			  
-              <p><input name="przyczyna1" type="checkbox" id = 'r1'>
+              <p><input name="przyczyna[]" type="checkbox" id = 'r1' value="1">
               {{Lang::get('participantChange.accomodationWith')}}
                  <input name="Imie" type="text" size="50" maxlength="50" placeholder="{{Lang::get('participantChange.nameInput')}}"></p>
              
-			 <p><input name="przyczyna2" type="checkbox" id = 'r2'>
+			 <p><input name="przyczyna[]" type="checkbox" id = 'r2' value="2">
              {{Lang::get('participantChange.standard')}}</p>
 			 
-			 <p><input name="przyczyna3" type="checkbox" id = 'r3'>
+			 <p><input name="przyczyna[]" type="checkbox" id = 'r3' value="3">
              {{Lang::get('participantChange.expensive')}}</p>
 			 
-			 <p><input name="przyczyna4" type="checkbox" id = 'r4'>
+			 <p><input name="przyczyna[]" type="checkbox" id = 'r4' value="4">
               {{Lang::get('participantChange.closer')}}<input name="Place" type="text" size="50" maxlength="50" placeholder="{{Lang::get('participantChange.localization')}}"></p>
 			  
-			  <p><input name="przyczyna5" type="checkbox" id = 'r5'>
+			  <p><input name="przyczyna[]" type="checkbox" id = 'r5' value="5">
               {{Lang::get('participantChange.other')}}<input name="Other" type="text" size="50" maxlength="50" placeholder="{{Lang::get('participantChange.res')}}"></p>
 			  
 			  <p>{{Lang::get('participantChange.info1')}}<b>{{Lang::get('participantChange.info2')}}</b></p>

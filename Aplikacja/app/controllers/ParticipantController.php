@@ -26,7 +26,8 @@ class ParticipantController extends BaseController {
         }
         else {
             echo "<script>alert(\"Musisz wybrać uczestników do przydziału\");</script>";
-        }
+            return Redirect::back();
+    }
 	}
     public function postChooseplaceprotector($idG)
     {
@@ -210,20 +211,61 @@ class ParticipantController extends BaseController {
         }
         return View::make('groups.management');
     }
-		public function postSendmail(){
+		public function postSendmail()
+        {
+
+            $id = Auth::id();
+            $user = User::where('id', '=', $id)->first();
+            if (isset($user)) {
+            $string="";
+            $select = Input::get('przyczyna');
+            if ($select != NULL) {
+                foreach ($select as $sel) {
+                    $string = $string . ":" . $sel;
+                }
+              //  echo $string;
+                $arr = explode(':', $string);
+                $tresc="";
+                foreach($arr as $i) {
+                    if ($i==1)
+                    {
+                        $tresc=$tresc . "Chcę mieszkać z: " . Input::get("Imie") . ". ";
+                    }
+                    if ($i==2)
+                    {
+                        $tresc=$tresc . "Nie jestem zadowolony/a ze standardu. ";
+                    }
+                    if ($i==3)
+                    {
+                        $tresc=$tresc . "Miejsce, do którego mnie przydzielono, jest za drogie. ";
+                    }
+                    if ($i==4)
+                    {
+                        $tresc=$tresc . "Chcę mieszkać bliżej miejsca: " . Input::get("Place") . ". ";
+                    }
+                    if ($i==5)
+                    {
+                        $tresc=$tresc . "Inny powód: " . Input::get("Other") . ". ";
+                    }
+                }
+                Mail::queue('emails.acco_change', array('title' => 'Zmiana zakwaterowania' , 'tresc' => $tresc), function($message) use($user)
+                {
+                    $message->to('mlteusz_711@wp.pl')->subject('Zmiana zakwaterowania '. $user->email);
+                });
+
+            } else {
+                echo "<script>alert(\"Musisz wybrać powód\");</script>";
+                return View::make('participants.participant_change');
+            }
+            }
 		
-		$id = Auth::id();
-		$res = Input::get('r1');
-		
-		
-		Mail::send('emails.change', array('key' => 'value'), function($message)
+	/*	Mail::send('emails.change', array('key' => 'value'), function($message)
 {
-		$message->to('joanna.drabik.93@gmail.com')->subject('Zmiana zakwaterowania');
+		$message->to('mlteusz_711@wp.pl')->subject('Zmiana zakwaterowania');
 		
 		
-		});
-		if(r1==true){
-		echo $id;}
+		});*/
+
 		
 		
 	}
