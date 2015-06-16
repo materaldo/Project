@@ -252,7 +252,7 @@ class ParticipantController extends BaseController {
                 {
                     $message->to('mlteusz_711@wp.pl')->subject('Zmiana zakwaterowania '. $user->email);
                 });
-
+                return View::make('index');
             } else {
                 echo "<script>alert(\"Musisz wybrać powód\");</script>";
                 return View::make('participants.participant_change');
