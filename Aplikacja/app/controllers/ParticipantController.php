@@ -255,7 +255,7 @@ class ParticipantController extends BaseController {
                 return View::make('index');
             } else {
                 echo "<script>alert(\"Musisz wybrać powód\");</script>";
-                return View::make('participants.participant_change');
+                return Redirect::back();
             }
             }
 		
@@ -265,8 +265,6 @@ class ParticipantController extends BaseController {
 		
 		
 		});*/
-
-		
 		
 	}
 
@@ -275,7 +273,6 @@ class ParticipantController extends BaseController {
 		return View::make('index');
 		
 	}
-	
 	public function getDetails($id)
 	{
 		return View::make('participants.userdetails')->with('idU', $id);
