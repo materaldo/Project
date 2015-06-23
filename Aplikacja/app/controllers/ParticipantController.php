@@ -2,18 +2,31 @@
 
 class ParticipantController extends BaseController {
 
+	/**
+	* @return view
+	*/
 	public function getIndex()
 	{
 		return View::make('index');
 	}
+	/**
+	* @return view 
+	*/
 	public function getAccommodation()
 	{
 		return View::make('participants.myaccommodation');
 	}
+	/**
+	* @return view
+	*/
 	public function getLost()
     {
         return View::make('participants.lost');
     }
+	/**
+	* takes checked participants in previous view and redirects them to /participants,assign with their id's
+	* @return depends on number of checked participants (if 0 redirects back)
+	*/
 	public function postChooseplace()
 	{
 		$sel = Input::get('participants');
@@ -29,6 +42,11 @@ class ParticipantController extends BaseController {
             return Redirect::back();
     }
 	}
+	/**
+	* @$idG is a group id  
+	* function separates checked participants id
+	* @return make view with $string - it's a reprezentation of group id and participants checked separeted with :
+	*/
     public function postChooseplaceprotector($idG)
     {
         $sel = Input::get('participants');
@@ -40,10 +58,19 @@ class ParticipantController extends BaseController {
             return View::make('participants.participantgroupassign')->with('sel', $string);
             }
     }
+	/**
+	* @return view
+	*/
 	public function getChange()
 	{
 		return View::make('participants.participant_change');
 	}
+	/**
+	* @$idAcc is an accomodation id, @$sel it's a reprezentation of group id and participants checked separeted with :  
+	* function add participants/protector to acoomodation made by organizer or admin
+	* depends on number of free places alert inform if an allocation was made
+	* @return view
+	*/
 	public function getAssign($idAcc,$sel)
 	{
 		$arr = explode(':', $sel);
@@ -81,6 +108,12 @@ class ParticipantController extends BaseController {
 		echo "<script>alert(\"Pomyślnie przydzielono do noclegu\");</script>";
 		return View::make('groups.groups')->with('conf', '1');
 	}
+	/**
+	* @$idAcc is an accomodation id, @$sel it's a reprezentation of group id and participants checked separeted with :  
+	* function add participants/protector to acoomodation made by protector
+	* depends on number of free places alert inform if an allocation was made
+	* @return view
+	*/
     public function getProtectorassign($idAcc,$sel)
     {
         $arr = explode(':', $sel);
@@ -132,7 +165,9 @@ class ParticipantController extends BaseController {
         echo "<script>alert(\"Pomyślnie przydzielono do noclegu\");</script>";
         return View::make('index');
     }
-
+	/**
+	* @return a form connected with data base using countries and languages tables
+	*/
 	public function getAdd($id)
 	{
         $countries = Country::all();
@@ -149,6 +184,12 @@ class ParticipantController extends BaseController {
         }
         return View::make('participants.add')->with('idG', $id)->with('countries', $countriesArr)->with('languages', $languagesArr);
 	}
+	/**
+	* @$id it's a group id  
+	* function add participants to data base 
+	* depends on mail input add user & participant.
+	* @return view
+	*/
     public function postAdduser($id)
     {
         $first_name = Input::get('first_name');
@@ -211,6 +252,10 @@ class ParticipantController extends BaseController {
         }
         return View::make('groups.management');
     }
+	/**
+	* 
+	* function sends mail to organizer about changing accomodation
+	*/
 		public function postSendmail()
         {
 

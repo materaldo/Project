@@ -1,8 +1,10 @@
 <?php
-
+/**
+* Class made to represent method to prevent xss attack. 
+*/
 class Common extends Eloquent {
 
-	/*
+/**
  * Method to strip tags globally.
  */
 public static function globalXssClean()
@@ -11,7 +13,11 @@ public static function globalXssClean()
     $sanitized = static::arrayStripTags(Input::get());
     Input::merge($sanitized);
 }
- 
+/**
+* Strip tags on $array, to prevent xss attack 
+* @$array is a input of a form. 
+* @return is a String without tags
+*/
 public static function arrayStripTags($array)
 {
     $result = array();
