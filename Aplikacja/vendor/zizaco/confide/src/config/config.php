@@ -70,6 +70,8 @@ return array(
     */
     'email_reset_password' =>       'confide::emails.passwordreset', // with $user and $token.
     'email_account_confirmation' => 'confide::emails.confirm', // with $user
+	'user_account_confirmation' => 'confide::emails.confirmuser', // with 
+
 
     /*
     |--------------------------------------------------------------------------

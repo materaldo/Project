@@ -1,3 +1,17 @@
+@extends ('layouts.default')
+
+@section('header')
+
+	{{App::setLocale(Session::get('lang', 'pl'));}}
+	<meta name="Description" content="" />
+	<meta name="Keywords" content="" />
+	<style>
+	fieldset {border: none}
+	</style>
+@stop
+
+@section('content')
+
 <form role="form" method="POST" action="{{{ URL::to('/users/login') }}}" accept-charset="UTF-8">
     <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
     <fieldset>
@@ -31,3 +45,5 @@
         </div>
     </fieldset>
 </form>
+
+@stop

@@ -8,13 +8,28 @@ return array(
     'e_mail' => 'Email',
     'username_e_mail' => 'Username or Email',
 
-    'signup' => array(
-        'title' => 'Signup',
-        'desc' => 'Signup for new account',
-        'confirmation_required' => 'Confirmation required',
+	'signup' => array(
+		'username' => 'Username',
+		'e_mail' => 'e-mail',
+		'password' => 'Password',
+		'username_e_mail' => 'Ussername or e-mail',
+        'title' => 'Registration',
+        'desc' => 'Register new account',
+        'confirmation_required' => '*(e-mail confirmation required)',
         'submit' => 'Create new account',
+        'first_name' => 'Name',
+        'last_name' => 'Surname',
+        'date_of_birth' => 'Date of birth',
+        'phone_number' => 'Telefon number',
+        'alt_phone_number' => 'Alternative telefon number',
+        'country_select' => 'Country',
+        'language_select' => 'Language',
+		'language_select_2' => 'Alternative language(optional)',
+		'language_select_3' => 'Alternative language(optional)',
+        'document_number' => 'Document number',
+        'insurance_number' => 'Insurance number',
     ),
-
+	
     'login' => array(
         'title' => 'Login',
         'desc' => 'Enter your credentials',
@@ -62,3 +77,7 @@ return array(
     ),
 
 );
+
+
+
+

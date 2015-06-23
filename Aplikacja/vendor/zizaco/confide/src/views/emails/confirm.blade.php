@@ -1,3 +1,4 @@
+
 <h1>{{ Lang::get('confide::confide.email.account_confirmation.subject') }}</h1>
 
 <p>{{ Lang::get('confide::confide.email.account_confirmation.greetings', array('name' => (isset($user['username'])) ? $user['username'] : $user['email'])) }},</p>
