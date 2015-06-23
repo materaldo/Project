@@ -2,6 +2,9 @@
 
 class OrganizerController extends BaseController {
 
+	/**
+	* @return view
+	*/
 	public function getIndex()
 	{
 		return View::make('index');
@@ -13,10 +16,17 @@ class OrganizerController extends BaseController {
 		$last_name = Input::get('last_name');
 		$email = Input::get('email');
 	}
+	/**
+	* @return view
+	*/
 	public function getMessage()
 	{
 		return View::make('organizers.message');
 	}
+	/**
+	* function sends mail to all protectors 
+	*@return view
+	*/
 	public function postMail()
 	{
 		$title = Input::get('title');
