@@ -1,15 +1,38 @@
 <?php
 
+/**
+ * AccommodationController Class
+ *
+ * Implements actions regarding accommodation management
+ */
 class AccommodationController extends BaseController {
 
+
+    /**
+     * Displays all places (accommodations) from database
+     *
+     * @return View returns view 'places/places'
+     */
 	public function getIndex()
 	{
 		return View::make('places.places');
 	}
+	
+    /**
+     * Displays the form for accommodation creation
+     *
+     * @return View returns view 'places/add'
+     */
 	public function getNew()
 	{
 		return View::make('places.add');
 	}
+	
+    /**
+     * Saves new accommodation and redirects to the view 'places/places'
+     *
+     * @return View returns view 'places/places' 
+	 */
 	public function postAdd()
 	{
 		$name = Input::get('name');
@@ -38,6 +61,7 @@ class AccommodationController extends BaseController {
 
 		return View::make('places.places');	
 	}
+   
 	public function postConfirm($id)
 	{
 		$name = Input::get('name');
@@ -64,6 +88,14 @@ class AccommodationController extends BaseController {
 		
 		return View::make('places.places');	
 	}	
+	
+	 /**
+     * Displays accommodation details
+     *
+	 * @param integer $id ID of accommodation
+	 *
+     * @return View returns view containing accommodation details or redirects to the list of accommodations
+     */
 	public function getDetails($id)
 	{
 		$acc=Accommodation::where('id','=', $id)->first();
@@ -72,7 +104,15 @@ class AccommodationController extends BaseController {
 		else
 			return Redirect::to('/accommodation');
 	}
-	public function getEdit($id)
+	
+	/**
+     * Displays edit form of accommodation
+     *
+	 * @param integer $id ID of accommodation
+	 *
+     * @return View returns view containing edit form or redirects to the list of accommodations
+     */
+	 public function getEdit($id)
 	{
 		$acc=Accommodation::where('id','=', $id)->first();
 		if(isset($acc->id))
@@ -80,6 +120,14 @@ class AccommodationController extends BaseController {
 		else
 			return Redirect::to('/accommodation');
 	}
+	
+	/**
+     * Deletes selected accommodation
+     *
+	 * @param integer $id ID of accommodation
+	 *
+     * @return View reditects to the list of accommodations
+     */
 	public function getDelete($id)
 	{
 		$acc=Accommodation::where('id','=', $id)->first();
