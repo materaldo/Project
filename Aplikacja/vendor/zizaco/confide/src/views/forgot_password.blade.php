@@ -1,17 +1,3 @@
-@extends ('layouts.default')
-
-@section('header')
-
-	{{App::setLocale(Session::get('lang', 'pl'));}}
-	<meta name="Description" content="" />
-	<meta name="Keywords" content="" />
-	<style>
-	fieldset {border: none}
-	</style>
-@stop
-
-@section('content')
-
 <form method="POST" action="{{ URL::to('/users/forgot_password') }}" accept-charset="UTF-8">
     <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
 
@@ -33,5 +19,3 @@
         <div class="alert">{{{ Session::get('notice') }}}</div>
     @endif
 </form>
-
-@stop

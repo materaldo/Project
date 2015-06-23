@@ -43,12 +43,12 @@ class UserValidator implements UserValidatorInterface
      */
     public $rules = [
         'create' => [
-            'username' => 'required',
+            'username' => 'alpha_dash',
             'email'    => 'required|email',
             'password' => 'required|min:4',
         ],
         'update' => [
-            'username' => 'required',
+            'username' => 'alpha_dash',
             'email'    => 'required|email',
             'password' => 'required|min:4',
         ]
@@ -70,7 +70,7 @@ class UserValidator implements UserValidatorInterface
         $result = $this->validateAttributes($user, $ruleset) ? true : false;
         $result = ($this->validatePassword($user) && $result) ? true : false;
         $result = ($this->validateIsUnique($user) && $result) ? true : false;
-	
+
         return $result;
     }
 
