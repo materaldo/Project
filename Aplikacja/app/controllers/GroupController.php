@@ -160,6 +160,7 @@ class GroupController extends BaseController {
 	public function postAdd()
 	{
 		$num_of_people = Input::get('num_of_people');
+
         if($num_of_people<=0)
         {
             $info = "Nie dodano grupy, liczba członków jest mniejsza od 0!";
