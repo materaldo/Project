@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class Protector
+ *
+ * Class representing instances of protectors in database
+ */
 class Protector extends Eloquent {
 
 	/**

@@ -78,6 +78,13 @@ class UserRepository
 		
     }
 
+	/**
+     * Signup a new account with the given parameters
+     *
+     * @param  array $input Array containing 'username', 'email' and 'password'.
+     *
+     * @return  User User object that may or may not be saved successfully. Check the id to make sure.
+     */
     public function signup2($input)
     {
         $user = new User;

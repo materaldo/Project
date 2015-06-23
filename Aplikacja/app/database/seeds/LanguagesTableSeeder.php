@@ -3,7 +3,11 @@
 
 class LanguagesTableSeeder extends Seeder 
 {
-
+	/**
+	 * Run the language seeds.
+	 *
+	 * @return void
+	 */
     public function run()
     {
         DB::table('languages')->delete();

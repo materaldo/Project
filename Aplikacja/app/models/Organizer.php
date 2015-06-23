@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class Organizer
+ *
+ * Class representing instances of organizers in database
+ */
 class Organizer extends Eloquent {
 
 	/**

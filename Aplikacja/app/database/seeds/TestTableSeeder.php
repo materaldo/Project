@@ -3,7 +3,11 @@
 
 class TestTableSeeder extends Seeder 
 {
-
+	/**
+	 * Run the data test seeds.
+	 *
+	 * @return void
+	 */
     public function run()
     {
        

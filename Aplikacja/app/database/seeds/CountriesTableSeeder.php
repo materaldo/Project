@@ -3,7 +3,11 @@
 
 class CountriesTableSeeder extends Seeder 
 {
-
+	/**
+	 * Run the country seeds.
+	 *
+	 * @return void
+	 */
     public function run()
     {
         DB::table('countries')->delete();

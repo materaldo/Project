@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class Group
+ *
+ * Class representing instances of groups in database
+ */
 class Group extends Eloquent {
 
 	/**

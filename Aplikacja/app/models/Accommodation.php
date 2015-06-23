@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class Administrator
+ *
+ * Class representing instances of accommodations in database
+ */
 class Accommodation extends Eloquent {
 
 	/**

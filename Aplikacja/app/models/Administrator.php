@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class Administrator
+ *
+ * Class representing instances of administrators in database
+ */
 class Administrator extends Eloquent {
 
 	/**

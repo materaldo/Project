@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class Language
+ *
+ * Class representing instances of languages in database
+ */
 class Language extends Eloquent {
 
 	/**

@@ -3,7 +3,11 @@
 
 class OthersSeeder extends Seeder 
 {
-
+	/**
+	 * Run the data test seeds.
+	 *
+	 * @return void
+	 */
     public function run()
     {
         Protector::create(['id'=>'4','first_name'=>'Tomasz','last_name'=>'Nowak','date_of_birth'=>'05.08.1967','phone_number'=>'603054612','id_coun'=>'2','id_first_lang'=>'3','id_second_lang'=>'4','id_third_lang'=>'5','document_number'=>'d82j83d9d','insurance_number'=>'jd29h3389j']);

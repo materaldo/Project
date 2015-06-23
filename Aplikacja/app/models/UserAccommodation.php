@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class UserAccommodation
+ *
+ * Class representing instances of accommodation for user in database
+ */
 class UserAccommodation extends Eloquent {
 
 	/**
