@@ -1,0 +1,145 @@
+<?php
+
+/**
+ * AccommodationController Class
+ *
+ * Implements actions regarding accommodation management
+ */
+class AccommodationController extends BaseController {
+
+
+    /**
+     * Displays all places (accommodations) from database
+     *
+     * @return View returns view 'places/places'
+     */
+	public function getIndex()
+	{
+		return View::make('places.places');
+	}
+	
+    /**
+     * Displays the form for accommodation creation
+     *
+     * @return View returns view 'places/add'
+     */
+	public function getNew()
+	{
+		return View::make('places.add');
+	}
+	
+    /**
+     * Saves new accommodation and redirects to the view 'places/places'
+     *
+     * @return View returns view 'places/places' 
+	 */
+	public function postAdd()
+	{
+		$name = Input::get('name');
+		$street = Input::get('street');
+		$building = Input::get('building');
+		$city = Input::get('city');
+		$post_code = Input::get('post_code');
+		$phone_number = Input::get('phone_number');
+		$map = Input::get('map');
+		$all_places = Input::get('all_places');
+		$image = Input::get('image');
+		
+		$acc = new Accommodation();
+		$acc->name = $name;
+		$acc->street = $street;
+		$acc->building = $building;
+		$acc->city = $city;
+		$acc->post_code = $post_code;
+		$acc->phone_number = $phone_number;
+		$acc->map = $map;
+		$acc->free_places = $all_places;
+		$acc->all_places = $all_places;
+		$acc->image = $image;
+		
+		$acc->save();
+
+		return View::make('places.places');	
+	}
+   
+	public function postConfirm($id)
+	{
+		$name = Input::get('name');
+		$street = Input::get('street');
+		$building = Input::get('building');
+		$city = Input::get('city');
+		$post_code = Input::get('post_code');
+		$phone_number = Input::get('phone_number');
+		$map = Input::get('map');
+		$all_places = Input::get('all_places');
+		$image = Input::get('image');
+		
+		Accommodation::where('id', $id)->update(array(
+			'name'=>$name,
+			'street'=>$street,
+			'building'=>$building,
+			'city'=>$city,
+			'post_code'=>$post_code,
+			'phone_number'=>$phone_number,
+			'map'=>$map,
+			'all_places'=>$all_places,
+			'image'=>$image
+			));
+		
+		return View::make('places.places');	
+	}	
+	
+	 /**
+     * Displays accommodation details
+     *
+	 * @param integer $id ID of accommodation
+	 *
+     * @return View returns view containing accommodation details or redirects to the list of accommodations
+     */
+	public function getDetails($id)
+	{
+		$acc=Accommodation::where('id','=', $id)->first();
+		if(isset($acc->id))
+			return View::make('places.details')->with('idA', $id);
+		else
+			return Redirect::to('/accommodation');
+	}
+	
+	/**
+     * Displays edit form of accommodation
+     *
+	 * @param integer $id ID of accommodation
+	 *
+     * @return View returns view containing edit form or redirects to the list of accommodations
+     */
+	 public function getEdit($id)
+	{
+		$acc=Accommodation::where('id','=', $id)->first();
+		if(isset($acc->id))
+			return View::make('places.edit')->with('idA', $id);
+		else
+			return Redirect::to('/accommodation');
+	}
+	
+	/**
+     * Deletes selected accommodation
+     *
+	 * @param integer $id ID of accommodation
+	 *
+     * @return View reditects to the list of accommodations
+     */
+	public function getDelete($id)
+	{
+		$acc=Accommodation::where('id','=', $id)->first();
+		if(isset($acc->id))
+		{
+			$acc->delete();
+			return Redirect::to('/accommodation');
+		}
+		else
+			return Redirect::to('/accommodation');
+	
+	}
+	
+}
+
