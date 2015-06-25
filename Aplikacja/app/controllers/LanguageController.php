@@ -1,8 +1,13 @@
 <?php
 
+/**
+     * Language Controller
+     *
+     */
 class LanguageController extends BaseController {
 
 	/**
+	* Display view of languages for members
 	* @return view
 	*/
 	public function getIndex()
@@ -10,6 +15,7 @@ class LanguageController extends BaseController {
 		return View::make('languages.languages');
 	}
 	/**
+	* Display view allows to create new language
 	* @return view
 	*/
 	public function getNew()
@@ -32,6 +38,7 @@ class LanguageController extends BaseController {
 	}
 	/**
 	* function delete language from data base 
+	* @param integer $id is a representation of language id
 	* @return view
 	*/
 	public function getDelete($id)
@@ -45,6 +52,7 @@ class LanguageController extends BaseController {
 	}
 	/**
 	* function edit language from data base 
+	* @param integer $id is a representation of language id
 	* @return view
 	*/
 	public function getEdit($id)
@@ -53,7 +61,7 @@ class LanguageController extends BaseController {
 	}
 	/**
 	* function update language from data base 
-	* @$id is a language id 
+	* @param integer $id is a language id 
 	* @return view
 	*/
 	public function getConfirm($id)

@@ -1,22 +1,21 @@
 <?php
 
+/**
+     * Organizer Controller
+     *
+     */
 class OrganizerController extends BaseController {
 
 	/**
+	* Display home page
 	* @return view
 	*/
 	public function getIndex()
 	{
 		return View::make('index');
 	}
-	
-	public function getAdd()
-	{
-		$first_name = Input::get('first_name');
-		$last_name = Input::get('last_name');
-		$email = Input::get('email');
-	}
 	/**
+	* Display view of message to protectors
 	* @return view
 	*/
 	public function getMessage()

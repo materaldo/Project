@@ -15,7 +15,7 @@ public static function globalXssClean()
 }
 /**
 * Strip tags on $array, to prevent xss attack 
-* @$array is a input of a form. 
+* @param Input $array is a input of a form. 
 * @return is a String without tags
 */
 public static function arrayStripTags($array)

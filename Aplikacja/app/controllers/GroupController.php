@@ -1,5 +1,9 @@
 <?php
 
+/**
+     * Group Controller
+     *
+     */
 class GroupController extends BaseController {
 
 	/**

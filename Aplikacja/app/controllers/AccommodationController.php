@@ -62,6 +62,13 @@ class AccommodationController extends BaseController {
 		return View::make('places.places');	
 	}
    
+    /**
+     * Edit accommodation and redirects to the view 'places/places'
+     * 
+	 * @param integer $id - id of edited accommodation
+	 *
+     * @return View returns view 'places/places' 
+	 */
 	public function postConfirm($id)
 	{
 		$name = Input::get('name');

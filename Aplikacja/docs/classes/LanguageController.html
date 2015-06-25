@@ -106,7 +106,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">83</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">49</span>
                                 </a>
                             </li>
                             <li>
@@ -136,10 +136,10 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1943238674"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-2038769295"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1943238674" class="accordion-body collapse in">
+            <div id="namespace-2038769295" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                     
@@ -171,7 +171,6 @@
                                                     <li class="class"><a href="../classes/OrganizerController.html">OrganizerController</a></li>
                                                     <li class="class"><a href="../classes/OthersSeeder.html">OthersSeeder</a></li>
                                                     <li class="class"><a href="../classes/Participant.html">Participant</a></li>
-                                                    <li class="class"><a href="../classes/ParticipantController.html">ParticipantController</a></li>
                                                     <li class="class"><a href="../classes/Permission.html">Permission</a></li>
                                                     <li class="class"><a href="../classes/Protector.html">Protector</a></li>
                                                     <li class="class"><a href="../classes/Role.html">Role</a></li>
@@ -198,7 +197,7 @@
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
                     <h1><small>\</small>LanguageController</h1>
-                    <p><em></em></p>
+                    <p><em>Language Controller</em></p>
                     
                     
                                         
@@ -299,7 +298,7 @@
                 <h3 class="public ">getIndex()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">getIndex() : \view</pre>
-                <p><em></em></p>
+                <p><em>Display view of languages for members</em></p>
                 
 
                 
@@ -327,7 +326,7 @@
                 <h3 class="public ">getNew()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
                 <pre class="signature" style="margin-right: 54px;">getNew() : \view</pre>
-                <p><em></em></p>
+                <p><em>Display view allows to create new language</em></p>
                 
 
                 
@@ -382,16 +381,16 @@
             <article class="method">
                 <h3 class="public ">getDelete()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getDelete(  <span class="argument">$id</span>) : \view</pre>
+                <pre class="signature" style="margin-right: 54px;">getDelete(integer  <span class="argument">$id</span>) : \view</pre>
                 <p><em>function delete language from data base</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>integer</td>
                                 <td>$id </td>
-                                <td></td>
+                                <td><p>is a representation of language id</p></td>
                             </tr>
                                             </table>
                 
@@ -418,16 +417,16 @@
             <article class="method">
                 <h3 class="public ">getEdit()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getEdit(  <span class="argument">$id</span>) : \view</pre>
+                <pre class="signature" style="margin-right: 54px;">getEdit(integer  <span class="argument">$id</span>) : \view</pre>
                 <p><em>function edit language from data base</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>integer</td>
                                 <td>$id </td>
-                                <td></td>
+                                <td><p>is a representation of language id</p></td>
                             </tr>
                                             </table>
                 
@@ -454,17 +453,16 @@
             <article class="method">
                 <h3 class="public ">getConfirm()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">getConfirm(  <span class="argument">$id</span>) : \view</pre>
-                <p><em>function update language from data base
-@$id is a language id</em></p>
+                <pre class="signature" style="margin-right: 54px;">getConfirm(integer  <span class="argument">$id</span>) : \view</pre>
+                <p><em>function update language from data base</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>integer</td>
                                 <td>$id </td>
-                                <td></td>
+                                <td><p>is a language id</p></td>
                             </tr>
                                             </table>
                 
@@ -562,7 +560,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on June 24th, 2015 at 10:20.
+                    on June 25th, 2015 at 10:07.
                 </section>
             </section>
         </section>

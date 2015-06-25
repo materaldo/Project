@@ -21,7 +21,7 @@ class HomeController extends BaseController {
 	*/
 	/**
 	* Allow to change website language
-	*
+	* @param string $lang - language website 
 	* @return View Home page with selected language
 	*/
     public function select($lang)

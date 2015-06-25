@@ -43,8 +43,8 @@ class ParticipantController extends BaseController {
     }
 	}
 	/**
-	* @$idG is a group id  
 	* function separates checked participants id
+	* @param integer $idG is a group id  
 	* @return make view with $string - it's a reprezentation of group id and participants checked separeted with :
 	*/
     public function postChooseplaceprotector($idG)
@@ -66,9 +66,8 @@ class ParticipantController extends BaseController {
 		return View::make('participants.participant_change');
 	}
 	/**
-	* @$idAcc is an accomodation id, @$sel it's a reprezentation of group id and participants checked separeted with :  
-	* function add participants/protector to acoomodation made by organizer or admin
-	* depends on number of free places alert inform if an allocation was made
+	* function add participants/protector to acoomodation made by organizer or admin depends on number of free places alert inform if an allocation was made
+	* @param integer $idAcc is an accomodation id, @param array $sel it's a reprezentation of group id and participants checked separeted with :  
 	* @return view
 	*/
 	public function getAssign($idAcc,$sel)
@@ -109,9 +108,8 @@ class ParticipantController extends BaseController {
 		return View::make('groups.groups')->with('conf', '1');
 	}
 	/**
-	* @$idAcc is an accomodation id, @$sel it's a reprezentation of group id and participants checked separeted with :  
-	* function add participants/protector to acoomodation made by protector
-	* depends on number of free places alert inform if an allocation was made
+	* function add participants/protector to acoomodation made by protector depends on number of free places alert inform if an allocation was made
+	* @param integer $idAcc is an accomodation id, @param array $sel it's a reprezentation of group id and participants checked separeted with :  
 	* @return view
 	*/
     public function getProtectorassign($idAcc,$sel)
@@ -166,6 +164,8 @@ class ParticipantController extends BaseController {
         return View::make('index');
     }
 	/**
+	* function return form connected with data base using countries, language data base and group id
+	* @param integer $id is a group id of added user
 	* @return a form connected with data base using countries and languages tables
 	*/
 	public function getAdd($id)
@@ -184,9 +184,15 @@ class ParticipantController extends BaseController {
         }
         return View::make('participants.add')->with('idG', $id)->with('countries', $countriesArr)->with('languages', $languagesArr);
 	}
+<<<<<<< HEAD
+	/**
+	* function add participants to data base depends on mail input add user & participant.
+	* @param integer $id it's a group id  
+=======
 	/** 
 	* function add participants to data base depends on mail input add user & participant.
 	* @param integer $id it's a group id 
+>>>>>>> origin/master
 	* @return view
 	*/
     public function postAdduser($id)
@@ -301,22 +307,17 @@ class ParticipantController extends BaseController {
                 echo "<script>alert(\"Musisz wybrać powód\");</script>";
                 return Redirect::back();
             }
-            }
-		
-	/*	Mail::send('emails.change', array('key' => 'value'), function($message)
-{
-		$message->to('mlteusz_711@wp.pl')->subject('Zmiana zakwaterowania');
-		
-		
-		});*/
-		
+            }		
 	}
 
-	public function accName(){
-		echo Auth::id();
-		return View::make('index');
-		
 	}
+	 /**
+     * Reditrect to user details 
+     *
+     * @param  integer $id is user id.
+     *
+     * @return  view with @param integer $id - user id.
+     */
 	public function getDetails($id)
 	{
 		return View::make('participants.userdetails')->with('idU', $id);
