@@ -1,6 +1,15 @@
 <?php
+/**
+* Seeder CountriesTableSeeder
+* 
+* Seeds database with countries data
+*/
 
-
+/**
+* Class CountriesTableSeeder
+* 
+* Class used to seed countries table
+*/
 class CountriesTableSeeder extends Seeder 
 {
 	/**

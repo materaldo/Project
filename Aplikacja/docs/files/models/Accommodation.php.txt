@@ -1,10 +1,15 @@
 <?php
+/**
+* Model Accommodation
+* 
+* Representation of data about accommodations
+*/
 
 /**
- * Class Administrator
- *
- * Class representing instances of accommodations in database
- */
+* Class Accommodation
+*
+* Class representing instances of accommodations in database
+*/
 class Accommodation extends Eloquent {
 
 	/**

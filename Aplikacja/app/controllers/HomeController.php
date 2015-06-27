@@ -1,4 +1,9 @@
 <?php
+/**
+* Controller HomeController
+* 
+* Default controller. Contains methods used for site/main page management
+*/
 
 /**
  * Class HomeController

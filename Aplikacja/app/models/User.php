@@ -1,4 +1,9 @@
 <?php
+/**
+* Model User
+* 
+* Representation of data about users
+*/
 use Zizaco\Entrust\HasRole;
 use Zizaco\Confide\ConfideUser;
 use Zizaco\Confide\ConfideUserInterface;

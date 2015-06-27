@@ -1,4 +1,9 @@
 <?php
+/**
+* Controller LanguageController
+* 
+* Contains methods used for language management
+*/
 
 /**
      * Language Controller

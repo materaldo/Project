@@ -1,8 +1,17 @@
 <?php
-
+/**
+* Migration for groups
+*
+* Representation of groups table schema in database
+*/
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+* Class CreateGrupyTable
+*
+* Includes methods used to create and drop groups table
+*/
 class CreateGrupyTable extends Migration {
 
 	/**

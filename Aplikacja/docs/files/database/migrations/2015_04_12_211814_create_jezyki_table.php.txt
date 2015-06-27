@@ -1,8 +1,18 @@
 <?php
+/**
+* Migration for languages
+*
+* Representation of languages table schema in database
+*/
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+* Class CreateJezykiTable
+*
+* Includes methods used to create and drop languages table
+*/
 class CreateJezykiTable extends Migration {
 
 	/**

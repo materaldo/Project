@@ -1,4 +1,9 @@
 <?php
+/**
+* Model Protector
+* 
+* Representation of data about protectors
+*/
 
 /**
  * Class Protector

@@ -1,6 +1,9 @@
 <?php
-
-
+/**
+* Model UserRepository
+* 
+* Representation of actions on users' data
+*/
 
 /**
  * Class UserRepository

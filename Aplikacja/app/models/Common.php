@@ -1,6 +1,12 @@
 <?php
 /**
-* Class made to represent method to prevent xss attack. 
+* Model Common
+* 
+* Represents actions to prevent attacks
+*/
+
+/**
+* Class including methods to prevent xss attack. 
 */
 class Common extends Eloquent {
 

@@ -1,8 +1,17 @@
 <?php
-
+/**
+* Migration for countries
+*
+* Representation of countries table schema in database
+*/
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+* Class CreateNarodowosciTable
+*
+* Includes methods used to create and drop countries table
+*/
 class CreateNarodowosciTable extends Migration {
 
 	/**

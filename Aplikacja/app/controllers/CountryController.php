@@ -1,4 +1,9 @@
 <?php
+/**
+* Controller CountryController
+* 
+* Contains methods used for countries management
+*/
 
 /**
  * CountryController Class

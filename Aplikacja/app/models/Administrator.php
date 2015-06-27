@@ -1,4 +1,9 @@
 <?php
+/**
+* Model Administrator
+* 
+* Representation of data about administrators
+*/
 
 /**
  * Class Administrator

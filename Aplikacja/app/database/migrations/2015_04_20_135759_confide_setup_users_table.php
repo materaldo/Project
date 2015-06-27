@@ -1,7 +1,17 @@
 <?php
-
+/**
+* Migration for Confide tables
+*
+* Representation of Confide package tables schema in database
+* Includes users, password_reminders schemas
+*/
 use Illuminate\Database\Migrations\Migration;
 
+/**
+* Class ConfideSetupUsersTable
+*
+* Includes methods used to create and drop Confide package tables
+*/
 class ConfideSetupUsersTable extends Migration
 {
     /**

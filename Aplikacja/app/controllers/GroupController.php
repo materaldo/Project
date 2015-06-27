@@ -1,4 +1,9 @@
 <?php
+/**
+* Controller GroupController
+* 
+* Contains methods used for group management
+*/
 
 /**
      * Group Controller

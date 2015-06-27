@@ -1,4 +1,9 @@
 <?php
+/**
+* Controller AccommodationController
+* 
+* Contains methods used for accommodation management
+*/
 
 /**
  * AccommodationController Class

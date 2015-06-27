@@ -1,6 +1,15 @@
 <?php
+/**
+* Seeder TestTableSeeder
+* 
+* Seeds database with test data
+*/
 
-
+/**
+* Class TestTableSeeder
+* 
+* Class used to seed database with test data
+*/
 class TestTableSeeder extends Seeder 
 {
 	/**

@@ -1,4 +1,9 @@
 <?php
+/**
+* Model Accommodation
+* 
+* Representation of data about groups
+*/
 
 /**
  * Class Group

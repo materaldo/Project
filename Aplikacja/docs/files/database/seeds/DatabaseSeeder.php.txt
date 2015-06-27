@@ -1,5 +1,15 @@
 <?php
+/**
+* Seeder DatabaseSeeder
+* 
+* Runs other seeders
+*/
 
+/**
+* Class DatabaseSeeder
+* 
+* Runs other seeders
+*/
 class DatabaseSeeder extends Seeder {
 
 	/**

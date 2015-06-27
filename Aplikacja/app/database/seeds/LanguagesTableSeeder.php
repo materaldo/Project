@@ -1,6 +1,15 @@
 <?php
+/**
+* Seeder LanguagesTableSeeder
+* 
+* Seeds database with languages data
+*/
 
-
+/**
+* Class LanguagesTableSeeder
+* 
+* Class used to seed languages table
+*/
 class LanguagesTableSeeder extends Seeder 
 {
 	/**

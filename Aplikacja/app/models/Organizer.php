@@ -1,4 +1,9 @@
 <?php
+/**
+* Model Accommodation
+* 
+* Representation of data about organizers
+*/
 
 /**
  * Class Organizer

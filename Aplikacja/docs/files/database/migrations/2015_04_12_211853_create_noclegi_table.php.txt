@@ -1,8 +1,17 @@
 <?php
-
+/**
+* Migration for accommodations
+*
+* Representation of accommodations table schema in database
+*/
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+* Class CreateNoclegiTable
+*
+* Includes methods used to create and drop accommodations table
+*/
 class CreateNoclegiTable extends Migration {
 
 	/**

@@ -1,4 +1,9 @@
 <?php
+/**
+* Model UserAccommodation
+* 
+* Representation of data about user-accommodation relations
+*/
 
 /**
  * Class UserAccommodation

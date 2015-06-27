@@ -1,5 +1,9 @@
 <?php
-
+/**
+* Model Permission
+* 
+* Representation of data about permissions for roles
+*/
 use Zizaco\Entrust\EntrustPermission;
 
 /**

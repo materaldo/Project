@@ -1,8 +1,18 @@
 <?php
-
+/**
+* Migration for Entrust tables
+*
+* Representation of Entrust package tables schema in database
+* Includes roles, permissions, permission_role and assigned_roles schemas
+*/
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
+/**
+* Class EntrustSetupTables
+*
+* Includes methods used to create and drop Entrust package tables
+*/
 class EntrustSetupTables extends Migration
 {
     /**

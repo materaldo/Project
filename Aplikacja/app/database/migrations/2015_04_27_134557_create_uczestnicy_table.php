@@ -1,8 +1,17 @@
 <?php
-
+/**
+* Migration for participants
+*
+* Representation of participants table schema in database
+*/
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+* Class CreateUczestnicyTable
+*
+* Includes methods used to create and drop participants table
+*/
 class CreateUczestnicyTable extends Migration {
 
 	/**

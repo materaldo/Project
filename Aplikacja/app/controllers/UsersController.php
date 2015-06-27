@@ -1,6 +1,9 @@
 <?php
-
-
+/**
+* Controller UsersController
+* 
+* Contains methods used for user management
+*/
 
 /**
  * UsersController Class

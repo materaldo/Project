@@ -1,5 +1,11 @@
 <?php
 /**
+* Controller BaseController
+* 
+* Base controller used as a parent for other controllers
+*/
+
+/**
      * Base controller for application
      *
      */

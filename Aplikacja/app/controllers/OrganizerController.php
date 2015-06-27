@@ -1,9 +1,15 @@
 <?php
+/**
+* Controller OrganizerController
+* 
+* Contains methods used for organizer management
+*/
 
 /**
-     * Organizer Controller
-     *
-     */
+* Class OrganizerController
+* 
+* Representation of data about accommodations
+*/
 class OrganizerController extends BaseController {
 
 	/**

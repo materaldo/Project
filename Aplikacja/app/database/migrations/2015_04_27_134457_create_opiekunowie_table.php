@@ -1,8 +1,17 @@
 <?php
-
+/**
+* Migration for protectors
+*
+* Representation of protectors table schema in database
+*/
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+/**
+* Class CreateOpiekunowieTable
+*
+* Includes methods used to create and drop protectors table
+*/
 class CreateOpiekunowieTable extends Migration {
 
 	/**

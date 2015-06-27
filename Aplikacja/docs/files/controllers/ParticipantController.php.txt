@@ -1,5 +1,15 @@
 <?php
+/**
+* Controller ParticipantController
+* 
+* Contains methods used for participant management
+*/
 
+/**
+ * Class ParticipantController 
+ *
+ * Implements actions regarding participant management
+ */
 class ParticipantController extends BaseController {
 
 	/**

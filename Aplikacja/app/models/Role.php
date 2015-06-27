@@ -1,5 +1,9 @@
 <?php
-
+/**
+* Model Role
+* 
+* Representation of data about roles
+*/
 use Zizaco\Entrust\EntrustRole;
 
 /**
